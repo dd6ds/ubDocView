@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-05 23:40+0100\n"
-"PO-Revision-Date: 2018-12-23 00:00+0000\n"
-"Last-Translator: M.Sugahara <equaaqua@hotmail.com>\n"
+"PO-Revision-Date: 2019-01-27 00:00+0000\n"
+"Last-Translator: louies0623 <louies0623@gmail.com>\n"
 "Language-Team: Japanese <https://translate.ubports.com/projects/ubports/"
 "docviewer-app/ja/>\n"
 "Language: ja\n"
@@ -221,7 +221,7 @@ msgstr ""
 #: ../src/app/qml/documentPage/DocumentPage.qml:23
 #: /tmp/lok-qml-async-imageprovider-build/po/com.ubuntu.docviewer.desktop.in.in.h:3
 msgid "Documents"
-msgstr ""
+msgstr "ドキュメント"
 
 #: ../src/app/qml/documentPage/DocumentPageDefaultHeader.qml:29
 msgid "Search..."
@@ -229,7 +229,7 @@ msgstr ""
 
 #: ../src/app/qml/documentPage/DocumentPageDefaultHeader.qml:36
 msgid "Sorting settings..."
-msgstr ""
+msgstr "ソート設定..."
 
 #: ../src/app/qml/documentPage/DocumentPagePickModeHeader.qml:41
 msgid "Switch to single column list"
@@ -237,7 +237,7 @@ msgstr ""
 
 #: ../src/app/qml/documentPage/DocumentPagePickModeHeader.qml:41
 msgid "Switch to grid"
-msgstr ""
+msgstr "グリッドに変更"
 
 #: ../src/app/qml/documentPage/DocumentPagePickModeHeader.qml:49
 msgid "Pick"
@@ -249,7 +249,7 @@ msgstr "戻る"
 
 #: ../src/app/qml/documentPage/DocumentPageSearchHeader.qml:47
 msgid "search in documents..."
-msgstr ""
+msgstr "ドキュメントを検索..."
 
 #: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:40
 msgid "Select None"
@@ -261,12 +261,12 @@ msgstr "すべて選択"
 
 #: ../src/app/qml/documentPage/SearchEmptyState.qml:24
 msgid "No matching document found"
-msgstr ""
+msgstr "ドキュメントが見つかりませんでした"
 
 #: ../src/app/qml/documentPage/SearchEmptyState.qml:26
 msgid ""
 "Please ensure that your query is not misspelled and/or try a different query."
-msgstr ""
+msgstr "クエリの綴りが間違えていないか、または、別のクエリを試してください"
 
 #: ../src/app/qml/documentPage/SectionHeader.qml:13
 msgid "Today"
@@ -290,23 +290,23 @@ msgstr ""
 
 #: ../src/app/qml/documentPage/SharePage.qml:23
 msgid "Share to"
-msgstr ""
+msgstr "〜に共有"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:26
 msgid "Sorting settings"
-msgstr ""
+msgstr "ソート設定"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:31
 msgid "Sort by date (Latest first)"
-msgstr ""
+msgstr "日付ソート（新しい順）"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:32
 msgid "Sort by name (A-Z)"
-msgstr ""
+msgstr "名前ソート（A-Z）"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:33
 msgid "Sort by size (Smaller first)"
-msgstr ""
+msgstr "サイズソート（小さい順）"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:47
 msgid "Reverse order"
@@ -349,13 +349,13 @@ msgstr ""
 #: ../src/app/qml/pdfView/PdfView.qml:228
 #: ../src/app/qml/textView/TextViewDefaultHeader.qml:63
 msgid "Disable night mode"
-msgstr ""
+msgstr "ナイトモードをオフにする"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:100
 #: ../src/app/qml/pdfView/PdfView.qml:228
 #: ../src/app/qml/textView/TextViewDefaultHeader.qml:63
 msgid "Enable night mode"
-msgstr ""
+msgstr "ナイトモードをオンにする"
 
 #: ../src/app/qml/loView/LOViewGotoDialog.qml:30
 msgid "Go to position"
@@ -363,7 +363,7 @@ msgstr ""
 
 #: ../src/app/qml/loView/LOViewGotoDialog.qml:31
 msgid "Choose a position between 1% and 100%"
-msgstr ""
+msgstr "1％から100％までの間でポジションwp選択する"
 
 #: ../src/app/qml/loView/LOViewGotoDialog.qml:62
 #: ../src/app/qml/pdfView/PdfViewGotoDialog.qml:58
@@ -376,17 +376,19 @@ msgstr ""
 
 #: ../src/app/qml/loView/LOViewPage.qml:170
 msgid "Error while loading LibreOffice."
-msgstr ""
+msgstr "LibreOfficeロード中にエラーが発生しました"
 
 #: ../src/app/qml/loView/LOViewPage.qml:173
 msgid ""
 "Document not loaded.\n"
 "The requested document may be corrupt or protected by a password."
 msgstr ""
+"ドキュメントがロードされていません\n"
+"リクエストされたドキュメントは破損もしくはパスワードで保護されています"
 
 #: ../src/app/qml/loView/LOViewPage.qml:228
 msgid "This sheet has no content."
-msgstr ""
+msgstr "このシートは内容がありません"
 
 #. TRANSLATORS: 'LibreOfficeKit' is the name of the library used by
 #. Document Viewer for rendering LibreOffice/MS-Office documents.
@@ -404,11 +406,11 @@ msgstr ""
 
 #: ../src/app/qml/loView/ZoomSelector.qml:122
 msgid "Fit width"
-msgstr ""
+msgstr "幅を合わせる"
 
 #: ../src/app/qml/loView/ZoomSelector.qml:123
 msgid "Fit height"
-msgstr ""
+msgstr "高さを合わせる"
 
 #: ../src/app/qml/loView/ZoomSelector.qml:124
 msgid "Automatic"
@@ -418,7 +420,7 @@ msgstr "自動"
 #: ../src/app/qml/pdfView/PdfContentsPage.qml:31
 #: ../src/app/qml/pdfView/PdfView.qml:153
 msgid "Contents"
-msgstr ""
+msgstr "目次"
 
 #. TRANSLATORS: the first argument (%1) refers to the page currently shown on the screen,
 #. while the second one (%2) refers to the total pages count.
@@ -430,7 +432,7 @@ msgstr ""
 
 #: ../src/app/qml/pdfView/PdfView.qml:203
 msgid "Search"
-msgstr ""
+msgstr "検索"
 
 #: ../src/app/qml/pdfView/PdfView.qml:213
 msgid "Go to page..."
@@ -438,7 +440,7 @@ msgstr ""
 
 #: ../src/app/qml/pdfView/PdfView.qml:221
 msgid "Presentation"
-msgstr ""
+msgstr "プレゼンテーション"
 
 #: ../src/app/qml/pdfView/PdfViewGotoDialog.qml:26
 msgid "Go to page"
@@ -451,7 +453,7 @@ msgstr ""
 
 #: ../src/app/qml/ubuntu-docviewer-app.qml:114
 msgid "File does not exist."
-msgstr ""
+msgstr "ファイルが存在しません"
 
 #. TRANSLATORS: This string is used for renaming a copied file,
 #. when a file with the same name already exists in user's
@@ -469,8 +471,8 @@ msgstr ""
 
 #: /tmp/lok-qml-async-imageprovider-build/po/com.ubuntu.docviewer.desktop.in.in.h:1
 msgid "Document Viewer"
-msgstr ""
+msgstr "ドキュメントビューアー"
 
 #: /tmp/lok-qml-async-imageprovider-build/po/com.ubuntu.docviewer.desktop.in.in.h:2
 msgid "documents;viewer;pdf;reader;"
-msgstr ""
+msgstr "ドキュメント;ビューアー;pdf;リーダー;"
