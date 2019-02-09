@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-05 23:40+0100\n"
-"PO-Revision-Date: 2018-10-14 18:56+0000\n"
-"Last-Translator: Ben van Hartingsveldt <benvanhartingsveldt@gmail.com>\n"
+"PO-Revision-Date: 2019-03-07 21:53+0000\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/ubports/"
 "docviewer-app/nl/>\n"
 "Language: nl\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0\n"
+"X-Generator: Weblate 3.1.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:48+0000\n"
 
 #: ../src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
-msgstr "Sommige van de opgegeven argumenten zijn ongeldig."
+msgstr "Bepaalde opgegeven argumenten zijn ongeldig."
 
 #: ../src/app/qml/common/CommandLineProxy.qml:58
 msgid "Open ubuntu-docviewer-app displaying the selected file"
@@ -42,7 +42,7 @@ msgid ""
 "Show documents from the given folder, instead of ~/Documents.\n"
 "The path must exist prior to running ubuntu-docviewer-app"
 msgstr ""
-"Documenten tonen van de opgegeven map, in plaats van ~/Documents.\n"
+"Documenten tonen van de opgegeven map in plaats van ~/Documenten.\n"
 "Het pad moet aanwezig zijn voordat ubuntu-docviewer-app draait"
 
 #: ../src/app/qml/common/DetailsPage.qml:26
@@ -66,11 +66,11 @@ msgstr "Grootte"
 
 #: ../src/app/qml/common/DetailsPage.qml:57
 msgid "Created"
-msgstr "Aangemaakt"
+msgstr "Gecreëerd op"
 
 #: ../src/app/qml/common/DetailsPage.qml:62
 msgid "Last modified"
-msgstr "Laatst gewijzigd"
+msgstr "Laatst gewijzigd op"
 
 #: ../src/app/qml/common/DetailsPage.qml:69
 msgid "MIME type"
@@ -118,7 +118,7 @@ msgid ""
 "Do you want to open it as a plain text?"
 msgstr ""
 "Dit bestand wordt niet ondersteund.\n"
-"Wilt u het openen als platte tekst?"
+"Wil je het openen als platte tekst?"
 
 #: ../src/app/qml/common/UnknownTypeDialog.qml:38
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:55
@@ -127,7 +127,7 @@ msgstr ""
 #: ../src/app/qml/pdfView/PdfView.qml:180
 #: ../src/app/qml/pdfView/PdfViewGotoDialog.qml:51
 msgid "Cancel"
-msgstr "Annuleren"
+msgstr "Afbreken"
 
 #: ../src/app/qml/common/UnknownTypeDialog.qml:44
 msgid "Yes"
@@ -172,8 +172,8 @@ msgstr[1] "%1 bestanden verwijderen"
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:42
 msgid "Are you sure you want to permanently delete this file?"
 msgid_plural "Are you sure you want to permanently delete these files?"
-msgstr[0] "Weet u zeker dat u dit bestand definitief wilt verwijderen?"
-msgstr[1] "Weet u zeker dat u deze bestanden definitief wilt verwijderen?"
+msgstr[0] "Weet je zeker dat je dit bestand definitief wilt verwijderen?"
+msgstr[1] "Weet je zeker dat je deze bestanden definitief wilt verwijderen?"
 
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:61
 #: ../src/app/qml/documentPage/DocumentDelegateActions.qml:25
@@ -187,15 +187,15 @@ msgstr "Delen"
 
 #: ../src/app/qml/documentPage/DocumentEmptyState.qml:27
 msgid "No documents found"
-msgstr "Geen documenten gevonden"
+msgstr "Geen documenten aangetroffen"
 
 #: ../src/app/qml/documentPage/DocumentEmptyState.qml:28
 msgid ""
 "Connect your device to any computer and simply drag files to the Documents "
 "folder or insert removable media containing documents."
 msgstr ""
-"Verbind je apparaat met een computer en sleep bestanden simpel naar de "
-"Documenten-map of plug verwijderbare media in met documenten."
+"Verbind je apparaat met een computer en sleep bestanden naar de map "
+"'Documenten' of koppel externe opslag aan die documenten bevat."
 
 #. TRANSLATORS: %1 refers to a time formatted as Locale.ShortFormat (e.g. hh:mm). It depends on system settings.
 #. http://qt-project.org/doc/qt-4.8/qlocale.html#FormatType-enum
@@ -235,15 +235,15 @@ msgstr "Zoeken…"
 
 #: ../src/app/qml/documentPage/DocumentPageDefaultHeader.qml:36
 msgid "Sorting settings..."
-msgstr "Instellingen sorteren…"
+msgstr "Sorteerinstellingen..."
 
 #: ../src/app/qml/documentPage/DocumentPagePickModeHeader.qml:41
 msgid "Switch to single column list"
-msgstr "Naar lijst met één kolom overschakelen"
+msgstr "Overschakelen naar lijst met één kolom"
 
 #: ../src/app/qml/documentPage/DocumentPagePickModeHeader.qml:41
 msgid "Switch to grid"
-msgstr "Naar raster overschakelen"
+msgstr "Overschakelen naar raster"
 
 #: ../src/app/qml/documentPage/DocumentPagePickModeHeader.qml:49
 msgid "Pick"
@@ -251,11 +251,11 @@ msgstr "Kiezen"
 
 #: ../src/app/qml/documentPage/DocumentPageSearchHeader.qml:27
 msgid "Back"
-msgstr "Vorige"
+msgstr "Terug"
 
 #: ../src/app/qml/documentPage/DocumentPageSearchHeader.qml:47
 msgid "search in documents..."
-msgstr "in documenten zoeken…"
+msgstr "documenten doorzoeken..."
 
 #: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:40
 msgid "Select None"
@@ -273,7 +273,7 @@ msgstr "Geen overeenkomend document gevonden"
 msgid ""
 "Please ensure that your query is not misspelled and/or try a different query."
 msgstr ""
-"Controleer of uw zoekopdracht juist gespeld is en/of probeer een andere "
+"Controleer of je zoekopdracht juist gespeld is en/of probeer een andere "
 "zoekopdracht."
 
 #: ../src/app/qml/documentPage/SectionHeader.qml:13
@@ -294,7 +294,7 @@ msgstr "Eerder deze maand"
 
 #: ../src/app/qml/documentPage/SectionHeader.qml:24
 msgid "Even earlier..."
-msgstr "Nog eerder…"
+msgstr "Nóg eerder…"
 
 #: ../src/app/qml/documentPage/SharePage.qml:23
 msgid "Share to"
@@ -302,11 +302,11 @@ msgstr "Delen met"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:26
 msgid "Sorting settings"
-msgstr "Instellingen sorteren"
+msgstr "Sorteerinstellingen"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:31
 msgid "Sort by date (Latest first)"
-msgstr "Sorteren op datum (laatste eerst)"
+msgstr "Sorteren op datum (nieuwste eerst)"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:32
 msgid "Sort by name (A-Z)"
@@ -327,23 +327,23 @@ msgstr "Bezig met laden…"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:55
 msgid "LibreOffice text document"
-msgstr "LibreOffice tekstdocument"
+msgstr "LibreOffice-tekstdocument"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:57
 msgid "LibreOffice spread sheet"
-msgstr "LibreOffice rekenblad"
+msgstr "LibreOffice-rekenblad"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:59
 msgid "LibreOffice presentation"
-msgstr "LibreOffice presentatie"
+msgstr "LibreOffice-presentatie"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:61
 msgid "LibreOffice Draw document"
-msgstr "LibreOffice tekendocument"
+msgstr "LibreOffice-tekendocument"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:63
 msgid "Unknown LibreOffice document"
-msgstr "Onbekend LibreOffice document"
+msgstr "Onbekend LibreOffice-document"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:65
 msgid "Unknown type document"
@@ -357,13 +357,13 @@ msgstr "Ga naar positie…"
 #: ../src/app/qml/pdfView/PdfView.qml:228
 #: ../src/app/qml/textView/TextViewDefaultHeader.qml:63
 msgid "Disable night mode"
-msgstr "Nachtmodus uitschakelen"
+msgstr "Nachtstand uitschakelen"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:100
 #: ../src/app/qml/pdfView/PdfView.qml:228
 #: ../src/app/qml/textView/TextViewDefaultHeader.qml:63
 msgid "Enable night mode"
-msgstr "Nachtmodus inschakelen"
+msgstr "Nachtstand inschakelen"
 
 #: ../src/app/qml/loView/LOViewGotoDialog.qml:30
 msgid "Go to position"
@@ -380,11 +380,11 @@ msgstr "GA!"
 
 #: ../src/app/qml/loView/LOViewPage.qml:167
 msgid "LibreOffice binaries not found."
-msgstr "LibreOffice binaire bestanden niet gevonden."
+msgstr "Geen uitvoerbare bestanden van LibreOffice aangetroffen."
 
 #: ../src/app/qml/loView/LOViewPage.qml:170
 msgid "Error while loading LibreOffice."
-msgstr "Fout bij het laden van LibreOffice."
+msgstr "Kan LibreOffice niet starten."
 
 #: ../src/app/qml/loView/LOViewPage.qml:173
 msgid ""
@@ -392,18 +392,18 @@ msgid ""
 "The requested document may be corrupt or protected by a password."
 msgstr ""
 "Document niet geladen.\n"
-"Het opgevraagde document is corrupt of beveiligd met een wachtwoord."
+"Het opgevraagde document is beschadigd of beveiligd met een wachtwoord."
 
 #: ../src/app/qml/loView/LOViewPage.qml:228
 msgid "This sheet has no content."
-msgstr "Dit blad heeft geen inhoud."
+msgstr "Dit blad bevat geen inhoud."
 
 #. TRANSLATORS: 'LibreOfficeKit' is the name of the library used by
 #. Document Viewer for rendering LibreOffice/MS-Office documents.
 #. Ref. https://docs.libreoffice.org/libreofficekit.html
 #: ../src/app/qml/loView/Splashscreen.qml:45
 msgid "Powered by LibreOfficeKit"
-msgstr "Ondersteund door LibreOfficeKit"
+msgstr "Aangedreven door LibreOfficeKit"
 
 #. TRANSLATORS: Please don't add any space between "Sheet" and "%1".
 #. This is the default name for a sheet in LibreOffice.
@@ -414,15 +414,15 @@ msgstr "Blad%1"
 
 #: ../src/app/qml/loView/ZoomSelector.qml:122
 msgid "Fit width"
-msgstr "Passend in de breedte"
+msgstr "Aanpassen aan breedte"
 
 #: ../src/app/qml/loView/ZoomSelector.qml:123
 msgid "Fit height"
-msgstr "Hoogte passend maken"
+msgstr "Aanpassen aan hoogte"
 
 #: ../src/app/qml/loView/ZoomSelector.qml:124
 msgid "Automatic"
-msgstr "automatisch"
+msgstr "Automatisch"
 
 #. TRANSLATORS: "Contents" refers to the "Table of Contents" of a PDF document.
 #: ../src/app/qml/pdfView/PdfContentsPage.qml:31
@@ -479,11 +479,11 @@ msgstr "kopie %1"
 
 #: /tmp/lok-qml-async-imageprovider-build/po/com.ubuntu.docviewer.desktop.in.in.h:1
 msgid "Document Viewer"
-msgstr "Documentenviewer"
+msgstr "Documentweergave"
 
 #: /tmp/lok-qml-async-imageprovider-build/po/com.ubuntu.docviewer.desktop.in.in.h:2
 msgid "documents;viewer;pdf;reader;"
-msgstr "documenten;viewer;pdf;lezer;"
+msgstr "documenten;weergave;pdf;lezer;"
 
 #~ msgid "File does not exist"
 #~ msgstr "Bestand bestaat niet"
