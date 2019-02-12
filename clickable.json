@@ -1,0 +1,11 @@
+{
+  "template": "cmake",
+  "prebuild": "./get_deps.sh",
+  "dependencies": [
+    "curl",
+    "libpoppler-qt5-dev",
+    "qtdeclarative5-dev",
+    "qtbase5-dev",
+    "qtdeclarative5-private-dev"
+  ]
+}
