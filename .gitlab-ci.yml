@@ -1,0 +1,10 @@
+build:
+  image: clickable/ci-16.04-armhf
+  except:
+    - tags
+  script:
+    - clickable clean build click-build
+  artifacts:
+    paths:
+      - build/*.click
+    expire_in: 1 week
