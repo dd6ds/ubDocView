@@ -58,7 +58,7 @@ msgstr "Bestand"
 
 #: ../src/app/qml/common/DetailsPage.qml:47
 msgid "Location"
-msgstr "Locatie"
+msgstr "Plaats"
 
 #: ../src/app/qml/common/DetailsPage.qml:52
 msgid "Size"
