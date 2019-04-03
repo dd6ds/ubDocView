@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-05 23:40+0100\n"
-"PO-Revision-Date: 2019-03-31 00:00+0000\n"
+"PO-Revision-Date: 2019-04-13 14:39+0000\n"
 "Last-Translator: Tom Dom <thomas@patoel.nl>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/ubports/"
 "docviewer-app/nl/>\n"
@@ -179,7 +179,7 @@ msgstr[1] "Weet je zeker dat je deze bestanden definitief wilt verwijderen?"
 #: ../src/app/qml/documentPage/DocumentDelegateActions.qml:25
 #: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:53
 msgid "Delete"
-msgstr "Verwijderen"
+msgstr "Verwijder"
 
 #: ../src/app/qml/documentPage/DocumentDelegateActions.qml:44
 msgid "Share"
