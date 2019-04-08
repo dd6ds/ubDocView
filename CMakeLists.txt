@@ -20,6 +20,7 @@ set(APP_NAME            ubuntu-docviewer-app)
 set(DESKTOP_FILE        "${PROJECT_NAME}.desktop")
 set(LP_PROJECT          ubuntu-docviewer-app)
 set(ICON_FILE           docviewer-app.png)
+set(SPLASH_FILE         docviewer-app-splash.svg)
 set(AUTOPILOT_DIR       ubuntu_docviewer_app)
 
 # Sets GIT_REVNO
