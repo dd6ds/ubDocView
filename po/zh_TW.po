@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-05 23:40+0100\n"
-"PO-Revision-Date: 2018-11-18 17:34+0000\n"
-"Last-Translator: Louies <louies0623@gmail.com>\n"
+"PO-Revision-Date: 2019-05-03 21:02+0000\n"
+"Last-Translator: louies0623 <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
 "ubports/docviewer-app/zh_Hant/>\n"
 "Language: zh_TW\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:49+0000\n"
 
 #: ../src/app/qml/common/CommandLineProxy.qml:49
@@ -26,7 +26,7 @@ msgstr "提供一些的參數無效。"
 
 #: ../src/app/qml/common/CommandLineProxy.qml:58
 msgid "Open ubuntu-docviewer-app displaying the selected file"
-msgstr "打開 ubuntu-docviewer-app 顯示選取的檔案"
+msgstr "打開 Ubuntu-Docviewer-APP 顯示選取的檔案"
 
 #: ../src/app/qml/common/CommandLineProxy.qml:65
 msgid "Run fullscreen"
@@ -34,15 +34,15 @@ msgstr "全螢幕執行"
 
 #: ../src/app/qml/common/CommandLineProxy.qml:71
 msgid "Open ubuntu-docviewer-app in pick mode. Used for tests only."
-msgstr "在選擇模式下打開 ubuntu-doceer-app。僅用於測試。"
+msgstr "在選擇模式下打開 Ubuntu-Docviewer-APP。僅用於測試。"
 
 #: ../src/app/qml/common/CommandLineProxy.qml:77
 msgid ""
 "Show documents from the given folder, instead of ~/Documents.\n"
 "The path must exist prior to running ubuntu-docviewer-app"
 msgstr ""
-"顯示給定資料夾中的文檔, 而不是 ~/Documents。\n"
-"在運行 ubuntu-docviewer-app 之前, 該路徑必須存在"
+"顯示選定資料夾中的文件，而不是 ~/Documents。\n"
+"在運行 Ubuntu-Docviewer-APP 之前, 該路徑必須存在"
 
 #: ../src/app/qml/common/DetailsPage.qml:26
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:107
@@ -162,13 +162,13 @@ msgstr "刪除檔案"
 #, qt-format
 msgid "Delete %1 file"
 msgid_plural "Delete %1 files"
-msgstr[0] "刪除％1個檔案"
+msgstr[0] "刪除 %1 個檔案"
 
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:41
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:42
 msgid "Are you sure you want to permanently delete this file?"
 msgid_plural "Are you sure you want to permanently delete these files?"
-msgstr[0] "你確定要永久移除這些檔案嗎?"
+msgstr[0] "你確定要永久移除這些檔案嗎？"
 
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:61
 #: ../src/app/qml/documentPage/DocumentDelegateActions.qml:25
@@ -188,21 +188,21 @@ msgstr "找不到文件"
 msgid ""
 "Connect your device to any computer and simply drag files to the Documents "
 "folder or insert removable media containing documents."
-msgstr "將設備連接到任何電腦，只需將檔案拖到Documents文件夾裡或者插入包含檔案的可移動式媒體。"
+msgstr "將設備連接到任何電腦，只需將檔案拖到 Documents 文件夾裡或者插入包含檔案的可移動式媒體。"
 
 #. TRANSLATORS: %1 refers to a time formatted as Locale.ShortFormat (e.g. hh:mm). It depends on system settings.
 #. http://qt-project.org/doc/qt-4.8/qlocale.html#FormatType-enum
 #: ../src/app/qml/documentPage/DocumentListDelegate.qml:103
 #, qt-format
 msgid "Today, %1"
-msgstr "今日，％1"
+msgstr "今天，%1"
 
 #. TRANSLATORS: %1 refers to a time formatted as Locale.ShortFormat (e.g. hh:mm). It depends on system settings.
 #. http://qt-project.org/doc/qt-4.8/qlocale.html#FormatType-enum
 #: ../src/app/qml/documentPage/DocumentListDelegate.qml:108
 #, qt-format
 msgid "Yesterday, %1"
-msgstr "昨天，％1"
+msgstr "昨天，%1"
 
 #. TRANSLATORS: this is a datetime formatting string,
 #. see http://qt-project.org/doc/qt-5/qml-qtqml-date.html#details for valid expressions.
@@ -297,7 +297,7 @@ msgstr "排序設定"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:31
 msgid "Sort by date (Latest first)"
-msgstr "按日期排序（最新的第一個）"
+msgstr "按日期排序 (最新的第一個)"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:32
 msgid "Sort by name (A-Z)"
@@ -305,7 +305,7 @@ msgstr "按名稱排序（A-Z）"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:33
 msgid "Sort by size (Smaller first)"
-msgstr "按大小排序（小一大）"
+msgstr "按大小排序 (小-大)"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:47
 msgid "Reverse order"
@@ -318,7 +318,7 @@ msgstr "載入中…"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:55
 msgid "LibreOffice text document"
-msgstr "LibreOffice文字文檔"
+msgstr "LibreOffice 文字文件"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:57
 msgid "LibreOffice spread sheet"
@@ -326,11 +326,11 @@ msgstr "LibreOffice 試算表"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:59
 msgid "LibreOffice presentation"
-msgstr "LibreOffice演示"
+msgstr "LibreOffice 簡報"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:61
 msgid "LibreOffice Draw document"
-msgstr "LibreOffice Draw文件"
+msgstr "LibreOffice Draw 文件"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:63
 msgid "Unknown LibreOffice document"
@@ -362,7 +362,7 @@ msgstr "到位置"
 
 #: ../src/app/qml/loView/LOViewGotoDialog.qml:31
 msgid "Choose a position between 1% and 100%"
-msgstr "選擇介於1％和100％之間的位置"
+msgstr "選擇介於 1% 和 100% 之間的位置"
 
 #: ../src/app/qml/loView/LOViewGotoDialog.qml:62
 #: ../src/app/qml/pdfView/PdfViewGotoDialog.qml:58
@@ -371,11 +371,11 @@ msgstr "出發！"
 
 #: ../src/app/qml/loView/LOViewPage.qml:167
 msgid "LibreOffice binaries not found."
-msgstr "未找到LibreOffice二進位文件。"
+msgstr "未找到 LibreOffice 二進位文件。"
 
 #: ../src/app/qml/loView/LOViewPage.qml:170
 msgid "Error while loading LibreOffice."
-msgstr "載入LibreOffice時出錯。"
+msgstr "載入 LibreOffice 時出錯。"
 
 #: ../src/app/qml/loView/LOViewPage.qml:173
 msgid ""
@@ -394,14 +394,14 @@ msgstr "此頁面沒有內容。"
 #. Ref. https://docs.libreoffice.org/libreofficekit.html
 #: ../src/app/qml/loView/Splashscreen.qml:45
 msgid "Powered by LibreOfficeKit"
-msgstr "由LibreOfficeKit提供"
+msgstr "由 LibreOfficeKit 提供"
 
 #. TRANSLATORS: Please don't add any space between "Sheet" and "%1".
 #. This is the default name for a sheet in LibreOffice.
 #: ../src/app/qml/loView/SpreadsheetSelector.qml:64
 #, qt-format
 msgid "Sheet%1"
-msgstr "工作表%1"
+msgstr "工作表 %1"
 
 #: ../src/app/qml/loView/ZoomSelector.qml:122
 msgid "Fit width"
@@ -466,7 +466,7 @@ msgstr "檔案並不存在。"
 #: ../src/plugin/file-qml-plugin/docviewerutils.cpp:111
 #, qt-format
 msgid "copy %1"
-msgstr "複製％1"
+msgstr "複製 %1"
 
 #: /tmp/lok-qml-async-imageprovider-build/po/com.ubuntu.docviewer.desktop.in.in.h:1
 msgid "Document Viewer"
