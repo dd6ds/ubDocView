@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-05 23:40+0100\n"
-"PO-Revision-Date: 2018-11-04 00:02+0000\n"
-"Last-Translator: ierihon <idekovets@mail.ru>\n"
+"PO-Revision-Date: 2019-07-05 08:13+0000\n"
+"Last-Translator: Moshe Lazar <wersewikkov@gmail.com>\n"
 "Language-Team: Russian <https://translate.ubports.com/projects/ubports/"
 "docviewer-app/ru/>\n"
 "Language: ru\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
 "4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:49+0000\n"
 
 #: ../src/app/qml/common/CommandLineProxy.qml:49
@@ -178,9 +178,9 @@ msgstr[2] "Удалить %1 файлов"
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:42
 msgid "Are you sure you want to permanently delete this file?"
 msgid_plural "Are you sure you want to permanently delete these files?"
-msgstr[0] "Удалить этот файл окончательно?"
-msgstr[1] "Удалить эти файлы окончательно?"
-msgstr[2] "Удалить эти файлы окончательно?"
+msgstr[0] "Вы уверены, что хотите удалить этот файл окончательно?"
+msgstr[1] "Вы уверены, что хотите удалить эти файлы окончательно?"
+msgstr[2] "Вы уверены, что хотите удалить эти файлы окончательно?"
 
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:61
 #: ../src/app/qml/documentPage/DocumentDelegateActions.qml:25
