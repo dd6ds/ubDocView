@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-05 23:40+0100\n"
-"PO-Revision-Date: 2019-05-03 21:02+0000\n"
+"PO-Revision-Date: 2019-08-05 22:49+0000\n"
 "Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
 "Language-Team: Catalan <https://translate.ubports.com/projects/ubports/"
 "docviewer-app/ca/>\n"
@@ -58,7 +58,7 @@ msgstr "Fitxer"
 
 #: ../src/app/qml/common/DetailsPage.qml:47
 msgid "Location"
-msgstr "Ubicació"
+msgstr "Posició"
 
 #: ../src/app/qml/common/DetailsPage.qml:52
 msgid "Size"
