@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-20 18:49+0000\n"
-"PO-Revision-Date: 2019-08-02 15:49+0000\n"
+"PO-Revision-Date: 2019-08-11 17:49+0000\n"
 "Last-Translator: Moo <moose@mail.ru>\n"
 "Language-Team: Lithuanian <https://translate.ubports.com/projects/ubports/"
 "docviewer-app/lt/>\n"
@@ -254,11 +254,11 @@ msgstr ""
 
 #: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:46
 msgid "Select None"
-msgstr ""
+msgstr "Nieko nežymėti"
 
 #: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:46
 msgid "Select All"
-msgstr ""
+msgstr "Žymėti viską"
 
 #: ../src/app/qml/documentPage/SearchEmptyState.qml:24
 msgid "No matching document found"
