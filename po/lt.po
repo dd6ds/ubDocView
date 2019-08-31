@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-20 18:49+0000\n"
-"PO-Revision-Date: 2019-08-11 17:49+0000\n"
+"PO-Revision-Date: 2019-09-01 16:50+0000\n"
 "Last-Translator: Moo <moose@mail.ru>\n"
 "Language-Team: Lithuanian <https://translate.ubports.com/projects/ubports/"
 "docviewer-app/lt/>\n"
@@ -303,7 +303,7 @@ msgstr ""
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:32
 msgid "Sort by name (A-Z)"
-msgstr ""
+msgstr "Rikiuoti pagal pavadinimą (A-Ž)"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:33
 msgid "Sort by size (Smaller first)"
@@ -311,7 +311,7 @@ msgstr ""
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:47
 msgid "Reverse order"
-msgstr ""
+msgstr "Atvirkštinė tvarka"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:41
 #: ../src/app/qml/textView/TextView.qml:49
@@ -320,7 +320,7 @@ msgstr "Įkeliama..."
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:45
 msgid "LibreOffice text document"
-msgstr ""
+msgstr "LibreOffice tekstinis dokumentas"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:47
 msgid "LibreOffice spread sheet"
@@ -336,11 +336,11 @@ msgstr ""
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:53
 msgid "Unknown LibreOffice document"
-msgstr ""
+msgstr "Nežinomas LibreOffice dokumentas"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:55
 msgid "Unknown document type"
-msgstr ""
+msgstr "Nežinomas dokumento tipas"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:72
 msgid "Go to position…"
@@ -377,13 +377,15 @@ msgstr ""
 
 #: ../src/app/qml/loView/LOViewPage.qml:176
 msgid "Error while loading LibreOffice."
-msgstr ""
+msgstr "Klaida įkeliant LibreOffice."
 
 #: ../src/app/qml/loView/LOViewPage.qml:179
 msgid ""
 "Document not loaded.\n"
 "The requested document may be corrupt or protected by a password."
 msgstr ""
+"Dokumentas neįkeltas.\n"
+"Užklaustas dokumentas gali būti pažeistas arba apsaugotas slaptažodžiu."
 
 #: ../src/app/qml/loView/LOViewPage.qml:231
 msgid "This sheet has no content."
@@ -394,7 +396,7 @@ msgstr ""
 #. Ref. https://docs.libreoffice.org/libreofficekit.html
 #: ../src/app/qml/loView/Splashscreen.qml:45
 msgid "Powered by LibreOfficeKit"
-msgstr ""
+msgstr "Veikia su LibreOfficeKit"
 
 #. TRANSLATORS: Please don't add any space between "Sheet" and "%1".
 #. This is the default name for a sheet in LibreOffice.
@@ -419,7 +421,7 @@ msgstr ""
 #: ../src/app/qml/pdfView/PdfContentsPage.qml:31
 #: ../src/app/qml/pdfView/PdfView.qml:157
 msgid "Contents"
-msgstr ""
+msgstr "Turinys"
 
 #. TRANSLATORS: the first argument (%1) refers to the page currently shown on the screen,
 #. while the second one (%2) refers to the total pages count.
@@ -427,7 +429,7 @@ msgstr ""
 #: ../src/app/qml/pdfView/PdfView.qml:56
 #, qt-format
 msgid "Page %1 of %2"
-msgstr ""
+msgstr "Puslapis %1 iš %2"
 
 #: ../src/app/qml/pdfView/PdfView.qml:212
 msgid "Go to page..."
@@ -448,7 +450,7 @@ msgstr ""
 
 #: ../src/app/qml/ubuntu-docviewer-app.qml:134
 msgid "File does not exist."
-msgstr ""
+msgstr "Failo nėra."
 
 #. TRANSLATORS: This string is used for renaming a copied file,
 #. when a file with the same name already exists in user's
@@ -466,7 +468,7 @@ msgstr ""
 
 #: /home/florian/UT-Apps/docviewer-app/build/po/com.ubuntu.docviewer.desktop.in.in.h:1
 msgid "Document Viewer"
-msgstr ""
+msgstr "Dokumentų žiūryklė"
 
 #: /home/florian/UT-Apps/docviewer-app/build/po/com.ubuntu.docviewer.desktop.in.in.h:2
 msgid "documents;viewer;pdf;reader;"
