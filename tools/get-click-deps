@@ -25,14 +25,14 @@
 # package.
 #
 # usage: get-click-deps [-h] [-f] [-d] [-e] [-c SCRIPT_PATH]
-#                       manifest_path {amd64,i386,armhf} target_path
+#                       manifest_path {amd64,i386,armhf,arm64} target_path
 #
 # A tool for adding external libraries to a Ubuntu SDK application or scope.
 #
 # positional arguments:
 #   manifest_path         path of json file containing the list of packages to
 #                         be downloaded.
-#   {amd64,i386,armhf}    CPU architecture ("amd64", "i386" or "armhf")
+#   {amd64,i386,armhf,arm64}    CPU architecture ("amd64", "i386", "armhf", "arm64)
 #   target_path           path to the target (a click package or a folder)
 #                         where this tool will include the downloaded binaries.
 #                         If the folder does not exist, it will be created.
@@ -331,8 +331,8 @@ parser.add_argument(
 parser.add_argument(
     'arch',
     type=str,
-    choices=['amd64', 'i386', 'armhf'],
-    help='CPU architecture ("amd64", "i386" or "armhf")')
+    choices=['amd64', 'i386', 'armhf', 'arm64'],
+    help='CPU architecture ("amd64", "i386", "armhf", "arm64")')
 
 parser.add_argument(
     'target_path',
