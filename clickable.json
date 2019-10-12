@@ -1,6 +1,6 @@
 {
   "template": "cmake",
-  "prebuild": "./get_deps.sh",
+  "prebuild": "./get_deps.sh $ARCH_TRIPLET",
   "dependencies_build": [
     "curl"
   ],
