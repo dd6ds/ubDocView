@@ -42,6 +42,49 @@
             ]
         }
     ],
+        "arm64": [
+        {
+            "url": "http://ports.ubuntu.com/ubuntu-ports",
+            "dist": "xenial",
+            "component": "main",
+            "packages" : [
+                "libglew1.13",
+                "libcmis-0.5-5v5",
+                "libclucene-core1v5",
+                "libclucene-contribs1v5",
+                "libeot0",
+                "libharfbuzz-icu0",
+                "liblangtag-common",
+                "liblangtag1",
+                "librdf0",
+                "libhyphen0",
+                "librevenge-0.0-0",
+                "libexttextcat-2.0-0",
+                "libexttextcat-data",
+                "libmythes-1.2-0",
+                "libboost-date-time1.58.0",
+                "libraptor2-0",
+                "librasqal3"
+            ]
+        },
+
+        {
+            "url": "http://ppa.launchpad.net/libreoffice/libreoffice-5-4/ubuntu/",
+            "dist": "xenial",
+            "component": "main",
+            "packages" : [
+                "libreoffice-core",
+                "libreoffice-common",
+                "libreoffice-java-common",
+                "libreoffice-writer",
+                "libreoffice-draw",
+                "libreoffice-calc",
+                "libreoffice-impress",
+                "uno-libs3",
+                "ure"
+            ]
+        }
+    ],
 
     "amd64": [
         {
