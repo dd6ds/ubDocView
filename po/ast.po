@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-05 23:40+0100\n"
-"PO-Revision-Date: 2016-12-16 01:56+0000\n"
+"PO-Revision-Date: 2019-10-28 16:36+0000\n"
 "Last-Translator: enolp <enolp@softastur.org>\n"
-"Language-Team: Asturian <ast@li.org>\n"
+"Language-Team: Asturian <https://translate.ubports.com/projects/ubports/"
+"docviewer-app/ast/>\n"
 "Language: ast\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.8\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:48+0000\n"
-"X-Generator: Launchpad (build 18335)\n"
 
 #: ../src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -177,7 +178,7 @@ msgstr "Desaniciar"
 
 #: ../src/app/qml/documentPage/DocumentDelegateActions.qml:44
 msgid "Share"
-msgstr "Compartir"
+msgstr ""
 
 #: ../src/app/qml/documentPage/DocumentEmptyState.qml:27
 msgid "No documents found"
@@ -225,7 +226,7 @@ msgstr "Documentos"
 
 #: ../src/app/qml/documentPage/DocumentPageDefaultHeader.qml:29
 msgid "Search..."
-msgstr "Guetar..."
+msgstr "Guetar…"
 
 #: ../src/app/qml/documentPage/DocumentPageDefaultHeader.qml:36
 msgid "Sorting settings..."
@@ -253,7 +254,7 @@ msgstr "guetar en documentos..."
 
 #: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:40
 msgid "Select None"
-msgstr "Nun esbillar nada"
+msgstr ""
 
 #: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:40
 msgid "Select All"
@@ -276,7 +277,7 @@ msgstr "Güei"
 
 #: ../src/app/qml/documentPage/SectionHeader.qml:16
 msgid "Yesterday"
-msgstr "Ayeri"
+msgstr ""
 
 #: ../src/app/qml/documentPage/SectionHeader.qml:19
 msgid "Earlier this week"
@@ -317,7 +318,7 @@ msgstr "Orde inversu"
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:51
 #: ../src/app/qml/textView/TextView.qml:43
 msgid "Loading..."
-msgstr "Cargando..."
+msgstr "Cargando…"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:55
 msgid "LibreOffice text document"
