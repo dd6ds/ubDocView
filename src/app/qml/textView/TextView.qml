@@ -48,6 +48,7 @@ Page {
 
         text: i18n.tr("Loading...")
         font.family: "UbuntuMono"
+        color: theme.palette.normal.backgroundText
 
         Component.onCompleted: {
             var xhr = new XMLHttpRequest;
@@ -62,9 +63,10 @@ Page {
 
             xhr.send();
         }
-
+/*
         style: TextAreaStyle {
             background: Rectangle { color: "white" }
         }
+*/
     }
 }
