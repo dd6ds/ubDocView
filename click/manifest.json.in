@@ -13,7 +13,7 @@
             "urls": "com.ubuntu.docviewer.url-dispatcher"
         }
     },
-    "version": "2.2.@GIT_REVNO@",
+    "version": "2.3.@GIT_REVNO@",
     "maintainer": "UBports <dev@ubports.com>",
     "x-test": {
         "autopilot": "@AUTOPILOT_DIR@"

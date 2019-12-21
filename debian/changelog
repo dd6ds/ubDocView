@@ -1,3 +1,12 @@
+ubuntu-docviewer-app (2.3) xenial; urgency=medium
+
+  * Fix #40 "Plain Text file: No Visible Text When Using System Suru Dark Theme" 
+  * add splash screen
+  * first release that includes arm64
+  * updated translations, thank you translators !
+
+ -- Chris Clime <chris.clime@gmx.net>  Sat, 21 Dec 2019 12:22:22 +0100
+ 
 ubuntu-docviewer-app (2.2) xenial; urgency=medium
 
   * Import to UBports CI
