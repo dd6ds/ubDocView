@@ -18,7 +18,7 @@ publish-arm64:
     - tags
   script:
     - clickable clean build click-build --arch arm64
-    - clickable publish "$CI_COMMIT_MESSAGE"
+    - clickable publish
   artifacts:
     paths:
       - build/aarch64-linux-gnu/app/*.click
@@ -31,7 +31,7 @@ publish-amd64:
     - tags
   script:
     - clickable clean build click-build --arch amd64
-    - clickable publish "$CI_COMMIT_MESSAGE"
+    - clickable publish
   artifacts:
     paths:
       - build/x86_64-linux-gnu/app/*.click
