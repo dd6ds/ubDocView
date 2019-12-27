@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-20 18:49+0000\n"
-"PO-Revision-Date: 2019-09-01 16:50+0000\n"
+"PO-Revision-Date: 2020-01-19 01:00+0000\n"
 "Last-Translator: Moo <moose@mail.ru>\n"
 "Language-Team: Lithuanian <https://translate.ubports.com/projects/ubports/"
 "docviewer-app/lt/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
 "19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
 "1 : 2);\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.8\n"
 
 #: ../src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -180,9 +180,9 @@ msgstr[2] "Ištrinti %1 failų"
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:42
 msgid "Are you sure you want to permanently delete this file?"
 msgid_plural "Are you sure you want to permanently delete these files?"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Ar tikrai norite negrįžtamai ištrinti šį failą?"
+msgstr[1] "Ar tikrai norite negrįžtamai ištrinti šiuos failus?"
+msgstr[2] "Ar tikrai norite negrįžtamai ištrinti šiuos failus?"
 
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:61
 #: ../src/app/qml/documentPage/DocumentDelegateActions.qml:25
@@ -295,7 +295,7 @@ msgstr ""
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:26
 msgid "Sorting settings"
-msgstr ""
+msgstr "Rikiavimo nustatymai"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:31
 msgid "Sort by date (Latest first)"
@@ -407,11 +407,11 @@ msgstr ""
 
 #: ../src/app/qml/loView/ZoomSelector.qml:122
 msgid "Fit width"
-msgstr ""
+msgstr "Talpinti į plotį"
 
 #: ../src/app/qml/loView/ZoomSelector.qml:123
 msgid "Fit height"
-msgstr ""
+msgstr "Talpinti į aukštį"
 
 #: ../src/app/qml/loView/ZoomSelector.qml:124
 msgid "Automatic"
@@ -464,7 +464,7 @@ msgstr "Failo nėra."
 #: ../src/plugin/file-qml-plugin/docviewerutils.cpp:119
 #, qt-format
 msgid "copy %1"
-msgstr ""
+msgstr "kopija %1"
 
 #: /home/florian/UT-Apps/docviewer-app/build/po/com.ubuntu.docviewer.desktop.in.in.h:1
 msgid "Document Viewer"
@@ -472,4 +472,4 @@ msgstr "Dokumentų žiūryklė"
 
 #: /home/florian/UT-Apps/docviewer-app/build/po/com.ubuntu.docviewer.desktop.in.in.h:2
 msgid "documents;viewer;pdf;reader;"
-msgstr ""
+msgstr "dokumentai;žiūryklė;ziurykle;pdf;skaitytuvė;skaitytuve;"
