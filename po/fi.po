@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-05 23:40+0100\n"
-"PO-Revision-Date: 2019-10-05 16:53+0000\n"
+"PO-Revision-Date: 2020-01-15 06:36+0000\n"
 "Last-Translator: Sami Törmänen <tormanen.sami@gmail.com>\n"
 "Language-Team: Finnish <https://translate.ubports.com/projects/ubports/"
 "docviewer-app/fi/>\n"
@@ -124,7 +124,7 @@ msgstr ""
 #: ../src/app/qml/pdfView/PdfView.qml:180
 #: ../src/app/qml/pdfView/PdfViewGotoDialog.qml:51
 msgid "Cancel"
-msgstr "Peruuta"
+msgstr "Keskeytä"
 
 #: ../src/app/qml/common/UnknownTypeDialog.qml:44
 msgid "Yes"
