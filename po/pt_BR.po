@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-05 23:40+0100\n"
-"PO-Revision-Date: 2019-04-25 19:14+0000\n"
-"Last-Translator: Vinícius F <magnetuz@protonmail.com>\n"
+"PO-Revision-Date: 2020-02-11 14:21+0000\n"
+"Last-Translator: Rodrigo Benedito <rodrigojob@yahoo.com.br>\n"
 "Language-Team: Portuguese (Brazil) <https://translate.ubports.com/projects/"
 "ubports/docviewer-app/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.2.2\n"
+"X-Generator: Weblate 3.8\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:49+0000\n"
 
 #: ../src/app/qml/common/CommandLineProxy.qml:49
@@ -259,7 +259,7 @@ msgstr "pesquisar em documentos…"
 
 #: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:40
 msgid "Select None"
-msgstr "Selecionar nenhum"
+msgstr "Não selecionar"
 
 #: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:40
 msgid "Select All"
