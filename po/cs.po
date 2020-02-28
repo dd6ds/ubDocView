@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-05 23:40+0100\n"
-"PO-Revision-Date: 2019-03-17 00:00+0000\n"
-"Last-Translator: Milan Korecký <milan.korecky@gmail.com>\n"
+"PO-Revision-Date: 2020-03-01 10:22+0000\n"
+"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://translate.ubports.com/projects/ubports/"
 "docviewer-app/cs/>\n"
 "Language: cs\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.8\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:48+0000\n"
 
 #: ../src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
-msgstr "Některé z uvedených argumentů jsou neplatné."
+msgstr "Některé ze zadaných argumentů nejsou platné."
 
 #: ../src/app/qml/common/CommandLineProxy.qml:58
 msgid "Open ubuntu-docviewer-app displaying the selected file"
@@ -42,15 +42,15 @@ msgid ""
 "Show documents from the given folder, instead of ~/Documents.\n"
 "The path must exist prior to running ubuntu-docviewer-app"
 msgstr ""
-"Zobrazit dokumenty z uvedené složky místo  ~/Dokumenty.\n"
-"Cesta musí existovat před spuštěním ubuntu-docviewer-app"
+"Zobrazit dokumenty z uvedené složky namísto  ~/Dokumenty.\n"
+"Je třeba, aby popis umístění už před spuštěním ubuntu-docviewer-app existoval"
 
 #: ../src/app/qml/common/DetailsPage.qml:26
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:107
 #: ../src/app/qml/pdfView/PdfView.qml:235
 #: ../src/app/qml/textView/TextViewDefaultHeader.qml:69
 msgid "Details"
-msgstr "Detaily"
+msgstr "Podrobnosti"
 
 #: ../src/app/qml/common/DetailsPage.qml:42
 msgid "File"
@@ -58,7 +58,7 @@ msgstr "Soubor"
 
 #: ../src/app/qml/common/DetailsPage.qml:47
 msgid "Location"
-msgstr "Poloha"
+msgstr "Umístění"
 
 #: ../src/app/qml/common/DetailsPage.qml:52
 msgid "Size"
@@ -100,14 +100,14 @@ msgstr "Vyberte, který se má otevřít:"
 msgid "File not supported"
 msgid_plural "Files not supported"
 msgstr[0] "Nepodporovaný soubor"
-msgstr[1] "Nepodporované soubory"
+msgstr[1] "Nepodporovaných souborů"
 msgstr[2] "Nepodporované soubory"
 
 #: ../src/app/qml/common/RejectedImportDialog.qml:29
 msgid "Following document has not been imported:"
 msgid_plural "Following documents have not been imported:"
 msgstr[0] "Následující dokument nebyl importován:"
-msgstr[1] "Následující dokumenty nebyly importovány:"
+msgstr[1] "Následujících dokumentů nebylo importováno:"
 msgstr[2] "Následující dokumenty nebyly importovány:"
 
 #: ../src/app/qml/common/UnknownTypeDialog.qml:27
@@ -119,8 +119,8 @@ msgid ""
 "This file is not supported.\n"
 "Do you want to open it as a plain text?"
 msgstr ""
-"Tento soubor není podporovaný. \n"
-"Chcete otevřít jako obyčejný text?"
+"Tento soubor není podporován. \n"
+"Chcete ho otevřít jako obyčejný text?"
 
 #: ../src/app/qml/common/UnknownTypeDialog.qml:38
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:55
@@ -129,7 +129,7 @@ msgstr ""
 #: ../src/app/qml/pdfView/PdfView.qml:180
 #: ../src/app/qml/pdfView/PdfViewGotoDialog.qml:51
 msgid "Cancel"
-msgstr "Zrušit"
+msgstr "Storno"
 
 #: ../src/app/qml/common/UnknownTypeDialog.qml:44
 msgid "Yes"
@@ -151,7 +151,7 @@ msgstr "%1 MB"
 #: ../src/app/qml/common/utils.js:30
 #, qt-format
 msgid "%1 kB"
-msgstr "%1 kB"
+msgstr "%1 KB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in byte
 #: ../src/app/qml/common/utils.js:33
@@ -168,8 +168,8 @@ msgstr "Smazat soubor"
 msgid "Delete %1 file"
 msgid_plural "Delete %1 files"
 msgstr[0] "Smazat %1 soubor"
-msgstr[1] "Smazat %1 soubory"
-msgstr[2] "Smazat %1 souborů"
+msgstr[1] "Smazat %1 souborů"
+msgstr[2] "Smazat %1 soubory"
 
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:41
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:42
@@ -191,7 +191,7 @@ msgstr "Sdílet"
 
 #: ../src/app/qml/documentPage/DocumentEmptyState.qml:27
 msgid "No documents found"
-msgstr "Žádné dokumenty nenalezeny"
+msgstr "Nenalezeny žádné dokumenty"
 
 #: ../src/app/qml/documentPage/DocumentEmptyState.qml:28
 msgid ""
