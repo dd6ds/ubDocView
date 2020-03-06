@@ -1,6 +1,5 @@
 /*
   Copyright (C) 2013-2016 Stefano Verzegnassi
-  Copyright (C) 2020 UBports
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License 3 as published by
@@ -37,11 +36,11 @@ Dialog {
     // See src/app/qml/documentPage/DocumentDelegateActions.qml
     property bool confirmed: false
 
-    title: path ? i18n.tr("Remove file from list")
-                : i18n.tr("Remove %1 list entry", "Remove %1 list entries", deleteCount).arg(deleteCount)
-    text: path ? i18n.tr("Are you sure you want to remove the list entry for this file?")
-               : i18n.tr("Are you sure you want to remove the list entry for this file?",
-                         "Are you sure you want to remove the list entries for these files?",
+    title: path ? i18n.tr("Delete file")
+                : i18n.tr("Delete %1 file", "Delete %1 files", deleteCount).arg(deleteCount)
+    text: path ? i18n.tr("Are you sure you want to permanently delete this file?")
+               : i18n.tr("Are you sure you want to permanently delete this file?",
+                         "Are you sure you want to permanently delete these files?",
                          deleteCount)
 
 
@@ -59,7 +58,7 @@ Dialog {
         }
 
         Button {
-            text: i18n.tr("Remove")
+            text: i18n.tr("Delete")
             color: UbuntuColors.red
             Layout.fillWidth: true
 
@@ -82,3 +81,4 @@ Dialog {
         }
     }
 }
+

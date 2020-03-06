@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-06 20:48+0000\n"
+"POT-Creation-Date: 2018-08-20 18:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -120,7 +120,7 @@ msgid ""
 msgstr ""
 
 #: ../src/app/qml/common/UnknownTypeDialog.qml:38
-#: ../src/app/qml/documentPage/DeleteFileDialog.qml:56
+#: ../src/app/qml/documentPage/DeleteFileDialog.qml:55
 #: ../src/app/qml/documentPage/DocumentPagePickModeHeader.qml:34
 #: ../src/app/qml/documentPage/DocumentPageSearchHeader.qml:33
 #: ../src/app/qml/loView/LOViewGotoDialog.qml:55
@@ -157,29 +157,25 @@ msgstr ""
 msgid "%1 byte"
 msgstr ""
 
-#: ../src/app/qml/documentPage/DeleteFileDialog.qml:40
-msgid "Remove file from list"
+#: ../src/app/qml/documentPage/DeleteFileDialog.qml:39
+msgid "Delete file"
 msgstr ""
+
+#: ../src/app/qml/documentPage/DeleteFileDialog.qml:40
+#, qt-format
+msgid "Delete %1 file"
+msgid_plural "Delete %1 files"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:41
-#, qt-format
-msgid "Remove %1 list entry"
-msgid_plural "Remove %1 list entries"
-msgstr[0] ""
-msgstr[1] ""
-
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:42
-#: ../src/app/qml/documentPage/DeleteFileDialog.qml:43
-msgid "Are you sure you want to remove the list entry for this file?"
-msgid_plural ""
-"Are you sure you want to remove the list entries for these files?"
+msgid "Are you sure you want to permanently delete this file?"
+msgid_plural "Are you sure you want to permanently delete these files?"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/app/qml/documentPage/DeleteFileDialog.qml:62
-msgid "Remove"
-msgstr ""
-
+#: ../src/app/qml/documentPage/DeleteFileDialog.qml:61
 #: ../src/app/qml/documentPage/DocumentDelegateActions.qml:25
 #: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:58
 msgid "Delete"
@@ -231,6 +227,7 @@ msgid "dddd, hh:mm"
 msgstr ""
 
 #: ../src/app/qml/documentPage/DocumentPageDefaultHeader.qml:27
+#: /home/florian/UT-Apps/docviewer-app/build/po/com.ubuntu.docviewer.desktop.in.in.h:3
 msgid "Documents"
 msgstr ""
 
@@ -458,10 +455,10 @@ msgstr ""
 msgid "copy %1"
 msgstr ""
 
-#: /media/ubuntu/Daten/Forks/docviewer-app/build/arm-linux-gnueabihf/app/po/com.ubuntu.docviewer.desktop.in.in.h:1
+#: /home/florian/UT-Apps/docviewer-app/build/po/com.ubuntu.docviewer.desktop.in.in.h:1
 msgid "Document Viewer"
 msgstr ""
 
-#: /media/ubuntu/Daten/Forks/docviewer-app/build/arm-linux-gnueabihf/app/po/com.ubuntu.docviewer.desktop.in.in.h:2
+#: /home/florian/UT-Apps/docviewer-app/build/po/com.ubuntu.docviewer.desktop.in.in.h:2
 msgid "documents;viewer;pdf;reader;"
 msgstr ""
