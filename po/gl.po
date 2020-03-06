@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-05 23:40+0100\n"
-"PO-Revision-Date: 2019-11-22 08:36+0000\n"
-"Last-Translator: Alberto <a14albertomt@iessanclemente.net>\n"
+"PO-Revision-Date: 2020-03-06 09:07+0000\n"
+"Last-Translator: Neutrum N <neutro@tutanota.com>\n"
 "Language-Team: Galician <https://translate.ubports.com/projects/ubports/"
 "docviewer-app/gl/>\n"
 "Language: gl\n"
@@ -22,11 +22,11 @@ msgstr ""
 
 #: ../src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
-msgstr "Algúns argumentos non son correctos."
+msgstr "Algúns dos argumentos achegados non son válidos."
 
 #: ../src/app/qml/common/CommandLineProxy.qml:58
 msgid "Open ubuntu-docviewer-app displaying the selected file"
-msgstr "Abrir Docviewer mostrando o ficheiro seleccionado"
+msgstr "Abrir ubuntu-docviewer-app mostrando o ficheiro seleccionado"
 
 #: ../src/app/qml/common/CommandLineProxy.qml:65
 msgid "Run fullscreen"
@@ -34,7 +34,7 @@ msgstr "En pantalla completa"
 
 #: ../src/app/qml/common/CommandLineProxy.qml:71
 msgid "Open ubuntu-docviewer-app in pick mode. Used for tests only."
-msgstr "Abrir Docviewer en modo selección. Só para probas."
+msgstr "Abrir ubuntu-docviewer-app en modo selección. Só pra probas."
 
 #: ../src/app/qml/common/CommandLineProxy.qml:77
 msgid ""
@@ -42,14 +42,14 @@ msgid ""
 "The path must exist prior to running ubuntu-docviewer-app"
 msgstr ""
 "Mostrar os documentos do cartafol indicado, no canto de ~/Documents.\n"
-"A ruta debe existir antes de executar o visualizador de documentos"
+"A ruta debe existir antes de executar ubuntu-docviewer-app"
 
 #: ../src/app/qml/common/DetailsPage.qml:26
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:107
 #: ../src/app/qml/pdfView/PdfView.qml:235
 #: ../src/app/qml/textView/TextViewDefaultHeader.qml:69
 msgid "Details"
-msgstr "Información"
+msgstr "Detalles"
 
 #: ../src/app/qml/common/DetailsPage.qml:42
 msgid "File"
@@ -60,9 +60,8 @@ msgid "Location"
 msgstr "Localización"
 
 #: ../src/app/qml/common/DetailsPage.qml:52
-#, fuzzy
 msgid "Size"
-msgstr "Tamaño:"
+msgstr "Tamaño"
 
 #: ../src/app/qml/common/DetailsPage.qml:57
 msgid "Created"
@@ -118,7 +117,7 @@ msgid ""
 "Do you want to open it as a plain text?"
 msgstr ""
 "Este ficheiro non é compatíbel.\n"
-"Desexa abrilo como texto plano?"
+"Quere abrilo como texto plano?"
 
 #: ../src/app/qml/common/UnknownTypeDialog.qml:38
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:55
@@ -235,7 +234,7 @@ msgstr "Buscar…"
 
 #: ../src/app/qml/documentPage/DocumentPageDefaultHeader.qml:36
 msgid "Sorting settings..."
-msgstr "Axustes de ordenación..."
+msgstr "Axustes de ordenamento..."
 
 #: ../src/app/qml/documentPage/DocumentPagePickModeHeader.qml:41
 msgid "Switch to single column list"
@@ -255,11 +254,11 @@ msgstr "Volver"
 
 #: ../src/app/qml/documentPage/DocumentPageSearchHeader.qml:47
 msgid "search in documents..."
-msgstr "buscar documentos..."
+msgstr "buscar en documentos..."
 
 #: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:40
 msgid "Select None"
-msgstr "Nada Seleccionado"
+msgstr "Seleccionar nada"
 
 #: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:40
 msgid "Select All"
@@ -306,7 +305,7 @@ msgstr "Axustes de ordenamento"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:31
 msgid "Sort by date (Latest first)"
-msgstr "Pola data (últimos primeiro)"
+msgstr "Pola data (máis recentes primeiro)"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:32
 msgid "Sort by name (A-Z)"
@@ -343,11 +342,11 @@ msgstr "Documento de LibreOffice Draw"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:63
 msgid "Unknown LibreOffice document"
-msgstr "Documento de LibreOffice descoñecido"
+msgstr "Documento descoñecido de LibreOffice"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:65
 msgid "Unknown type document"
-msgstr "Tipo de documento descoñecido"
+msgstr "Documento de tipo descoñecido"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:85
 msgid "Go to position..."
@@ -357,13 +356,13 @@ msgstr "Ir á posición..."
 #: ../src/app/qml/pdfView/PdfView.qml:228
 #: ../src/app/qml/textView/TextViewDefaultHeader.qml:63
 msgid "Disable night mode"
-msgstr "Desact. modo noite"
+msgstr "Desactivar o modo noite"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:100
 #: ../src/app/qml/pdfView/PdfView.qml:228
 #: ../src/app/qml/textView/TextViewDefaultHeader.qml:63
 msgid "Enable night mode"
-msgstr "Activar modo noite"
+msgstr "Activar o modo noite"
 
 #: ../src/app/qml/loView/LOViewGotoDialog.qml:30
 msgid "Go to position"
@@ -418,7 +417,7 @@ msgstr "Axustar á largura"
 
 #: ../src/app/qml/loView/ZoomSelector.qml:123
 msgid "Fit height"
-msgstr "Axustar altura"
+msgstr "Axustar á altura"
 
 #: ../src/app/qml/loView/ZoomSelector.qml:124
 msgid "Automatic"
