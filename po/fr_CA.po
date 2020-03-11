@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-05 23:40+0100\n"
-"PO-Revision-Date: 2020-02-28 05:21+0000\n"
+"PO-Revision-Date: 2020-03-12 05:22+0000\n"
 "Last-Translator: Ryan Argente <rargente@lonerider.one>\n"
 "Language-Team: French (Canada) <https://translate.ubports.com/projects/"
 "ubports/docviewer-app/fr_CA/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
-msgstr "Certains arguments fournis ne sont pas valides"
+msgstr "Certains des arguments fournis ne sont pas valides."
 
 #: ../src/app/qml/common/CommandLineProxy.qml:58
 msgid "Open ubuntu-docviewer-app displaying the selected file"
