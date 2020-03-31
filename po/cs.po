@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-05 23:40+0100\n"
-"PO-Revision-Date: 2020-03-03 14:22+0000\n"
+"PO-Revision-Date: 2020-04-01 12:22+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://translate.ubports.com/projects/ubports/"
 "docviewer-app/cs/>\n"
@@ -26,7 +26,7 @@ msgstr "Některé ze zadaných argumentů nejsou platné."
 
 #: ../src/app/qml/common/CommandLineProxy.qml:58
 msgid "Open ubuntu-docviewer-app displaying the selected file"
-msgstr "Otevřít ubuntu-docviewer-app pro zobrazení vybraného souboru"
+msgstr "Otevřít ubuntu-docviewer-app a zobrazit v něm vybraný soubor"
 
 #: ../src/app/qml/common/CommandLineProxy.qml:65
 msgid "Run fullscreen"
@@ -42,8 +42,9 @@ msgid ""
 "Show documents from the given folder, instead of ~/Documents.\n"
 "The path must exist prior to running ubuntu-docviewer-app"
 msgstr ""
-"Zobrazit dokumenty z uvedené složky namísto  ~/Dokumenty.\n"
-"Je třeba, aby popis umístění už před spuštěním ubuntu-docviewer-app existoval"
+"Zobrazit dokumenty z dané složky namísto  ~/Dokumenty.\n"
+"Je třeba, aby popis umístění existuoval už před spuštěním ubuntu-docviewer-"
+"app"
 
 #: ../src/app/qml/common/DetailsPage.qml:26
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:107
@@ -157,7 +158,7 @@ msgstr "%1 KB"
 #: ../src/app/qml/common/utils.js:33
 #, qt-format
 msgid "%1 byte"
-msgstr "%1 bytů"
+msgstr "%1 bajtů"
 
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:39
 msgid "Delete file"
@@ -239,7 +240,7 @@ msgstr "Hledat…"
 
 #: ../src/app/qml/documentPage/DocumentPageDefaultHeader.qml:36
 msgid "Sorting settings..."
-msgstr "Nastavení třídění…"
+msgstr "Nastavení řazení…"
 
 #: ../src/app/qml/documentPage/DocumentPagePickModeHeader.qml:41
 msgid "Switch to single column list"
@@ -271,12 +272,12 @@ msgstr "Vybrat vše"
 
 #: ../src/app/qml/documentPage/SearchEmptyState.qml:24
 msgid "No matching document found"
-msgstr "Žádné dokumenty nenalezeny"
+msgstr "Nenalezeny žádné dokumenty"
 
 #: ../src/app/qml/documentPage/SearchEmptyState.qml:26
 msgid ""
 "Please ensure that your query is not misspelled and/or try a different query."
-msgstr "Ujistěte se, že váš dotaz je správně zapsaný anebo zkuste jiný."
+msgstr "Ověřte, že váš dotaz je správně zapsaný anebo zkuste jiný."
 
 #: ../src/app/qml/documentPage/SectionHeader.qml:13
 msgid "Today"
@@ -304,11 +305,11 @@ msgstr "Sdílet s"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:26
 msgid "Sorting settings"
-msgstr "Nastavení třídění"
+msgstr "Nastavení řazení"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:31
 msgid "Sort by date (Latest first)"
-msgstr "Třídit dle data (poslední nejdříve)"
+msgstr "Řadit dle data (nejnovější jako první)"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:32
 msgid "Sort by name (A-Z)"
@@ -316,7 +317,7 @@ msgstr "Dle jména (A-Z)"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:33
 msgid "Sort by size (Smaller first)"
-msgstr "Třídit dle velikosti (nejmenší nejdříve)"
+msgstr "Řadit dle velikosti (nejmenší první)"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:47
 msgid "Reverse order"
@@ -378,11 +379,11 @@ msgstr "Vybrat pozici mezi 1% a 100%"
 #: ../src/app/qml/loView/LOViewGotoDialog.qml:62
 #: ../src/app/qml/pdfView/PdfViewGotoDialog.qml:58
 msgid "GO!"
-msgstr "JDI!"
+msgstr "PŘEJÍT!"
 
 #: ../src/app/qml/loView/LOViewPage.qml:167
 msgid "LibreOffice binaries not found."
-msgstr "Binární soubory LibreOffice nenalezeny."
+msgstr "Nenalezeny spustitelné soubory s LibreOffice."
 
 #: ../src/app/qml/loView/LOViewPage.qml:170
 msgid "Error while loading LibreOffice."
@@ -405,7 +406,7 @@ msgstr "Tento list nemá žádný obsah."
 #. Ref. https://docs.libreoffice.org/libreofficekit.html
 #: ../src/app/qml/loView/Splashscreen.qml:45
 msgid "Powered by LibreOfficeKit"
-msgstr "Poháněno LibreOfficeKit-em"
+msgstr "Založeno na LibreOfficeKit"
 
 #. TRANSLATORS: Please don't add any space between "Sheet" and "%1".
 #. This is the default name for a sheet in LibreOffice.
@@ -416,11 +417,11 @@ msgstr "List%1"
 
 #: ../src/app/qml/loView/ZoomSelector.qml:122
 msgid "Fit width"
-msgstr "Přizpůsobit šířku"
+msgstr "Přizpůsobit šířce"
 
 #: ../src/app/qml/loView/ZoomSelector.qml:123
 msgid "Fit height"
-msgstr "Přizpůsobit výšku"
+msgstr "Přizpůsobit výšce"
 
 #: ../src/app/qml/loView/ZoomSelector.qml:124
 msgid "Automatic"
@@ -485,7 +486,7 @@ msgstr "Prohlížeč dokumentů"
 
 #: /tmp/lok-qml-async-imageprovider-build/po/com.ubuntu.docviewer.desktop.in.in.h:2
 msgid "documents;viewer;pdf;reader;"
-msgstr "dokumenty;prohlížeč;pdf;reader;"
+msgstr "dokumenty;prohlížeč;pdf;čtečka;"
 
 #~ msgid "File does not exist"
 #~ msgstr "Soubor neexistuje"
