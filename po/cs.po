@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-05 23:40+0100\n"
-"PO-Revision-Date: 2020-04-01 12:22+0000\n"
+"PO-Revision-Date: 2020-05-19 20:24+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://translate.ubports.com/projects/ubports/"
 "docviewer-app/cs/>\n"
@@ -43,8 +43,7 @@ msgid ""
 "The path must exist prior to running ubuntu-docviewer-app"
 msgstr ""
 "Zobrazit dokumenty z dané složky namísto  ~/Dokumenty.\n"
-"Je třeba, aby popis umístění existuoval už před spuštěním ubuntu-docviewer-"
-"app"
+"Je třeba, aby popis umístění existoval už před spuštěním ubuntu-docviewer-app"
 
 #: ../src/app/qml/common/DetailsPage.qml:26
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:107
@@ -59,7 +58,7 @@ msgstr "Soubor"
 
 #: ../src/app/qml/common/DetailsPage.qml:47
 msgid "Location"
-msgstr "Poloha"
+msgstr "Umístění"
 
 #: ../src/app/qml/common/DetailsPage.qml:52
 msgid "Size"
@@ -91,7 +90,7 @@ msgstr "Zavřít"
 
 #: ../src/app/qml/common/PickImportedDialog.qml:29
 msgid "Multiple documents imported"
-msgstr "Bylo importováno vícero dokumentů"
+msgstr "Naimportováno vícero dokumentů"
 
 #: ../src/app/qml/common/PickImportedDialog.qml:30
 msgid "Choose which one to open:"
@@ -101,15 +100,15 @@ msgstr "Vyberte, který se má otevřít:"
 msgid "File not supported"
 msgid_plural "Files not supported"
 msgstr[0] "Nepodporovaný soubor"
-msgstr[1] "Nepodporovaných souborů"
-msgstr[2] "Nepodporované soubory"
+msgstr[1] "Nepodporované soubory"
+msgstr[2] "Nepodporovaných souborů"
 
 #: ../src/app/qml/common/RejectedImportDialog.qml:29
 msgid "Following document has not been imported:"
 msgid_plural "Following documents have not been imported:"
-msgstr[0] "Následující dokument nebyl importován:"
-msgstr[1] "Následujících dokumentů nebylo importováno:"
-msgstr[2] "Následující dokumenty nebyly importovány:"
+msgstr[0] "Následující dokument nebyl naimportován:"
+msgstr[1] "Následující dokumenty nebyly naimportovány:"
+msgstr[2] "Následujících dokumentů nebylo naimportováno:"
 
 #: ../src/app/qml/common/UnknownTypeDialog.qml:27
 msgid "Unknown file type"
@@ -169,16 +168,16 @@ msgstr "Smazat soubor"
 msgid "Delete %1 file"
 msgid_plural "Delete %1 files"
 msgstr[0] "Smazat %1 soubor"
-msgstr[1] "Smazat %1 souborů"
-msgstr[2] "Smazat %1 soubory"
+msgstr[1] "Smazat %1 soubory"
+msgstr[2] "Smazat %1 souborů"
 
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:41
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:42
 msgid "Are you sure you want to permanently delete this file?"
 msgid_plural "Are you sure you want to permanently delete these files?"
-msgstr[0] "Opravdu chcete natrvalo smazat tento soubor?"
-msgstr[1] "Opravdu chcete natrvalo smazat tyto soubory?"
-msgstr[2] "Opravdu chcete natrvalo smazat tyto soubory?"
+msgstr[0] "Opravdu chcete tento soubor natrvalo smazat?"
+msgstr[1] "Opravdu chcete tyto soubory natrvalo smazat?"
+msgstr[2] "Opravdu chcete tyto soubory natrvalo smazat?"
 
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:61
 #: ../src/app/qml/documentPage/DocumentDelegateActions.qml:25
@@ -313,7 +312,7 @@ msgstr "Řadit dle data (nejnovější jako první)"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:32
 msgid "Sort by name (A-Z)"
-msgstr "Dle jména (A-Z)"
+msgstr "Dle názvu (A-Z)"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:33
 msgid "Sort by size (Smaller first)"
@@ -455,7 +454,7 @@ msgstr "Prezentace"
 
 #: ../src/app/qml/pdfView/PdfViewGotoDialog.qml:26
 msgid "Go to page"
-msgstr "Přejít na stranu"
+msgstr "Přejít na stránku"
 
 #: ../src/app/qml/pdfView/PdfViewGotoDialog.qml:27
 #, qt-format
