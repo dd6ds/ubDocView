@@ -17,7 +17,7 @@ publish-arm64:
   only:
     - tags
   script:
-    - clickable clean build click-build
+    - clickable clean build click-build --arch arm64
     - clickable publish
   artifacts:
     paths:
@@ -53,7 +53,7 @@ build-arm64:
   stage: build
   image: clickable/ci-16.04-arm64
   script:
-    - clickable clean build
+    - clickable clean build --arch arm64
   artifacts:
     paths:
       - build/aarch64-linux-gnu/app/*.click
