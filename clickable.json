@@ -1,7 +1,7 @@
 {
-  "template": "cmake",
+  "builder": "cmake",
   "prebuild": "./get_deps.sh $ARCH_TRIPLET",
-  "dependencies_build": [
+  "dependencies_host": [
     "curl"
   ],
   "dependencies_target": [
