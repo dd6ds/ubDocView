@@ -21,7 +21,8 @@
                 "libmythes-1.2-0",
                 "libboost-date-time1.58.0",
                 "libraptor2-0",
-                "librasqal3"
+                "librasqal3",
+                "libxslt1.1"
             ]
         },
 
@@ -64,7 +65,8 @@
                 "libmythes-1.2-0",
                 "libboost-date-time1.58.0",
                 "libraptor2-0",
-                "librasqal3"
+                "librasqal3",
+                "libxslt1.1"
             ]
         },
 
@@ -110,7 +112,8 @@
                 "libraptor2-0",
                 "librasqal3",
                 "libnss3",
-                "libnspr4"
+                "libnspr4",
+                "libxslt1.1"
             ]
         },
 
