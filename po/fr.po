@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-05 23:40+0100\n"
-"PO-Revision-Date: 2020-07-22 12:20+0000\n"
+"PO-Revision-Date: 2020-07-22 12:59+0000\n"
 "Last-Translator: Max Libre <libremax@protonmail.com>\n"
 "Language-Team: French <https://translate.ubports.com/projects/ubports/"
 "docviewer-app/fr/>\n"
@@ -59,7 +59,7 @@ msgstr "Fichier"
 
 #: ../src/app/qml/common/DetailsPage.qml:47
 msgid "Location"
-msgstr "Localisation"
+msgstr "Lieu"
 
 #: ../src/app/qml/common/DetailsPage.qml:52
 msgid "Size"
