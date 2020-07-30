@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-05 23:40+0100\n"
-"PO-Revision-Date: 2020-07-30 01:19+0000\n"
+"PO-Revision-Date: 2020-07-30 02:05+0000\n"
 "Last-Translator: Young Kim <rsyh93@gmail.com>\n"
 "Language-Team: Korean <https://translate.ubports.com/projects/ubports/"
 "docviewer-app/ko/>\n"
@@ -169,7 +169,7 @@ msgstr[0] ""
 #: ../src/app/qml/documentPage/DocumentDelegateActions.qml:25
 #: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:53
 msgid "Delete"
-msgstr ""
+msgstr "삭제"
 
 #: ../src/app/qml/documentPage/DocumentDelegateActions.qml:44
 msgid "Share"
@@ -247,11 +247,11 @@ msgstr ""
 
 #: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:40
 msgid "Select None"
-msgstr ""
+msgstr "선택 안 함"
 
 #: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:40
 msgid "Select All"
-msgstr ""
+msgstr "모두 선택"
 
 #: ../src/app/qml/documentPage/SearchEmptyState.qml:24
 msgid "No matching document found"
