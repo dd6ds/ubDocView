@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-05 23:40+0100\n"
-"PO-Revision-Date: 2020-08-09 19:32+0000\n"
+"PO-Revision-Date: 2020-08-09 19:40+0000\n"
 "Last-Translator: Rüdiger Kupper <ruediger.kupper+launchpad@gmail.com>\n"
 "Language-Team: German <https://translate.ubports.com/projects/ubports/"
 "docviewer-app/de/>\n"
@@ -231,7 +231,7 @@ msgstr "Dokumente"
 
 #: ../src/app/qml/documentPage/DocumentPageDefaultHeader.qml:29
 msgid "Search..."
-msgstr "Suchen..."
+msgstr "Suchen"
 
 #: ../src/app/qml/documentPage/DocumentPageDefaultHeader.qml:36
 msgid "Sorting settings..."
@@ -441,7 +441,7 @@ msgstr "Seite %1 von %2"
 
 #: ../src/app/qml/pdfView/PdfView.qml:203
 msgid "Search"
-msgstr "Suche"
+msgstr "Suchen"
 
 #: ../src/app/qml/pdfView/PdfView.qml:213
 msgid "Go to page..."
