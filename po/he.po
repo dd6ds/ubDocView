@@ -8,72 +8,76 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-20 18:49+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2020-09-05 00:01+0000\n"
+"Last-Translator: tamer dab <dabsantamer@yahoo.com>\n"
+"Language-Team: Hebrew <https://translate.ubports.com/projects/ubports/"
+"docviewer-app/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
+"X-Generator: Weblate 3.11.3\n"
 
 #: ../src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
-msgstr ""
+msgstr "חלק מהטיעונים הניתנים אינם תקפים."
 
 #: ../src/app/qml/common/CommandLineProxy.qml:58
 msgid "Open ubuntu-docviewer-app displaying the selected file"
-msgstr ""
+msgstr "פתח את אפליקציית ubuntu-docviewer המציגה את הקובץ שנבחר"
 
 #: ../src/app/qml/common/CommandLineProxy.qml:65
 msgid "Run fullscreen"
-msgstr ""
+msgstr "הפעל מסך מלא"
 
 #: ../src/app/qml/common/CommandLineProxy.qml:71
 msgid "Open ubuntu-docviewer-app in pick mode. Used for tests only."
-msgstr ""
+msgstr "פתח את אפליקציית ubuntu-docviewer במצב בחירה. משמש לבדיקות בלבד."
 
 #: ../src/app/qml/common/CommandLineProxy.qml:77
 msgid ""
 "Show documents from the given folder, instead of ~/Documents.\n"
 "The path must exist prior to running ubuntu-docviewer-app"
 msgstr ""
+"הצג מסמכים מהתיקייה הנתונה, במקום ~ / Documents.\n"
+"הנתיב חייב להתקיים לפני הפעלת אפליקציית ubuntu-docviewer-app"
 
 #: ../src/app/qml/common/DetailsPage.qml:29
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:93
 #: ../src/app/qml/pdfView/PdfView.qml:234
 #: ../src/app/qml/textView/TextViewDefaultHeader.qml:55
 msgid "Details"
-msgstr ""
+msgstr "פרטים"
 
 #: ../src/app/qml/common/DetailsPage.qml:42
 msgid "File"
-msgstr ""
+msgstr "קובץ"
 
 #: ../src/app/qml/common/DetailsPage.qml:47
 msgid "Location"
-msgstr ""
+msgstr "מיקום"
 
 #: ../src/app/qml/common/DetailsPage.qml:52
 msgid "Size"
-msgstr ""
+msgstr "גודל"
 
 #: ../src/app/qml/common/DetailsPage.qml:57
 msgid "Created"
-msgstr ""
+msgstr "נוצר"
 
 #: ../src/app/qml/common/DetailsPage.qml:62
 msgid "Last modified"
-msgstr ""
+msgstr "שונה לאחרונה"
 
 #: ../src/app/qml/common/DetailsPage.qml:69
 msgid "MIME type"
-msgstr ""
+msgstr "סוג MIME"
 
 #: ../src/app/qml/common/ErrorDialog.qml:23
 msgid "Error"
-msgstr ""
+msgstr "שגיאה"
 
 #: ../src/app/qml/common/ErrorDialog.qml:26
 #: ../src/app/qml/common/PickImportedDialog.qml:54
@@ -81,47 +85,49 @@ msgstr ""
 #: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:33
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:53
 msgid "Close"
-msgstr ""
+msgstr "סגור"
 
 #: ../src/app/qml/common/PickImportedDialog.qml:29
 msgid "Multiple documents imported"
-msgstr ""
+msgstr "מספר מסמכים מיובאים"
 
 #: ../src/app/qml/common/PickImportedDialog.qml:30
 msgid "Choose which one to open:"
-msgstr ""
+msgstr "בחר איזה לפתוח:"
 
 #: ../src/app/qml/common/RejectedImportDialog.qml:28
 msgid "File not supported"
 msgid_plural "Files not supported"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "הקובץ אינו נתמך"
+msgstr[1] "הקבצים אינם נתמכים"
+msgstr[2] "הקבצים אינם נתמכים"
+msgstr[3] "הקבצים אינם נתמכים"
 
 #: ../src/app/qml/common/RejectedImportDialog.qml:29
 msgid "Following document has not been imported:"
 msgid_plural "Following documents have not been imported:"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "המסמך הבא לא יובא:"
+msgstr[1] "שני המסמכים הבאים לא יובאו:"
+msgstr[2] "המסמכים הבאים לא יובאו:"
+msgstr[3] "המסמכים הבאים לא יובאו:"
 
 #: ../src/app/qml/common/TextualButtonStyle.qml:48
 #: ../src/app/qml/common/TextualButtonStyle.qml:51
 #: ../src/app/qml/documentPage/DocumentPagePickModeHeader.qml:54
 msgid "Pick"
-msgstr ""
+msgstr "בחירה"
 
 #: ../src/app/qml/common/UnknownTypeDialog.qml:27
 msgid "Unknown file type"
-msgstr ""
+msgstr "סוג קובץ לא ידוע"
 
 #: ../src/app/qml/common/UnknownTypeDialog.qml:28
 msgid ""
 "This file is not supported.\n"
 "Do you want to open it as a plain text?"
 msgstr ""
+"אין תמיכה בקובץ זה.\n"
+"האם ברצונך לפתוח אותו כטקסט רגיל?"
 
 #: ../src/app/qml/common/UnknownTypeDialog.qml:38
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:55
@@ -131,231 +137,233 @@ msgstr ""
 #: ../src/app/qml/pdfView/PdfView.qml:188
 #: ../src/app/qml/pdfView/PdfViewGotoDialog.qml:51
 msgid "Cancel"
-msgstr ""
+msgstr "בטול"
 
 #: ../src/app/qml/common/UnknownTypeDialog.qml:44
 msgid "Yes"
-msgstr ""
+msgstr "כן"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
 #: ../src/app/qml/common/utils.js:22
 #, qt-format
 msgid "%1 GB"
-msgstr ""
+msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
 #: ../src/app/qml/common/utils.js:26
 #, qt-format
 msgid "%1 MB"
-msgstr ""
+msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
 #: ../src/app/qml/common/utils.js:30
 #, qt-format
 msgid "%1 kB"
-msgstr ""
+msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in byte
 #: ../src/app/qml/common/utils.js:33
 #, qt-format
 msgid "%1 byte"
-msgstr ""
+msgstr "%1 byte"
 
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:39
 msgid "Delete file"
-msgstr ""
+msgstr "מחק קובץ"
 
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:40
 #, qt-format
 msgid "Delete %1 file"
 msgid_plural "Delete %1 files"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "מחק קובץ %1"
+msgstr[1] "מחק %1 קבצים"
+msgstr[2] "מחק %1 קבצים"
+msgstr[3] "מחק %1 קבצים"
 
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:41
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:42
 msgid "Are you sure you want to permanently delete this file?"
 msgid_plural "Are you sure you want to permanently delete these files?"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "האם אתה בטוח שברצונך למחוק את הקובץ לצמיתות?"
+msgstr[1] "האם אתה בטוח שברצונך למחוק קבצים אלה לצמיתות?"
+msgstr[2] "האם אתה בטוח שברצונך למחוק קבצים אלה לצמיתות?"
+msgstr[3] "האם אתה בטוח שברצונך למחוק קבצים אלה לצמיתות?"
 
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:61
 #: ../src/app/qml/documentPage/DocumentDelegateActions.qml:25
 #: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:58
 msgid "Delete"
-msgstr ""
+msgstr "מחק"
 
 #: ../src/app/qml/documentPage/DocumentDelegateActions.qml:44
 msgid "Share"
-msgstr ""
+msgstr "שיתוף"
 
 #: ../src/app/qml/documentPage/DocumentEmptyState.qml:27
 msgid "No documents found"
-msgstr ""
+msgstr "לא נמצאו מסמכים"
 
 #: ../src/app/qml/documentPage/DocumentEmptyState.qml:28
 msgid ""
 "Connect your device to any computer and simply drag files to the Documents "
 "folder or insert removable media containing documents."
 msgstr ""
+"חבר את המכשיר לכל מחשב ופשוט גרור קבצים לתיקיית המסמכים או הכנס מדיה נשלפת "
+"המכילה מסמכים."
 
 #: ../src/app/qml/documentPage/DocumentListDelegate.qml:75
 msgid "SD card"
-msgstr ""
+msgstr "כרטיס זיכרון"
 
 #. TRANSLATORS: %1 refers to a time formatted as Locale.ShortFormat (e.g. hh:mm). It depends on system settings.
 #. http://qt-project.org/doc/qt-4.8/qlocale.html#FormatType-enum
 #: ../src/app/qml/documentPage/DocumentListDelegate.qml:100
 #, qt-format
 msgid "Today, %1"
-msgstr ""
+msgstr "היום, %1"
 
 #. TRANSLATORS: %1 refers to a time formatted as Locale.ShortFormat (e.g. hh:mm). It depends on system settings.
 #. http://qt-project.org/doc/qt-4.8/qlocale.html#FormatType-enum
 #: ../src/app/qml/documentPage/DocumentListDelegate.qml:105
 #, qt-format
 msgid "Yesterday, %1"
-msgstr ""
+msgstr "אתמול, %1"
 
 #. TRANSLATORS: this is a datetime formatting string,
 #. see http://qt-project.org/doc/qt-5/qml-qtqml-date.html#details for valid expressions.
 #: ../src/app/qml/documentPage/DocumentListDelegate.qml:112
 #: ../src/app/qml/documentPage/DocumentListDelegate.qml:131
 msgid "yyyy/MM/dd hh:mm"
-msgstr ""
+msgstr "yyyy/MM/dd hh:mm"
 
 #. TRANSLATORS: this is a datetime formatting string,
 #. see http://qt-project.org/doc/qt-5/qml-qtqml-date.html#details for valid expressions.
 #: ../src/app/qml/documentPage/DocumentListDelegate.qml:125
 msgid "dddd, hh:mm"
-msgstr ""
+msgstr "dddd, hh:mm"
 
 #: ../src/app/qml/documentPage/DocumentPageDefaultHeader.qml:27
 #: /home/florian/UT-Apps/docviewer-app/build/po/com.ubuntu.docviewer.desktop.in.in.h:3
 msgid "Documents"
-msgstr ""
+msgstr "מסמכים"
 
 #: ../src/app/qml/documentPage/DocumentPageDefaultHeader.qml:35
 msgid "Search..."
-msgstr ""
+msgstr "חיפוש…"
 
 #: ../src/app/qml/documentPage/DocumentPageDefaultHeader.qml:42
 msgid "Sorting settings..."
-msgstr ""
+msgstr "הגדרות מיון ..."
 
 #: ../src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
-msgstr ""
+msgstr "חפש במסמכים ..."
 
 #: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:46
 msgid "Select None"
-msgstr ""
+msgstr "ביטול הבחירה"
 
 #: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:46
 msgid "Select All"
-msgstr ""
+msgstr "בחירת הכול"
 
 #: ../src/app/qml/documentPage/SearchEmptyState.qml:24
 msgid "No matching document found"
-msgstr ""
+msgstr "לא נמצא מסמך תואם"
 
 #: ../src/app/qml/documentPage/SearchEmptyState.qml:26
 msgid ""
 "Please ensure that your query is not misspelled and/or try a different query."
-msgstr ""
+msgstr "אנא ודא שהשאילתה שלך אינה מאויתת שגוי ו / או נסה שאילתה אחרת."
 
 #: ../src/app/qml/documentPage/SectionHeader.qml:30
 msgid "Today"
-msgstr ""
+msgstr "היום"
 
 #: ../src/app/qml/documentPage/SectionHeader.qml:33
 msgid "Yesterday"
-msgstr ""
+msgstr "אתמול"
 
 #: ../src/app/qml/documentPage/SectionHeader.qml:36
 msgid "Earlier this week"
-msgstr ""
+msgstr "מוקדם יותר השבוע"
 
 #: ../src/app/qml/documentPage/SectionHeader.qml:39
 msgid "Earlier this month"
-msgstr ""
+msgstr "מוקדם יותר החודש"
 
 #: ../src/app/qml/documentPage/SectionHeader.qml:41
 msgid "Even earlier..."
-msgstr ""
+msgstr "אפילו מוקדם יותר..."
 
 #: ../src/app/qml/documentPage/SharePage.qml:28
 msgid "Share to"
-msgstr ""
+msgstr "שיתוף אל"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:26
 msgid "Sorting settings"
-msgstr ""
+msgstr "הגדרות מיון"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:31
 msgid "Sort by date (Latest first)"
-msgstr ""
+msgstr "מיין לפי תאריך (האחרון ראשון)"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:32
 msgid "Sort by name (A-Z)"
-msgstr ""
+msgstr "מיין לפי שם (A-Z)"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:33
 msgid "Sort by size (Smaller first)"
-msgstr ""
+msgstr "מיין לפי גודל (הקטן ראשון)"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:47
 msgid "Reverse order"
-msgstr ""
+msgstr "סדר הפוך"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:41
 #: ../src/app/qml/textView/TextView.qml:49
 msgid "Loading..."
-msgstr ""
+msgstr "בטעינה…"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:45
 msgid "LibreOffice text document"
-msgstr ""
+msgstr "מסמך טקסט של LibreOffice"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:47
 msgid "LibreOffice spread sheet"
-msgstr ""
+msgstr "גיליון אלקטרוני של LibreOffice"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:49
 msgid "LibreOffice presentation"
-msgstr ""
+msgstr "מצגת LibreOffice"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:51
 msgid "LibreOffice Draw document"
-msgstr ""
+msgstr "מסמך ציור LibreOffice"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:53
 msgid "Unknown LibreOffice document"
-msgstr ""
+msgstr "מסמך LibreOffice לא ידוע"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:55
 msgid "Unknown document type"
-msgstr ""
+msgstr "סוג מסמך לא ידוע"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:72
 msgid "Go to position…"
-msgstr ""
+msgstr "עבור לאיות…"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:86
 #: ../src/app/qml/pdfView/PdfView.qml:227
 #: ../src/app/qml/textView/TextViewDefaultHeader.qml:49
 msgid "Disable night mode"
-msgstr ""
+msgstr "השבת את מצב הלילה"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:86
 #: ../src/app/qml/pdfView/PdfView.qml:227
 #: ../src/app/qml/textView/TextViewDefaultHeader.qml:49
 msgid "Enable night mode"
-msgstr ""
+msgstr "הפעל מצב לילה"
 
 #: ../src/app/qml/loView/LOViewGotoDialog.qml:30
 msgid "Go to position"
