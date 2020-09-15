@@ -27,9 +27,6 @@ PageHeader {
     title: i18n.tr("Documents")
    // flickable: view
 
-    // FIXME: Why need this?!
-    leadingActionBar.actions: null
-
     trailingActionBar.actions: [
         Action {
             text: i18n.tr("Search...")
