@@ -1,8 +1,12 @@
 {
   "builder": "cmake",
   "prebuild": "./get_deps.sh ${ARCH_TRIPLET}",
+  "dependencies_ppa": [
+    "ppa:janisozaur/cmake-update"
+  ],
   "dependencies_host": [
-    "curl"
+    "curl",
+    "cmake'
   ],
   "dependencies_target": [
     "libpoppler-qt5-dev",
