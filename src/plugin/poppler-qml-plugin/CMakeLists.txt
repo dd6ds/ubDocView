@@ -8,24 +8,41 @@ find_package(Qt5Xml)
 find_package(Qt5Concurrent)
 
 include_directories(
-	${CMAKE_CURRENT_SOURCE_DIR}
-	${CMAKE_CURRENT_BINARY_DIR}
-	${Qt5Quick_PRIVATE_INCLUDE_DIRS}
-	${Qt5Qml_PRIVATE_INCLUDE_DIRS}
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_CURRENT_BINARY_DIR}
 )
+
+file(GLOB_RECURSE QML_SRCS
+    qml/*.qml
+    qml/*.js
+)
+
 
 #add the sources to compile
 set(popplerqmlplugin_SRCS
     plugin.cpp
     pdfdocument.cpp
-    pdfimageprovider.cpp
-    pdfitem.cpp
     verticalview.cpp
     pdftocmodel.cpp
+    pdfrendertask.cpp
+    sgtileitem.cpp
+    pagedecoration.cpp
+    pageoverlay.cpp
+    pdfzoom.cpp
+    ucunits.cpp
+    touchdetectionarea.cpp
+    ${QML_SRCS}
+)
+
+set(popplerqmlplugin_HDRS
+    pdferror.h
+    twips.h
+    config.h
 )
 
 add_library(popplerqmlplugin MODULE
     ${popplerqmlplugin_SRCS}
+    ${popplerqmlplugin_HDRS}
 )
 
 target_link_libraries(popplerqmlplugin poppler-qt5)
@@ -38,9 +55,11 @@ add_custom_command(TARGET popplerqmlplugin POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_CURRENT_BINARY_DIR}/../${PLUGIN_DIR}
     COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_CURRENT_SOURCE_DIR}/qmldir ${CMAKE_CURRENT_BINARY_DIR}/../${PLUGIN_DIR}
     COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:popplerqmlplugin> ${CMAKE_CURRENT_BINARY_DIR}/../${PLUGIN_DIR}
+    COMMAND ${CMAKE_COMMAND} -E copy ${QML_SRCS} ${CMAKE_CURRENT_BINARY_DIR}/../${PLUGIN_DIR}
 )
 endif(NOT "${CMAKE_CURRENT_SOURCE_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
 
 # Install plugin file
 install(TARGETS popplerqmlplugin DESTINATION ${QT_IMPORTS_DIR}/${PLUGIN_DIR})
 install(FILES qmldir DESTINATION ${QT_IMPORTS_DIR}/${PLUGIN_DIR})
+install(FILES ${QML_SRCS} DESTINATION ${QT_IMPORTS_DIR}/${PLUGIN_DIR})

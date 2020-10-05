@@ -20,15 +20,21 @@
 
 #include "plugin.h"
 #include "pdfdocument.h"
+#include "pdfzoom.h"
+#include "pdferror.h"
 #include "verticalview.h"
+#include "touchdetectionarea.h"
 
 void PopplerPlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == QLatin1String("DocumentViewer.PDF"));
     
     //@uri DocumentViewer.PDF
-    qmlRegisterType<PdfDocument>(uri, 1, 0, "Document");
-    qmlRegisterType<VerticalView>(uri, 1, 0, "VerticalView");
+    qmlRegisterType<PdfDocument>(uri, 2, 0, "Document");
+    qmlRegisterUncreatableType<PdfZoom>(uri, 2, 0, "Zoom", "Not creatable as an object, use only to retrieve error enums (e.g. PDF.Zoom.Manual)");
+    qmlRegisterType<VerticalView>(uri, 2, 0, "VerticalView");
+    qmlRegisterType<TouchDetectionArea>(uri, 2, 0, "TouchDetectionArea");
+    qmlRegisterUncreatableType<PopplerError>(uri, 2, 0, "Error", "Not creatable as an object, use only to retrieve error enums (e.g. PDF.Error.FileNotFound)");
 }
 
 void PopplerPlugin::initializeEngine(QQmlEngine *engine, const char *uri)

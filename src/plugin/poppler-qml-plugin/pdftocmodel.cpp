@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015
+ * Copyright (C) 2015, 2016
  *          Stefano Verzegnassi <verzegnassi.stefano@gmail.com>
  *
  * This program is free software: you can redistribute it and/or modify it
@@ -26,16 +26,12 @@
 
 PdfTocModel::PdfTocModel(QAbstractListModel *parent):
     QAbstractListModel(parent)
-{
-    connect(this, SIGNAL(documentChanged()), this, SLOT(fillModel()));
-}
+{ }
 
-void PdfTocModel::setDocument(Poppler::Document *document)
+void PdfTocModel::setDocument(const QSharedPointer<Poppler::Document>& document)
 {
-    if (document != m_document) {
-        m_document = document;
-        Q_EMIT documentChanged();
-    }
+    m_document = document;
+    fillModel();
 }
 
 QHash<int, QByteArray> PdfTocModel::roleNames() const
@@ -65,6 +61,8 @@ QVariant PdfTocModel::data(const QModelIndex & index, int role) const
         return tocEntry.title;
     case PageIndexRole:
         return tocEntry.pageIndex;
+    case ParentNodeIndexRole:
+        return tocEntry.parentNodeIndex;
     case LevelRole:
         return tocEntry.level;
     default:
@@ -84,6 +82,7 @@ QVariantMap PdfTocModel::get(int index) const
     QVariantMap map;
     map["title"] = item.title;
     map["pageIndex"] = item.pageIndex;
+    map["parentNodeIndex"] = item.parentNodeIndex;
     map["level"] = item.level;
 
     return map;
@@ -91,7 +90,10 @@ QVariantMap PdfTocModel::get(int index) const
 
 void PdfTocModel::fillModel() {
     if (m_entries.count() != 0) {
+        beginResetModel();
         m_entries.clear();
+        endResetModel();
+
         Q_EMIT countChanged();
     }
 
@@ -104,13 +106,14 @@ void PdfTocModel::fillModel() {
     }
 }
 
-void PdfTocModel::recursiveGetEntries(QDomNode node, int nodeLevel)
+void PdfTocModel::recursiveGetEntries(QDomNode node, int nodeLevel, int parentNodeIndex)
 {
     while(!node.isNull()) {
         QDomNode child = node.firstChild();
 
         TocEntry entry;
         entry.title = node.toElement().tagName();
+        entry.parentNodeIndex = parentNodeIndex;
         entry.level = nodeLevel;
 
         QString dest = node.toElement().attribute("Destination");
@@ -125,11 +128,14 @@ void PdfTocModel::recursiveGetEntries(QDomNode node, int nodeLevel)
             }
         }
 
+        beginInsertRows(QModelIndex(), rowCount(), rowCount());
         m_entries.append(entry);
+        endInsertRows();
+
         Q_EMIT countChanged();
 
         // Look for children entries
-        recursiveGetEntries(child, nodeLevel + 1);
+        recursiveGetEntries(child, nodeLevel + 1, m_entries.count() - 1);
 
         // Go to the next entry at the same level.
         node = node.nextSibling();
@@ -137,5 +143,4 @@ void PdfTocModel::recursiveGetEntries(QDomNode node, int nodeLevel)
 }
 
 PdfTocModel::~PdfTocModel()
-{
-}
+{ }

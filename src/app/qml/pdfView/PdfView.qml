@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013-2016 Canonical, Ltd.
+ * Copyright (C) 2013-2015 Canonical, Ltd.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,12 +17,13 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
-import QtQuick.Layouts 1.1
+import DocumentViewer.PDF 2.0 as PDF
 import DocumentViewer 1.0
-import DocumentViewer.PDF 1.0 as PDF
 
 import "../common"
 import "../common/utils.js" as Utils
+
+// FIXME: After a resizing of the window, keep the current page visible.
 
 Page {
     id: pdfPage
@@ -31,18 +32,10 @@ Page {
     header: PageHeader {
         flickable: pdfView
 
-        trailingActionBar.actions: [ goToPage, startPresentation, nightModeToggle, fileDetails ]
+        trailingActionBar.actions: [ searchText, goToPage, /*startPresentation,*/ nightModeToggle, fileDetails, rotateRight, rotateLeft ]
 
         contents: ListItemLayout {
             anchors.centerIn: parent
-
-            ActivityIndicator {
-                SlotsLayout.position: SlotsLayout.Leading
-                SlotsLayout.overrideVerticalPositioning: true
-                y: (parent.height - height) * 0.5
-                running: pdfView.currentPageItem.status == Image.Loading || poppler.isLoading
-                visible: running
-            }
 
             title {
                 font.weight: Font.DemiBold
@@ -53,7 +46,13 @@ Page {
                 textSize: Label.Small
                 // TRANSLATORS: the first argument (%1) refers to the page currently shown on the screen,
                 // while the second one (%2) refers to the total pages count.
-                text: i18n.tr("Page %1 of %2").arg(pdfView.currentPageIndex + 1).arg(pdfView.count)
+                text: i18n.tr("Page %1 of %2").arg(pdfView.currentPageIndex + 1).arg(pdfView.pagesCount)
+            }
+
+            ZoomSelector {
+                SlotsLayout.position: SlotsLayout.Trailing
+                view: pdfView
+                visible: DocumentViewer.desktopMode || mainView.wideWindow
             }
         }
     }
@@ -61,85 +60,159 @@ Page {
     // Reset night mode shader settings when closing the page
     // Component.onDestruction: mainView.nightModeEnabled = false
 
+    // FIXME: TODO: Broken with the new PDF plugin
+    /*
     Keys.onPressed: {
         if (event.key == Qt.Key_F5) { pageStack.push(Qt.resolvedUrl("./PdfPresentation.qml"), {'poppler': poppler}); }
     }
-    Rectangle {
-        // Since UITK 1.3, the MainView background is white.
-        // We need to set a different color, otherwise pages
-        // boundaries are not visible.
-        anchors.fill: parent
-        color: "#f5f5f5"
-    }
+    */
 
-    ScrollView {
-        anchors.fill: parent
+    ScalingPinchArea {
+        id: pinchArea
+        objectName: "pinchArea"
 
-        PDF.VerticalView {
-            id: pdfView
-            objectName: "pdfView"
+        anchors {
+            top: pdfPage.header.bottom
+            left: parent.left
+            right: parent.right
+            bottom: parent.bottom
+        }
 
+        clip: true
+
+        enabled: !pdfView.moving
+
+        targetFlickable: pdfView
+        onTotalScaleChanged: targetFlickable.updateContentSize(totalScale)
+
+        maximumZoom: pdfView.zoomSettings.maximumZoom
+        minimumZoom: {
+            if (DocumentViewer.desktopMode || mainView.wideWindow)
+                return pdfView.zoomSettings.minimumZoom
+
+
+            return pdfView.zoomSettings.valueAutomaticZoom
+        }
+
+        Binding {
+            when: !pinchArea.pinch.active
+            target: pinchArea
+            property: "zoomValue"
+            value: pdfView.zoomSettings.zoomFactor
+        }
+
+        Rectangle {
+            // Since UITK 1.3, the MainView background is white.
+            // We need to set a different color, otherwise pages
+            // boundaries are not visible.
             anchors.fill: parent
-            anchors.topMargin: pdfPage.header.height
-            spacing: units.gu(2)
+            color: "#f5f5f5"
+        }
 
-            boundsBehavior: Flickable.StopAtBounds
-            flickDeceleration: 1500 * units.gridUnit / 8
-            maximumFlickVelocity: 2500 * units.gridUnit / 8
+        ScrollView {
+            anchors.fill: parent
 
-            contentWidth: parent.width * _zoomHelper.scale
-            cacheBuffer: height * poppler.providersNumber * _zoomHelper.scale * 0.5
-            interactive: !pinchy.pinch.active
-
-            model: poppler
-            delegate: PdfViewDelegate {
-                Component.onDestruction: window.releaseResources()
-            }
-
-            Component.onDestruction: {
-                // workaround for bug #1577277
-                pdfPage.header.flickable = null;
-            }
-            // FIXME: On zooming, keep the same content position.
-            PinchArea {
-                id: pinchy
+            PDF.Viewer {
+                id: pdfView
+                objectName: "pdfView"
                 anchors.fill: parent
 
-                pinch {
-                    target: _zoomHelper
-                    minimumScale: 1.0
-                    maximumScale: 2.5
+                function updateContentSize(tgtScale) {
+                    zoomSettings.zoomFactor = tgtScale
                 }
 
-                onPinchFinished: {
-                    pdfView.returnToBounds();
+                renderHints: PDF.Document.Antialiasing | PDF.Document.TextAntialiasing
 
-                    // This is a bit expensive, so it's safer to put it here.
-                    // It won't be called on desktop (where PinchArea is not used),
-                    // but it's not a problem at the moment (our target is phone).
-                    window.releaseResources();
+                linkHighlightColor: UbuntuColors.orange
+
+                spacing: units.gu(4)
+
+                documentPath: file.path
+                clip: false
+
+                Component.onCompleted: {
+                    // WORKAROUND: Fix for wrong grid unit size
+                    flickDeceleration = 1500 * units.gridUnit / 8
+                    maximumFlickVelocity = 2500 * units.gridUnit / 8
+
+                    var t = pdfView.document.documentInfo(PDF.Document.Title);
+                    if (t) {
+                        pdfPage.title = t
+                    }
+                }
+
+                onErrorChanged: {
+                    // TODO: Error management
+                    console.log(pdfView.error)
+
+                    switch(pdfView.error) {
+                    case PDF.Error.DocumentLocked:
+                        PopupUtils.open(Qt.resolvedUrl("DocumentLockedDialog.qml"), pdfPage)
+                        break;
+                    }
+                }
+
+                // FIXME: TODO: Not the best management for this. See if/how it can be improved.
+                property var hint
+                onLinkHovered: {
+                    if (!hint) {
+                        var hintComponent = Qt.createComponent("LinkHint.qml");
+                        hint = hintComponent.createObject(pdfView, { "x": mouseX, "y": mouseY - units.gu(3), "linkInfo": linkInfo })
+                    }
+                }
+                onIsLinkHoveredChanged: {
+                    if (!isLinkHovered && hint)
+                        hint.destroy()
+                }
+
+                onLinkClicked: {
+                    if (!isTouch) {
+                        if (linkInfo.url) {
+                            Qt.openUrlExternally(linkInfo.url)
+                        } else {
+                            pdfView.positionAtIndex(linkInfo.pageIndex, linkInfo.top, linkInfo.left)
+                        }
+                    }
+                }
+
+                onLinkPressAndHold: {
+                    if (isTouch) {
+                        PopupUtils.open(Qt.resolvedUrl("OpenLinkDialog.qml"), pdfPage, { linkInfo: linkInfo })
+                    }
+                }
+
+                ScalingMouseArea {
+                    id: mouseArea
+                    anchors.fill: parent
+                    enabled: !pdfView.moving
+
+                    targetFlickable: pdfView
+                    onTotalScaleChanged: targetFlickable.updateContentSize(totalScale)
+
+                    thresholdZoom: minimumZoom + (maximumZoom - minimumZoom) * 0.75
+                    maximumZoom: {
+                        if (DocumentViewer.desktopMode || mainView.wideWindow)
+                            return 3.0
+
+                        return minimumZoom * 3
+                    }
+                    minimumZoom: {
+                        if (DocumentViewer.desktopMode || mainView.wideWindow)
+                            return pdfView.zoomSettings.minimumZoom
+
+
+                        return pdfView.zoomSettings.valueAutomaticZoom
+                    }
+
+                    Binding {
+                        target: mouseArea
+                        property: "zoomValue"
+                        value: pdfView.zoomSettings.zoomFactor
+                    }
                 }
             }
-
-            Item { id: _zoomHelper }
         }
     }
-
-    PDF.Document {
-        id: poppler
-
-        property bool isLoading: true
-        path: file.path
-
-        onPagesLoaded: {
-            isLoading = false;
-
-            var title = getDocumentInfo("Title")
-            if (title !== "")
-                pdfPage.title = title;
-        }
-    }
-
 
     BottomEdge {
         id: contentsBottomEdge
@@ -170,7 +243,7 @@ Page {
             children: contentsBottomEdge._realPage
         }
 
-        enabled: poppler.tocModel.count > 0
+        enabled: pdfView.document.tocModel.count > 0
         visible: enabled
 
         onCollapseCompleted: {
@@ -206,13 +279,23 @@ Page {
     /*** ACTIONS ***/
 
     Action {
+        id: searchText
+        iconName: "search"
+        text: i18n.tr("Search")
+        // onTriggered: pageMain.state = "search"
+        //Disable it until we provide search in Poppler plugin.
+        enabled: false
+    }
+
+    Action {
         id: goToPage
         objectName:"gotopage"
         iconName: "browser-tabs"
         text: i18n.tr("Go to page...")
-        onTriggered: PopupUtils.open(Qt.resolvedUrl("PdfViewGotoDialog.qml"), pdfPage)
+        onTriggered: PopupUtils.open(Qt.resolvedUrl("PdfViewGotoDialog.qml"), targetPage)
     }
 
+    // FIXME: TODO: Broken with the new PDF plugin
     Action {
         id: startPresentation
         objectName:"presentationmode"
@@ -234,5 +317,39 @@ Page {
         text: i18n.tr("Details")
         iconName: "info"
         onTriggered: pageStack.push(Qt.resolvedUrl("../common/DetailsPage.qml"))
+    }
+
+    Action {
+        id: rotateRight
+        text: i18n.tr("Rotate 90° right")
+        iconName: "rotate-right"
+        onTriggered: {
+            var r = pdfView.rotation
+            r += 1
+
+            if (r > 3)
+                r = 0
+            else if (r < 0)
+                r = 3
+
+            pdfView.rotation = r
+        }
+    }
+
+    Action {
+        id: rotateLeft
+        text: i18n.tr("Rotate 90° left")
+        iconName: "rotate-left"
+        onTriggered: {
+            var r = pdfView.rotation
+            r -= 1
+
+            if (r > 3)
+                r = 0
+            else if (r < 0)
+                r = 3
+
+            pdfView.rotation = r
+        }
     }
 }

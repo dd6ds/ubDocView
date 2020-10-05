@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014-2016 Canonical, Ltd.
+ * Copyright (C) 2014-2015 Canonical, Ltd.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,7 +24,7 @@ Dialog {
     objectName:"PdfViewGotoDialog"
 
     title: i18n.tr("Go to page")
-    text: i18n.tr("Choose a page between 1 and %1").arg(pdfView.count)
+    text: i18n.tr("Choose a page between 1 and %1").arg(pdfView.pagesCount)
 
     TextField {
         id: goToPageTextField
@@ -34,9 +34,9 @@ Dialog {
 
         hasClearButton: true
         inputMethodHints: Qt.ImhFormattedNumbersOnly
-        validator: IntValidator{ bottom: 1; top: pdfView.count }
+        validator: IntValidator{ bottom: 1; top: pdfView.pagesCount }
 
-        onAccepted: goToPage()
+        Keys.onReturnPressed: goToPage()
         Component.onCompleted: forceActiveFocus()
     }
 

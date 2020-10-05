@@ -1,2 +1,4 @@
 module DocumentViewer.PDF
 plugin popplerqmlplugin
+
+Viewer 2.0 Viewer.qml

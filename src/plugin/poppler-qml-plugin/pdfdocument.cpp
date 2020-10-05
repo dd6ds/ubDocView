@@ -1,24 +1,5 @@
-/*
- * Copyright (C) 2013-2015 Canonical, Ltd.
- *
- * This program is free software: you can redistribute it and/or modify it
- * under the terms of the GNU General Public License version 3, as published
- * by the Free Software Foundation.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranties of
- * MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR
- * PURPOSE.  See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along
- * with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
- * Authors: Anthony Granger <grangeranthony@gmail.com>
- *          Stefano Verzegnassi <stefano92.100@gmail.com>
- */
-
 #include "pdfdocument.h"
-#include "pdfimageprovider.h"
+#include "twips.h"
 
 #include <poppler/qt5/poppler-qt5.h>
 #include <QDebug>
@@ -27,47 +8,19 @@
 
 #include <QtConcurrent/QtConcurrent>
 
-PdfDocument::PdfDocument(QAbstractListModel *parent):
-    QAbstractListModel(parent)
-  , m_path("")
-  , m_providersNumber(1)
+// TODO: Add QQuickAsyncImageProvider for thumbnails
+// TODO: Handle protected documents
+
+PdfDocument::PdfDocument():
+    m_path("")
   , m_tocModel(nullptr)
+  , m_error(PopplerError::NoError)
+  , m_renderHints(0)
 {
-    qRegisterMetaType<PdfPagesList>("PdfPagesList");
+    connect(this, &PdfDocument::renderHintsChanged, this, &PdfDocument::updateRenderHints);
 }
 
-QHash<int, QByteArray> PdfDocument::roleNames() const
-{
-    QHash<int, QByteArray> roles;
-    roles[WidthRole] = "width";
-    roles[HeightRole] = "height";
-    return roles;
-}
-
-int PdfDocument::rowCount(const QModelIndex & parent) const
-{
-    Q_UNUSED(parent)
-    return m_pages.count();
-}
-
-QVariant PdfDocument::data(const QModelIndex & index, int role) const
-{
-    if (index.row() < 0 || index.row() > m_pages.count())
-        return QVariant();
-
-    const PdfItem &pdfItem = m_pages.at(index.row());
-
-    switch (role) {
-    case WidthRole:
-        return pdfItem.width();
-    case HeightRole:
-        return pdfItem.height();
-    default:
-        return 0;
-    }
-}
-
-void PdfDocument::setPath(QString &pathName)
+void PdfDocument::setPath(const QString &pathName)
 {
     if (pathName.isEmpty())
         return;
@@ -75,131 +28,244 @@ void PdfDocument::setPath(QString &pathName)
     m_path = pathName;
     Q_EMIT pathChanged();
 
-    if (!loadDocument(m_path))
-        return;
-
-    // Init toc model
-    m_tocModel = new PdfTocModel;
-    m_tocModel->setDocument(m_document);
-    Q_EMIT tocModelChanged();
-
-    loadPages();
-    loadProvider();
+    loadDocument();
 }
 
-bool PdfDocument::loadDocument(QString &pathName)
+bool PdfDocument::isLocked()
 {
-    qDebug() << "Loading document...";
+    if (!m_popDocument)
+        return true;
 
-    if (pathName.isEmpty()) {
-        qDebug() << "Can't load the document, path is empty.";
-        return false;
-    }
+    return m_popDocument.data()->isLocked();
+}
 
-    m_document = Poppler::Document::load(pathName);
+int PdfDocument::pageCount()
+{
+    if (!m_popDocument)
+        return 0;
 
-    if (!m_document || m_document->isLocked()) {
-        qDebug() << "ERROR : Can't open the document located at " + pathName;
-        Q_EMIT error("Can't open the document located at " + pathName);
-
-        delete m_document;
-        return false;
-    }
-
-    qDebug() << "Document loaded successfully !";
-
-    m_document->setRenderHint(Poppler::Document::Antialiasing, true);
-    m_document->setRenderHint(Poppler::Document::TextAntialiasing, true);
-
-    return true;
+    return m_popDocument.data()->numPages();
 }
 
 QDateTime PdfDocument::getDocumentDate(QString data)
 {
-    if (!m_document)
+    if (!m_popDocument)
         return QDateTime();
 
     if (data == "CreationDate" || data == "ModDate")
-        return m_document->date(data);
+        return m_popDocument->date(data);
     else
         return QDateTime();
 }
 
 QString PdfDocument::getDocumentInfo(QString data)
 {
-    if (!m_document)
+    if (!m_popDocument)
         return QString("");
 
     if (data == "Title" || data == "Subject" || data == "Author" || data == "Creator" || data == "Producer")
-        return m_document->info(data);
+        return m_popDocument->info(data);
     else
         return QString("");
 }
 
-bool PdfDocument::loadPages()
+QVariant PdfDocument::documentInfo(PdfDocument::DocumentInfo info)
 {
-    qDebug() << "Populating model...";
+    if (!m_popDocument)
+        return QVariant();
 
-    m_pages.clear();
+    switch (info) {
+    case Title:
+        return m_popDocument->info("Title");
+    case Subject:
+        return m_popDocument->info("Subject");
+    case Author:
+        return m_popDocument->info("Author");
+    case Creator:
+        return m_popDocument->info("Creator");
+    case Producer:
+        return m_popDocument->info("Producer");
+    case CreationDate:
+        return m_popDocument->date("CreationDate");
+    case ModifiedDate:
+        return m_popDocument->date("ModDate");
+    default:
+        return QVariant();
+    }
+}
 
-    if (!m_document)
+bool PdfDocument::unlock(const QString &ownerPassword, const QString &userPassword)
+{
+    bool result = false;
+
+    m_popDocument.data()->unlock(ownerPassword.toLatin1(), userPassword.toLatin1());
+
+    // It seems that Poppler::Document::unlock() returns true even with the wrong password :/
+    result = !isLocked();
+
+    if (result) {
+        completeIntialization();
+    }
+
+    return result;
+}
+
+QObject *PdfDocument::tocModel() const
+{
+    return m_tocModel;
+}
+
+QSize PdfDocument::pageSize(int index) const
+{
+    QSize s;
+
+    if (m_popDocument) {
+        Poppler::Page* page = m_popDocument.data()->page(index);
+
+        s = page->pageSize();
+
+        delete page;
+    }
+
+    return s;
+}
+
+PopplerError::Error PdfDocument::error() const
+{
+    return m_error;
+}
+
+PdfDocument::RenderHints PdfDocument::renderHints() const
+{
+    return m_renderHints;
+}
+
+void PdfDocument::setRenderHints(const RenderHints hints)
+{
+    if (m_renderHints == hints)
+        return;
+
+    m_renderHints = hints;
+    Q_EMIT renderHintsChanged();
+}
+
+void PdfDocument::updateRenderHints()
+{
+    if (!m_popDocument)
+        return;
+
+    Poppler::Document* doc = m_popDocument.data();
+
+    doc->setRenderHint(Poppler::Document::RenderHint::Antialiasing,      m_renderHints & PdfDocument::Antialiasing);
+    doc->setRenderHint(Poppler::Document::RenderHint::TextAntialiasing,  m_renderHints & PdfDocument::TextAntialiasing);
+    doc->setRenderHint(Poppler::Document::RenderHint::TextHinting,       m_renderHints & PdfDocument::TextHinting);
+    doc->setRenderHint(Poppler::Document::RenderHint::TextSlightHinting, m_renderHints & PdfDocument::TextSlightHinting);
+    doc->setRenderHint(Poppler::Document::RenderHint::OverprintPreview,  m_renderHints & PdfDocument::OverprintPreview);
+    doc->setRenderHint(Poppler::Document::RenderHint::ThinLineSolid,     m_renderHints & PdfDocument::ThinLineSolid);
+    doc->setRenderHint(Poppler::Document::RenderHint::ThinLineShape,     m_renderHints & PdfDocument::ThinLineShape);
+}
+
+QImage PdfDocument::paintPage(int pageIndex, const qreal &zoom, QRect rect, Rotation rotate) const
+{
+    QImage result;
+
+    if (m_popDocument) {
+        if (pageIndex >= 0 || pageIndex < m_popDocument.data()->numPages()) {
+            Poppler::Page* page = m_popDocument.data()->page(pageIndex);
+
+            result = page->renderToImage(
+                        DEFAULT_DPI * Twips::getUnitsRatio() * zoom,
+                        DEFAULT_DPI * Twips::getUnitsRatio() * zoom,
+                        rect.x(), rect.y(), rect.width(), rect.height(),
+                        Poppler::Page::Rotation(rotate));
+
+            delete page;
+        }
+    }
+
+    return result;
+}
+
+QList<Poppler::Link *> PdfDocument::pageLinks(int pageIndex) const
+{
+    QList<Poppler::Link *> result;
+
+    if (!m_links.empty())
+        result = m_links.value(pageIndex);
+
+    return result;
+}
+
+bool PdfDocument::loadDocument()
+{
+    qDebug() << "Loading document...";
+
+    if (m_path.isEmpty()) {
+        qDebug() << "Can't load the document, path is empty.";
+        setError(PopplerError::FileNotFound);
         return false;
+    }
 
-    Poppler::Document* document = m_document;
-    QtConcurrent::run( [=] {
-        PdfPagesList pages;
+    Poppler::Document* doc = Poppler::Document::load(m_path);
+    m_popDocument = QSharedPointer<Poppler::Document>(doc);
 
-        for( int i = 0; i < document->numPages(); ++i )
-            pages.append(document->page(i));
+    if (!doc || doc->isLocked()) {
+        qDebug() << "ERROR : Can't open the document located at " + m_path;
+        setError(PopplerError::DocumentLocked);
 
-        QMetaObject::invokeMethod(this, "_q_populate", Qt::QueuedConnection, Q_ARG(PdfPagesList, pages));
-    });
+        return false;
+    }
+
+    setError(PopplerError::NoError);
+    qDebug() << "Document loaded successfully !";
+
+    completeIntialization();
 
     return true;
+
 }
 
-void PdfDocument::_q_populate(PdfPagesList pagesList)
+void PdfDocument::setError(const PopplerError::Error &error)
 {
-    qDebug() << "Number of pages:" << pagesList.count();
+    if (m_error == error)
+        return;
 
-    Q_FOREACH (Poppler::Page *page, pagesList) {
-        beginInsertRows(QModelIndex(), rowCount(), rowCount());
-        m_pages << page;
-        endInsertRows();
-    }
-
-    qDebug() << "Model has been successfully populated!";
-    Q_EMIT pagesLoaded();
+    m_error = error;
+    Q_EMIT errorChanged();
 }
 
-void PdfDocument::loadProvider()
+void PdfDocument::completeIntialization()
 {
-    // WORKAROUND: QQuickImageProvider should create multiple threads to load more images at the same time.
-    // [QTBUG-37998] QQuickImageProvider can block its separate thread with ForceAsynchronousImageLoading
-    // Link: https://bugreports.qt.io/browse/QTBUG-37988
+    updateRenderHints();
 
-    // WORKAROUND: ARM SoCs can disable some of their cores when the load is not particulary high.
-    // This causes a wrong value for the "newProvidersNumber" variable.
-    // We hard-code its value to 4 (which is the number of available core on all the supported devices).
-//    int newProvidersNumber = QThread::idealThreadCount();
-    int newProvidersNumber = 4;
+    // Init toc model
+    m_tocModel = new PdfTocModel;
+    m_tocModel->setDocument(m_popDocument);
+    Q_EMIT tocModelChanged();
 
-    if (newProvidersNumber != m_providersNumber) {
-        m_providersNumber = newProvidersNumber;
-        Q_EMIT providersNumberChanged();
+    Q_EMIT pageCountChanged();
+
+    // WORKAROUND: Getting links from pages seems a bit trivial and causes SIGFAULTs.
+    // Do it once at document initialization and cache them for any future request.
+    for (int i=0; i<m_popDocument->numPages(); ++i) {
+        Poppler::Page* page = m_popDocument->page(i);
+
+        QList<Poppler::Link *> l = page->links();
+        m_links.insert(i, l);
+
+        delete page;
     }
-
-    qDebug() << "Ideal number of image providers is:" << m_providersNumber;
-
-    qDebug() << "Loading image provider(s)...";
-    QQmlEngine *engine = QQmlEngine::contextForObject(this)->engine();
-
-    for (int i=0; i<m_providersNumber; i++)
-        engine->addImageProvider(QLatin1String("poppler" + QByteArray::number(i)), new PdfImageProvider(m_document));
-
-    qDebug() << "Image provider(s) loaded successfully !";
 }
 
 PdfDocument::~PdfDocument()
 {
+    Q_FOREACH(QList<Poppler::Link *> list, m_links)
+        qDeleteAll(list);
+
+    delete m_tocModel;
+}
+
+QString PdfDocument::path() const
+{
+    return m_path;
 }
