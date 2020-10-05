@@ -6,7 +6,7 @@
   ],
   "dependencies_host": [
     "curl",
-    "cmake'
+    "cmake"
   ],
   "dependencies_target": [
     "libpoppler-qt5-dev",
