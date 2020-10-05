@@ -1,8 +1,4 @@
 build-amd64:
-  before_script:
-    - echo "deb https://repo.ubports.com/ xenial_-_qt-5-12 main" | tee /etc/apt/sources.list.d/ubports-qt-5-12.list
-    - apt-get update
-    - apt-get dist-upgrade -y --purge
   artifacts:
     expire_in: 1 week
     paths:
@@ -13,10 +9,6 @@ build-amd64:
   stage: build
 
 build-arm64:
-  before_script:
-    - echo "deb https://repo.ubports.com/ xenial_-_qt-5-12 main" | tee /etc/apt/sources.list.d/ubports-qt-5-12.list
-    - apt-get update
-    - apt-get dist-upgrade -y --purge
   artifacts:
     expire_in: 1 week
     paths:
@@ -27,10 +19,6 @@ build-arm64:
   stage: build
 
 build-armhf:
-  before_script:
-    - echo "deb https://repo.ubports.com/ xenial_-_qt-5-12 main" | tee /etc/apt/sources.list.d/ubports-qt-5-12.list
-    - apt-get update
-    - apt-get dist-upgrade -y --purge
   artifacts:
     expire_in: 1 week
     paths:
