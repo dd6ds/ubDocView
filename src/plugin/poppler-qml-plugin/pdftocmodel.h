@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015
+ * Copyright (C) 2015, 2016
  *          Stefano Verzegnassi <verzegnassi.stefano@gmail.com>
  *
  * This program is free software: you can redistribute it and/or modify it
@@ -20,6 +20,7 @@
 #define PDFTOCMODEL_H
 
 #include <QAbstractListModel>
+#include <QSharedPointer>
 #include <poppler/qt5/poppler-qt5.h>
 #include <QDomNode>
 
@@ -28,6 +29,7 @@ class TocEntry
 public:
     QString title;
     int pageIndex = 0;
+    int parentNodeIndex = 0;
     int level = 0;
 };
 
@@ -41,13 +43,14 @@ public:
     enum Roles {
         TitleRole = Qt::UserRole + 1,
         PageIndexRole,
+        ParentNodeIndexRole,
         LevelRole
     };
 
     explicit PdfTocModel(QAbstractListModel *parent = 0);
     virtual ~PdfTocModel();
 
-    void setDocument(Poppler::Document* document);
+    void setDocument(const QSharedPointer<Poppler::Document>& document);
 
     QHash<int, QByteArray> roleNames() const;
 
@@ -57,18 +60,16 @@ public:
     Q_INVOKABLE QVariantMap get(int index) const;
 
 Q_SIGNALS:
-    void documentChanged();
     void countChanged();
 
 private slots:
     void fillModel();
 
 private:
-    Poppler::Document* m_document;
+    QSharedPointer<Poppler::Document> m_document;
     QList<TocEntry> m_entries;
 
-    void recursiveGetEntries(QDomNode node, int nodeLevel);
-
+    void recursiveGetEntries(QDomNode node, int nodeLevel, int parentNodeIndex = -1);
 };
 
 #endif // PDFTOCMODEL_H

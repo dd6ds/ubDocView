@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013-2016 Canonical, Ltd.
+ * Copyright (C) 2013-2015 Canonical, Ltd.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -54,9 +54,8 @@ Page {
         }
 
         StyleHints {
-            backgroundColor: Qt.rgba(0, 0, 0, 0.75)
+            backgroundColor: "#BF000000"
             foregroundColor: "white"
-            dividerColor: "transparent"
         }
     }
 
@@ -85,7 +84,7 @@ Page {
 
         MouseArea {
             anchors.fill: parent
-            onClicked: pdfPage.header.visible = !pdfPage.header.visible
+            onDoubleClicked: pdfPage.header.visible = !pdfPage.header.visible
 
             // Hide mouse curson when there's no on-going mouse event
             hoverEnabled: true

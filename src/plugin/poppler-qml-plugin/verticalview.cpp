@@ -1,187 +1,135 @@
 /*
- * Copyright (C) 2013-2015 Canonical, Ltd.
+ * Copyright (C) 2015-2016
+ *          Stefano Verzegnassi <verzegnassi.stefano@gmail.com>
  *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; version 3.
+ * This program is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License version 3, as published
+ * by the Free Software Foundation.
  *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranties of
+ * MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR
+ * PURPOSE.  See the GNU General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
-
-/*
- * Some documentation on how this thing works:
+ * You should have received a copy of the GNU General Public License along
+ * with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
- * A flickable has two very important concepts that define the top and
- * height of the flickable area.
- * The top is returned in minYExtent()
- * The height is set using setContentHeight()
- * By changing those two values we can make the list grow up or down
- * as needed. e.g. if we are in the middle of the list
- * and something that is above the viewport grows, since we do not
- * want to change the viewport because of that we just adjust the
- * minYExtent so that the list grows up.
- *
- * The implementation on the list relies on the delegateModel doing
- * most of the instantiation work. You call createItem() when you
- * need to create an item asking for it async or not. If returns null
- * it means the item will be created async and the model will call the
- * itemCreated slot with the item.
- *
- * updatePolish is the central point of dispatch for the work of the
- * class. It is called by the scene graph just before drawing the class.
- * In it we:
- *  * Make sure all items are positioned correctly
- *  * Add/Remove items if needed
- *  * Update the content height if it was dirty
- *
- * m_visibleItems contains all the items we have created at the moment.
- * Actually not all of them are visible since it includes the ones
- * in the cache area we create asynchronously to help performance.
- * The first item in m_visibleItems has the m_firstVisibleIndex in
- * the model. If you actually want to know what is the first
- * item in the viewport you have to find the first non culled element
- * in m_visibleItems
- *
- * The first item of m_visibleItems is the one that defines the
- * positions of all the rest of items (see updatePolish()) and
- * this is why sometimes we move it even if it's not the item
- * that has triggered the function (i.e. in itemGeometryChanged())
- *
- * m_visibleItems is a list of ListItem. Each ListItem
- * will contain a item and potentially a sectionItem. The sectionItem
- * is only there when the list is using sectionDelegate+sectionProperty
- * and this is the first item of the section. Each ListItem is vertically
- * layouted with the sectionItem first and then the item.
- *
- * Note that minYExtent and height are not always totally accurate, since
- * we don't have the items created we can't guess their heights
- * so we can only guarantee the values are correct when the first/last
- * items of the list are visible, otherwise we just live with good enough
- * values that make the list scrollable
- *
- * There are a few things that are not really implemented or tested properly
- * which we don't use at the moment like changing the model, etc.
- * The known missing features are marked with TODOs along the code.
  */
 
 #include "verticalview.h"
+#include "pdfdocument.h"
+#include "pdfzoom.h"
+#include "twips.h"
+#include "sgtileitem.h"
+#include "pagedecoration.h"
+#include "pageoverlay.h"
 
-#include <QCoreApplication>
-#include <QDebug>
-#include <qqmlinfo.h>
-#include <qqmlengine.h>
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-pedantic"
-#include <private/qqmldelegatemodel_p.h>
-#include <private/qqmlglobal_p.h>
-#include <private/qquickitem_p.h>
-#include <private/qquickanimation_p.h>
-#pragma GCC diagnostic pop
+#include "config.h"
 
-qreal VerticalView::ListItem::height() const
+#include <QImage>
+#include <QtCore/qmath.h>
+
+// FIXME: Sometimes layout is not created when a document is opened
+// TODO: Check if everything works as expected when zooming
+
+#define UPDATE_TIMER_MSECS 20
+
+VerticalView::VerticalView(QQuickItem *parent)
+    : QQuickItem(parent)
+    , m_parentFlickable(nullptr)
+    , m_document(nullptr)
+    , m_zoomSettings(new PdfZoom(this))
+    , m_cacheBuffer(200)
+    , m_spacing(12)
+    , m_rotation(Rotation::Rotate0)
+    , m_currentPageIndex(-1)
+    , m_visibleArea(0, 0, 0, 0)
+    , m_bufferArea(0, 0, 0, 0)
+    , m_renderHints(0)
+    , m_showLinkHighlight(true)
+    , m_linkHighlightColor(Qt::red)
+    , m_error(PopplerError::NoError)
+    , m_hasZoomChanged(false)
+    , m_hasRotationChanged(false)
+    , m_hasFlickableBeenScrolled(false)
+    , m_hasFlickableBeenResized(false)
+    , m_hasRenderHintsChanged(false)
 {
-    return m_item->height();
-}
+    // Connect signals
+    connect(this, &VerticalView::documentChanged, this, &VerticalView::updateLayout);
+    connect(this, &VerticalView::parentFlickableChanged, this, &VerticalView::updateLayout);
+    connect(this, &VerticalView::cacheBufferChanged, this, &VerticalView::updateLayout);
+    connect(this, &VerticalView::spacingChanged, this, &VerticalView::updateLayout);
+    connect(this, &VerticalView::renderHintsChanged, this, &VerticalView::onRenderHintsChanged);
 
-qreal VerticalView::ListItem::y() const
-{
-    return m_item->y();
-}
+    connect(RenderEngine::instance(), &RenderEngine::taskRenderFinished,
+            this, &VerticalView::slotTaskRenderFinished);
 
-void VerticalView::ListItem::setY(qreal newY)
-{
-    m_item->setY(newY);
-}
+    connect(&m_updateTimer, &QTimer::timeout, this, &VerticalView::updateLayout);
 
-bool VerticalView::ListItem::culled() const
-{
-    return QQuickItemPrivate::get(m_item)->culled;
-}
+    connect(m_zoomSettings, &PdfZoom::zoomFactorChanged, [&]() {
+        m_hasZoomChanged = true;
+        updateLayout();
+    });
 
-void VerticalView::ListItem::setCulled(bool culled)
-{
-    QQuickItemPrivate::get(m_item)->setCulled(culled);
-}
-
-VerticalView::VerticalView()
- : m_delegateModel(nullptr)
- , m_asyncRequestedIndex(-1)
- , m_delegateValidated(false)
- , m_firstVisibleIndex(-1)
- , m_currentPageIndex(-1)
- , m_minYExtent(0)
- , m_contentHeightDirty(false)
- , m_previousContentY(0)
- , m_inLayout(false)
- , m_cacheBuffer(0)
- , m_spacing(0)
-{
-    connect(this, SIGNAL(heightChanged()), this, SLOT(_q_heightChanged()));
-    connect(this, SIGNAL(contentYChanged()), this, SLOT(_q_updateCurrentPageIndex()));
-
-    setFlickableDirection(QQuickFlickable::HorizontalAndVerticalFlick);
+    connect(this, &VerticalView::rotationChanged, [&]() {
+        m_hasRotationChanged = true;
+        updateLayout();
+    });
 }
 
 VerticalView::~VerticalView()
 {
+    disconnect(RenderEngine::instance(), &RenderEngine::taskRenderFinished,
+            this, &VerticalView::slotTaskRenderFinished);
+
+    qDeleteAll(m_decorations);
+    qDeleteAll(m_overlays);
+    qDeleteAll(m_pages);
 }
 
-QAbstractItemModel *VerticalView::model() const
+// Returns the parent QML Flickable
+QQuickItem* VerticalView::parentFlickable() const
 {
-    return m_delegateModel ? m_delegateModel->model().value<QAbstractItemModel *>() : nullptr;
+    return m_parentFlickable;
 }
 
-void VerticalView::setModel(QAbstractItemModel *model)
+// Set the parent QML Flickable
+void VerticalView::setParentFlickable(QQuickItem *flickable)
 {
-    if (model != this->model()) {
-        if (!m_delegateModel) {
-            createDelegateModel();
-        } else {
-            disconnect(m_delegateModel, SIGNAL(modelUpdated(QQmlChangeSet,bool)), this, SLOT(_q_modelUpdated(QQmlChangeSet,bool)));
-        }
-        m_delegateModel->setModel(QVariant::fromValue<QAbstractItemModel *>(model));
-        connect(m_delegateModel, SIGNAL(modelUpdated(QQmlChangeSet,bool)), this, SLOT(_q_modelUpdated(QQmlChangeSet,bool)));
-        Q_EMIT modelChanged();
-        polish();
-        // TODO?
-//         Q_EMIT contentHeightChanged();
-//         Q_EMIT contentYChanged();
-    }
+    if (m_parentFlickable == flickable)
+        return;
+
+    if (m_parentFlickable)
+        m_parentFlickable->disconnect(this);
+
+    m_parentFlickable = flickable;
+
+    connect(m_parentFlickable, &QQuickItem::widthChanged, this, &VerticalView::onFlickableSizeChanged);
+    connect(m_parentFlickable, &QQuickItem::heightChanged, this, &VerticalView::onFlickableSizeChanged);
+
+    connect(m_parentFlickable, SIGNAL(contentXChanged()), this, SLOT(onFlickableScrolled()));
+    connect(m_parentFlickable, SIGNAL(contentYChanged()), this, SLOT(onFlickableScrolled()));
+
+    Q_EMIT parentFlickableChanged();
 }
 
-QQmlComponent *VerticalView::delegate() const
+PdfDocument* VerticalView::document() const
 {
-    return m_delegateModel ? m_delegateModel->delegate() : nullptr;
+    return m_document.data();
 }
 
-void VerticalView::setDelegate(QQmlComponent *delegate)
+PdfZoom *VerticalView::zoomSettings() const
 {
-    if (delegate != this->delegate()) {
-        if (!m_delegateModel) {
-            createDelegateModel();
-        }
+    return m_zoomSettings;
+}
+void VerticalView::setCurrentPageIndex(int currentPageIndex)
+{
+    if (m_currentPageIndex == currentPageIndex)
+        return;
 
-        // Cleanup the existing items
-        Q_FOREACH(ListItem *item, m_visibleItems)
-            releaseItem(item);
-        m_visibleItems.clear();
-        m_firstVisibleIndex = -1;
-        adjustMinYExtent();
-        setContentY(0);
-
-        m_delegateModel->setDelegate(delegate);
-
-        Q_EMIT delegateChanged();
-        m_delegateValidated = false;
-        m_contentHeightDirty = true;
-        polish();
-    }
+    m_currentPageIndex = currentPageIndex;
+    Q_EMIT currentPageIndexChanged();
 }
 
 int VerticalView::cacheBuffer() const
@@ -191,43 +139,25 @@ int VerticalView::cacheBuffer() const
 
 void VerticalView::setCacheBuffer(int cacheBuffer)
 {
-    if (cacheBuffer < 0) {
-        qmlInfo(this) << "Cannot set a negative cache buffer";
+    if (m_cacheBuffer == cacheBuffer)
         return;
-    }
 
-    if (cacheBuffer != m_cacheBuffer) {
-        m_cacheBuffer = cacheBuffer;
-        Q_EMIT cacheBufferChanged();
-        polish();
-    }
+    m_cacheBuffer = cacheBuffer;
+    Q_EMIT cacheBufferChanged();
 }
 
-qreal VerticalView::spacing() const
+int VerticalView::spacing() const
 {
     return m_spacing;
 }
 
-void VerticalView::setSpacing(qreal spacing)
+void VerticalView::setSpacing(int spacing)
 {
-    if (spacing < 0) {
-        qmlInfo(this) << "Cannot set a negative spacing";
+    if (m_spacing == spacing)
         return;
-    }
 
-    if (spacing != m_spacing) {
-        m_spacing = spacing;
-        Q_EMIT spacingChanged();
-        polish();
-    }
-}
-
-int VerticalView::count() const
-{
-    if (m_delegateModel)
-        return m_delegateModel->count();
-    else
-        return 0;
+    m_spacing = spacing;
+    Q_EMIT spacingChanged();
 }
 
 int VerticalView::currentPageIndex() const
@@ -235,694 +165,570 @@ int VerticalView::currentPageIndex() const
     return m_currentPageIndex;
 }
 
-QQuickItem *VerticalView::currentPageItem() const
+int VerticalView::pagesCount() const
 {
-    return itemAt(m_currentPageIndex);
+    if (!m_document || m_document.data()->isLocked())
+        return 0;
+
+    return m_document.data()->pageCount();
 }
 
-void VerticalView::_q_updateCurrentPageIndex()
+VerticalView::Rotation VerticalView::rotation() const
 {
-    if (!m_visibleItems.isEmpty()) {
-        qreal pos = this->contentY() + (this->height() * 0.5);
+    return m_rotation;
+}
 
-        int oldCurrentPageIndex = m_currentPageIndex;
-        int i = 0;
+void VerticalView::setRotation(VerticalView::Rotation rotation)
+{
+    if (m_rotation == rotation)
+        return;
 
-        Q_FOREACH(ListItem * item, m_visibleItems) {
-            if (item->y() < pos && item->y() + item->height() > pos)
-                break;
+    m_rotation = rotation;
+    Q_EMIT rotationChanged();
+}
 
-            i++;
-        }
+PopplerError::Error VerticalView::error() const
+{
+    return m_error;
+}
 
-        // If spacing is set, there may be no page on posY position,
-        // and the Q_FOREACH loop keep on running until the end.
-        if (i != m_visibleItems.length())
-            m_currentPageIndex = m_firstVisibleIndex + i;
+PdfDocument::RenderHints VerticalView::renderHints() const
+{
+    return m_renderHints;
+}
 
-        if (m_currentPageIndex != oldCurrentPageIndex) {
-            Q_EMIT currentPageIndexChanged();
-            Q_EMIT currentPageItemChanged();
-        }
+void VerticalView::setRenderHints(const PdfDocument::RenderHints hints)
+{
+    if (m_renderHints == hints)
+        return;
 
+    m_renderHints = hints;
+    Q_EMIT renderHintsChanged();
+}
+
+bool VerticalView::showLinkHighlight() const
+{
+    return m_showLinkHighlight;
+}
+
+void VerticalView::setShowLinkHighlight(bool show)
+{
+    if (m_showLinkHighlight == show)
+        return;
+
+    m_showLinkHighlight = show;
+    Q_EMIT showLinkHighlightChanged();
+}
+
+QColor VerticalView::linkHighlightColor() const
+{
+    return m_linkHighlightColor;
+}
+
+void VerticalView::setLinkHighlightColor(const QColor &color)
+{
+    if (m_linkHighlightColor == color)
+        return;
+
+    m_linkHighlightColor = color;
+    Q_EMIT linkHighlightColorChanged();
+}
+
+void VerticalView::setError(const PopplerError::Error &error)
+{
+    if (m_error == error)
+        return;
+
+    m_error = error;
+    Q_EMIT errorChanged();
+}
+
+void VerticalView::initializeDocument(const QString &path)
+{
+    if (m_document)
+        m_document->disconnect(this);
+
+    setError(PopplerError::NoError);
+
+    m_document = QSharedPointer<PdfDocument>(new PdfDocument());
+    m_document->setPath(path);
+
+    /* A lot of things happens when we set the path property in
+     * m_document. Need to check if an error has been emitted. */
+    setError(m_document->error());
+
+    if (m_error != PopplerError::NoError && m_error != PopplerError::DocumentLocked) {
+        m_document.clear();
+
+        // Stop doing anything below.
+        return;
     }
+
+    m_document.data()->setRenderHints(m_renderHints);
+
+    Q_EMIT documentChanged();
+
+    // Init zoom settings
+    m_zoomSettings->init();
+}
+
+bool VerticalView::adjustZoomToWidth()
+{
+    if (!m_zoomSettings)
+        return false;
+
+    bool result;
+
+    result = m_zoomSettings->adjustZoomToWidth();
+    m_hasZoomChanged = result;
+
+    return result;
+}
+
+bool VerticalView::adjustZoomToPage()
+{
+    if (!m_zoomSettings)
+        return false;
+
+    bool result;
+
+    result = m_zoomSettings->adjustZoomToPage();
+    m_hasZoomChanged = result;
+
+    return result;
+}
+
+bool VerticalView::adjustAutomaticZoom()
+{
+    if (!m_zoomSettings)
+        return false;
+
+    bool result;
+
+    result = m_zoomSettings->adjustAutomaticZoom();
+    m_hasZoomChanged = result;
+
+    return result;
 }
 
 void VerticalView::positionAtBeginning()
 {
-    if (m_delegateModel->count() <= 0)
-        return;
-
-    if (m_firstVisibleIndex != 0) {
-        // TODO This could be optimized by trying to reuse the interesection
-        // of items that may end up intersecting between the existing
-        // m_visibleItems and the items we are creating in the next loop
-        Q_FOREACH(ListItem *item, m_visibleItems)
-            releaseItem(item);
-        m_visibleItems.clear();
-        m_firstVisibleIndex = -1;
-
-        // Create the item 0, it will be already correctly positioned at createItem()
-        ListItem *item = createItem(0, false);
-        // Create the subsequent items
-        int modelIndex = 1;
-        qreal pos = item->y() + item->height();
-        const qreal bufferTo = height() + m_cacheBuffer;
-        while (modelIndex < m_delegateModel->count() && pos <= bufferTo) {
-            if (!(item = createItem(modelIndex, false)))
-                break;
-            pos += item->height();
-            ++modelIndex;
-        }
-
-        m_previousContentY = m_visibleItems.first()->y();
-    }
-    setContentY(m_visibleItems.first()->y());
-
-    // Force update of currentPageIndex
-    _q_updateCurrentPageIndex();
+    m_parentFlickable->setProperty("contentY", 0);
 }
 
-void VerticalView::positionAtIndex(int index)
+void VerticalView::positionAtIndex(int index, qreal top, qreal left)
 {
-    if (m_delegateModel->count() <= 0)
-        return;
+    SGTileItem* page = m_pages.value(index);
 
-    if (index < m_firstVisibleIndex || index > m_firstVisibleIndex + m_visibleItems.length() - 1) {
-        // TODO This could be optimized by trying to reuse the interesection
-        // of items that may end up intersecting between the existing
-        // m_visibleItems and the items we are creating in the next loop
-        Q_FOREACH(ListItem *item, m_visibleItems)
-            releaseItem(item);
-        m_visibleItems.clear();
-        m_firstVisibleIndex = -1;
+    if (!page) {
+        PdfDocument* doc = m_document.data();
 
-        // Create the item with the given index, it will be already correctly positioned at createItem()
-        // Other items are created when createdItem() signal is emitted.
-        createItem(index, false);
+        const qreal &zoomFactor = m_zoomSettings->zoomFactor();
+        qreal totalHeight = 0;
 
-        m_previousContentY = m_visibleItems.first()->y();
+        for (int j=0; j < doc->pageCount(); ++j) {
+            const QSize &s = doc->pageSize(j);
+            QRect pageRect;
+
+            if (m_rotation == Rotation::Rotate0 || m_rotation == Rotate180) {
+                pageRect = QRect(
+                            (this->width() - Twips::convertPointsToPixels(s.width(), zoomFactor)) * 0.5,
+                            totalHeight,
+                            Twips::convertPointsToPixels(s.width(), zoomFactor),
+                            Twips::convertPointsToPixels(s.height(), zoomFactor)
+                            );
+            } else {
+                pageRect = QRect(
+                            (this->width() - Twips::convertPointsToPixels(s.height(), zoomFactor)) * 0.5,
+                            totalHeight,
+                            Twips::convertPointsToPixels(s.height(), zoomFactor),
+                            Twips::convertPointsToPixels(s.width(), zoomFactor)
+                            );
+            }
+
+            if (j == index) {
+                page = createPage(j, pageRect);
+                break;
+            }
+
+            totalHeight += (pageRect.height() + m_spacing);
+        }
     }
 
-    setContentY(itemAt(index)->y());
-
-    // Force update of currentPageIndex
-    _q_updateCurrentPageIndex();
+    m_parentFlickable->setProperty("contentY", page->x() + left);
+    m_parentFlickable->setProperty("contentY", page->y() + top);
 }
 
 void VerticalView::positionAtEnd()
 {
-    if (m_delegateModel->count() <= 0)
-        return;
+    const int posY = this->height() - m_parentFlickable->property("height").toInt();
 
-    if (m_firstVisibleIndex != m_delegateModel->count() - 1) {
-        // TODO This could be optimized by trying to reuse the interesection
-        // of items that may end up intersecting between the existing
-        // m_visibleItems and the items we are creating in the next loop
-        Q_FOREACH(ListItem *item, m_visibleItems)
-            releaseItem(item);
-        m_visibleItems.clear();
-        m_firstVisibleIndex = -1;
+    m_parentFlickable->setProperty("contentY", posY);
+}
 
-        // Create the item 0, it will be already correctly positioned at createItem()
-        ListItem *item = createItem(m_delegateModel->count() - 1, false);
-        // Create the prior items
-        int modelIndex = m_delegateModel->count() - 2;
-        qreal pos = item->y() + item->height();
-        const qreal bufferFrom = contentY() - m_cacheBuffer;
-        while (modelIndex > -1 && pos >= bufferFrom) {
-            if (!(item = createItem(modelIndex, false)))
+QVariantMap VerticalView::linkAtPosition(int x, int y)
+{
+    QVariantMap result;
+    int pageIndex = -1;
+    SGTileItem* page;
+
+    if (!m_pages.isEmpty()) {
+        auto i = m_pages.begin();
+        while (i != m_pages.end()) {
+            page = i.value();
+
+            if (page->area().contains(x, y)) {
+                pageIndex = i.key();
                 break;
-            pos += item->height();
-            --modelIndex;
+            }
+
+            i++;
         }
-
-        m_previousContentY = m_visibleItems.first()->y();
-    }
-    setContentY(m_visibleItems.first()->y());
-
-    // Force update of currentPageIndex
-    _q_updateCurrentPageIndex();
-}
-
-static inline bool uFuzzyCompare(qreal r1, qreal r2)
-{
-    return qFuzzyCompare(r1, r2) || (qFuzzyIsNull(r1) && qFuzzyIsNull(r2));
-}
-
-QQuickItem *VerticalView::itemAt(int modelIndex) const
-{
-    ListItem *item = itemAtIndex(modelIndex);
-    if (item)
-        return item->m_item;
-    else
-        return nullptr;
-}
-
-qreal VerticalView::minYExtent() const
-{
-    return m_minYExtent;
-}
-
-void VerticalView::componentComplete()
-{
-    if (m_delegateModel)
-        m_delegateModel->componentComplete();
-
-    QQuickFlickable::componentComplete();
-
-    polish();
-}
-
-void VerticalView::viewportMoved(Qt::Orientations orient)
-{
-    // Check we are not being taken down and don't paint anything
-    // TODO Check if we still need this in 5.2
-    // For reproduction just inifnite loop testDash or testDashContent
-    if (!QQmlEngine::contextForObject(this)->parentContext())
-        return;
-
-    QQuickFlickable::viewportMoved(orient);
-    m_previousContentY = contentY();
-    layout();
-    polish();
-}
-
-void VerticalView::createDelegateModel()
-{
-    m_delegateModel = new QQmlDelegateModel(qmlContext(this), this);
-    connect(m_delegateModel, SIGNAL(createdItem(int,QObject*)), this, SLOT(_q_itemCreated(int,QObject*)));
-    connect(m_delegateModel, SIGNAL(countChanged()), this, SIGNAL(countChanged()));
-    if (isComponentComplete())
-        m_delegateModel->componentComplete();
-    updateWatchedRoles();
-}
-
-void VerticalView::refill()
-{
-    if (m_inLayout) {
-        return;
-    }
-    if (!isComponentComplete()) {
-        return;
     }
 
-    const qreal from = contentY();
-    const qreal to = from + height();
-    const qreal bufferFrom = from - m_cacheBuffer;
-    const qreal bufferTo = to + m_cacheBuffer;
-
-    bool added = addVisibleItems(from, to, false);
-    bool removed = removeNonVisibleItems(bufferFrom, bufferTo);
-    added |= addVisibleItems(bufferFrom, bufferTo, true);
-
-    if (added || removed) {
-        m_contentHeightDirty = true;
+    if (pageIndex == -1) {
+        return QVariantMap();
     }
-}
 
-bool VerticalView::addVisibleItems(qreal fillFrom, qreal fillTo, bool asynchronous)
-{
-    if (!delegate())
-        return false;
+    QList<Poppler::Link *> links = m_document->pageLinks(pageIndex);
+    Q_FOREACH (Poppler::Link *link, links) {
+        bool rotatedBy90 = (m_rotation == VerticalView::Rotate90 ||
+                            m_rotation == VerticalView::Rotate270);
 
-    if (m_delegateModel->count() == 0)
-        return false;
+        QRectF linkRect;
+        int x1 = (!rotatedBy90 ? page->width() : page->height()) * link->linkArea().left();
+        int y1 = (!rotatedBy90 ? page->height() : page->width()) * link->linkArea().top();
+        int x2 = (!rotatedBy90 ? page->width() : page->height()) * link->linkArea().right();
+        int y2 = (!rotatedBy90 ? page->height() : page->width()) * link->linkArea().bottom();
+        int w  = page->width();
+        int h  = page->height();
 
-    ListItem *item;
-    int modelIndex = 0;
-    qreal pos = 0;
-    if (!m_visibleItems.isEmpty()) {
-        modelIndex = m_firstVisibleIndex + m_visibleItems.count();
-        item = m_visibleItems.last();
-        pos = item->y() + item->height() + m_spacing;
-    }
-    bool changed = false;
-
-    while (modelIndex < m_delegateModel->count() && pos <= fillTo) {
-        #if QT_VERSION < QT_VERSION_CHECK(5, 9, 0)
-        if (!(item = createItem(modelIndex, asynchronous)))
-        #else
-        if (!(item = createItem(modelIndex, asynchronous ? QQmlIncubator::Asynchronous : QQmlIncubator::AsynchronousIfNested)))
-        #endif
-        {
+        switch (m_rotation) {
+        case VerticalView::Rotate0:
+            linkRect.setLeft   ( page->x() + x1 );
+            linkRect.setTop    ( page->y() + y1 );
+            linkRect.setRight  ( page->x() + x2 );
+            linkRect.setBottom ( page->y() + y2 );
+            break;
+        case VerticalView::Rotate90:
+            linkRect.setLeft   ( page->x() + w - y2 );
+            linkRect.setTop    ( page->y() + x1     );
+            linkRect.setRight  ( page->x() + w - y1 );
+            linkRect.setBottom ( page->y() + x2     );
+            break;
+        case VerticalView::Rotate180:
+            linkRect.setLeft   ( page->x() + w - x2 );
+            linkRect.setTop    ( page->y() + h - y2 );
+            linkRect.setRight  ( page->x() + w - x1 );
+            linkRect.setBottom ( page->y() + h - y1 );
+            break;
+        case VerticalView::Rotate270:
+            linkRect.setLeft   ( page->x() + y1     );
+            linkRect.setTop    ( page->y() + h - x2 );
+            linkRect.setRight  ( page->x() + y2     );
+            linkRect.setBottom ( page->y() + h - x1 );
             break;
         }
-        pos += item->height() + m_spacing;
-        ++modelIndex;
-        changed = true;
+
+        if (linkRect.contains(x, y)) {
+            if (link->linkType() == Poppler::Link::LinkType::Goto) {
+                auto l = static_cast<Poppler::LinkGoto*>(link);
+
+                if (!l->isExternal()) {
+                    Poppler::LinkDestination dest = l->destination();
+
+                    result["pageIndex"] = dest.pageNumber() - 1;
+                    result["top"] = dest.top();
+                    result["left"] = dest.left();
+
+                    break;
+                }
+            } else if (link->linkType() == Poppler::Link::LinkType::Browse) {
+                auto l = static_cast<Poppler::LinkBrowse*>(link);
+
+                result["url"] = l->url();
+
+                break;
+            }
+        }
     }
 
-    modelIndex = 0;
-    pos = 0;
-    if (!m_visibleItems.isEmpty()) {
-        modelIndex = m_firstVisibleIndex - 1;
-        item = m_visibleItems.first();
-        pos = item->y();
+    return result;
+}
+
+bool VerticalView::unlock(const QString &ownerPassword, const QString &userPassword)
+{
+    bool result = false;
+
+    if (m_document) {
+        result = m_document.data()->unlock(ownerPassword, userPassword);
+
+        if (result) {
+            Q_EMIT documentChanged(); // which trigger a layout update
+        }
     }
-    while (modelIndex >= 0 && pos > fillFrom) {
-        #if QT_VERSION < QT_VERSION_CHECK(5, 9, 0)
-        if (!(item = createItem(modelIndex, asynchronous)))
-        #else
-        if (!(item = createItem(modelIndex, asynchronous ? QQmlIncubator::Asynchronous : QQmlIncubator::AsynchronousIfNested)))
-        #endif
-        {
+
+    return result;
+}
+
+// FIXME: There's something wrong here. Improve the events management.
+// e.g. change zoom mode and immediately scroll the view. We have ~40
+// RenderTask requests for new rendering just two pages.
+void VerticalView::updateLayout()
+{
+    if (!m_parentFlickable || !m_document || m_document.data()->isLocked())
+        return;
+
+    if (m_zoomSettings->zoomMode() == PdfZoom::FitWidth) {
+        if (m_zoomSettings->adjustZoomToWidth(false))
+            m_hasZoomChanged = true;
+    }
+
+    else if (m_zoomSettings->zoomMode() == PdfZoom::FitPage) {
+        if (m_zoomSettings->adjustZoomToPage(false))
+            m_hasZoomChanged = true;
+    }
+
+    else if (m_zoomSettings->zoomMode() == PdfZoom::Automatic) {
+        if (m_zoomSettings->adjustAutomaticZoom(false))
+            m_hasZoomChanged = true;
+    }
+
+    if (!m_pages.isEmpty() && (m_hasZoomChanged || m_hasRotationChanged || m_hasRenderHintsChanged)) {
+        clearView();
+        m_hasZoomChanged = false;
+        m_hasRotationChanged = false;
+        m_hasRenderHintsChanged = false;
+    }
+
+    // Just for convenience.
+    QRect documentRect(this->boundingRect().toRect());
+
+    // Update visible area
+    QRect visibleRect(m_parentFlickable->property("contentX").toInt(),
+                      m_parentFlickable->property("contentY").toInt(),
+                      m_parentFlickable->width(),
+                      m_parentFlickable->height());
+
+    m_visibleArea = visibleRect.intersected(documentRect);
+
+    // Update buffer area
+    QRect bufferRect(m_visibleArea.left()   -  m_cacheBuffer,
+                     m_visibleArea.top()    -  m_cacheBuffer,
+                     m_visibleArea.width()  + (m_cacheBuffer * 2),
+                     m_visibleArea.height() + (m_cacheBuffer * 2));
+
+    m_bufferArea = bufferRect.intersected(documentRect);
+
+    // Delete tiles that are outside the loading area
+    if (!m_pages.isEmpty()) {
+        auto i = m_pages.begin();
+        while (i != m_pages.end()) {
+            SGTileItem* page = i.value();
+
+            // Ok - we still need this item.
+            if (m_bufferArea.intersects(page->area())) {
+                i++;
+                continue;
+            }
+
+            RenderEngine::instance()->dequeueTask(page->id());
+
+            m_overlays.value(i.key())->deleteLater();
+            m_overlays.remove(i.key());
+
+            m_decorations.value(i.key())->deleteLater();
+            m_decorations.remove(i.key());
+
+            page->deleteLater();
+            i = m_pages.erase(i);
+        }
+    }
+
+
+    PdfDocument* doc = m_document.data();
+
+    const qreal &zoomFactor = m_zoomSettings->zoomFactor();
+
+
+    int docWidth = 0;
+    int totalHeight = 0;
+
+    for (int i=0; i < doc->pageCount(); ++i) {
+        if (m_rotation == Rotation::Rotate0 || m_rotation == Rotate180) {
+            const int w = Twips::convertPointsToPixels(doc->pageSize(i).width(), zoomFactor);
+            if (docWidth < w)
+                docWidth = w;
+        } else {
+            const int h = Twips::convertPointsToPixels(doc->pageSize(i).height(), zoomFactor);
+            if (docWidth < h)
+                docWidth = h;
+        }
+    }
+
+    for (int j=0; j < doc->pageCount(); ++j) {
+        const QSize &s = doc->pageSize(j);
+        QRect pageRect;
+
+        if (m_rotation == Rotation::Rotate0 || m_rotation == Rotate180) {
+            pageRect = QRect(
+                        (docWidth - Twips::convertPointsToPixels(s.width(), zoomFactor)) * 0.5,
+                        totalHeight,
+                        Twips::convertPointsToPixels(s.width(), zoomFactor),
+                        Twips::convertPointsToPixels(s.height(), zoomFactor)
+                        );
+        } else {
+            pageRect = QRect(
+                        (docWidth - Twips::convertPointsToPixels(s.height(), zoomFactor)) * 0.5,
+                        totalHeight,
+                        Twips::convertPointsToPixels(s.height(), zoomFactor),
+                        Twips::convertPointsToPixels(s.width(), zoomFactor)
+                        );
+        }
+
+        if (pageRect.intersects(m_bufferArea)) {
+            createPage(j, pageRect);
+        }
+
+        totalHeight += (pageRect.height() + m_spacing);
+    }
+
+    setWidth(docWidth);
+    setHeight(totalHeight);
+
+    m_hasFlickableBeenResized = false;
+    m_hasFlickableBeenScrolled = false;
+}
+
+void VerticalView::clearView()
+{   
+    Q_FOREACH(PageDecoration* decoration, m_decorations)
+        decoration->deleteLater();
+
+    Q_FOREACH(PageOverlay* overlay, m_overlays)
+        overlay->deleteLater();
+
+    Q_FOREACH(SGTileItem* page, m_pages)
+        page->deleteLater();
+
+    m_decorations.clear();
+    m_overlays.clear();
+    m_pages.clear();
+}
+
+void VerticalView::onFlickableScrolled()
+{
+    if (m_updateTimer.isActive())
+        return;
+
+    m_hasFlickableBeenScrolled = true;
+
+    // Update current page index
+    int newCurrentPageIndex = -1;
+    int flickCenterY = m_parentFlickable->property("contentY").toInt() + m_parentFlickable->height() * 0.5;
+
+    // First attempt: check at the exact center
+    for (auto i = m_pages.begin(); i != m_pages.end(); ++i) {
+        QRect pageRect = i.value()->area();
+        QPoint flickableCenter(this->width() * 0.5, flickCenterY);
+
+        if (pageRect.contains(flickableCenter)) {
+            newCurrentPageIndex = i.key();
             break;
         }
-        pos -= item->height() + m_spacing;
-        --modelIndex;
-        changed = true;
     }
 
-    return changed;
-}
+    // currentPageIndex not found
+    // Second attempt: sum the spacing to flickCenterY, so we're sure we'll find a page this time.
+    if (newCurrentPageIndex == -1) {
+        flickCenterY += m_spacing;
 
-void VerticalView::reallyReleaseItem(ListItem *listItem)
-{
-    QQuickItem *item = listItem->m_item;
-    QQmlDelegateModel::ReleaseFlags flags = m_delegateModel->release(item);
-    if (flags & QQmlDelegateModel::Destroyed) {
-        item->setParentItem(nullptr);
-    }
-    delete listItem;
-}
+        for (auto i = m_pages.begin(); i != m_pages.end(); ++i) {
+            QRect pageRect = i.value()->area();
+            QPoint flickableCenter(this->width() * 0.5, flickCenterY);
 
-void VerticalView::releaseItem(ListItem *listItem)
-{
-    QQuickItemPrivate *itemPrivate = QQuickItemPrivate::get(listItem->m_item);
-    itemPrivate->removeItemChangeListener(this, QQuickItemPrivate::Geometry);
-    m_itemsToRelease << listItem;
-}
-
-void VerticalView::updateWatchedRoles()
-{
-    if (m_delegateModel) {
-        QList<QByteArray> roles;
-        m_delegateModel->setWatchedRoles(roles);
-    }
-}
-
-bool VerticalView::removeNonVisibleItems(qreal bufferFrom, qreal bufferTo)
-{
-    // Do not remove items if we are overshooting up or down, since we'll come back
-    // to the "stable" position and delete/create items without any reason
-    if (contentY() < -m_minYExtent) {
-        return false;
-    } else if (contentY() + height() > contentHeight()) {
-        return false;
-    }
-    bool changed = false;
-
-    bool foundVisible = false;
-    int i = 0;
-    int removedItems = 0;
-    const auto oldFirstVisibleIndex = m_firstVisibleIndex;
-    while (i < m_visibleItems.count()) {
-        ListItem *item = m_visibleItems[i];
-        const qreal pos = item->y() + m_spacing;
-        if (pos + item->height() < bufferFrom || pos > bufferTo) {
-            releaseItem(item);
-            m_visibleItems.removeAt(i);
-            changed = true;
-            ++removedItems;
-        } else {
-            if (!foundVisible) {
-                foundVisible = true;
-                const int itemIndex = m_firstVisibleIndex + removedItems + i;
-                m_firstVisibleIndex = itemIndex;
+            if (pageRect.contains(flickableCenter)) {
+                newCurrentPageIndex = i.key();
+                break;
             }
-            ++i;
         }
     }
-    if (!foundVisible) {
-        m_firstVisibleIndex = -1;
-    }
-    if (m_firstVisibleIndex != oldFirstVisibleIndex) {
-        adjustMinYExtent();
-    }
 
-    return changed;
+    // Set the value: -1 = current page not found
+    setCurrentPageIndex(newCurrentPageIndex);
+
+    // updateLayout() is triggered by the timer
+    m_updateTimer.setSingleShot(true);
+    m_updateTimer.start(UPDATE_TIMER_MSECS);
 }
 
-VerticalView::ListItem *VerticalView::createItem(int modelIndex, bool asynchronous)
+void VerticalView::onFlickableSizeChanged()
 {
-    if (asynchronous && m_asyncRequestedIndex != -1)
-        return nullptr;
+    m_hasFlickableBeenResized = true;
+    updateLayout();
+}
 
-    m_asyncRequestedIndex = -1;
-    #if QT_VERSION < QT_VERSION_CHECK(5, 9, 0)
-    QObject* object = m_delegateModel->object(modelIndex, asynchronous);
-    #else
-    QObject* object = m_delegateModel->object(modelIndex, asynchronous ? QQmlIncubator::Asynchronous : QQmlIncubator::AsynchronousIfNested);
-    #endif
-            
-    QQuickItem *item = qmlobject_cast<QQuickItem*>(object);
-    if (!item) {
-        if (object) {
-            m_delegateModel->release(object);
-            if (!m_delegateValidated) {
-                m_delegateValidated = true;
-                QObject* delegateObj = delegate();
-                qmlInfo(delegateObj ? delegateObj : this) << "Delegate must be of Item type";
-            }
-        } else {
-            m_asyncRequestedIndex = modelIndex;
-        }
-        return 0;
+void VerticalView::onRenderHintsChanged()
+{
+    if (!m_document || m_document.data()->isLocked())
+        return;
+
+    m_document.data()->setRenderHints(m_renderHints);
+
+    m_hasRenderHintsChanged = true;
+    updateLayout();
+}
+
+SGTileItem *VerticalView::createPage(int index, const QRect &pageRect)
+{
+    SGTileItem* page;
+
+    if (!m_pages.contains(index)) {
+        page = new SGTileItem(pageRect, m_zoomSettings->zoomFactor(), RenderEngine::getNextId(), this);
+        m_pages.insert(index, page);
+        RenderEngine::instance()->enqueueTask(createTask(pageRect, index, page->id()));
+
+        auto decoration = new PageDecoration(page);
+        decoration->setZ(-1000);
+        decoration->setWidth(page->width());
+        decoration->setHeight(page->height());
+        m_decorations.insert(index, decoration);
+
+        auto overlay = new PageOverlay(this, index, page);
+        overlay->setZ(1000);
+        overlay->setWidth(page->width());
+        overlay->setHeight(page->height());
+        m_overlays.insert(index, overlay);
+
     } else {
-        ListItem *listItem = new ListItem;
-        listItem->m_item = item;
-        QQuickItemPrivate::get(item)->addItemChangeListener(this, QQuickItemPrivate::Geometry);
-        ListItem *prevItem = itemAtIndex(modelIndex - 1);
-        bool lostItem = false; // Is an item that we requested async but because of model changes
-                               // it is no longer attached to any of the existing items (has no prev nor next item)
-                               // nor is the first item
-        if (prevItem) {
-            listItem->setY(prevItem->y() + prevItem->height() + m_spacing);
-        } else {
-            ListItem *currItem = itemAtIndex(modelIndex);
-            if (currItem) {
-                // There's something already in m_visibleItems at out index, meaning this is an insert, so attach to its top
-                listItem->setY(currItem->y() - listItem->height() - m_spacing);
-            } else {
-                ListItem *nextItem = itemAtIndex(modelIndex + 1);
-                if (nextItem) {
-                    listItem->setY(nextItem->y() - listItem->height() - m_spacing);
-                } else if (modelIndex == 0) {
-                    listItem->setY(0);
-                } else if (!m_visibleItems.isEmpty()) {
-                    lostItem = true;
-                }
-            }
-        }
-        if (lostItem) {
-            listItem->setCulled(true);
-            releaseItem(listItem);
-            listItem = nullptr;
-        } else {
-            listItem->setCulled(listItem->y() + listItem->height() + m_spacing <= contentY() || listItem->y() >= contentY() + height());
-            if (m_visibleItems.isEmpty()) {
-                m_visibleItems << listItem;
-            } else {
-                m_visibleItems.insert(modelIndex - m_firstVisibleIndex, listItem);
-            }
-            if (m_firstVisibleIndex < 0 || modelIndex < m_firstVisibleIndex) {
-                m_firstVisibleIndex = modelIndex;
-                polish();
-            }
-            adjustMinYExtent();
-            m_contentHeightDirty = true;
-        }
-        return listItem;
+        page = m_pages.value(index);
     }
+
+    return page;
 }
 
-void VerticalView::_q_itemCreated(int modelIndex, QObject *object)
+PdfRenderTask* VerticalView::createTask(const QRect &rect, int pageIndex, int id) const
 {
-    QQuickItem *item = qmlobject_cast<QQuickItem*>(object);
-    if (!item) {
-        qWarning() << "VerticalView::itemCreated got a non item for index" << modelIndex;
-        return;
-    }
-
-    // Check we are not being taken down and don't paint anything
-    // TODO Check if we still need this in 5.2
-    // For reproduction just inifnite loop testDash or testDashContent
-    if (!QQmlEngine::contextForObject(this)->parentContext())
-        return;
-
-    item->setParentItem(contentItem());
-    QQmlContext *context = QQmlEngine::contextForObject(item)->parentContext();
-    context->setContextProperty(QLatin1String("VerticalView"), this);
-    context->setContextProperty(QLatin1String("heightToClip"), QVariant::fromValue<int>(0));
-    if (modelIndex == m_asyncRequestedIndex) {
-        createItem(modelIndex, false);
-        refill();
-    }
+    auto task = new PdfRenderTask();
+    task->setId(id);
+    task->setDocument(m_document);
+    task->setPage(pageIndex);
+    task->setRotation(m_rotation);
+    task->setArea(QRect(0, 0, rect.width(), rect.height()));
+    task->setZoom(m_zoomSettings->zoomFactor());
+    return task;
 }
 
-void VerticalView::_q_heightChanged()
+void VerticalView::slotTaskRenderFinished(AbstractRenderTask *task, QImage img)
 {
-    polish();
-}
+    if (task->type() == RttPdfPage) {
+        int id = task->id();
 
-void VerticalView::_q_modelUpdated(const QQmlChangeSet &changeSet, bool /*reset*/)
-{
-    // TODO Do something with reset
-    const auto oldFirstVisibleIndex = m_firstVisibleIndex;
-
-    Q_FOREACH(const QQmlChangeSet::Change &remove, changeSet.removes()) {
-        if (remove.index + remove.count > m_firstVisibleIndex && remove.index < m_firstVisibleIndex + m_visibleItems.count()) {
-            const qreal oldFirstValidIndexPos = m_visibleItems.first()->y();
-            // If all the items we are removing are either not created or culled
-            // we have to grow down to avoid viewport changing
-            bool growDown = true;
-            for (int i = 0; growDown && i < remove.count; ++i) {
-                const int modelIndex = remove.index + i;
-                ListItem *item = itemAtIndex(modelIndex);
-                if (item && !item->culled()) {
-                    growDown = false;
-                }
+        Q_FOREACH(SGTileItem* page, m_pages) {
+            if (page->id() == id) {
+                page->setData(img);
+                break;
             }
-            for (int i = remove.count - 1; i >= 0; --i) {
-                const int visibleIndex = remove.index + i - m_firstVisibleIndex;
-                if (visibleIndex >= 0 && visibleIndex < m_visibleItems.count()) {
-                    ListItem *item = m_visibleItems[visibleIndex];
-                    releaseItem(item);
-                    m_visibleItems.removeAt(visibleIndex);
-                }
-            }
-            if (growDown) {
-                adjustMinYExtent();
-            } else if (remove.index <= m_firstVisibleIndex) {
-                if (!m_visibleItems.isEmpty()) {
-                    // We removed the first item that is the one that positions the rest
-                    // position the new first item correctly
-                    m_visibleItems.first()->setY(oldFirstValidIndexPos);
-                } else {
-                    m_firstVisibleIndex = -1;
-                }
-            }
-        } else if (remove.index + remove.count <= m_firstVisibleIndex) {
-            m_firstVisibleIndex -= remove.count;
-        }
-        for (int i = remove.count - 1; i >= 0; --i) {
-            const int modelIndex = remove.index + i;
-            if (modelIndex == m_asyncRequestedIndex) {
-                m_asyncRequestedIndex = -1;
-            } else if (modelIndex < m_asyncRequestedIndex) {
-                m_asyncRequestedIndex--;
-            }
-        }
-    }
-
-    Q_FOREACH(const QQmlChangeSet::Change &insert, changeSet.inserts()) {
-        const bool insertingInValidIndexes = insert.index > m_firstVisibleIndex && insert.index < m_firstVisibleIndex + m_visibleItems.count();
-        const bool firstItemWithViewOnTop = insert.index == 0 && m_firstVisibleIndex == 0 && m_visibleItems.first()->y()  > contentY();
-        if (insertingInValidIndexes || firstItemWithViewOnTop)
-        {
-            // If the items we are adding won't be really visible
-            // we grow up instead of down to not change the viewport
-            bool growUp = false;
-            if (!firstItemWithViewOnTop) {
-                for (int i = 0; i < m_visibleItems.count(); ++i) {
-                    if (!m_visibleItems[i]->culled()) {
-                        if (insert.index <= m_firstVisibleIndex + i) {
-                            growUp = true;
-                        }
-                        break;
-                    }
-                }
-            }
-
-            const qreal oldFirstValidIndexPos = m_visibleItems.first()->y();
-            for (int i = insert.count - 1; i >= 0; --i) {
-                const int modelIndex = insert.index + i;
-                ListItem *item = createItem(modelIndex, false);
-                if (growUp) {
-                    ListItem *firstItem = m_visibleItems.first();
-                    firstItem->setY(firstItem->y() - item->height());
-                }
-            }
-            if (firstItemWithViewOnTop) {
-                ListItem *firstItem = m_visibleItems.first();
-                firstItem->setY(oldFirstValidIndexPos);
-            }
-            adjustMinYExtent();
-        } else if (insert.index <= m_firstVisibleIndex) {
-            m_firstVisibleIndex += insert.count;
-        }
-
-        for (int i = insert.count - 1; i >= 0; --i) {
-            const int modelIndex = insert.index + i;
-            if (modelIndex <= m_asyncRequestedIndex) {
-                m_asyncRequestedIndex++;
-            }
-        }
-    }
-
-    if (m_firstVisibleIndex != oldFirstVisibleIndex) {
-        adjustMinYExtent();
-    }
-
-    layout();
-    polish();
-    m_contentHeightDirty = true;
-}
-
-#if QT_VERSION < QT_VERSION_CHECK(5, 9, 0)
-void VerticalView::itemGeometryChanged(QQuickItem * /*item*/, const QRectF &newGeometry, const QRectF &oldGeometry)
-{
-    const qreal heightDiff = newGeometry.height() - oldGeometry.height();
-    if (heightDiff != 0) {
-        if (oldGeometry.y() + oldGeometry.height() <= contentY() && !m_visibleItems.isEmpty()) {
-            ListItem *firstItem = m_visibleItems.first();
-            firstItem->setY(firstItem->y() - heightDiff);
-            adjustMinYExtent();
-            layout();
-        }
-        refill();
-        adjustMinYExtent();
-        polish();
-        m_contentHeightDirty = true;
-    }
-#else
-void VerticalView::itemGeometryChanged(QQuickItem * /*item*/, QQuickGeometryChange change, const QRectF &oldGeometry)
-{
-    if (change.heightChange()) {
-        if (oldGeometry.y() + oldGeometry.height() <= contentY() && !m_visibleItems.isEmpty()) {
-            const qreal heightDiff = height() - oldGeometry.height();
-            ListItem *firstItem = m_visibleItems.first();
-            firstItem->setY(firstItem->y() - heightDiff);
-            adjustMinYExtent();
-            layout();
-        }
-        refill();
-        adjustMinYExtent();
-        polish();
-        m_contentHeightDirty = true;
-    }
-}
-#endif
-
-void VerticalView::adjustMinYExtent()
-{
-    if (m_visibleItems.isEmpty()) {
-        m_minYExtent = 0;
-    } else {
-        qreal nonCreatedHeight = 0;
-        if (m_firstVisibleIndex != 0) {
-            // Calculate the average height of items to estimate the position of the list start
-            const int visibleItems = m_visibleItems.count();
-            qreal visibleItemsHeight = 0;
-            Q_FOREACH(ListItem *item, m_visibleItems) {
-                visibleItemsHeight += item->height() + m_spacing;
-            }
-            nonCreatedHeight = m_firstVisibleIndex * visibleItemsHeight / visibleItems;
-        }
-        m_minYExtent = nonCreatedHeight - m_visibleItems.first()->y();
-        if (m_minYExtent != 0 && qFuzzyIsNull(m_minYExtent)) {
-            m_minYExtent = 0;
-            m_visibleItems.first()->setY(nonCreatedHeight);
         }
     }
 }
-
-VerticalView::ListItem *VerticalView::itemAtIndex(int modelIndex) const
-{
-    const int visibleIndexedModelIndex = modelIndex - m_firstVisibleIndex;
-    if (visibleIndexedModelIndex >= 0 && visibleIndexedModelIndex < m_visibleItems.count())
-        return m_visibleItems[visibleIndexedModelIndex];
-
-    return nullptr;
-}
-
-void VerticalView::layout()
-{
-    if (m_inLayout)
-        return;
-
-    m_inLayout = true;
-    if (!m_visibleItems.isEmpty()) {
-        const qreal visibleFrom = contentY();
-        const qreal visibleTo = contentY() + height();
-
-        qreal pos = m_visibleItems.first()->y();
-
-//         qDebug() << "VerticalView::layout Updating positions and heights. contentY" << contentY() << "minYExtent" << minYExtent();
-        int firstReallyVisibleItem = -1;
-        int modelIndex = m_firstVisibleIndex;
-        Q_FOREACH(ListItem *item, m_visibleItems) {
-            const bool cull = pos + item->height() + m_spacing <= visibleFrom || pos >= visibleTo;
-            item->setCulled(cull);
-            item->setY(pos);
-            if (!cull && firstReallyVisibleItem == -1) {
-                firstReallyVisibleItem = modelIndex;
-            }
-            QQmlContext *context = QQmlEngine::contextForObject(item->m_item)->parentContext();
-            const qreal clipFrom = visibleFrom;
-            if (!cull && pos < clipFrom) {
-                context->setContextProperty(QLatin1String("heightToClip"), clipFrom - pos);
-            } else {
-                context->setContextProperty(QLatin1String("heightToClip"), QVariant::fromValue<int>(0));
-            }
-//             qDebug() << "VerticalView::layout" << item->m_item;
-            pos += item->height() + m_spacing;
-            ++modelIndex;
-        }
-    }
-    m_inLayout = false;
-}
-
-void VerticalView::updatePolish()
-{
-    // Check we are not being taken down and don't paint anything
-    // TODO Check if we still need this in 5.2
-    // For reproduction just inifnite loop testDash or testDashContent
-    if (!QQmlEngine::contextForObject(this)->parentContext())
-        return;
-
-    Q_FOREACH(ListItem *item, m_itemsToRelease)
-        reallyReleaseItem(item);
-    m_itemsToRelease.clear();
-
-    if (!model())
-        return;
-
-    layout();
-
-    refill();
-
-    if (m_contentHeightDirty) {
-        qreal contentHeight;
-        if (m_visibleItems.isEmpty()) {
-            contentHeight = 0;
-        } else {
-            const int modelCount = model()->rowCount();
-            const int visibleItems = m_visibleItems.count();
-            const int lastValidIndex = m_firstVisibleIndex + visibleItems - 1;
-            qreal nonCreatedHeight = 0;
-            if (lastValidIndex != modelCount - 1) {
-                const int visibleItems = m_visibleItems.count();
-                qreal visibleItemsHeight = 0;
-                Q_FOREACH(ListItem *item, m_visibleItems) {
-                    visibleItemsHeight += item->height() + m_spacing;
-                }
-                const int unknownSizes = modelCount - (m_firstVisibleIndex + visibleItems);
-                nonCreatedHeight = unknownSizes * visibleItemsHeight / visibleItems;
-            }
-            ListItem *item = m_visibleItems.last();
-            contentHeight = nonCreatedHeight + item->y() + item->height();
-            if (m_firstVisibleIndex != 0) {
-                // Make sure that if we are shrinking we tell the view we still fit
-                m_minYExtent = qMax(m_minYExtent, -(contentHeight - height()));
-            }
-        }
-
-        m_contentHeightDirty = false;
-        adjustMinYExtent();
-        setContentHeight(contentHeight);
-    }
-}
-
-#include "moc_verticalview.cpp"

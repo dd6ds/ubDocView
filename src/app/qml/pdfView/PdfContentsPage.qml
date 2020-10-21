@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014-2016
+ * Copyright (C) 2014, 2015
  *                  Stefano Verzegnassi <verzegnassi.stefano@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
@@ -24,7 +24,7 @@ Page {
     objectName: "pdfcontents"
 
     // this property will have to be removed when bug #1341671 will be fixed.
-    property string testProperty: "for page name issue"
+    property string testProperty: "for page name issue"  
 
     header: PageHeader {
         // TRANSLATORS: "Contents" refers to the "Table of Contents" of a PDF document.
@@ -32,7 +32,8 @@ Page {
         flickable: view
     }
 
-    onActiveChanged: {
+//     FIXME: Restore it
+   /* onActiveChanged: {
         // Find out the current page position in the ToC index
         for (var i=0; i<poppler.tocModel.count; i++) {
             if (i+1 < poppler.tocModel.count) {
@@ -48,75 +49,81 @@ Page {
 
         // Position view at the highlighted index
         view.positionViewAtIndex(i, ListView.Center);
-    }
+    }*/
 
-    ScrollView {
+    ListView {
+        id: view
+        objectName: "view"
         anchors.fill: parent
+        clip: true
 
-        ListView {
-            id: view
-            objectName: "view"
-            anchors.fill: parent
-            clip: true
+        model: pdfView.document.tocModel
 
-            model: poppler.tocModel
+        delegate: ListItem {
+            id: delegate
+            objectName: "delegate" + index
 
-            delegate: ListItem {
-                id: delegate
-                objectName: "delegate" + index
+            anchors {
+                left: parent.left; right: parent.right
+                leftMargin: units.gu(2) + (model.level * units.gu(2))
+                rightMargin: units.gu(2)
+            }
 
-                property bool __isCurrentIndex: view.currentIndex == model.index
+            onClicked: {
+                pdfView.positionAtIndex(model.pageIndex);
+                contentsBottomEdge.collapse();
+            }
 
-                onClicked: {
-                    pdfView.positionAtIndex(model.pageIndex);
-                    contentsBottomEdge.collapse();
+            // Highlighted property of ListItem is read-only. In order to
+            // provide an highlight for the current page, we need to duplicate
+            // the overlay.
+            Rectangle {
+                anchors.fill: parent
+                color: Qt.rgba(0, 0, 0, 0.05)
+                visible: view.currentIndex == model.index
+            }
+
+            /* UITK 1.3 spec: Three slot layout (A-B-C)   */
+            //  ________________________________________
+            // |                              |     |   |
+            // |               A              |  B  | C |
+            // |______________________________|__ __|___|
+            //
+            ListItemLayout {
+                id: listItemLayout
+                objectName: "listItemLayout" + index
+                anchors.fill: parent
+
+                /* UITK 1.3 specs: Slot A */
+                title {
+                    text: model.title
+                    elide: Text.ElideRight
+                    font.weight: model.level == 0 ? Font.DemiBold : Font.Normal
+                    color: (model.level == 0) ? UbuntuColors.midAubergine
+                                              : theme.palette.selected.backgroundText
                 }
 
-                // Highlighted property of ListItem is read-only. In order to
-                // provide an highlight for the current page, we need to duplicate
-                // the overlay.
-                Rectangle {
-                    anchors.fill: parent
-                    color: Qt.rgba(0, 0, 0, 0.05)
-                    visible: __isCurrentIndex
+                /* UITK 1.3 specs: Slot B */
+                Icon {
+                    SlotsLayout.position: SlotsLayout.Trailing
+                    width: units.gu(2); height: width
+                    name: "tick"
+                    color: UbuntuColors.green
+                    visible: view.currentIndex == model.index
                 }
 
-                /* UITK 1.3 spec: Three slot layout (A-B-C)   */
-                //  ________________________________________
-                // |                              |     |   |
-                // |               A              |  B  | C |
-                // |______________________________|__ __|___|
-                //
-                ListItemLayout {
-                    id: listItemLayout
-                    objectName: "listItemLayout" + index
-                    anchors.fill: parent
-                    anchors.leftMargin: model.level * units.gu(4)
-
-                    /* UITK 1.3 specs: Slot A */
-                    title.text: model.title
-                    title.color: __isCurrentIndex ? theme.palette.selected.backgroundText
-                                                  : theme.palette.normal.backgroundText
-
-                    /* UITK 1.3 specs: Slot B */
-                    Icon {
-                        SlotsLayout.position: SlotsLayout.Trailing
-                        width: units.gu(2); height: width
-                        name: "tick"
-                        color: UbuntuColors.green
-                        visible: view.currentIndex == model.index
-                    }
-
-                    /* UITK 1.3 specs: Slot C */
-                    Label {
-                        objectName: "pageindex"
-                        SlotsLayout.position: SlotsLayout.Last
-                        text: model.pageIndex + 1
-                        color: __isCurrentIndex ? theme.palette.selected.backgroundText
-                                                : theme.palette.normal.backgroundText
-                    }
+                /* UITK 1.3 specs: Slot C */
+                Label {
+                    objectName: "pageindex"
+                    SlotsLayout.position: SlotsLayout.Last
+                    text: model.pageIndex + 1
+                    font.weight: model.level == 0 ? Font.DemiBold : Font.Normal
+                    color: (model.level == 0) ? UbuntuColors.midAubergine
+                                              : theme.palette.selected.backgroundText
                 }
             }
         }
     }
+
+    Scrollbar { flickableItem: view }
 }

@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2013-2015 Canonical, Ltd.
+ * Copyright (C) 2016
+ *          Stefano Verzegnassi <verzegnassi.stefano@gmail.com>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License version 3, as published
@@ -13,73 +14,115 @@
  * You should have received a copy of the GNU General Public License along
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
- * Author: Anthony Granger <grangeranthony@gmail.com>
- *         Stefano Verzegnassi <stefano92.100@gmail.com>
  */
 
 #ifndef PDFDOCUMENT_H
 #define PDFDOCUMENT_H
 
-#include <QAbstractListModel>
+#include <QObject>
+#include <QSharedPointer>
 #include <poppler/qt5/poppler-qt5.h>
-#include "pdfitem.h"
+
+#include "../../app/renderengine.h"
 #include "pdftocmodel.h"
+#include "pdferror.h"
 
-typedef QList<Poppler::Page*> PdfPagesList;
-
-class PdfDocument : public QAbstractListModel
+class PdfDocument : public QObject
 {
     Q_OBJECT
     Q_DISABLE_COPY(PdfDocument)
+    Q_ENUMS(Rotation)
+    Q_ENUMS(DocumentInfo)
+    Q_ENUMS(RenderHint)
+    Q_FLAGS(RenderHints)
     Q_PROPERTY(QString path READ path WRITE setPath NOTIFY pathChanged)
-    Q_PROPERTY(int providersNumber READ providersNumber NOTIFY providersNumberChanged)
+    Q_PROPERTY(int pageCount READ pageCount NOTIFY pageCountChanged)
     Q_PROPERTY(QObject* tocModel READ tocModel NOTIFY tocModelChanged)
+    Q_PROPERTY(PopplerError::Error error READ error NOTIFY errorChanged)
+    Q_PROPERTY(RenderHints renderHints READ renderHints WRITE setRenderHints NOTIFY renderHintsChanged)
 
 public:
-    enum Roles {
-        WidthRole = Qt::UserRole + 1,
-        HeightRole
+    explicit PdfDocument();
+    ~PdfDocument();
+
+    enum Rotation {
+        Rotate0 = Poppler::Page::Rotate0,
+        Rotate90 = Poppler::Page::Rotate90,
+        Rotate180 = Poppler::Page::Rotate180,
+        Rotate270 = Poppler::Page::Rotate270,
     };
 
-    explicit PdfDocument(QAbstractListModel *parent = 0);
-    virtual ~PdfDocument();
+    enum DocumentInfo {
+        Title,
+        Subject,
+        Author,
+        Creator,
+        Producer,
+        CreationDate,
+        ModifiedDate
+    };
 
-    QString path() const { return m_path; }
-    void setPath(QString &pathName);
+    enum RenderHint {
+        Antialiasing  = 0x00000001,
+        TextAntialiasing = 0x00000002,
+        TextHinting = 0x00000004,
+        TextSlightHinting = 0x00000008,
+        OverprintPreview = 0x00000010,
+        ThinLineSolid = 0x00000020,
+        ThinLineShape = 0x00000040
+    };
+    Q_DECLARE_FLAGS(RenderHints, RenderHint)
 
-    int providersNumber() const { return m_providersNumber; }
+    QString path() const;
+    void setPath(const QString &pathName);
 
-    QHash<int, QByteArray> roleNames() const;
+    bool isLocked();
 
-    int rowCount(const QModelIndex & parent = QModelIndex()) const;
-    QVariant data(const QModelIndex & index, int role = Qt::DisplayRole) const;
+    int pageCount();
+
+    QImage paintPage(int pageIndex, const qreal &zoom, QRect rect, Rotation rotate = Rotate0) const;
+
+    QList<Poppler::Link *> pageLinks(int pageIndex) const;
 
     Q_INVOKABLE QDateTime getDocumentDate(QString data);
     Q_INVOKABLE QString getDocumentInfo(QString data);
+    Q_INVOKABLE QVariant documentInfo(DocumentInfo info);
 
-    QObject *tocModel() const { return m_tocModel; }
+    Q_INVOKABLE bool unlock(const QString &ownerPassword, const QString &userPassword);
+
+    QObject *tocModel() const;
+
+    QSize pageSize(int index) const;
+
+    PopplerError::Error error() const;
+
+    RenderHints renderHints() const;
+    void setRenderHints(const RenderHints hints);
 
 Q_SIGNALS:
     void pathChanged();
-    void error(const QString& errorMessage);
-    void pagesLoaded();
-    void providersNumberChanged();
+    void pageCountChanged();
     void tocModelChanged();
+    void errorChanged();
+    void renderHintsChanged();
 
-private slots:
-    void _q_populate(PdfPagesList pagesList);
+private Q_SLOTS:
+    void updateRenderHints();
+
+private:
+    bool loadDocument();
+    void setError(const PopplerError::Error &error);
+    void completeIntialization();
 
 private:
     QString m_path;
-    int m_providersNumber;
-
-    bool loadDocument(QString &pathNAme);
-    void loadProvider();
-    bool loadPages();
-
-    Poppler::Document *m_document;
-    QList<PdfItem> m_pages;
     PdfTocModel* m_tocModel;
+    PopplerError::Error m_error;
+    RenderHints m_renderHints;
+
+    QHash<int, QList<Poppler::Link *>> m_links;
+
+    QSharedPointer<Poppler::Document> m_popDocument;
 };
 
 #endif // PDFDOCUMENT_H
