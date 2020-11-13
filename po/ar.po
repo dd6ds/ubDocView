@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-05 23:40+0100\n"
-"PO-Revision-Date: 2020-11-06 11:55+0000\n"
+"PO-Revision-Date: 2020-11-13 10:18+0000\n"
 "Last-Translator: abidin <abidin24@tutanota.com>\n"
 "Language-Team: Arabic <https://translate.ubports.com/projects/ubports/"
 "docviewer-app/ar/>\n"
@@ -265,7 +265,7 @@ msgstr "إلتقط"
 
 #: ../src/app/qml/documentPage/DocumentPageSearchHeader.qml:27
 msgid "Back"
-msgstr "للوراء"
+msgstr "للخلف"
 
 #: ../src/app/qml/documentPage/DocumentPageSearchHeader.qml:47
 msgid "search in documents..."
@@ -436,7 +436,7 @@ msgstr "ملائمة الارتفاع"
 
 #: ../src/app/qml/loView/ZoomSelector.qml:124
 msgid "Automatic"
-msgstr "تلقائي"
+msgstr "تلقائيا"
 
 #. TRANSLATORS: "Contents" refers to the "Table of Contents" of a PDF document.
 #: ../src/app/qml/pdfView/PdfContentsPage.qml:31
@@ -454,7 +454,7 @@ msgstr "صفحة %1 من %2"
 
 #: ../src/app/qml/pdfView/PdfView.qml:203
 msgid "Search"
-msgstr "البحث"
+msgstr "ابحث"
 
 #: ../src/app/qml/pdfView/PdfView.qml:213
 msgid "Go to page..."
