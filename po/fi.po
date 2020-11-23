@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-05 23:40+0100\n"
-"PO-Revision-Date: 2020-02-11 14:21+0000\n"
-"Last-Translator: Oi Suomi On! <oisuomion@protonmail.com>\n"
+"PO-Revision-Date: 2020-11-23 18:30+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://translate.ubports.com/projects/ubports/"
 "docviewer-app/fi/>\n"
 "Language: fi\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.8\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:48+0000\n"
 
 #: ../src/app/qml/common/CommandLineProxy.qml:49
@@ -128,7 +128,7 @@ msgstr ""
 #: ../src/app/qml/pdfView/PdfView.qml:180
 #: ../src/app/qml/pdfView/PdfViewGotoDialog.qml:51
 msgid "Cancel"
-msgstr "Keskeytä"
+msgstr "Peru"
 
 #: ../src/app/qml/common/UnknownTypeDialog.qml:44
 msgid "Yes"
@@ -252,7 +252,7 @@ msgstr "Valitse"
 
 #: ../src/app/qml/documentPage/DocumentPageSearchHeader.qml:27
 msgid "Back"
-msgstr "Palaa"
+msgstr "Takaisin"
 
 #: ../src/app/qml/documentPage/DocumentPageSearchHeader.qml:47
 msgid "search in documents..."
