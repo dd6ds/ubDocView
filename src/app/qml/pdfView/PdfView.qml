@@ -292,7 +292,7 @@ Page {
         objectName:"gotopage"
         iconName: "browser-tabs"
         text: i18n.tr("Go to page...")
-        onTriggered: PopupUtils.open(Qt.resolvedUrl("PdfViewGotoDialog.qml"), targetPage)
+        onTriggered: PopupUtils.open(Qt.resolvedUrl("PdfViewGotoDialog.qml"))
     }
 
     // FIXME: TODO: Broken with the new PDF plugin

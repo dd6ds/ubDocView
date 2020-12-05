@@ -21,3 +21,5 @@ debian/*.substvars
 com.ubuntu.docviewer.desktop
 com.ubuntu.docviewer.desktop.in
 manifest.json
+*.qmlc
+*.jsc
