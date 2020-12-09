@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-20 18:49+0000\n"
-"PO-Revision-Date: 2020-12-04 17:58+0000\n"
+"PO-Revision-Date: 2020-12-08 12:50+0000\n"
 "Last-Translator: Zmicer <nashtlumach@gmail.com>\n"
 "Language-Team: Belarusian <https://translate.ubports.com/projects/ubports/"
 "docviewer-app/be/>\n"
@@ -22,36 +22,39 @@ msgstr ""
 
 #: ../src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
-msgstr ""
+msgstr "Некаторыя аргументы непрыдатныя."
 
 #: ../src/app/qml/common/CommandLineProxy.qml:58
 msgid "Open ubuntu-docviewer-app displaying the selected file"
-msgstr ""
+msgstr "Адкрыць абраны файл у праграме для прагляду дакументаў"
 
 #: ../src/app/qml/common/CommandLineProxy.qml:65
 msgid "Run fullscreen"
-msgstr ""
+msgstr "Запусціць у поўнаэкранным рэжыме"
 
 #: ../src/app/qml/common/CommandLineProxy.qml:71
 msgid "Open ubuntu-docviewer-app in pick mode. Used for tests only."
 msgstr ""
+"Адкрыць праграму ў рэжыме выбару. Выкарыстоўваецца толькі для тэставання."
 
 #: ../src/app/qml/common/CommandLineProxy.qml:77
 msgid ""
 "Show documents from the given folder, instead of ~/Documents.\n"
 "The path must exist prior to running ubuntu-docviewer-app"
 msgstr ""
+"Паказваць дакументы з абранага каталога замест ~/Documents.\n"
+"Каталог неабходна стварыць да запуску праграмы"
 
 #: ../src/app/qml/common/DetailsPage.qml:29
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:93
 #: ../src/app/qml/pdfView/PdfView.qml:234
 #: ../src/app/qml/textView/TextViewDefaultHeader.qml:55
 msgid "Details"
-msgstr ""
+msgstr "Падрабязнасці"
 
 #: ../src/app/qml/common/DetailsPage.qml:42
 msgid "File"
-msgstr ""
+msgstr "Файл"
 
 #: ../src/app/qml/common/DetailsPage.qml:47
 msgid "Location"
@@ -59,23 +62,23 @@ msgstr "Месцазнаходжанне"
 
 #: ../src/app/qml/common/DetailsPage.qml:52
 msgid "Size"
-msgstr ""
+msgstr "Памер"
 
 #: ../src/app/qml/common/DetailsPage.qml:57
 msgid "Created"
-msgstr ""
+msgstr "Створана"
 
 #: ../src/app/qml/common/DetailsPage.qml:62
 msgid "Last modified"
-msgstr ""
+msgstr "Апошняя змена"
 
 #: ../src/app/qml/common/DetailsPage.qml:69
 msgid "MIME type"
-msgstr ""
+msgstr "Тып MIME"
 
 #: ../src/app/qml/common/ErrorDialog.qml:23
 msgid "Error"
-msgstr ""
+msgstr "Памылка"
 
 #: ../src/app/qml/common/ErrorDialog.qml:26
 #: ../src/app/qml/common/PickImportedDialog.qml:54
@@ -83,45 +86,47 @@ msgstr ""
 #: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:33
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:53
 msgid "Close"
-msgstr ""
+msgstr "Закрыць"
 
 #: ../src/app/qml/common/PickImportedDialog.qml:29
 msgid "Multiple documents imported"
-msgstr ""
+msgstr "Імпартавана некалькі дакументаў"
 
 #: ../src/app/qml/common/PickImportedDialog.qml:30
 msgid "Choose which one to open:"
-msgstr ""
+msgstr "Абярыце дакумент, які патрэбна адкрыць:"
 
 #: ../src/app/qml/common/RejectedImportDialog.qml:28
 msgid "File not supported"
 msgid_plural "Files not supported"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Файл не падтрымліваецца"
+msgstr[1] "Файлы не падтрымліваюцца"
+msgstr[2] "Файлы не падтрымліваюцца"
 
 #: ../src/app/qml/common/RejectedImportDialog.qml:29
 msgid "Following document has not been imported:"
 msgid_plural "Following documents have not been imported:"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Наступны дакумент не быў імпартаваны:"
+msgstr[1] "Наступныя дакументы не былі імпартаваныя:"
+msgstr[2] "Наступныя дакументы не былі імпартаваныя:"
 
 #: ../src/app/qml/common/TextualButtonStyle.qml:48
 #: ../src/app/qml/common/TextualButtonStyle.qml:51
 #: ../src/app/qml/documentPage/DocumentPagePickModeHeader.qml:54
 msgid "Pick"
-msgstr ""
+msgstr "Абраць"
 
 #: ../src/app/qml/common/UnknownTypeDialog.qml:27
 msgid "Unknown file type"
-msgstr ""
+msgstr "Невядомы тып файла"
 
 #: ../src/app/qml/common/UnknownTypeDialog.qml:28
 msgid ""
 "This file is not supported.\n"
 "Do you want to open it as a plain text?"
 msgstr ""
+"Файлы гэтага тыпу не падтрымліваюцца.\n"
+"Адкрыць як просты тэкст?"
 
 #: ../src/app/qml/common/UnknownTypeDialog.qml:38
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:55
@@ -135,288 +140,292 @@ msgstr "Скасаваць"
 
 #: ../src/app/qml/common/UnknownTypeDialog.qml:44
 msgid "Yes"
-msgstr ""
+msgstr "Так"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
 #: ../src/app/qml/common/utils.js:22
 #, qt-format
 msgid "%1 GB"
-msgstr ""
+msgstr "%1 Гб"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
 #: ../src/app/qml/common/utils.js:26
 #, qt-format
 msgid "%1 MB"
-msgstr ""
+msgstr "%1 Мб"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
 #: ../src/app/qml/common/utils.js:30
 #, qt-format
 msgid "%1 kB"
-msgstr ""
+msgstr "%1 Кб"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in byte
 #: ../src/app/qml/common/utils.js:33
 #, qt-format
 msgid "%1 byte"
-msgstr ""
+msgstr "%1 б"
 
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:39
 msgid "Delete file"
-msgstr ""
+msgstr "Выдаліць файл"
 
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:40
 #, qt-format
 msgid "Delete %1 file"
 msgid_plural "Delete %1 files"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Выдаліць %1 файл"
+msgstr[1] "Выдаліць %1 файлы"
+msgstr[2] "Выдаліць %1 файлаў"
 
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:41
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:42
 msgid "Are you sure you want to permanently delete this file?"
 msgid_plural "Are you sure you want to permanently delete these files?"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Сапраўды хочаце выдаліць гэты файл?"
+msgstr[1] "Сапраўды хочаце выдаліць гэтыя файлы?"
+msgstr[2] "Сапраўды хочаце выдаліць гэтыя файлы?"
 
 #: ../src/app/qml/documentPage/DeleteFileDialog.qml:61
 #: ../src/app/qml/documentPage/DocumentDelegateActions.qml:25
 #: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:58
 msgid "Delete"
-msgstr ""
+msgstr "Выдаліць"
 
 #: ../src/app/qml/documentPage/DocumentDelegateActions.qml:44
 msgid "Share"
-msgstr ""
+msgstr "Падзяліцца"
 
 #: ../src/app/qml/documentPage/DocumentEmptyState.qml:27
 msgid "No documents found"
-msgstr ""
+msgstr "Дакументаў не знойдзена"
 
 #: ../src/app/qml/documentPage/DocumentEmptyState.qml:28
 msgid ""
 "Connect your device to any computer and simply drag files to the Documents "
 "folder or insert removable media containing documents."
 msgstr ""
+"Падлучыце прыладу да камп'ютара і скапіюйце файлы ў каталог дакументаў альбо "
+"ўстаўце носьбіт з дакументамі."
 
 #: ../src/app/qml/documentPage/DocumentListDelegate.qml:75
 msgid "SD card"
-msgstr ""
+msgstr "SD-картка"
 
 #. TRANSLATORS: %1 refers to a time formatted as Locale.ShortFormat (e.g. hh:mm). It depends on system settings.
 #. http://qt-project.org/doc/qt-4.8/qlocale.html#FormatType-enum
 #: ../src/app/qml/documentPage/DocumentListDelegate.qml:100
 #, qt-format
 msgid "Today, %1"
-msgstr ""
+msgstr "Сёння, %1"
 
 #. TRANSLATORS: %1 refers to a time formatted as Locale.ShortFormat (e.g. hh:mm). It depends on system settings.
 #. http://qt-project.org/doc/qt-4.8/qlocale.html#FormatType-enum
 #: ../src/app/qml/documentPage/DocumentListDelegate.qml:105
 #, qt-format
 msgid "Yesterday, %1"
-msgstr ""
+msgstr "Учора, %1"
 
 #. TRANSLATORS: this is a datetime formatting string,
 #. see http://qt-project.org/doc/qt-5/qml-qtqml-date.html#details for valid expressions.
 #: ../src/app/qml/documentPage/DocumentListDelegate.qml:112
 #: ../src/app/qml/documentPage/DocumentListDelegate.qml:131
 msgid "yyyy/MM/dd hh:mm"
-msgstr ""
+msgstr "dd/MM/yyyy hh:mm"
 
 #. TRANSLATORS: this is a datetime formatting string,
 #. see http://qt-project.org/doc/qt-5/qml-qtqml-date.html#details for valid expressions.
 #: ../src/app/qml/documentPage/DocumentListDelegate.qml:125
 msgid "dddd, hh:mm"
-msgstr ""
+msgstr "dddd, hh:mm"
 
 #: ../src/app/qml/documentPage/DocumentPageDefaultHeader.qml:27
 #: /home/florian/UT-Apps/docviewer-app/build/po/com.ubuntu.docviewer.desktop.in.in.h:3
 msgid "Documents"
-msgstr ""
+msgstr "Дакументы"
 
 #: ../src/app/qml/documentPage/DocumentPageDefaultHeader.qml:35
 msgid "Search..."
-msgstr ""
+msgstr "Пошук..."
 
 #: ../src/app/qml/documentPage/DocumentPageDefaultHeader.qml:42
 msgid "Sorting settings..."
-msgstr ""
+msgstr "Налады сартавання..."
 
 #: ../src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
-msgstr ""
+msgstr "пошук у дакументах…"
 
 #: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:46
 msgid "Select None"
-msgstr ""
+msgstr "Нічога не абрана"
 
 #: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:46
 msgid "Select All"
-msgstr ""
+msgstr "Абраць усе"
 
 #: ../src/app/qml/documentPage/SearchEmptyState.qml:24
 msgid "No matching document found"
-msgstr ""
+msgstr "Адпаведных дакументаў не знойдзена"
 
 #: ../src/app/qml/documentPage/SearchEmptyState.qml:26
 msgid ""
 "Please ensure that your query is not misspelled and/or try a different query."
-msgstr ""
+msgstr "Праверце запыт на наяўнасць памылак ці паспрабуйце іншыя параметры."
 
 #: ../src/app/qml/documentPage/SectionHeader.qml:30
 msgid "Today"
-msgstr ""
+msgstr "Сёння"
 
 #: ../src/app/qml/documentPage/SectionHeader.qml:33
 msgid "Yesterday"
-msgstr ""
+msgstr "Учора"
 
 #: ../src/app/qml/documentPage/SectionHeader.qml:36
 msgid "Earlier this week"
-msgstr ""
+msgstr "Раней на гэтым тыдні"
 
 #: ../src/app/qml/documentPage/SectionHeader.qml:39
 msgid "Earlier this month"
-msgstr ""
+msgstr "Раней у гэтым месяцы"
 
 #: ../src/app/qml/documentPage/SectionHeader.qml:41
 msgid "Even earlier..."
-msgstr ""
+msgstr "Даўней…"
 
 #: ../src/app/qml/documentPage/SharePage.qml:28
 msgid "Share to"
-msgstr ""
+msgstr "Падзяліцца"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:26
 msgid "Sorting settings"
-msgstr ""
+msgstr "Налады сартавання"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:31
 msgid "Sort by date (Latest first)"
-msgstr ""
+msgstr "Сартаваць па даце (спачатку старэйшыя)"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:32
 msgid "Sort by name (A-Z)"
-msgstr ""
+msgstr "Сартаваць па назве (А-Я)"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:33
 msgid "Sort by size (Smaller first)"
-msgstr ""
+msgstr "Сартаваць па памеры (спачатку меншыя)"
 
 #: ../src/app/qml/documentPage/SortSettingsDialog.qml:47
 msgid "Reverse order"
-msgstr ""
+msgstr "Адваротны парадак"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:41
 #: ../src/app/qml/textView/TextView.qml:49
 msgid "Loading..."
-msgstr ""
+msgstr "Загрузка..."
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:45
 msgid "LibreOffice text document"
-msgstr ""
+msgstr "Тэкставы дакумент LibreOffice"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:47
 msgid "LibreOffice spread sheet"
-msgstr ""
+msgstr "Табліца LibreOffice"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:49
 msgid "LibreOffice presentation"
-msgstr ""
+msgstr "Прэзентацыя LibreOffice"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:51
 msgid "LibreOffice Draw document"
-msgstr ""
+msgstr "Дакумент LibreOffice Draw"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:53
 msgid "Unknown LibreOffice document"
-msgstr ""
+msgstr "Невядомы дакумент LibreOffice"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:55
 msgid "Unknown document type"
-msgstr ""
+msgstr "Невядомы тып дакумента"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:72
 msgid "Go to position…"
-msgstr ""
+msgstr "Перайсці да…"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:86
 #: ../src/app/qml/pdfView/PdfView.qml:227
 #: ../src/app/qml/textView/TextViewDefaultHeader.qml:49
 msgid "Disable night mode"
-msgstr ""
+msgstr "Адключыць начны рэжым"
 
 #: ../src/app/qml/loView/LOViewDefaultHeader.qml:86
 #: ../src/app/qml/pdfView/PdfView.qml:227
 #: ../src/app/qml/textView/TextViewDefaultHeader.qml:49
 msgid "Enable night mode"
-msgstr ""
+msgstr "Уключыць начны рэжым"
 
 #: ../src/app/qml/loView/LOViewGotoDialog.qml:30
 msgid "Go to position"
-msgstr ""
+msgstr "Перайсці да"
 
 #: ../src/app/qml/loView/LOViewGotoDialog.qml:31
 msgid "Choose a position between 1% and 100%"
-msgstr ""
+msgstr "Абярыце пазіцыю паміж 1% і 100%"
 
 #: ../src/app/qml/loView/LOViewGotoDialog.qml:62
 #: ../src/app/qml/pdfView/PdfViewGotoDialog.qml:58
 msgid "GO!"
-msgstr ""
+msgstr "Перайсці!"
 
 #: ../src/app/qml/loView/LOViewPage.qml:173
 msgid "LibreOffice binaries not found."
-msgstr ""
+msgstr "Файлаў LibreOffice не знойдзена."
 
 #: ../src/app/qml/loView/LOViewPage.qml:176
 msgid "Error while loading LibreOffice."
-msgstr ""
+msgstr "Не атрымалася загрузіць LibreOffice."
 
 #: ../src/app/qml/loView/LOViewPage.qml:179
 msgid ""
 "Document not loaded.\n"
 "The requested document may be corrupt or protected by a password."
 msgstr ""
+"Не атрымалася загрузіць дакумент.\n"
+"Ён можа быць пашкоджаны альбо абаронены паролем."
 
 #: ../src/app/qml/loView/LOViewPage.qml:231
 msgid "This sheet has no content."
-msgstr ""
+msgstr "Гэты аркуш пусты."
 
 #. TRANSLATORS: 'LibreOfficeKit' is the name of the library used by
 #. Document Viewer for rendering LibreOffice/MS-Office documents.
 #. Ref. https://docs.libreoffice.org/libreofficekit.html
 #: ../src/app/qml/loView/Splashscreen.qml:45
 msgid "Powered by LibreOfficeKit"
-msgstr ""
+msgstr "Распрацавана на LibreOfficeKit"
 
 #. TRANSLATORS: Please don't add any space between "Sheet" and "%1".
 #. This is the default name for a sheet in LibreOffice.
 #: ../src/app/qml/loView/SpreadsheetSelector.qml:64
 #, qt-format
 msgid "Sheet%1"
-msgstr ""
+msgstr "Аркуш%1"
 
 #: ../src/app/qml/loView/ZoomSelector.qml:122
 msgid "Fit width"
-msgstr ""
+msgstr "Па шырыні"
 
 #: ../src/app/qml/loView/ZoomSelector.qml:123
 msgid "Fit height"
-msgstr ""
+msgstr "Па вышыні"
 
 #: ../src/app/qml/loView/ZoomSelector.qml:124
 msgid "Automatic"
-msgstr ""
+msgstr "Аўтаматычна"
 
 #. TRANSLATORS: "Contents" refers to the "Table of Contents" of a PDF document.
 #: ../src/app/qml/pdfView/PdfContentsPage.qml:31
 #: ../src/app/qml/pdfView/PdfView.qml:157
 msgid "Contents"
-msgstr ""
+msgstr "Змесціва"
 
 #. TRANSLATORS: the first argument (%1) refers to the page currently shown on the screen,
 #. while the second one (%2) refers to the total pages count.
@@ -424,28 +433,28 @@ msgstr ""
 #: ../src/app/qml/pdfView/PdfView.qml:56
 #, qt-format
 msgid "Page %1 of %2"
-msgstr ""
+msgstr "Старонка %1 з %2"
 
 #: ../src/app/qml/pdfView/PdfView.qml:212
 msgid "Go to page..."
-msgstr ""
+msgstr "Перайсці да старонкі…"
 
 #: ../src/app/qml/pdfView/PdfView.qml:220
 msgid "Presentation"
-msgstr ""
+msgstr "Прэзентацыя"
 
 #: ../src/app/qml/pdfView/PdfViewGotoDialog.qml:26
 msgid "Go to page"
-msgstr ""
+msgstr "Перайсці да старонкі"
 
 #: ../src/app/qml/pdfView/PdfViewGotoDialog.qml:27
 #, qt-format
 msgid "Choose a page between 1 and %1"
-msgstr ""
+msgstr "Абярыце старонку паміж 1 і %1"
 
 #: ../src/app/qml/ubuntu-docviewer-app.qml:134
 msgid "File does not exist."
-msgstr ""
+msgstr "Файл не існуе."
 
 #. TRANSLATORS: This string is used for renaming a copied file,
 #. when a file with the same name already exists in user's
@@ -459,12 +468,12 @@ msgstr ""
 #: ../src/plugin/file-qml-plugin/docviewerutils.cpp:119
 #, qt-format
 msgid "copy %1"
-msgstr ""
+msgstr "копія %1"
 
 #: /home/florian/UT-Apps/docviewer-app/build/po/com.ubuntu.docviewer.desktop.in.in.h:1
 msgid "Document Viewer"
-msgstr ""
+msgstr "Прагляд дакументаў"
 
 #: /home/florian/UT-Apps/docviewer-app/build/po/com.ubuntu.docviewer.desktop.in.in.h:2
 msgid "documents;viewer;pdf;reader;"
-msgstr ""
+msgstr "дакументы;прагляд;pdf;чытанне;"
