@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-20 18:49+0000\n"
-"PO-Revision-Date: 2020-09-05 14:38+0000\n"
-"Last-Translator: tamer dab <dabsantamer@yahoo.com>\n"
+"PO-Revision-Date: 2020-12-17 14:38+0000\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://translate.ubports.com/projects/ubports/"
 "docviewer-app/he/>\n"
 "Language: he\n"
@@ -137,7 +137,7 @@ msgstr ""
 #: ../src/app/qml/pdfView/PdfView.qml:188
 #: ../src/app/qml/pdfView/PdfViewGotoDialog.qml:51
 msgid "Cancel"
-msgstr "בטול"
+msgstr "ביטול"
 
 #: ../src/app/qml/common/UnknownTypeDialog.qml:44
 msgid "Yes"
