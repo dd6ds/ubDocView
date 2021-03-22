@@ -3,7 +3,7 @@ build-amd64:
     expire_in: 1 week
     paths:
     - build/x86_64-linux-gnu/app/*.click
-  image: clickable/ci-16.04-amd64
+  image: clickable/ci-16.04-amd64:16.04.4-qt5.9
   script:
   - clickable clean-build
   stage: build
@@ -13,7 +13,7 @@ build-arm64:
     expire_in: 1 week
     paths:
     - build/aarch64-linux-gnu/app/*.click
-  image: clickable/ci-16.04-arm64
+  image: clickable/ci-16.04-arm64:16.04.4-qt5.9
   script:
   - clickable clean-build
   stage: build
@@ -23,7 +23,7 @@ build-armhf:
     expire_in: 1 week
     paths:
     - build/arm-linux-gnueabihf/app/*.click
-  image: clickable/ci-16.04-armhf
+  image: clickable/ci-16.04-armhf:16.04.4-qt5.9
   rules:
   - if: $CI_COMMIT_TAG == null
   script:
@@ -35,7 +35,7 @@ publish-amd64:
     expire_in: 1 week
     paths:
     - build/x86_64-linux-gnu/app/*.click
-  image: clickable/ci-16.04-amd64
+  image: clickable/ci-16.04-amd64:16.04.4-qt5.9
   rules:
   - if: $CI_COMMIT_TAG
   script:
@@ -48,7 +48,7 @@ publish-arm64:
     expire_in: 1 week
     paths:
     - build/aarch64-linux-gnu/app/*.click
-  image: clickable/ci-16.04-arm64
+  image: clickable/ci-16.04-arm64:16.04.4-qt-5.9
   rules:
   - if: $CI_COMMIT_TAG
   script:
@@ -61,7 +61,7 @@ publish-armhf:
     expire_in: 1 week
     paths:
     - build/arm-linux-gnueabihf/app/*.click
-  image: clickable/ci-16.04-armhf
+  image: clickable/ci-16.04-armhf:16.04.4-qt5.9
   rules:
   - if: $CI_COMMIT_TAG
   script:
