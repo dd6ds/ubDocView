@@ -40,6 +40,16 @@
                 "uno-libs3",
                 "ure"
             ]
+        },
+
+        {
+            "url": "http://repo.ubports.com/",
+            "dist": "xenial",
+            "component": "main",
+            "packages": [
+                "libharfbuzz0b",
+                "libharfbuzz-icu0"
+            ]
         }
     ],
         "arm64": [
@@ -82,6 +92,16 @@
                 "libreoffice-impress",
                 "uno-libs3",
                 "ure"
+            ]
+        },
+
+        {
+            "url": "http://repo.ubports.com/",
+            "dist": "xenial",
+            "component": "main",
+            "packages": [
+                "libharfbuzz0b",
+                "libharfbuzz-icu0"
             ]
         }
     ],
@@ -128,6 +148,16 @@
                 "libreoffice-impress",
                 "uno-libs3",
                 "ure"
+            ]
+        },
+
+        {
+            "url": "http://repo.ubports.com/",
+            "dist": "xenial",
+            "component": "main",
+            "packages": [
+                "libharfbuzz0b",
+                "libharfbuzz-icu0"
             ]
         }
     ]
