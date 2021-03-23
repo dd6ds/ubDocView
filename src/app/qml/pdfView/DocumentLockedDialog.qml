@@ -29,6 +29,8 @@ Dialog {
         id: passwordField
         width: parent.width
 
+        echoMode: TextInput.Password
+
         hasClearButton: true
 
         Keys.onReturnPressed: tryUnlock()
@@ -68,7 +70,7 @@ Dialog {
             color: UbuntuColors.green
             Layout.fillWidth: true
 
-            onClicked: goToPage()
+            onClicked: tryUnlock()
         }
     }
 
