@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-20 18:49+0000\n"
-"PO-Revision-Date: 2021-05-23 05:10+0000\n"
+"PO-Revision-Date: 2021-10-14 16:02+0000\n"
 "Last-Translator: Wannaphong Phatthiyaphaibun <wannaphong@yahoo.com>\n"
 "Language-Team: Thai <https://translate.ubports.com/projects/ubports/"
 "docviewer-app/th/>\n"
@@ -46,7 +46,7 @@ msgstr ""
 #: ../src/app/qml/pdfView/PdfView.qml:234
 #: ../src/app/qml/textView/TextViewDefaultHeader.qml:55
 msgid "Details"
-msgstr ""
+msgstr "รายละเอียด"
 
 #: ../src/app/qml/common/DetailsPage.qml:42
 msgid "File"
@@ -130,7 +130,7 @@ msgstr "ยกเลิก"
 
 #: ../src/app/qml/common/UnknownTypeDialog.qml:44
 msgid "Yes"
-msgstr ""
+msgstr "ใช่"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
 #: ../src/app/qml/common/utils.js:22
