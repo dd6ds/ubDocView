@@ -8,8 +8,9 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-05 23:40+0100\n"
-"PO-Revision-Date: 2021-03-26 09:20+0000\n"
-"Last-Translator: vokaliz <vokaliz@protonmail.com>\n"
+"PO-Revision-Date: 2022-02-12 06:45+0000\n"
+"Last-Translator: Герман Семенов (Разработчик) "
+"<wipetmp+german_semenov@gmail.com>\n"
 "Language-Team: Russian <https://translate.ubports.com/projects/ubports/"
 "docviewer-app/ru/>\n"
 "Language: ru\n"
@@ -53,7 +54,7 @@ msgstr ""
 #: ../src/app/qml/pdfView/PdfView.qml:235
 #: ../src/app/qml/textView/TextViewDefaultHeader.qml:69
 msgid "Details"
-msgstr "Сведения"
+msgstr "Подробности"
 
 #: ../src/app/qml/common/DetailsPage.qml:42
 msgid "File"
@@ -69,7 +70,7 @@ msgstr "Размер"
 
 #: ../src/app/qml/common/DetailsPage.qml:57
 msgid "Created"
-msgstr "Создан"
+msgstr "Создано"
 
 #: ../src/app/qml/common/DetailsPage.qml:62
 msgid "Last modified"
