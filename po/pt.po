@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-05 23:40+0100\n"
-"PO-Revision-Date: 2021-03-02 13:39+0000\n"
+"PO-Revision-Date: 2022-02-21 19:36+0000\n"
 "Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
 "Language-Team: Portuguese <https://translate.ubports.com/projects/ubports/"
 "docviewer-app/pt/>\n"
@@ -66,7 +66,7 @@ msgstr "Tamanho"
 
 #: ../src/app/qml/common/DetailsPage.qml:57
 msgid "Created"
-msgstr "Criado"
+msgstr "Criada"
 
 #: ../src/app/qml/common/DetailsPage.qml:62
 msgid "Last modified"
