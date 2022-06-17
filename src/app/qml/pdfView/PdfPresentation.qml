@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import DocumentViewer 1.0
 import DocumentViewer.PDF 1.0 as PDF
 

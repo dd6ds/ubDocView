@@ -42,7 +42,7 @@ static float getenvFloat(const char* name, float defaultValue)
 /*!
     \qmltype Units
     \instantiates UCUnits
-    \inqmlmodule Ubuntu.Components 1.1
+    \inqmlmodule Lomiri.Components 1.1
     \ingroup resolution-independence
     \brief Units of measurement for sizes, spacing, margin, etc.
 
@@ -54,7 +54,7 @@ static float getenvFloat(const char* name, float defaultValue)
 
     \qml
     import QtQuick 2.4
-    import Ubuntu.Components 1.2
+    import Lomiri.Components 1.2
 
     Item {
         width: units.gu(2)
@@ -76,7 +76,7 @@ static float getenvFloat(const char* name, float defaultValue)
  * physical pixels. Developers describe their UI in terms of density-independent pixels.
  * Qt scales accordingly.
  *
- * The Ubuntu UI Toolkit has solved the scaling problem with the GRID_UNIT_PX variable.
+ * The Lomiri UI Toolkit has solved the scaling problem with the GRID_UNIT_PX variable.
  * It offers more flexibility, but only scales QML applications written to use the UITK
  * (since it uses this Units class) as it is built on top of QML.
  *
@@ -86,7 +86,7 @@ static float getenvFloat(const char* name, float defaultValue)
  *   2. gesture recognition  matches what is on screen better, as it is density-independent
  *      pixel aware
  *
- * In order to get the best of both worlds, Ubuntu will set both GRID_UNIT_PX and
+ * In order to get the best of both worlds, Lomiri will set both GRID_UNIT_PX and
  * QT_DEVICE_PIXEL_RATIO. Thus all Qt apps will scale reasonably well, with UITK-based apps
  * scaling perfectly for any desired scale (i.e. non-integer scales).
  *

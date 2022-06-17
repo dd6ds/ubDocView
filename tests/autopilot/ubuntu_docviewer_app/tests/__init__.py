@@ -25,7 +25,7 @@ import ubuntu_docviewer_app
 from autopilot.testcase import AutopilotTestCase
 from autopilot import logging as autopilot_logging
 
-import ubuntuuitoolkit
+import lomiriuitoolkit
 
 logger = logging.getLogger(__name__)
 
@@ -88,7 +88,7 @@ class BaseTestCaseWithPatchedHome(AutopilotTestCase):
             self.local_build_location_binary,
             self.filepath,
             app_type='qt',
-            emulator_base=ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase)
+            emulator_base=lomiriuitoolkit.LomiriUIToolkitCustomProxyObjectBase)
 
     @autopilot_logging.log_action(logger.info)
     def launch_test_sdk(self):
@@ -96,7 +96,7 @@ class BaseTestCaseWithPatchedHome(AutopilotTestCase):
             self.sdk_build_location_binary,
             self.filepath,
             app_type='qt',
-            emulator_base=ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase)
+            emulator_base=lomiriuitoolkit.LomiriUIToolkitCustomProxyObjectBase)
 
     @autopilot_logging.log_action(logger.info)
     def launch_test_installed(self):
@@ -105,13 +105,13 @@ class BaseTestCaseWithPatchedHome(AutopilotTestCase):
             os.path.join(os.path.join('usr', 'lib', 'python3',
                                       'dist-packages'), self.filepath),
             app_type='qt',
-            emulator_base=ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase)
+            emulator_base=lomiriuitoolkit.LomiriUIToolkitCustomProxyObjectBase)
 
     @autopilot_logging.log_action(logger.info)
     def launch_test_click(self):
         return self.launch_click_package(
             "com.ubuntu.docviewer",
-            emulator_base=ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase)
+            emulator_base=lomiriuitoolkit.LomiriUIToolkitCustomProxyObjectBase)
 
     def _patch_home(self):
         """ mock /home for testing purposes to preserve user data

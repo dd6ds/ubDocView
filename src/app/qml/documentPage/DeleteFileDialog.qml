@@ -16,8 +16,8 @@
 */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
 import QtQuick.Layouts 1.1
 
 Dialog {
@@ -59,7 +59,7 @@ Dialog {
 
         Button {
             text: i18n.tr("Delete")
-            color: UbuntuColors.red
+            color: LomiriColors.red
             Layout.fillWidth: true
 
             onClicked: {

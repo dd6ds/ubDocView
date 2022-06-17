@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import QtQuick.Layouts 1.1
 import DocumentViewer.LibreOffice 1.0 as LibreOffice
 
@@ -42,7 +42,7 @@ ListView {
     // animation shouldn't be fully performed, but applied from the first visible
     // item instead. This actually seems to be a limitation of ListView itself.
     highlightRangeMode: ListView.ApplyRange
-    highlightMoveDuration: UbuntuAnimation.FastDuration
+    highlightMoveDuration: LomiriAnimation.FastDuration
     preferredHighlightBegin: internal.isVerticalView ? (view.height - internal.verticalItemHeight) * 0.5
                                                      : (view.width - internal.horizontalItemWidth) * 0.5
     preferredHighlightEnd: internal.isVerticalView ? (view.height - internal.verticalItemHeight) * 0.5
