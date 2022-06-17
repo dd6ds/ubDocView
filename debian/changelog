@@ -1,3 +1,9 @@
+lomiri-docviewer-app (2.4) UNRELEASED; urgency=medium
+
+  * Port to focal
+
+ -- Guido Berhoerster <guido+ubports@berhoerster.name>  Fri, 17 Jun 2022 14:05:15 +0200
+
 ubuntu-docviewer-app (2.3) xenial; urgency=medium
 
   * Fix #40 "Plain Text file: No Visible Text When Using System Suru Dark Theme" 
