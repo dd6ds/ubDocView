@@ -3,7 +3,7 @@ if(CLICK_MODE)
   set(CMAKE_INSTALL_PREFIX /)
   set(DATA_DIR /)
 
-  # Path for ubuntu-docviewer-app executable
+  # Path for lomiri-docviewer-app executable
   set(BIN_DIR ${DATA_DIR}lib/${ARCH_TRIPLET}/bin)
 
   # If running in CLICK_MODE, include binary dependencies of docviewer

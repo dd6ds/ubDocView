@@ -20,7 +20,7 @@ import os
 import logging
 
 import fixtures
-import ubuntu_docviewer_app
+import lomiri_docviewer_app
 
 from autopilot.testcase import AutopilotTestCase
 from autopilot import logging as autopilot_logging
@@ -33,7 +33,7 @@ logger = logging.getLogger(__name__)
 class BaseTestCaseWithPatchedHome(AutopilotTestCase):
 
     """A common test case class that provides several useful methods for
-    ubuntu-docviewer-app tests.
+    lomiri-docviewer-app tests.
 
     """
 
@@ -43,18 +43,18 @@ class BaseTestCaseWithPatchedHome(AutopilotTestCase):
                                       '-build')
 
     local_build_location_qml = os.path.join(local_build_location, 'src', 'app',
-                                            'qml', 'ubuntu-docviewer-app.qml')
+                                            'qml', 'lomiri-docviewer-app.qml')
     local_build_location_binary = os.path.join(local_build_location, 'src',
-                                               'app', 'ubuntu-docviewer-app')
+                                               'app', 'lomiri-docviewer-app')
     sdk_build_location_qml = os.path.join(sdk_build_location, 'src', 'app',
-                                          'qml', 'ubuntu-docviewer-app.qml')
+                                          'qml', 'lomiri-docviewer-app.qml')
     sdk_build_location_binary = os.path.join(sdk_build_location, 'src',
-                                             'app', 'ubuntu-docviewer-app')
+                                             'app', 'lomiri-docviewer-app')
     installed_location_binary = os.path.join('usr', 'bin',
-                                             'ubuntu-docviewer-app')
+                                             'lomiri-docviewer-app')
     installed_location_qml = os.path.join('usr', 'share',
-                                          'ubuntu-docviewer-app', 'qml',
-                                          'ubuntu-docviewer-app.qml')
+                                          'lomiri-docviewer-app', 'qml',
+                                          'lomiri-docviewer-app.qml')
 
     def get_launcher_method_and_type(self):
         if os.path.exists(self.local_build_location_binary):
@@ -110,7 +110,7 @@ class BaseTestCaseWithPatchedHome(AutopilotTestCase):
     @autopilot_logging.log_action(logger.info)
     def launch_test_click(self):
         return self.launch_click_package(
-            "com.ubuntu.docviewer",
+            "docviewer.ubports",
             emulator_base=lomiriuitoolkit.LomiriUIToolkitCustomProxyObjectBase)
 
     def _patch_home(self):
@@ -135,10 +135,10 @@ class BaseTestCaseWithPatchedHome(AutopilotTestCase):
 
 class DocviewerAppTestCase(BaseTestCaseWithPatchedHome):
 
-    """Base test case that launches the ubuntu-docviewer-app."""
+    """Base test case that launches the lomiri-docviewer-app."""
 
     def setUp(self):
         super(DocviewerAppTestCase, self).setUp()
 
     def launch_app(self):
-        self.app = ubuntu_docviewer_app.DocviewerApp(self.launcher())
+        self.app = lomiri_docviewer_app.DocviewerApp(self.launcher())

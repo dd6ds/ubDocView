@@ -87,7 +87,7 @@ MainView {
                         mainView, { parent: mainView, text: message });
     }
 
-    applicationName: "com.ubuntu.docviewer"
+    applicationName: "docviewer.ubports"
     automaticOrientation: true
 
     width: units.gu(150)

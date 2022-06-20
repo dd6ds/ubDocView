@@ -62,5 +62,5 @@ file(GLOB TRANSLATION_FILES
      RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
      *.po *.pot)
 
-add_custom_target(com_ubuntu_docviewer_translation_files ALL SOURCES ${TRANSLATION_FILES})
+add_custom_target(docviewer_ubports_translation_files ALL SOURCES ${TRANSLATION_FILES})
 

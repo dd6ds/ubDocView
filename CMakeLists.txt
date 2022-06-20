@@ -1,7 +1,7 @@
-project(com.ubuntu.docviewer C CXX)
+project(lomiri-docviewer-app C CXX)
 cmake_minimum_required(VERSION 2.8.9)
 
-set(UBUNTU_MANIFEST_PATH "click/manifest.json.in" CACHE INTERNAL "Relative path to the manifest file")
+set(MANIFEST_PATH "click/manifest.json.in" CACHE INTERNAL "Relative path to the manifest file")
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules")
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -fno-permissive -pedantic -Wall -Wextra -fPIC")
@@ -16,12 +16,11 @@ option(INSTALL_TESTS    "Install the tests on make install" on)
 option(CLICK_MODE       "Installs to a contained location" on)
 option(NO_CACHE         "Disable caching of click dependencies (CLICK_MODE only)" off)
 
-set(APP_NAME            ubuntu-docviewer-app)
+set(APP_NAME            lomiri-docviewer-app)
 set(DESKTOP_FILE        "${PROJECT_NAME}.desktop")
-set(LP_PROJECT          ubuntu-docviewer-app)
 set(ICON_FILE           docviewer-app.png)
 set(SPLASH_FILE         docviewer-app-splash.svg)
-set(AUTOPILOT_DIR       ubuntu_docviewer_app)
+set(AUTOPILOT_DIR       lomiri_docviewer_app)
 
 # Sets GIT_REVNO
 execute_process(

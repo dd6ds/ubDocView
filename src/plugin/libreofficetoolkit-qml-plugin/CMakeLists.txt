@@ -26,7 +26,7 @@ set(libreofficetoolkitqmlplugin_SRCS
     lopartsimageresponse.cpp
     lopartsmodel.cpp
     lorendertask.cpp
-    ucunits.cpp
+    lcunits.cpp
     lozoom.cpp
     ${QML_SRCS}
 )

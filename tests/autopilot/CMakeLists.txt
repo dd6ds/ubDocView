@@ -7,4 +7,4 @@ install(DIRECTORY ${AUTOPILOT_DIR}
     )
 endif(INSTALL_TESTS)
 
-add_subdirectory(ubuntu_docviewer_app)
+add_subdirectory(lomiri_docviewer_app)

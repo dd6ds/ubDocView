@@ -15,4 +15,4 @@ file(GLOB CLICK_FILES
   *.json *.json.in *.apparmor
 )
 
-add_custom_target(com_ubuntu_docviewer_CLICKFiles ALL SOURCES ${CLICK_FILES})
+add_custom_target(docviewer_ubports_CLICKFiles ALL SOURCES ${CLICK_FILES})

@@ -2,7 +2,7 @@ Dependencies
 ============
 **DEPENDENCIES ARE NEEDED TO BE INSTALLED TO BUILD AND RUN THE APP**
 
-A complete list of dependencies for the project can be found in ubuntu-docviewer-app/debian/control
+A complete list of dependencies for the project can be found in lomiri-docviewer-app/debian/control
 
 The following essential packages are also required to develop this app:
 * [ubuntu-sdk](http://developer.ubuntu.com/start)
