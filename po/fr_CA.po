@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-05 23:40+0100\n"
-"PO-Revision-Date: 2020-03-12 05:22+0000\n"
-"Last-Translator: Ryan Argente <rargente@lonerider.one>\n"
+"PO-Revision-Date: 2022-09-28 04:14+0000\n"
+"Last-Translator: Antoine Mailhot <capitaineam@outlook.com>\n"
 "Language-Team: French (Canada) <https://translate.ubports.com/projects/"
 "ubports/docviewer-app/fr_CA/>\n"
 "Language: fr_CA\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.8\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:49+0000\n"
 
 #: ../src/app/qml/common/CommandLineProxy.qml:49
@@ -66,8 +66,9 @@ msgid "Size"
 msgstr "Taille"
 
 #: ../src/app/qml/common/DetailsPage.qml:57
+#, fuzzy
 msgid "Created"
-msgstr "Créé le"
+msgstr "Créé"
 
 #: ../src/app/qml/common/DetailsPage.qml:62
 msgid "Last modified"
