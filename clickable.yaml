@@ -1,0 +1,17 @@
+clickable_minimum_required: '7.5.0'
+
+builder: cmake
+
+framework: ubuntu-sdk-20.04
+
+# FIXME does not work since prebuild is executed inside container
+#prebuild: './get_deps.sh ${ARCH_TRIPLET}'
+
+dependencies_host:
+- curl
+
+dependencies_target:
+- libreofficekit-dev
+- libpoppler-qt5-dev
+- qtdeclarative5-dev
+- qtbase5-dev

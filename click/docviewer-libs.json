@@ -1,11 +1,12 @@
-{   
+{
     "armhf": [
         {
             "url": "http://ports.ubuntu.com/ubuntu-ports",
-            "dist": "xenial",
+            "dist": "focal",
             "component": "main",
             "packages" : [
-                "libglew1.13",
+                "libharfbuzz0b",
+                "libharfbuzz-icu0",
                 "libcmis-0.5-5v5",
                 "libclucene-core1v5",
                 "libclucene-contribs1v5",
@@ -18,18 +19,10 @@
                 "libexttextcat-2.0-0",
                 "libexttextcat-data",
                 "libmythes-1.2-0",
-                "libboost-date-time1.58.0",
+                "libboost-date-time1.71.0",
                 "libraptor2-0",
                 "librasqal3",
-                "libxslt1.1"
-            ]
-        },
-
-        {
-            "url": "http://ppa.launchpad.net/libreoffice/libreoffice-5-4/ubuntu/",
-            "dist": "xenial",
-            "component": "main",
-            "packages" : [
+                "libxslt1.1",
                 "libreoffice-core",
                 "libreoffice-common",
                 "libreoffice-java-common",
@@ -37,28 +30,20 @@
                 "libreoffice-draw",
                 "libreoffice-calc",
                 "libreoffice-impress",
-                "uno-libs3",
+                "uno-libs-private",
+                "libuno-sal3",
                 "ure"
-            ]
-        },
-
-        {
-            "url": "http://repo.ubports.com/",
-            "dist": "xenial",
-            "component": "main",
-            "packages": [
-                "libharfbuzz0b",
-                "libharfbuzz-icu0"
             ]
         }
     ],
-        "arm64": [
+    "arm64": [
         {
             "url": "http://ports.ubuntu.com/ubuntu-ports",
-            "dist": "xenial",
+            "dist": "focal",
             "component": "main",
             "packages" : [
-                "libglew1.13",
+                "libharfbuzz0b",
+                "libharfbuzz-icu0",
                 "libcmis-0.5-5v5",
                 "libclucene-core1v5",
                 "libclucene-contribs1v5",
@@ -71,18 +56,10 @@
                 "libexttextcat-2.0-0",
                 "libexttextcat-data",
                 "libmythes-1.2-0",
-                "libboost-date-time1.58.0",
+                "libboost-date-time1.71.0",
                 "libraptor2-0",
                 "librasqal3",
-                "libxslt1.1"
-            ]
-        },
-
-        {
-            "url": "http://ppa.launchpad.net/libreoffice/libreoffice-5-4/ubuntu/",
-            "dist": "xenial",
-            "component": "main",
-            "packages" : [
+                "libxslt1.1",
                 "libreoffice-core",
                 "libreoffice-common",
                 "libreoffice-java-common",
@@ -90,18 +67,9 @@
                 "libreoffice-draw",
                 "libreoffice-calc",
                 "libreoffice-impress",
-                "uno-libs3",
+                "uno-libs-private",
+                "libuno-sal3",
                 "ure"
-            ]
-        },
-
-        {
-            "url": "http://repo.ubports.com/",
-            "dist": "xenial",
-            "component": "main",
-            "packages": [
-                "libharfbuzz0b",
-                "libharfbuzz-icu0"
             ]
         }
     ],
@@ -109,10 +77,11 @@
     "amd64": [
         {
             "url": "http://archive.ubuntu.com/ubuntu",
-            "dist": "xenial",
+            "dist": "focal",
             "component": "main",
             "packages" : [
-                "libglew1.13",
+                "libharfbuzz0b",
+                "libharfbuzz-icu0",
                 "libcmis-0.5-5v5",
                 "libclucene-core1v5",
                 "libclucene-contribs1v5",
@@ -125,20 +94,12 @@
                 "libexttextcat-2.0-0",
                 "libexttextcat-data",
                 "libmythes-1.2-0",
-                "libboost-date-time1.58.0",
+                "libboost-date-time1.71.0",
                 "libraptor2-0",
                 "librasqal3",
                 "libnss3",
                 "libnspr4",
-                "libxslt1.1"
-            ]
-        },
-
-        {
-            "url": "http://ppa.launchpad.net/libreoffice/libreoffice-5-4/ubuntu/",
-            "dist": "xenial",
-            "component": "main",
-            "packages" : [
+                "libxslt1.1",
                 "libreoffice-core",
                 "libreoffice-common",
                 "libreoffice-java-common",
@@ -146,18 +107,9 @@
                 "libreoffice-draw",
                 "libreoffice-calc",
                 "libreoffice-impress",
-                "uno-libs3",
+                "uno-libs-private",
+                "libuno-sal3",
                 "ure"
-            ]
-        },
-
-        {
-            "url": "http://repo.ubports.com/",
-            "dist": "xenial",
-            "component": "main",
-            "packages": [
-                "libharfbuzz0b",
-                "libharfbuzz-icu0"
             ]
         }
     ]
