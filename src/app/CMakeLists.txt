@@ -10,6 +10,8 @@ add_definitions(
   -DGETTEXT_LOCALEDIR=\"${CMAKE_INSTALL_LOCALEDIR}\"
 )
 
+string(REGEX REPLACE "^/*(.+)/*$" "\\1" CLICK_REL_PATH "${DEFAULT_ROOT}")
+
 configure_file(
     config.h.in
     ${CMAKE_CURRENT_BINARY_DIR}/config.h

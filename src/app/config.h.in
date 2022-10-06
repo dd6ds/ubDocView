@@ -24,7 +24,7 @@
 static QString SNAP_ENV = qgetenv("SNAP");
 
 inline bool isClick() {
-    static bool click = (QCoreApplication::applicationDirPath().contains("click.ubuntu.com"));
+    static bool click = (QCoreApplication::applicationDirPath().contains("@CLICK_REL_PATH@"));
     return click;
 }
 
