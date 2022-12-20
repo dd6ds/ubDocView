@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 Item {
     id: resizeableSidebar
@@ -76,7 +76,7 @@ Item {
             ColorAnimation {
                 target: verticalDivider
                 property: "color"
-                duration: UbuntuAnimation.SlowDuration
+                duration: LomiriAnimation.SlowDuration
             }
         }
     }

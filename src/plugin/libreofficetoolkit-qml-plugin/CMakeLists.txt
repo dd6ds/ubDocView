@@ -13,7 +13,7 @@ file(GLOB_RECURSE QML_SRCS
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_CURRENT_BINARY_DIR}
-    ${CMAKE_CURRENT_SOURCE_DIR}/LibreOfficeKit/
+    ${LIBREOFFICE_INCLUDE_DIR}
 )
 
 #add the sources to compile
@@ -26,7 +26,7 @@ set(libreofficetoolkitqmlplugin_SRCS
     lopartsimageresponse.cpp
     lopartsmodel.cpp
     lorendertask.cpp
-    ucunits.cpp
+    lcunits.cpp
     lozoom.cpp
     ${QML_SRCS}
 )

@@ -10,6 +10,8 @@ add_definitions(
   -DGETTEXT_LOCALEDIR=\"${CMAKE_INSTALL_LOCALEDIR}\"
 )
 
+string(REGEX REPLACE "^/*(.+)/*$" "\\1" CLICK_REL_PATH "${DEFAULT_ROOT}")
+
 configure_file(
     config.h.in
     ${CMAKE_CURRENT_BINARY_DIR}/config.h
@@ -27,10 +29,10 @@ set(docviewer_SRCS
     ${QML_SRCS}
 )
 
-add_executable(ubuntu-docviewer-app ${docviewer_SRCS})
+add_executable(lomiri-docviewer-app ${docviewer_SRCS})
 
-qt5_use_modules(ubuntu-docviewer-app Gui Qml Quick)
-target_link_libraries(ubuntu-docviewer-app stdc++)
+qt5_use_modules(lomiri-docviewer-app Gui Qml Quick)
+target_link_libraries(lomiri-docviewer-app stdc++)
 
 if(NOT "${CMAKE_CURRENT_SOURCE_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
 add_custom_target(docviewer-qmlfiles ALL
@@ -42,7 +44,7 @@ endif(NOT "${CMAKE_CURRENT_SOURCE_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
 install(DIRECTORY qml DESTINATION ${DATA_DIR})
 
 if(CLICK_MODE)
-  install(TARGETS ubuntu-docviewer-app DESTINATION ${BIN_DIR})
+  install(TARGETS lomiri-docviewer-app DESTINATION ${BIN_DIR})
 else()
-  install(TARGETS ubuntu-docviewer-app RUNTIME DESTINATION bin)
+  install(TARGETS lomiri-docviewer-app RUNTIME DESTINATION bin)
 endif()

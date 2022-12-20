@@ -1,74 +1,67 @@
-build-amd64:
-  artifacts:
-    expire_in: 1 week
-    paths:
-    - build/x86_64-linux-gnu/app/*.click
-  image: clickable/ci-16.04-amd64:16.04.4-qt5.9
-  rules:
-  - if: $CI_COMMIT_TAG == null
-  script:
-  - clickable clean-build
-  stage: build
+stages:
+    - build
+    - publish
 
-build-arm64:
-  artifacts:
-    expire_in: 1 week
-    paths:
-    - build/aarch64-linux-gnu/app/*.click
-  image: clickable/ci-16.04-arm64:16.04.4-qt5.9
-  rules:
-  - if: $CI_COMMIT_TAG == null
-  script:
-  - clickable clean-build
-  stage: build
+variables:
+    GIT_SUBMODULE_STRATEGY: 'recursive'
+    DOCKER_DRIVER: overlay2
+    CLICKABLE_VERSION: "7.7.0"
+
+.armhf: &armhf
+    variables:
+        ARCH: "armhf"
+        ARCH_TRIPLET: "arm-linux-gnueabihf"
+
+.arm64: &arm64
+    variables:
+        ARCH: "arm64"
+        ARCH_TRIPLET: "aarch64-linux-gnu"
+
+.amd64: &amd64
+    variables:
+        ARCH: "amd64"
+        ARCH_TRIPLET: "x86_64-linux-gnu"
+
+.build:
+    image: "clickable/ci-20.04-$ARCH:$CLICKABLE_VERSION"
+    stage: build
+    variables:
+        LIBREOFFICE_PROJECT_ID=41919946
+    script: clickable build --clean --all --arch $ARCH --accept-review-errors
+    artifacts:
+        paths:
+            - "build/$ARCH_TRIPLET/app"
+            - "build/$ARCH_TRIPLET/libreoffice"
+        expire_in: 1 week
 
 build-armhf:
-  artifacts:
-    expire_in: 1 week
-    paths:
-    - build/arm-linux-gnueabihf/app/*.click
-  image: clickable/ci-16.04-armhf:16.04.4-qt5.9
-  rules:
-  - if: $CI_COMMIT_TAG == null
-  script:
-  - clickable clean-build
-  stage: build
+    <<: *armhf
+    extends: .build
 
-publish-amd64:
-  artifacts:
-    expire_in: 1 week
-    paths:
-    - build/x86_64-linux-gnu/app/*.click
-  image: clickable/ci-16.04-amd64:16.04.4-qt5.9
-  rules:
-  - if: $CI_COMMIT_TAG
-  script:
-  - clickable clean-build
-  - clickable publish
-  stage: deploy
+build-arm64:
+    <<: *arm64
+    extends: .build
 
-publish-arm64:
-  artifacts:
-    expire_in: 1 week
-    paths:
-    - build/aarch64-linux-gnu/app/*.click
-  image: clickable/ci-16.04-arm64:16.04.4-qt5.9
-  rules:
-  - if: $CI_COMMIT_TAG
-  script:
-  - clickable clean-build
-  - clickable publish
-  stage: deploy
+build-amd64:
+    <<: *amd64
+    extends: .build
 
-publish-armhf:
-  artifacts:
-    expire_in: 1 week
-    paths:
-    - build/arm-linux-gnueabihf/app/*.click
-  image: clickable/ci-16.04-armhf:16.04.4-qt5.9
-  rules:
-  - if: $CI_COMMIT_TAG
-  script:
-  - clickable clean-build
-  - clickable publish "$CI_COMMIT_MESSAGE"
-  stage: deploy
+publish:
+    stage: publish
+    image: "clickable/ci-20.04-armhf:$CLICKABLE_VERSION"
+    rules:
+        - if: $CI_COMMIT_TAG
+    script:
+        - 'clickable publish "$CI_COMMIT_MESSAGE"'
+        - 'clickable publish --arch arm64'
+        - 'clickable publish --arch amd64'
+    dependencies:
+        - build-armhf
+        - build-arm64
+        - build-amd64
+    artifacts:
+        paths:
+            - build/arm-linux-gnueabihf/app/*.click
+            - build/aarch64-linux-gnu/app/*.click
+            - build/x86_64-linux-gnu/app/*.click
+        expire_in: 30 days

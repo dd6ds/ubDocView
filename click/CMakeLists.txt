@@ -5,7 +5,7 @@ if(CLICK_MODE)
 
   configure_file(manifest.json.in ${CMAKE_CURRENT_BINARY_DIR}/manifest.json)
   install(FILES ${CMAKE_CURRENT_BINARY_DIR}/manifest.json DESTINATION ${CMAKE_INSTALL_PREFIX})
-  install(FILES docviewer.apparmor docviewer-content.json com.ubuntu.docviewer.url-dispatcher DESTINATION ${CMAKE_INSTALL_PREFIX})
+  install(FILES docviewer.apparmor docviewer-content.json lomiri-docviewer-app.url-dispatcher DESTINATION ${CMAKE_INSTALL_PREFIX})
 endif(CLICK_MODE)
 
 
@@ -15,4 +15,4 @@ file(GLOB CLICK_FILES
   *.json *.json.in *.apparmor
 )
 
-add_custom_target(com_ubuntu_docviewer_CLICKFiles ALL SOURCES ${CLICK_FILES})
+add_custom_target(docviewer_ubports_CLICKFiles ALL SOURCES ${CLICK_FILES})

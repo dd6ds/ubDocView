@@ -16,7 +16,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import QtQuick.Layouts 1.1
 
 Page {
@@ -99,7 +99,7 @@ Page {
                     text: model.title
                     elide: Text.ElideRight
                     font.weight: model.level == 0 ? Font.DemiBold : Font.Normal
-                    color: (model.level == 0) ? UbuntuColors.midAubergine
+                    color: (model.level == 0) ? LomiriColors.midAubergine
                                               : theme.palette.selected.backgroundText
                 }
 
@@ -108,7 +108,7 @@ Page {
                     SlotsLayout.position: SlotsLayout.Trailing
                     width: units.gu(2); height: width
                     name: "tick"
-                    color: UbuntuColors.green
+                    color: LomiriColors.green
                     visible: view.currentIndex == model.index
                 }
 
@@ -118,7 +118,7 @@ Page {
                     SlotsLayout.position: SlotsLayout.Last
                     text: model.pageIndex + 1
                     font.weight: model.level == 0 ? Font.DemiBold : Font.Normal
-                    color: (model.level == 0) ? UbuntuColors.midAubergine
+                    color: (model.level == 0) ? LomiriColors.midAubergine
                                               : theme.palette.selected.backgroundText
                 }
             }

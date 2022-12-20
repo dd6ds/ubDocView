@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Content 1.3
+import Lomiri.Content 1.3
 import DocumentViewer 1.0
 
 // TODO: Show a dialog asking for the destination (internal storage or SD card)
@@ -27,7 +27,7 @@ Item {
     property var activeExportTransfer
 
     // This property is used in ../documentPage/Document(Grid|List)View.qml
-    // so that we avoid to import Ubuntu.Content module outside this proxy.
+    // so that we avoid to import Lomiri.Content module outside this proxy.
     property bool multipleSelectionType: !activeExportTransfer || activeExportTransfer.selectionType == ContentTransfer.Multiple
 
     property alias rejectedDocuments: rejectedDocsModel

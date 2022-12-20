@@ -49,8 +49,8 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
     QQuickView view;
 
-    QCoreApplication::setApplicationName("com.ubuntu.docviewer");
-    QCoreApplication::setOrganizationDomain("com.ubuntu.docviewer");
+    QCoreApplication::setApplicationName("docviewer.ubports");
+    QCoreApplication::setOrganizationDomain("docviewer.ubports");
 
     view.rootContext()->setContextProperty("window", &view);
     QObject::connect(view.engine(), SIGNAL(quit()), &app, SLOT(quit()));
@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
     if (!isRunningInstalled())
         view.engine()->addImportPath(QCoreApplication::applicationDirPath() + "/../plugin/");
 
-    view.setSource(QUrl::fromLocalFile(docviewerDirectory() + "/qml/ubuntu-docviewer-app.qml"));
+    view.setSource(QUrl::fromLocalFile(docviewerDirectory() + "/qml/lomiri-docviewer-app.qml"));
     view.setResizeMode(QQuickView::SizeRootObjectToView);
 
     // UITK/QML command line arguments are parsed before view's window becomes visible.

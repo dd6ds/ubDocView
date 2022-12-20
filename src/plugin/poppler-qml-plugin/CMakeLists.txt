@@ -29,7 +29,7 @@ set(popplerqmlplugin_SRCS
     pagedecoration.cpp
     pageoverlay.cpp
     pdfzoom.cpp
-    ucunits.cpp
+    lcunits.cpp
     touchdetectionarea.cpp
     ${QML_SRCS}
 )

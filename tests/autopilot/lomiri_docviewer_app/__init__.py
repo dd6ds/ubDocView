@@ -16,10 +16,10 @@
 
 """docviewer app autopilot helpers."""
 
-import ubuntuuitoolkit
+import lomiriuitoolkit
 
 
-class DocviewerException(ubuntuuitoolkit.ToolkitException):
+class DocviewerException(lomiriuitoolkit.ToolkitException):
 
     """Exception raised when there are problems with the docviewer."""
 
@@ -37,7 +37,7 @@ class DocviewerApp(object):
         return self.app.pointing_device
 
 
-class MainView(ubuntuuitoolkit.MainView):
+class MainView(lomiriuitoolkit.MainView):
 
     """A helper that makes it easy to interact with the docviewer-app."""
 

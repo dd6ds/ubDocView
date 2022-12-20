@@ -16,8 +16,8 @@
  * Author: Florian Boucault <florian.boucault@canonical.com>
  */
 
-#ifndef UBUNTU_COMPONENTS_UNITS_H
-#define UBUNTU_COMPONENTS_UNITS_H
+#ifndef LOMIRI_COMPONENTS_UNITS_H
+#define LOMIRI_COMPONENTS_UNITS_H
 
 #include <QObject>
 #include <QtCore/QHash>
@@ -57,4 +57,4 @@ private:
     float m_gridUnit;
 };
 
-#endif // UBUNTU_COMPONENTS_UNITS_H
+#endif // LOMIRI_COMPONENTS_UNITS_H

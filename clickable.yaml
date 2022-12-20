@@ -1,0 +1,27 @@
+clickable_minimum_required: '7.7.0'
+
+builder: cmake
+
+framework: ubuntu-sdk-20.04
+
+dependencies_target:
+- qtbase5-dev
+- qtdeclarative5-dev
+- libpoppler-qt5-dev
+
+build_args:
+- -DLIBREOFFICE_INCLUDE_DIR=${LIBREOFFICE_LIB_INSTALL_DIR}/include
+
+install_lib:
+- ${LIBREOFFICE_LIB_INSTALL_DIR}/lib/libreoffice
+
+libraries:
+  libreoffice:
+    builder: custom
+    prebuild:
+    - cd ${ROOT} && ./fetch-libreoffice.py 41919946 $ARCH_TRIPLET
+    build:
+    - mkdir -p ${INSTALL_DIR}/lib/libreoffice
+    - cp -rp instdir/* ${INSTALL_DIR}/lib/libreoffice
+    - mkdir -p ${INSTALL_DIR}/include
+    - cp -rp include/LibreOfficeKit ${INSTALL_DIR}/include/

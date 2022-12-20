@@ -15,9 +15,9 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
-import Ubuntu.Components.Themes.Ambiance 1.3 as Theme
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
+import Lomiri.Components.Themes.Ambiance 1.3 as Theme
 
 TextField {
     id: textField
@@ -61,7 +61,7 @@ TextField {
             name: "go-down"
             color: "Grey"
             rotation: textField.expanded ? 180 : 0
-            Behavior on rotation { UbuntuNumberAnimation { } }
+            Behavior on rotation { LomiriNumberAnimation { } }
         }
     }
 
@@ -76,9 +76,9 @@ TextField {
 
     /* style */
     style: Theme.TextFieldStyle {
-        background: UbuntuShape {
+        background: LomiriShape {
             anchors.fill: parent
-            aspect: UbuntuShape.DropShadow
+            aspect: LomiriShape.DropShadow
         }
     }
 }

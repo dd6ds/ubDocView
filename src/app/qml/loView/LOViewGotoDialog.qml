@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
 import QtQuick.Layouts 1.1
 
 // TODO: Use page breaks detection, when LibreOfficeKit will support it.
@@ -60,7 +60,7 @@ Dialog {
         Button {
             objectName:"GOButton"
             text: i18n.tr("GO!")
-            color: UbuntuColors.green
+            color: LomiriColors.green
             Layout.fillWidth: true
 
             enabled: goToPageTextField.acceptableInput

@@ -4,7 +4,7 @@ Makefile
 /.tmp-click-deps-*
 /build
 /upstream-libs-*
-ubuntu-docviewer-app
+lomiri-docviewer-app
 *.user
 *.user.*
 moc_file.cpp
@@ -18,8 +18,8 @@ debian/files
 debian/app-template/
 debian/*.debhelper.log
 debian/*.substvars
-com.ubuntu.docviewer.desktop
-com.ubuntu.docviewer.desktop.in
+lomiri-docviewer-app.desktop
+lomiri-docviewer-app.desktop.in
 manifest.json
 *.qmlc
 *.jsc

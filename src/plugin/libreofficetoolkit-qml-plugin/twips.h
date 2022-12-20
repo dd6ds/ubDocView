@@ -23,7 +23,7 @@
 #include <QtWidgets/QApplication>
 #include <QScreen>
 
-#include "ucunits.h"
+#include "lcunits.h"
 
 #define DEFAULT_DPI 96
 #define DEFAULT_GRID_UNIT_PX 8

@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 Item {
     id: rootItem
@@ -55,7 +55,7 @@ Item {
         id: args
 
         defaultArgument {
-            help: i18n.tr("Open ubuntu-docviewer-app displaying the selected file")
+            help: i18n.tr("Open lomiri-docviewer-app displaying the selected file")
             valueNames: ["file_path"]
             required: false
         }
@@ -68,13 +68,13 @@ Item {
 
         Argument {
             name: "pickMode"
-            help: i18n.tr("Open ubuntu-docviewer-app in pick mode. Used for tests only.")
+            help: i18n.tr("Open lomiri-docviewer-app in pick mode. Used for tests only.")
             required: false
         }
 
         Argument {
             name: "documentsDir"
-            help: i18n.tr("Show documents from the given folder, instead of ~/Documents.\nThe path must exist prior to running ubuntu-docviewer-app")
+            help: i18n.tr("Show documents from the given folder, instead of ~/Documents.\nThe path must exist prior to running lomiri-docviewer-app")
             valueNames: ["PATH"]
             required: false
         }
