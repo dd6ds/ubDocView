@@ -8,14 +8,16 @@ msgstr ""
 "Project-Id-Version: lomiri-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-06 12:33+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-01-04 00:32+0000\n"
+"Last-Translator: Muhammad <muhammad23012009@hotmail.com>\n"
+"Language-Team: Urdu <https://hosted.weblate.org/projects/lomiri/"
+"lomiri-docviewer-app/ur/>\n"
 "Language: ur\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 
 #: lomiri-docviewer-app.desktop.in:7
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
@@ -60,7 +62,7 @@ msgstr ""
 
 #: src/app/qml/common/DetailsPage.qml:47
 msgid "Location"
-msgstr ""
+msgstr "موجودہ مقام"
 
 #: src/app/qml/common/DetailsPage.qml:52
 msgid "Size"
@@ -136,7 +138,7 @@ msgstr ""
 #: src/app/qml/pdfView/PdfView.qml:261
 #: src/app/qml/pdfView/PdfViewGotoDialog.qml:51
 msgid "Cancel"
-msgstr ""
+msgstr "منسوخ کریں"
 
 #: src/app/qml/common/UnknownTypeDialog.qml:44
 msgid "Yes"
@@ -257,7 +259,7 @@ msgstr ""
 
 #: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:46
 msgid "Select All"
-msgstr ""
+msgstr "تمام منتخب کریں"
 
 #: src/app/qml/documentPage/SearchEmptyState.qml:24
 msgid "No matching document found"
