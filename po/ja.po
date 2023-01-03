@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-05 23:40+0100\n"
+"POT-Creation-Date: 2022-10-06 12:33+0000\n"
 "PO-Revision-Date: 2020-01-19 01:00+0000\n"
 "Last-Translator: M.Sugahara <equaaqua@hotmail.com>\n"
 "Language-Team: Japanese <https://translate.ubports.com/projects/ubports/"
@@ -20,96 +20,120 @@ msgstr ""
 "X-Generator: Weblate 3.8\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:49+0000\n"
 
-#: ../src/app/qml/common/CommandLineProxy.qml:49
+#: lomiri-docviewer-app.desktop.in:7
+msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
+msgstr ""
+
+#: src/app/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr "ファイルが存在しません"
+
+#: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
 msgstr "引数が不正です。"
 
-#: ../src/app/qml/common/CommandLineProxy.qml:58
-msgid "Open ubuntu-docviewer-app displaying the selected file"
+#: src/app/qml/common/CommandLineProxy.qml:58
+#, fuzzy
+#| msgid "Open ubuntu-docviewer-app displaying the selected file"
+msgid "Open lomiri-docviewer-app displaying the selected file"
 msgstr "選択されたファイルを表示する ubuntu-docviewer-app を起動"
 
-#: ../src/app/qml/common/CommandLineProxy.qml:65
+#: src/app/qml/common/CommandLineProxy.qml:65
 msgid "Run fullscreen"
 msgstr "全画面表示"
 
-#: ../src/app/qml/common/CommandLineProxy.qml:71
-msgid "Open ubuntu-docviewer-app in pick mode. Used for tests only."
-msgstr "Pickモードで ubuntu-docviewer-app を起動しています。テスト用途にのみ使用してください。"
+#: src/app/qml/common/CommandLineProxy.qml:71
+#, fuzzy
+#| msgid "Open ubuntu-docviewer-app in pick mode. Used for tests only."
+msgid "Open lomiri-docviewer-app in pick mode. Used for tests only."
+msgstr ""
+"Pickモードで ubuntu-docviewer-app を起動しています。テスト用途にのみ使用して"
+"ください。"
 
-#: ../src/app/qml/common/CommandLineProxy.qml:77
+#: src/app/qml/common/CommandLineProxy.qml:77
+#, fuzzy
+#| msgid ""
+#| "Show documents from the given folder, instead of ~/Documents.\n"
+#| "The path must exist prior to running ubuntu-docviewer-app"
 msgid ""
 "Show documents from the given folder, instead of ~/Documents.\n"
-"The path must exist prior to running ubuntu-docviewer-app"
+"The path must exist prior to running lomiri-docviewer-app"
 msgstr ""
 "~/Documents 以外のフォルダにあるドキュメントを表示します。\n"
 "パスは ubuntu-docviewer-app の起動前にアクセス可能でなくてはなりません"
 
-#: ../src/app/qml/common/DetailsPage.qml:26
-#: ../src/app/qml/loView/LOViewDefaultHeader.qml:107
-#: ../src/app/qml/pdfView/PdfView.qml:235
-#: ../src/app/qml/textView/TextViewDefaultHeader.qml:69
+#: src/app/qml/common/DetailsPage.qml:29
+#: src/app/qml/loView/LOViewDefaultHeader.qml:93
+#: src/app/qml/pdfView/PdfView.qml:317
+#: src/app/qml/textView/TextViewDefaultHeader.qml:55
 msgid "Details"
 msgstr "詳細"
 
-#: ../src/app/qml/common/DetailsPage.qml:42
+#: src/app/qml/common/DetailsPage.qml:42
 msgid "File"
 msgstr "ファイル"
 
-#: ../src/app/qml/common/DetailsPage.qml:47
+#: src/app/qml/common/DetailsPage.qml:47
 msgid "Location"
 msgstr "場所"
 
-#: ../src/app/qml/common/DetailsPage.qml:52
+#: src/app/qml/common/DetailsPage.qml:52
 msgid "Size"
 msgstr "サイズ"
 
-#: ../src/app/qml/common/DetailsPage.qml:57
+#: src/app/qml/common/DetailsPage.qml:57
 msgid "Created"
 msgstr "作成日時"
 
-#: ../src/app/qml/common/DetailsPage.qml:62
+#: src/app/qml/common/DetailsPage.qml:62
 msgid "Last modified"
 msgstr "更新日時"
 
-#: ../src/app/qml/common/DetailsPage.qml:69
+#: src/app/qml/common/DetailsPage.qml:69
 msgid "MIME type"
 msgstr "MIME タイプ"
 
-#: ../src/app/qml/common/ErrorDialog.qml:23
+#: src/app/qml/common/ErrorDialog.qml:23
 msgid "Error"
 msgstr "エラー"
 
-#: ../src/app/qml/common/ErrorDialog.qml:26
-#: ../src/app/qml/common/PickImportedDialog.qml:54
-#: ../src/app/qml/common/RejectedImportDialog.qml:38
-#: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:31
-#: ../src/app/qml/documentPage/SortSettingsDialog.qml:53
+#: src/app/qml/common/ErrorDialog.qml:26
+#: src/app/qml/common/PickImportedDialog.qml:54
+#: src/app/qml/common/RejectedImportDialog.qml:38
+#: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:33
+#: src/app/qml/documentPage/SortSettingsDialog.qml:53
 msgid "Close"
 msgstr "閉じる"
 
-#: ../src/app/qml/common/PickImportedDialog.qml:29
+#: src/app/qml/common/PickImportedDialog.qml:29
 msgid "Multiple documents imported"
 msgstr "複数のドキュメントをインポートしました"
 
-#: ../src/app/qml/common/PickImportedDialog.qml:30
+#: src/app/qml/common/PickImportedDialog.qml:30
 msgid "Choose which one to open:"
 msgstr "このアプリで開く:"
 
-#: ../src/app/qml/common/RejectedImportDialog.qml:28
+#: src/app/qml/common/RejectedImportDialog.qml:28
 msgid "File not supported"
 msgid_plural "Files not supported"
 msgstr[0] "このファイルはサポートしていません"
 
-#: ../src/app/qml/common/RejectedImportDialog.qml:29
+#: src/app/qml/common/RejectedImportDialog.qml:29
 msgid "Following document has not been imported:"
 msgid_plural "Following documents have not been imported:"
 msgstr[0] "次のドキュメントをインポートできません:"
 
-#: ../src/app/qml/common/UnknownTypeDialog.qml:27
+#: src/app/qml/common/TextualButtonStyle.qml:48
+#: src/app/qml/common/TextualButtonStyle.qml:51
+#: src/app/qml/documentPage/DocumentPagePickModeHeader.qml:54
+msgid "Pick"
+msgstr "選択"
+
+#: src/app/qml/common/UnknownTypeDialog.qml:27
 msgid "Unknown file type"
 msgstr "ファイル形式が不明です"
 
-#: ../src/app/qml/common/UnknownTypeDialog.qml:28
+#: src/app/qml/common/UnknownTypeDialog.qml:28
 msgid ""
 "This file is not supported.\n"
 "Do you want to open it as a plain text?"
@@ -117,268 +141,261 @@ msgstr ""
 "ファイルがサポートされていません。\n"
 "プレーンテキストとして開きますか?"
 
-#: ../src/app/qml/common/UnknownTypeDialog.qml:38
-#: ../src/app/qml/documentPage/DeleteFileDialog.qml:55
-#: ../src/app/qml/documentPage/DocumentPagePickModeHeader.qml:28
-#: ../src/app/qml/loView/LOViewGotoDialog.qml:55
-#: ../src/app/qml/pdfView/PdfView.qml:180
-#: ../src/app/qml/pdfView/PdfViewGotoDialog.qml:51
+#: src/app/qml/common/UnknownTypeDialog.qml:38
+#: src/app/qml/documentPage/DeleteFileDialog.qml:55
+#: src/app/qml/documentPage/DocumentPagePickModeHeader.qml:34
+#: src/app/qml/documentPage/DocumentPageSearchHeader.qml:33
+#: src/app/qml/loView/LOViewGotoDialog.qml:55
+#: src/app/qml/pdfView/DocumentLockedDialog.qml:63
+#: src/app/qml/pdfView/OpenLinkDialog.qml:39
+#: src/app/qml/pdfView/PdfView.qml:261
+#: src/app/qml/pdfView/PdfViewGotoDialog.qml:51
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: ../src/app/qml/common/UnknownTypeDialog.qml:44
+#: src/app/qml/common/UnknownTypeDialog.qml:44
 msgid "Yes"
 msgstr "はい"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: ../src/app/qml/common/utils.js:22
+#: src/app/qml/common/utils.js:22
 #, qt-format
 msgid "%1 GB"
 msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: ../src/app/qml/common/utils.js:26
+#: src/app/qml/common/utils.js:26
 #, qt-format
 msgid "%1 MB"
 msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: ../src/app/qml/common/utils.js:30
+#: src/app/qml/common/utils.js:30
 #, qt-format
 msgid "%1 kB"
 msgstr "%1 KB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in byte
-#: ../src/app/qml/common/utils.js:33
+#: src/app/qml/common/utils.js:33
 #, qt-format
 msgid "%1 byte"
 msgstr "%1 バイト"
 
-#: ../src/app/qml/documentPage/DeleteFileDialog.qml:39
+#: src/app/qml/documentPage/DeleteFileDialog.qml:39
 msgid "Delete file"
 msgstr "ファイルを消去"
 
-#: ../src/app/qml/documentPage/DeleteFileDialog.qml:40
+#: src/app/qml/documentPage/DeleteFileDialog.qml:40
 #, qt-format
 msgid "Delete %1 file"
 msgid_plural "Delete %1 files"
 msgstr[0] "%1個のファイルを消去"
 
-#: ../src/app/qml/documentPage/DeleteFileDialog.qml:41
-#: ../src/app/qml/documentPage/DeleteFileDialog.qml:42
+#: src/app/qml/documentPage/DeleteFileDialog.qml:41
+#: src/app/qml/documentPage/DeleteFileDialog.qml:42
 msgid "Are you sure you want to permanently delete this file?"
 msgid_plural "Are you sure you want to permanently delete these files?"
 msgstr[0] "このファイルを完全に削除しますか?"
 
-#: ../src/app/qml/documentPage/DeleteFileDialog.qml:61
-#: ../src/app/qml/documentPage/DocumentDelegateActions.qml:25
-#: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:53
+#: src/app/qml/documentPage/DeleteFileDialog.qml:61
+#: src/app/qml/documentPage/DocumentDelegateActions.qml:25
+#: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:58
 msgid "Delete"
 msgstr "削除"
 
-#: ../src/app/qml/documentPage/DocumentDelegateActions.qml:44
+#: src/app/qml/documentPage/DocumentDelegateActions.qml:44
 msgid "Share"
 msgstr "共有"
 
-#: ../src/app/qml/documentPage/DocumentEmptyState.qml:27
+#: src/app/qml/documentPage/DocumentEmptyState.qml:27
 msgid "No documents found"
 msgstr "ドキュメントが見つかりません"
 
-#: ../src/app/qml/documentPage/DocumentEmptyState.qml:28
+#: src/app/qml/documentPage/DocumentEmptyState.qml:28
 msgid ""
 "Connect your device to any computer and simply drag files to the Documents "
 "folder or insert removable media containing documents."
 msgstr ""
-"端末をコンピューターに接続してドキュメントフォルダにファイルをドラッグするか、ドキュメントが保存されているリムーバブルメディアを挿入してください。"
+"端末をコンピューターに接続してドキュメントフォルダにファイルをドラッグする"
+"か、ドキュメントが保存されているリムーバブルメディアを挿入してください。"
+
+#: src/app/qml/documentPage/DocumentListDelegate.qml:75
+msgid "SD card"
+msgstr ""
 
 #. TRANSLATORS: %1 refers to a time formatted as Locale.ShortFormat (e.g. hh:mm). It depends on system settings.
 #. http://qt-project.org/doc/qt-4.8/qlocale.html#FormatType-enum
-#: ../src/app/qml/documentPage/DocumentListDelegate.qml:103
+#: src/app/qml/documentPage/DocumentListDelegate.qml:100
 #, qt-format
 msgid "Today, %1"
 msgstr "今日、%1"
 
 #. TRANSLATORS: %1 refers to a time formatted as Locale.ShortFormat (e.g. hh:mm). It depends on system settings.
 #. http://qt-project.org/doc/qt-4.8/qlocale.html#FormatType-enum
-#: ../src/app/qml/documentPage/DocumentListDelegate.qml:108
+#: src/app/qml/documentPage/DocumentListDelegate.qml:105
 #, qt-format
 msgid "Yesterday, %1"
 msgstr "昨日、%1"
 
 #. TRANSLATORS: this is a datetime formatting string,
 #. see http://qt-project.org/doc/qt-5/qml-qtqml-date.html#details for valid expressions.
-#: ../src/app/qml/documentPage/DocumentListDelegate.qml:115
-#: ../src/app/qml/documentPage/DocumentListDelegate.qml:134
+#: src/app/qml/documentPage/DocumentListDelegate.qml:112
+#: src/app/qml/documentPage/DocumentListDelegate.qml:131
 msgid "yyyy/MM/dd hh:mm"
 msgstr "yyyy/MM/dd hh:mm"
 
 #. TRANSLATORS: this is a datetime formatting string,
 #. see http://qt-project.org/doc/qt-5/qml-qtqml-date.html#details for valid expressions.
-#: ../src/app/qml/documentPage/DocumentListDelegate.qml:128
+#: src/app/qml/documentPage/DocumentListDelegate.qml:125
 msgid "dddd, hh:mm"
 msgstr ""
 
-#: ../src/app/qml/documentPage/DocumentPage.qml:23
-#: /tmp/lok-qml-async-imageprovider-build/po/com.ubuntu.docviewer.desktop.in.in.h:3
+#: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:27
 msgid "Documents"
 msgstr "ドキュメント"
 
-#: ../src/app/qml/documentPage/DocumentPageDefaultHeader.qml:29
+#: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
 msgid "Search..."
 msgstr "検索…"
 
-#: ../src/app/qml/documentPage/DocumentPageDefaultHeader.qml:36
+#: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
 msgid "Sorting settings..."
 msgstr "ソート設定..."
 
-#: ../src/app/qml/documentPage/DocumentPagePickModeHeader.qml:41
-msgid "Switch to single column list"
-msgstr ""
-
-#: ../src/app/qml/documentPage/DocumentPagePickModeHeader.qml:41
-msgid "Switch to grid"
-msgstr "グリッドに変更"
-
-#: ../src/app/qml/documentPage/DocumentPagePickModeHeader.qml:49
-msgid "Pick"
-msgstr "選択"
-
-#: ../src/app/qml/documentPage/DocumentPageSearchHeader.qml:27
-msgid "Back"
-msgstr "戻る"
-
-#: ../src/app/qml/documentPage/DocumentPageSearchHeader.qml:47
+#: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
 msgstr "ドキュメントを検索..."
 
-#: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:40
+#: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:46
 msgid "Select None"
 msgstr "選択解除"
 
-#: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:40
+#: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:46
 msgid "Select All"
 msgstr "すべて選択"
 
-#: ../src/app/qml/documentPage/SearchEmptyState.qml:24
+#: src/app/qml/documentPage/SearchEmptyState.qml:24
 msgid "No matching document found"
 msgstr "ドキュメントが見つかりませんでした"
 
-#: ../src/app/qml/documentPage/SearchEmptyState.qml:26
+#: src/app/qml/documentPage/SearchEmptyState.qml:26
 msgid ""
 "Please ensure that your query is not misspelled and/or try a different query."
 msgstr "クエリの綴りが間違えていないか、または、別のクエリを試してください"
 
-#: ../src/app/qml/documentPage/SectionHeader.qml:13
+#: src/app/qml/documentPage/SectionHeader.qml:30
 msgid "Today"
 msgstr "今日"
 
-#: ../src/app/qml/documentPage/SectionHeader.qml:16
+#: src/app/qml/documentPage/SectionHeader.qml:33
 msgid "Yesterday"
 msgstr "昨日"
 
-#: ../src/app/qml/documentPage/SectionHeader.qml:19
+#: src/app/qml/documentPage/SectionHeader.qml:36
 msgid "Earlier this week"
 msgstr ""
 
-#: ../src/app/qml/documentPage/SectionHeader.qml:22
+#: src/app/qml/documentPage/SectionHeader.qml:39
 msgid "Earlier this month"
 msgstr ""
 
-#: ../src/app/qml/documentPage/SectionHeader.qml:24
+#: src/app/qml/documentPage/SectionHeader.qml:41
 msgid "Even earlier..."
 msgstr ""
 
-#: ../src/app/qml/documentPage/SharePage.qml:23
+#: src/app/qml/documentPage/SharePage.qml:28
 msgid "Share to"
 msgstr "〜に共有"
 
-#: ../src/app/qml/documentPage/SortSettingsDialog.qml:26
+#: src/app/qml/documentPage/SortSettingsDialog.qml:26
 msgid "Sorting settings"
 msgstr "ソート設定"
 
-#: ../src/app/qml/documentPage/SortSettingsDialog.qml:31
+#: src/app/qml/documentPage/SortSettingsDialog.qml:31
 msgid "Sort by date (Latest first)"
 msgstr "日付ソート（新しい順）"
 
-#: ../src/app/qml/documentPage/SortSettingsDialog.qml:32
+#: src/app/qml/documentPage/SortSettingsDialog.qml:32
 msgid "Sort by name (A-Z)"
 msgstr "名前ソート（A-Z）"
 
-#: ../src/app/qml/documentPage/SortSettingsDialog.qml:33
+#: src/app/qml/documentPage/SortSettingsDialog.qml:33
 msgid "Sort by size (Smaller first)"
 msgstr "サイズソート（小さい順）"
 
-#: ../src/app/qml/documentPage/SortSettingsDialog.qml:47
+#: src/app/qml/documentPage/SortSettingsDialog.qml:47
 msgid "Reverse order"
 msgstr ""
 
-#: ../src/app/qml/loView/LOViewDefaultHeader.qml:51
-#: ../src/app/qml/textView/TextView.qml:43
+#: src/app/qml/loView/LOViewDefaultHeader.qml:41
+#: src/app/qml/textView/TextView.qml:49
 msgid "Loading..."
 msgstr "読み込み中..."
 
-#: ../src/app/qml/loView/LOViewDefaultHeader.qml:55
+#: src/app/qml/loView/LOViewDefaultHeader.qml:45
 msgid "LibreOffice text document"
 msgstr ""
 
-#: ../src/app/qml/loView/LOViewDefaultHeader.qml:57
+#: src/app/qml/loView/LOViewDefaultHeader.qml:47
 msgid "LibreOffice spread sheet"
 msgstr ""
 
-#: ../src/app/qml/loView/LOViewDefaultHeader.qml:59
+#: src/app/qml/loView/LOViewDefaultHeader.qml:49
 msgid "LibreOffice presentation"
 msgstr ""
 
-#: ../src/app/qml/loView/LOViewDefaultHeader.qml:61
+#: src/app/qml/loView/LOViewDefaultHeader.qml:51
 msgid "LibreOffice Draw document"
 msgstr ""
 
-#: ../src/app/qml/loView/LOViewDefaultHeader.qml:63
+#: src/app/qml/loView/LOViewDefaultHeader.qml:53
 msgid "Unknown LibreOffice document"
 msgstr ""
 
-#: ../src/app/qml/loView/LOViewDefaultHeader.qml:65
-msgid "Unknown type document"
+#: src/app/qml/loView/LOViewDefaultHeader.qml:55
+#, fuzzy
+#| msgid "Unknown file type"
+msgid "Unknown document type"
+msgstr "ファイル形式が不明です"
+
+#: src/app/qml/loView/LOViewDefaultHeader.qml:72
+msgid "Go to position…"
 msgstr ""
 
-#: ../src/app/qml/loView/LOViewDefaultHeader.qml:85
-msgid "Go to position..."
-msgstr ""
-
-#: ../src/app/qml/loView/LOViewDefaultHeader.qml:100
-#: ../src/app/qml/pdfView/PdfView.qml:228
-#: ../src/app/qml/textView/TextViewDefaultHeader.qml:63
+#: src/app/qml/loView/LOViewDefaultHeader.qml:86
+#: src/app/qml/pdfView/PdfView.qml:310
+#: src/app/qml/textView/TextViewDefaultHeader.qml:49
 msgid "Disable night mode"
 msgstr "ナイトモードをオフにする"
 
-#: ../src/app/qml/loView/LOViewDefaultHeader.qml:100
-#: ../src/app/qml/pdfView/PdfView.qml:228
-#: ../src/app/qml/textView/TextViewDefaultHeader.qml:63
+#: src/app/qml/loView/LOViewDefaultHeader.qml:86
+#: src/app/qml/pdfView/PdfView.qml:310
+#: src/app/qml/textView/TextViewDefaultHeader.qml:49
 msgid "Enable night mode"
 msgstr "ナイトモードをオンにする"
 
-#: ../src/app/qml/loView/LOViewGotoDialog.qml:30
+#: src/app/qml/loView/LOViewGotoDialog.qml:30
 msgid "Go to position"
 msgstr ""
 
-#: ../src/app/qml/loView/LOViewGotoDialog.qml:31
+#: src/app/qml/loView/LOViewGotoDialog.qml:31
 msgid "Choose a position between 1% and 100%"
 msgstr "1％から100％までの間でポジションwp選択する"
 
-#: ../src/app/qml/loView/LOViewGotoDialog.qml:62
-#: ../src/app/qml/pdfView/PdfViewGotoDialog.qml:58
+#: src/app/qml/loView/LOViewGotoDialog.qml:62
+#: src/app/qml/pdfView/PdfViewGotoDialog.qml:58
 msgid "GO!"
 msgstr ""
 
-#: ../src/app/qml/loView/LOViewPage.qml:167
+#: src/app/qml/loView/LOViewPage.qml:173
 msgid "LibreOffice binaries not found."
 msgstr ""
 
-#: ../src/app/qml/loView/LOViewPage.qml:170
+#: src/app/qml/loView/LOViewPage.qml:176
 msgid "Error while loading LibreOffice."
 msgstr "LibreOfficeロード中にエラーが発生しました"
 
-#: ../src/app/qml/loView/LOViewPage.qml:173
+#: src/app/qml/loView/LOViewPage.qml:179
 msgid ""
 "Document not loaded.\n"
 "The requested document may be corrupt or protected by a password."
@@ -386,74 +403,129 @@ msgstr ""
 "ドキュメントがロードされていません\n"
 "リクエストされたドキュメントは破損もしくはパスワードで保護されています"
 
-#: ../src/app/qml/loView/LOViewPage.qml:228
+#: src/app/qml/loView/LOViewPage.qml:231
 msgid "This sheet has no content."
 msgstr "このシートは内容がありません"
 
 #. TRANSLATORS: 'LibreOfficeKit' is the name of the library used by
 #. Document Viewer for rendering LibreOffice/MS-Office documents.
 #. Ref. https://docs.libreoffice.org/libreofficekit.html
-#: ../src/app/qml/loView/Splashscreen.qml:45
+#: src/app/qml/loView/Splashscreen.qml:45
 msgid "Powered by LibreOfficeKit"
 msgstr ""
 
 #. TRANSLATORS: Please don't add any space between "Sheet" and "%1".
 #. This is the default name for a sheet in LibreOffice.
-#: ../src/app/qml/loView/SpreadsheetSelector.qml:64
+#: src/app/qml/loView/SpreadsheetSelector.qml:64
 #, qt-format
 msgid "Sheet%1"
 msgstr ""
 
-#: ../src/app/qml/loView/ZoomSelector.qml:122
+#: src/app/qml/loView/ZoomSelector.qml:122
+#: src/app/qml/pdfView/ZoomSelector.qml:119
 msgid "Fit width"
 msgstr "幅を合わせる"
 
-#: ../src/app/qml/loView/ZoomSelector.qml:123
+#: src/app/qml/loView/ZoomSelector.qml:123
 msgid "Fit height"
 msgstr "高さを合わせる"
 
-#: ../src/app/qml/loView/ZoomSelector.qml:124
+#: src/app/qml/loView/ZoomSelector.qml:124
+#: src/app/qml/pdfView/ZoomSelector.qml:121
 msgid "Automatic"
 msgstr "自動"
 
+#: src/app/qml/pdfView/DocumentLockedDialog.qml:25
+#, fuzzy
+#| msgid "Document Viewer"
+msgid "Document is locked"
+msgstr "ドキュメントビューアー"
+
+#: src/app/qml/pdfView/DocumentLockedDialog.qml:26
+msgid "Please insert a password in order to unlock this document"
+msgstr ""
+
+#: src/app/qml/pdfView/DocumentLockedDialog.qml:50
+msgid "Entered password is not valid"
+msgstr ""
+
+#: src/app/qml/pdfView/DocumentLockedDialog.qml:69
+msgid "Unlock"
+msgstr ""
+
+#: src/app/qml/pdfView/LinkHint.qml:36
+#, qt-format
+msgid "Open link externally: %1"
+msgstr ""
+
+#: src/app/qml/pdfView/LinkHint.qml:37
+#: src/app/qml/pdfView/OpenLinkDialog.qml:28
+#, qt-format
+msgid "Go to page %1"
+msgstr ""
+
+#: src/app/qml/pdfView/OpenLinkDialog.qml:28
+msgid "Open link externally"
+msgstr ""
+
+#: src/app/qml/pdfView/OpenLinkDialog.qml:29
+msgid "Are you sure?"
+msgstr ""
+
+#: src/app/qml/pdfView/OpenLinkDialog.qml:45
+msgid "Open"
+msgstr ""
+
+#: src/app/qml/pdfView/OpenLinkDialog.qml:45
+msgid "Go to destination"
+msgstr ""
+
 #. TRANSLATORS: "Contents" refers to the "Table of Contents" of a PDF document.
-#: ../src/app/qml/pdfView/PdfContentsPage.qml:31
-#: ../src/app/qml/pdfView/PdfView.qml:153
+#: src/app/qml/pdfView/PdfContentsPage.qml:31
+#: src/app/qml/pdfView/PdfView.qml:230
 msgid "Contents"
 msgstr "目次"
 
 #. TRANSLATORS: the first argument (%1) refers to the page currently shown on the screen,
 #. while the second one (%2) refers to the total pages count.
-#: ../src/app/qml/pdfView/PdfPresentation.qml:51
-#: ../src/app/qml/pdfView/PdfView.qml:56
+#: src/app/qml/pdfView/PdfPresentation.qml:51
+#: src/app/qml/pdfView/PdfView.qml:49
 #, qt-format
 msgid "Page %1 of %2"
 msgstr ""
 
-#: ../src/app/qml/pdfView/PdfView.qml:203
+#: src/app/qml/pdfView/PdfView.qml:284
 msgid "Search"
 msgstr "検索"
 
-#: ../src/app/qml/pdfView/PdfView.qml:213
+#: src/app/qml/pdfView/PdfView.qml:294
 msgid "Go to page..."
 msgstr ""
 
-#: ../src/app/qml/pdfView/PdfView.qml:221
+#: src/app/qml/pdfView/PdfView.qml:303
 msgid "Presentation"
 msgstr "プレゼンテーション"
 
-#: ../src/app/qml/pdfView/PdfViewGotoDialog.qml:26
+#: src/app/qml/pdfView/PdfView.qml:324
+msgid "Rotate 90° right"
+msgstr ""
+
+#: src/app/qml/pdfView/PdfView.qml:341
+msgid "Rotate 90° left"
+msgstr ""
+
+#: src/app/qml/pdfView/PdfViewGotoDialog.qml:26
 msgid "Go to page"
 msgstr ""
 
-#: ../src/app/qml/pdfView/PdfViewGotoDialog.qml:27
+#: src/app/qml/pdfView/PdfViewGotoDialog.qml:27
 #, qt-format
 msgid "Choose a page between 1 and %1"
 msgstr ""
 
-#: ../src/app/qml/ubuntu-docviewer-app.qml:114
-msgid "File does not exist."
-msgstr "ファイルが存在しません"
+#: src/app/qml/pdfView/ZoomSelector.qml:120
+msgid "Fit page"
+msgstr ""
 
 #. TRANSLATORS: This string is used for renaming a copied file,
 #. when a file with the same name already exists in user's
@@ -464,15 +536,16 @@ msgstr "ファイルが存在しません"
 #.
 #. where "2" is given by the argument "%1"
 #.
-#: ../src/plugin/file-qml-plugin/docviewerutils.cpp:111
+#: src/plugin/file-qml-plugin/docviewerutils.cpp:119
 #, qt-format
 msgid "copy %1"
 msgstr ""
 
-#: /tmp/lok-qml-async-imageprovider-build/po/com.ubuntu.docviewer.desktop.in.in.h:1
-msgid "Document Viewer"
-msgstr "ドキュメントビューアー"
+#~ msgid "Switch to grid"
+#~ msgstr "グリッドに変更"
 
-#: /tmp/lok-qml-async-imageprovider-build/po/com.ubuntu.docviewer.desktop.in.in.h:2
-msgid "documents;viewer;pdf;reader;"
-msgstr "ドキュメント;ビューアー;pdf;リーダー;"
+#~ msgid "Back"
+#~ msgstr "戻る"
+
+#~ msgid "documents;viewer;pdf;reader;"
+#~ msgstr "ドキュメント;ビューアー;pdf;リーダー;"

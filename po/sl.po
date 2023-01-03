@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-05 23:40+0100\n"
+"POT-Creation-Date: 2022-10-06 12:33+0000\n"
 "PO-Revision-Date: 2020-02-18 17:21+0000\n"
 "Last-Translator: Riccardo Riccio <rickyriccio@tiscali.it>\n"
 "Language-Team: Slovenian <https://translate.ubports.com/projects/ubports/"
@@ -16,87 +16,103 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
-"n%100==4 ? 2 : 3;\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3;\n"
 "X-Generator: Weblate 3.8\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:49+0000\n"
 
-#: ../src/app/qml/common/CommandLineProxy.qml:49
+#: lomiri-docviewer-app.desktop.in:7
+msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
+msgstr ""
+
+#: src/app/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr "Datoteka ne obstaja."
+
+#: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
 msgstr "Nekaj navedenih argumentov ni veljavnih"
 
-#: ../src/app/qml/common/CommandLineProxy.qml:58
-msgid "Open ubuntu-docviewer-app displaying the selected file"
+#: src/app/qml/common/CommandLineProxy.qml:58
+#, fuzzy
+#| msgid "Open ubuntu-docviewer-app displaying the selected file"
+msgid "Open lomiri-docviewer-app displaying the selected file"
 msgstr "Odpri ubuntu-docviewer-app s prikazano izbrano datoteko"
 
-#: ../src/app/qml/common/CommandLineProxy.qml:65
+#: src/app/qml/common/CommandLineProxy.qml:65
 msgid "Run fullscreen"
 msgstr "Pokaži celozaslonsko"
 
-#: ../src/app/qml/common/CommandLineProxy.qml:71
-msgid "Open ubuntu-docviewer-app in pick mode. Used for tests only."
+#: src/app/qml/common/CommandLineProxy.qml:71
+#, fuzzy
+#| msgid "Open ubuntu-docviewer-app in pick mode. Used for tests only."
+msgid "Open lomiri-docviewer-app in pick mode. Used for tests only."
 msgstr "Odpri ubuntu-docviewer-app v izbirnem načinu. Samo za teste."
 
-#: ../src/app/qml/common/CommandLineProxy.qml:77
+#: src/app/qml/common/CommandLineProxy.qml:77
+#, fuzzy
+#| msgid ""
+#| "Show documents from the given folder, instead of ~/Documents.\n"
+#| "The path must exist prior to running ubuntu-docviewer-app"
 msgid ""
 "Show documents from the given folder, instead of ~/Documents.\n"
-"The path must exist prior to running ubuntu-docviewer-app"
+"The path must exist prior to running lomiri-docviewer-app"
 msgstr ""
 "Pokaži dokumente v navedeni mapi namesto v ~/Dokumenti.\n"
 "Pot do dokumentov mora obstajati pred zagonom ubuntu-docviewer-app"
 
-#: ../src/app/qml/common/DetailsPage.qml:26
-#: ../src/app/qml/loView/LOViewDefaultHeader.qml:107
-#: ../src/app/qml/pdfView/PdfView.qml:235
-#: ../src/app/qml/textView/TextViewDefaultHeader.qml:69
+#: src/app/qml/common/DetailsPage.qml:29
+#: src/app/qml/loView/LOViewDefaultHeader.qml:93
+#: src/app/qml/pdfView/PdfView.qml:317
+#: src/app/qml/textView/TextViewDefaultHeader.qml:55
 msgid "Details"
 msgstr "Podrobnosti"
 
-#: ../src/app/qml/common/DetailsPage.qml:42
+#: src/app/qml/common/DetailsPage.qml:42
 msgid "File"
 msgstr "Datoteka"
 
-#: ../src/app/qml/common/DetailsPage.qml:47
+#: src/app/qml/common/DetailsPage.qml:47
 msgid "Location"
 msgstr "Položaj"
 
-#: ../src/app/qml/common/DetailsPage.qml:52
+#: src/app/qml/common/DetailsPage.qml:52
 msgid "Size"
 msgstr "Velikost"
 
-#: ../src/app/qml/common/DetailsPage.qml:57
+#: src/app/qml/common/DetailsPage.qml:57
 msgid "Created"
 msgstr "Ustvarjeno"
 
-#: ../src/app/qml/common/DetailsPage.qml:62
+#: src/app/qml/common/DetailsPage.qml:62
 msgid "Last modified"
 msgstr "Nazadnje spremenjeno"
 
-#: ../src/app/qml/common/DetailsPage.qml:69
+#: src/app/qml/common/DetailsPage.qml:69
 msgid "MIME type"
 msgstr "Vrsta MIME"
 
-#: ../src/app/qml/common/ErrorDialog.qml:23
+#: src/app/qml/common/ErrorDialog.qml:23
 msgid "Error"
 msgstr "Napaka"
 
-#: ../src/app/qml/common/ErrorDialog.qml:26
-#: ../src/app/qml/common/PickImportedDialog.qml:54
-#: ../src/app/qml/common/RejectedImportDialog.qml:38
-#: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:31
-#: ../src/app/qml/documentPage/SortSettingsDialog.qml:53
+#: src/app/qml/common/ErrorDialog.qml:26
+#: src/app/qml/common/PickImportedDialog.qml:54
+#: src/app/qml/common/RejectedImportDialog.qml:38
+#: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:33
+#: src/app/qml/documentPage/SortSettingsDialog.qml:53
 msgid "Close"
 msgstr "Zapri"
 
-#: ../src/app/qml/common/PickImportedDialog.qml:29
+#: src/app/qml/common/PickImportedDialog.qml:29
 msgid "Multiple documents imported"
 msgstr "Več dokumentov je uvoženih"
 
-#: ../src/app/qml/common/PickImportedDialog.qml:30
+#: src/app/qml/common/PickImportedDialog.qml:30
 msgid "Choose which one to open:"
 msgstr "Izberite, katerega boste odprli:"
 
-#: ../src/app/qml/common/RejectedImportDialog.qml:28
+#: src/app/qml/common/RejectedImportDialog.qml:28
 msgid "File not supported"
 msgid_plural "Files not supported"
 msgstr[0] "Datotek ni podprtih"
@@ -104,7 +120,7 @@ msgstr[1] "Datoteka ni podprta"
 msgstr[2] "Datoteki nista podprti"
 msgstr[3] "Datoteke niso podprte"
 
-#: ../src/app/qml/common/RejectedImportDialog.qml:29
+#: src/app/qml/common/RejectedImportDialog.qml:29
 msgid "Following document has not been imported:"
 msgid_plural "Following documents have not been imported:"
 msgstr[0] "Sledečih dokumentov ni bilo uvoženih:"
@@ -112,11 +128,17 @@ msgstr[1] "Sledeči dokument ni bil uvožen:"
 msgstr[2] "Sledeča dokumenta nisa bila uvožena:"
 msgstr[3] "Sledeči dokumenti niso bili uvoženi:"
 
-#: ../src/app/qml/common/UnknownTypeDialog.qml:27
+#: src/app/qml/common/TextualButtonStyle.qml:48
+#: src/app/qml/common/TextualButtonStyle.qml:51
+#: src/app/qml/documentPage/DocumentPagePickModeHeader.qml:54
+msgid "Pick"
+msgstr "Izberi"
+
+#: src/app/qml/common/UnknownTypeDialog.qml:27
 msgid "Unknown file type"
 msgstr "Neznana vrsta datoteke"
 
-#: ../src/app/qml/common/UnknownTypeDialog.qml:28
+#: src/app/qml/common/UnknownTypeDialog.qml:28
 msgid ""
 "This file is not supported.\n"
 "Do you want to open it as a plain text?"
@@ -124,48 +146,51 @@ msgstr ""
 "Datoteka ni podprta.\n"
 "Ali jo želite odpreti kot golo besedilo?"
 
-#: ../src/app/qml/common/UnknownTypeDialog.qml:38
-#: ../src/app/qml/documentPage/DeleteFileDialog.qml:55
-#: ../src/app/qml/documentPage/DocumentPagePickModeHeader.qml:28
-#: ../src/app/qml/loView/LOViewGotoDialog.qml:55
-#: ../src/app/qml/pdfView/PdfView.qml:180
-#: ../src/app/qml/pdfView/PdfViewGotoDialog.qml:51
+#: src/app/qml/common/UnknownTypeDialog.qml:38
+#: src/app/qml/documentPage/DeleteFileDialog.qml:55
+#: src/app/qml/documentPage/DocumentPagePickModeHeader.qml:34
+#: src/app/qml/documentPage/DocumentPageSearchHeader.qml:33
+#: src/app/qml/loView/LOViewGotoDialog.qml:55
+#: src/app/qml/pdfView/DocumentLockedDialog.qml:63
+#: src/app/qml/pdfView/OpenLinkDialog.qml:39
+#: src/app/qml/pdfView/PdfView.qml:261
+#: src/app/qml/pdfView/PdfViewGotoDialog.qml:51
 msgid "Cancel"
 msgstr "Prekliči"
 
-#: ../src/app/qml/common/UnknownTypeDialog.qml:44
+#: src/app/qml/common/UnknownTypeDialog.qml:44
 msgid "Yes"
 msgstr "Da"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
-#: ../src/app/qml/common/utils.js:22
+#: src/app/qml/common/utils.js:22
 #, qt-format
 msgid "%1 GB"
 msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
-#: ../src/app/qml/common/utils.js:26
+#: src/app/qml/common/utils.js:26
 #, qt-format
 msgid "%1 MB"
 msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
-#: ../src/app/qml/common/utils.js:30
+#: src/app/qml/common/utils.js:30
 #, qt-format
 msgid "%1 kB"
 msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in byte
-#: ../src/app/qml/common/utils.js:33
+#: src/app/qml/common/utils.js:33
 #, qt-format
 msgid "%1 byte"
 msgstr "%1 bajt"
 
-#: ../src/app/qml/documentPage/DeleteFileDialog.qml:39
+#: src/app/qml/documentPage/DeleteFileDialog.qml:39
 msgid "Delete file"
 msgstr "Izbriši datoteko"
 
-#: ../src/app/qml/documentPage/DeleteFileDialog.qml:40
+#: src/app/qml/documentPage/DeleteFileDialog.qml:40
 #, qt-format
 msgid "Delete %1 file"
 msgid_plural "Delete %1 files"
@@ -174,8 +199,8 @@ msgstr[1] "Izbriši %1 datoteko"
 msgstr[2] "Izbriši %1 datoteki"
 msgstr[3] "Izbriši %1 datoteke"
 
-#: ../src/app/qml/documentPage/DeleteFileDialog.qml:41
-#: ../src/app/qml/documentPage/DeleteFileDialog.qml:42
+#: src/app/qml/documentPage/DeleteFileDialog.qml:41
+#: src/app/qml/documentPage/DeleteFileDialog.qml:42
 msgid "Are you sure you want to permanently delete this file?"
 msgid_plural "Are you sure you want to permanently delete these files?"
 msgstr[0] "Ali ste prepričani, da želite trajno izbrisati datotek?"
@@ -183,21 +208,21 @@ msgstr[1] "Ali ste prepričani, da želite trajno izbrisati to datoteko?"
 msgstr[2] "Ali ste prepričani, da želite trajno izbrisati ti datoteki?"
 msgstr[3] "Ali ste prepričani, da želite trajno izbrisati te datoteke?"
 
-#: ../src/app/qml/documentPage/DeleteFileDialog.qml:61
-#: ../src/app/qml/documentPage/DocumentDelegateActions.qml:25
-#: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:53
+#: src/app/qml/documentPage/DeleteFileDialog.qml:61
+#: src/app/qml/documentPage/DocumentDelegateActions.qml:25
+#: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:58
 msgid "Delete"
 msgstr "Izbriši"
 
-#: ../src/app/qml/documentPage/DocumentDelegateActions.qml:44
+#: src/app/qml/documentPage/DocumentDelegateActions.qml:44
 msgid "Share"
 msgstr "Deli"
 
-#: ../src/app/qml/documentPage/DocumentEmptyState.qml:27
+#: src/app/qml/documentPage/DocumentEmptyState.qml:27
 msgid "No documents found"
 msgstr "Ni najdenih dokumentov"
 
-#: ../src/app/qml/documentPage/DocumentEmptyState.qml:28
+#: src/app/qml/documentPage/DocumentEmptyState.qml:28
 msgid ""
 "Connect your device to any computer and simply drag files to the Documents "
 "folder or insert removable media containing documents."
@@ -205,196 +230,187 @@ msgstr ""
 "Priključite napravo na katerikoli računalnik in enostavno potegnite datoteke "
 "v mapo Dokumenti ali pa vstavite odstranljivi nosilec podatkov z dokumenti."
 
+#: src/app/qml/documentPage/DocumentListDelegate.qml:75
+msgid "SD card"
+msgstr ""
+
 #. TRANSLATORS: %1 refers to a time formatted as Locale.ShortFormat (e.g. hh:mm). It depends on system settings.
 #. http://qt-project.org/doc/qt-4.8/qlocale.html#FormatType-enum
-#: ../src/app/qml/documentPage/DocumentListDelegate.qml:103
+#: src/app/qml/documentPage/DocumentListDelegate.qml:100
 #, qt-format
 msgid "Today, %1"
 msgstr "Danes, %1"
 
 #. TRANSLATORS: %1 refers to a time formatted as Locale.ShortFormat (e.g. hh:mm). It depends on system settings.
 #. http://qt-project.org/doc/qt-4.8/qlocale.html#FormatType-enum
-#: ../src/app/qml/documentPage/DocumentListDelegate.qml:108
+#: src/app/qml/documentPage/DocumentListDelegate.qml:105
 #, qt-format
 msgid "Yesterday, %1"
 msgstr "Včeraj, %1"
 
 #. TRANSLATORS: this is a datetime formatting string,
 #. see http://qt-project.org/doc/qt-5/qml-qtqml-date.html#details for valid expressions.
-#: ../src/app/qml/documentPage/DocumentListDelegate.qml:115
-#: ../src/app/qml/documentPage/DocumentListDelegate.qml:134
+#: src/app/qml/documentPage/DocumentListDelegate.qml:112
+#: src/app/qml/documentPage/DocumentListDelegate.qml:131
 msgid "yyyy/MM/dd hh:mm"
 msgstr "dd.MM.yyyy hh:mm"
 
 #. TRANSLATORS: this is a datetime formatting string,
 #. see http://qt-project.org/doc/qt-5/qml-qtqml-date.html#details for valid expressions.
-#: ../src/app/qml/documentPage/DocumentListDelegate.qml:128
+#: src/app/qml/documentPage/DocumentListDelegate.qml:125
 msgid "dddd, hh:mm"
 msgstr "dddd, hh:mm"
 
-#: ../src/app/qml/documentPage/DocumentPage.qml:23
-#: /tmp/lok-qml-async-imageprovider-build/po/com.ubuntu.docviewer.desktop.in.in.h:3
+#: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:27
 msgid "Documents"
 msgstr "Dokumenti"
 
-#: ../src/app/qml/documentPage/DocumentPageDefaultHeader.qml:29
+#: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
 msgid "Search..."
 msgstr "Iskanje ..."
 
-#: ../src/app/qml/documentPage/DocumentPageDefaultHeader.qml:36
+#: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
 msgid "Sorting settings..."
 msgstr "Nastavitve razvrščanja ..."
 
-#: ../src/app/qml/documentPage/DocumentPagePickModeHeader.qml:41
-msgid "Switch to single column list"
-msgstr "preklopi na seznam z enim stolpcem"
-
-#: ../src/app/qml/documentPage/DocumentPagePickModeHeader.qml:41
-msgid "Switch to grid"
-msgstr "Preklopi na mrežo"
-
-#: ../src/app/qml/documentPage/DocumentPagePickModeHeader.qml:49
-msgid "Pick"
-msgstr "Izberi"
-
-#: ../src/app/qml/documentPage/DocumentPageSearchHeader.qml:27
-msgid "Back"
-msgstr "Nazaj"
-
-#: ../src/app/qml/documentPage/DocumentPageSearchHeader.qml:47
+#: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
 msgstr "išči v dokumentih ..."
 
-#: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:40
+#: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:46
 msgid "Select None"
 msgstr "Odznači vse"
 
-#: ../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:40
+#: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:46
 msgid "Select All"
 msgstr "Izberi vse"
 
-#: ../src/app/qml/documentPage/SearchEmptyState.qml:24
+#: src/app/qml/documentPage/SearchEmptyState.qml:24
 msgid "No matching document found"
 msgstr "Ni ujemajočega dokumenta"
 
-#: ../src/app/qml/documentPage/SearchEmptyState.qml:26
+#: src/app/qml/documentPage/SearchEmptyState.qml:26
 msgid ""
 "Please ensure that your query is not misspelled and/or try a different query."
 msgstr ""
 "Prepričajte se, da vaša poizvedba ni napačno črkovana in/ali poskusite drugo "
 "poizvedbo."
 
-#: ../src/app/qml/documentPage/SectionHeader.qml:13
+#: src/app/qml/documentPage/SectionHeader.qml:30
 msgid "Today"
 msgstr "Danes"
 
-#: ../src/app/qml/documentPage/SectionHeader.qml:16
+#: src/app/qml/documentPage/SectionHeader.qml:33
 msgid "Yesterday"
 msgstr "Včeraj"
 
-#: ../src/app/qml/documentPage/SectionHeader.qml:19
+#: src/app/qml/documentPage/SectionHeader.qml:36
 msgid "Earlier this week"
 msgstr "V začetku tega tedna"
 
-#: ../src/app/qml/documentPage/SectionHeader.qml:22
+#: src/app/qml/documentPage/SectionHeader.qml:39
 msgid "Earlier this month"
 msgstr "V začetku tega meseca"
 
-#: ../src/app/qml/documentPage/SectionHeader.qml:24
+#: src/app/qml/documentPage/SectionHeader.qml:41
 msgid "Even earlier..."
 msgstr "Še prej ..."
 
-#: ../src/app/qml/documentPage/SharePage.qml:23
+#: src/app/qml/documentPage/SharePage.qml:28
 msgid "Share to"
 msgstr "Deli z"
 
-#: ../src/app/qml/documentPage/SortSettingsDialog.qml:26
+#: src/app/qml/documentPage/SortSettingsDialog.qml:26
 msgid "Sorting settings"
 msgstr "Nastavitve razvrščanja"
 
-#: ../src/app/qml/documentPage/SortSettingsDialog.qml:31
+#: src/app/qml/documentPage/SortSettingsDialog.qml:31
 msgid "Sort by date (Latest first)"
 msgstr "Razvrsti po datumu (najnovejši so prvi)"
 
-#: ../src/app/qml/documentPage/SortSettingsDialog.qml:32
+#: src/app/qml/documentPage/SortSettingsDialog.qml:32
 msgid "Sort by name (A-Z)"
 msgstr "Razvrsti po imenu (A-Z)"
 
-#: ../src/app/qml/documentPage/SortSettingsDialog.qml:33
+#: src/app/qml/documentPage/SortSettingsDialog.qml:33
 msgid "Sort by size (Smaller first)"
 msgstr "Razvrsti po velikosti (najmanjši so prvi)"
 
-#: ../src/app/qml/documentPage/SortSettingsDialog.qml:47
+#: src/app/qml/documentPage/SortSettingsDialog.qml:47
 msgid "Reverse order"
 msgstr "Preobrni red"
 
-#: ../src/app/qml/loView/LOViewDefaultHeader.qml:51
-#: ../src/app/qml/textView/TextView.qml:43
+#: src/app/qml/loView/LOViewDefaultHeader.qml:41
+#: src/app/qml/textView/TextView.qml:49
 msgid "Loading..."
 msgstr "Nalaganje …"
 
-#: ../src/app/qml/loView/LOViewDefaultHeader.qml:55
+#: src/app/qml/loView/LOViewDefaultHeader.qml:45
 msgid "LibreOffice text document"
 msgstr "Besedilo LibreOffice"
 
-#: ../src/app/qml/loView/LOViewDefaultHeader.qml:57
+#: src/app/qml/loView/LOViewDefaultHeader.qml:47
 msgid "LibreOffice spread sheet"
 msgstr "Preglednica LibreOffice"
 
-#: ../src/app/qml/loView/LOViewDefaultHeader.qml:59
+#: src/app/qml/loView/LOViewDefaultHeader.qml:49
 msgid "LibreOffice presentation"
 msgstr "Predstavitev LibreOffice"
 
-#: ../src/app/qml/loView/LOViewDefaultHeader.qml:61
+#: src/app/qml/loView/LOViewDefaultHeader.qml:51
 msgid "LibreOffice Draw document"
 msgstr "Risba LibreOffice"
 
-#: ../src/app/qml/loView/LOViewDefaultHeader.qml:63
+#: src/app/qml/loView/LOViewDefaultHeader.qml:53
 msgid "Unknown LibreOffice document"
 msgstr "Dokument LibreOffice"
 
-#: ../src/app/qml/loView/LOViewDefaultHeader.qml:65
-msgid "Unknown type document"
+#: src/app/qml/loView/LOViewDefaultHeader.qml:55
+#, fuzzy
+#| msgid "Unknown type document"
+msgid "Unknown document type"
 msgstr "Dokument neznane vrste"
 
-#: ../src/app/qml/loView/LOViewDefaultHeader.qml:85
-msgid "Go to position..."
-msgstr "Pojdi na ..."
+#: src/app/qml/loView/LOViewDefaultHeader.qml:72
+#, fuzzy
+#| msgid "Go to position"
+msgid "Go to position…"
+msgstr "Pojdi na mesto"
 
-#: ../src/app/qml/loView/LOViewDefaultHeader.qml:100
-#: ../src/app/qml/pdfView/PdfView.qml:228
-#: ../src/app/qml/textView/TextViewDefaultHeader.qml:63
+#: src/app/qml/loView/LOViewDefaultHeader.qml:86
+#: src/app/qml/pdfView/PdfView.qml:310
+#: src/app/qml/textView/TextViewDefaultHeader.qml:49
 msgid "Disable night mode"
 msgstr "Onemogoči nočni način"
 
-#: ../src/app/qml/loView/LOViewDefaultHeader.qml:100
-#: ../src/app/qml/pdfView/PdfView.qml:228
-#: ../src/app/qml/textView/TextViewDefaultHeader.qml:63
+#: src/app/qml/loView/LOViewDefaultHeader.qml:86
+#: src/app/qml/pdfView/PdfView.qml:310
+#: src/app/qml/textView/TextViewDefaultHeader.qml:49
 msgid "Enable night mode"
 msgstr "Omogoči nočni način"
 
-#: ../src/app/qml/loView/LOViewGotoDialog.qml:30
+#: src/app/qml/loView/LOViewGotoDialog.qml:30
 msgid "Go to position"
 msgstr "Pojdi na mesto"
 
-#: ../src/app/qml/loView/LOViewGotoDialog.qml:31
+#: src/app/qml/loView/LOViewGotoDialog.qml:31
 msgid "Choose a position between 1% and 100%"
 msgstr "Izberite mesto med 1 in 100 %"
 
-#: ../src/app/qml/loView/LOViewGotoDialog.qml:62
-#: ../src/app/qml/pdfView/PdfViewGotoDialog.qml:58
+#: src/app/qml/loView/LOViewGotoDialog.qml:62
+#: src/app/qml/pdfView/PdfViewGotoDialog.qml:58
 msgid "GO!"
 msgstr "POJDI!"
 
-#: ../src/app/qml/loView/LOViewPage.qml:167
+#: src/app/qml/loView/LOViewPage.qml:173
 msgid "LibreOffice binaries not found."
 msgstr "Programov LibreOffice ni bilo moč najti."
 
-#: ../src/app/qml/loView/LOViewPage.qml:170
+#: src/app/qml/loView/LOViewPage.qml:176
 msgid "Error while loading LibreOffice."
 msgstr "Napaka med nalaganjem LibreOffice."
 
-#: ../src/app/qml/loView/LOViewPage.qml:173
+#: src/app/qml/loView/LOViewPage.qml:179
 msgid ""
 "Document not loaded.\n"
 "The requested document may be corrupt or protected by a password."
@@ -402,74 +418,134 @@ msgstr ""
 "Dokument se ni naložil.\n"
 "Zahtevani dokument je morda okvarjen ali zaščiten z geslom."
 
-#: ../src/app/qml/loView/LOViewPage.qml:228
+#: src/app/qml/loView/LOViewPage.qml:231
 msgid "This sheet has no content."
 msgstr "Ta list je prazen."
 
 #. TRANSLATORS: 'LibreOfficeKit' is the name of the library used by
 #. Document Viewer for rendering LibreOffice/MS-Office documents.
 #. Ref. https://docs.libreoffice.org/libreofficekit.html
-#: ../src/app/qml/loView/Splashscreen.qml:45
+#: src/app/qml/loView/Splashscreen.qml:45
 msgid "Powered by LibreOfficeKit"
 msgstr "Poganja LibreofficeKit"
 
 #. TRANSLATORS: Please don't add any space between "Sheet" and "%1".
 #. This is the default name for a sheet in LibreOffice.
-#: ../src/app/qml/loView/SpreadsheetSelector.qml:64
+#: src/app/qml/loView/SpreadsheetSelector.qml:64
 #, qt-format
 msgid "Sheet%1"
 msgstr "List%1"
 
-#: ../src/app/qml/loView/ZoomSelector.qml:122
+#: src/app/qml/loView/ZoomSelector.qml:122
+#: src/app/qml/pdfView/ZoomSelector.qml:119
 msgid "Fit width"
 msgstr "Prilagodi širini"
 
-#: ../src/app/qml/loView/ZoomSelector.qml:123
+#: src/app/qml/loView/ZoomSelector.qml:123
 msgid "Fit height"
 msgstr "Prilagodi višini"
 
-#: ../src/app/qml/loView/ZoomSelector.qml:124
+#: src/app/qml/loView/ZoomSelector.qml:124
+#: src/app/qml/pdfView/ZoomSelector.qml:121
 msgid "Automatic"
 msgstr "Samodejno"
 
+#: src/app/qml/pdfView/DocumentLockedDialog.qml:25
+#, fuzzy
+#| msgid "Document Viewer"
+msgid "Document is locked"
+msgstr "Pregledovalnik dokumentov"
+
+#: src/app/qml/pdfView/DocumentLockedDialog.qml:26
+msgid "Please insert a password in order to unlock this document"
+msgstr ""
+
+#: src/app/qml/pdfView/DocumentLockedDialog.qml:50
+msgid "Entered password is not valid"
+msgstr ""
+
+#: src/app/qml/pdfView/DocumentLockedDialog.qml:69
+msgid "Unlock"
+msgstr ""
+
+#: src/app/qml/pdfView/LinkHint.qml:36
+#, qt-format
+msgid "Open link externally: %1"
+msgstr ""
+
+#: src/app/qml/pdfView/LinkHint.qml:37
+#: src/app/qml/pdfView/OpenLinkDialog.qml:28
+#, fuzzy, qt-format
+#| msgid "Go to page"
+msgid "Go to page %1"
+msgstr "Pojdi na stran"
+
+#: src/app/qml/pdfView/OpenLinkDialog.qml:28
+msgid "Open link externally"
+msgstr ""
+
+#: src/app/qml/pdfView/OpenLinkDialog.qml:29
+msgid "Are you sure?"
+msgstr ""
+
+#: src/app/qml/pdfView/OpenLinkDialog.qml:45
+msgid "Open"
+msgstr ""
+
+#: src/app/qml/pdfView/OpenLinkDialog.qml:45
+#, fuzzy
+#| msgid "Go to position"
+msgid "Go to destination"
+msgstr "Pojdi na mesto"
+
 #. TRANSLATORS: "Contents" refers to the "Table of Contents" of a PDF document.
-#: ../src/app/qml/pdfView/PdfContentsPage.qml:31
-#: ../src/app/qml/pdfView/PdfView.qml:153
+#: src/app/qml/pdfView/PdfContentsPage.qml:31
+#: src/app/qml/pdfView/PdfView.qml:230
 msgid "Contents"
 msgstr "Vsebina"
 
 #. TRANSLATORS: the first argument (%1) refers to the page currently shown on the screen,
 #. while the second one (%2) refers to the total pages count.
-#: ../src/app/qml/pdfView/PdfPresentation.qml:51
-#: ../src/app/qml/pdfView/PdfView.qml:56
+#: src/app/qml/pdfView/PdfPresentation.qml:51
+#: src/app/qml/pdfView/PdfView.qml:49
 #, qt-format
 msgid "Page %1 of %2"
 msgstr "Stran %1 od %2"
 
-#: ../src/app/qml/pdfView/PdfView.qml:203
+#: src/app/qml/pdfView/PdfView.qml:284
 msgid "Search"
 msgstr "Poišči"
 
-#: ../src/app/qml/pdfView/PdfView.qml:213
+#: src/app/qml/pdfView/PdfView.qml:294
 msgid "Go to page..."
 msgstr "Pojdi na stran ..."
 
-#: ../src/app/qml/pdfView/PdfView.qml:221
+#: src/app/qml/pdfView/PdfView.qml:303
 msgid "Presentation"
 msgstr "Predstavitev"
 
-#: ../src/app/qml/pdfView/PdfViewGotoDialog.qml:26
+#: src/app/qml/pdfView/PdfView.qml:324
+msgid "Rotate 90° right"
+msgstr ""
+
+#: src/app/qml/pdfView/PdfView.qml:341
+msgid "Rotate 90° left"
+msgstr ""
+
+#: src/app/qml/pdfView/PdfViewGotoDialog.qml:26
 msgid "Go to page"
 msgstr "Pojdi na stran"
 
-#: ../src/app/qml/pdfView/PdfViewGotoDialog.qml:27
+#: src/app/qml/pdfView/PdfViewGotoDialog.qml:27
 #, qt-format
 msgid "Choose a page between 1 and %1"
 msgstr "Izberite stran med 1 in %1"
 
-#: ../src/app/qml/ubuntu-docviewer-app.qml:114
-msgid "File does not exist."
-msgstr "Datoteka ne obstaja."
+#: src/app/qml/pdfView/ZoomSelector.qml:120
+#, fuzzy
+#| msgid "Go to page"
+msgid "Fit page"
+msgstr "Pojdi na stran"
 
 #. TRANSLATORS: This string is used for renaming a copied file,
 #. when a file with the same name already exists in user's
@@ -480,18 +556,25 @@ msgstr "Datoteka ne obstaja."
 #.
 #. where "2" is given by the argument "%1"
 #.
-#: ../src/plugin/file-qml-plugin/docviewerutils.cpp:111
+#: src/plugin/file-qml-plugin/docviewerutils.cpp:119
 #, qt-format
 msgid "copy %1"
 msgstr "kopija %1"
 
-#: /tmp/lok-qml-async-imageprovider-build/po/com.ubuntu.docviewer.desktop.in.in.h:1
-msgid "Document Viewer"
-msgstr "Pregledovalnik dokumentov"
+#~ msgid "Switch to single column list"
+#~ msgstr "preklopi na seznam z enim stolpcem"
 
-#: /tmp/lok-qml-async-imageprovider-build/po/com.ubuntu.docviewer.desktop.in.in.h:2
-msgid "documents;viewer;pdf;reader;"
-msgstr "dokumenti;pregledovalnik;pdf;bralnik;"
+#~ msgid "Switch to grid"
+#~ msgstr "Preklopi na mrežo"
+
+#~ msgid "Back"
+#~ msgstr "Nazaj"
+
+#~ msgid "Go to position..."
+#~ msgstr "Pojdi na ..."
+
+#~ msgid "documents;viewer;pdf;reader;"
+#~ msgstr "dokumenti;pregledovalnik;pdf;bralnik;"
 
 #~ msgid "File does not exist"
 #~ msgstr "Datoteka ne obstaja"
