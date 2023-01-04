@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: lomiri-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-06 12:33+0000\n"
-"PO-Revision-Date: 2023-01-04 19:45+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2023-01-07 02:52+0000\n"
+"Last-Translator: Muhammad <muhammad23012009@hotmail.com>\n"
 "Language-Team: Urdu <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-docviewer-app/ur/>\n"
 "Language: ur\n"
@@ -82,7 +82,7 @@ msgstr ""
 
 #: src/app/qml/common/ErrorDialog.qml:23
 msgid "Error"
-msgstr ""
+msgstr "خرابی"
 
 #: src/app/qml/common/ErrorDialog.qml:26
 #: src/app/qml/common/PickImportedDialog.qml:54
@@ -142,7 +142,7 @@ msgstr "منسوخ کریں"
 
 #: src/app/qml/common/UnknownTypeDialog.qml:44
 msgid "Yes"
-msgstr ""
+msgstr "ہاں"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
 #: src/app/qml/common/utils.js:22
@@ -189,9 +189,8 @@ msgstr[1] ""
 #: src/app/qml/documentPage/DeleteFileDialog.qml:61
 #: src/app/qml/documentPage/DocumentDelegateActions.qml:25
 #: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:58
-#, fuzzy
 msgid "Delete"
-msgstr "Delete"
+msgstr "حذف کریں"
 
 #: src/app/qml/documentPage/DocumentDelegateActions.qml:44
 msgid "Share"
@@ -240,7 +239,7 @@ msgstr ""
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:27
 msgid "Documents"
-msgstr ""
+msgstr "دستاویز"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
 msgid "Search..."
@@ -255,9 +254,8 @@ msgid "search in documents..."
 msgstr ""
 
 #: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:46
-#, fuzzy
 msgid "Select None"
-msgstr "Select None"
+msgstr "کوئی بھی منتخب نہ کریں"
 
 #: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:46
 msgid "Select All"
@@ -319,7 +317,7 @@ msgstr ""
 #: src/app/qml/loView/LOViewDefaultHeader.qml:41
 #: src/app/qml/textView/TextView.qml:49
 msgid "Loading..."
-msgstr ""
+msgstr "لوڈ ہو رہا ہے..."
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:45
 msgid "LibreOffice text document"
