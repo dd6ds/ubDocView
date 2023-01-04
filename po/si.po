@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-06 12:33+0000\n"
-"PO-Revision-Date: 2021-03-04 00:27+0000\n"
-"Last-Translator: helabasa <R45XvezA@pm.me>\n"
-"Language-Team: Sinhala <https://translate.ubports.com/projects/ubports/"
-"docviewer-app/si/>\n"
+"PO-Revision-Date: 2023-01-04 19:45+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Sinhala <https://hosted.weblate.org/projects/lomiri/"
+"lomiri-docviewer-app/si/>\n"
 "Language: si\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.11.3\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 
 #: lomiri-docviewer-app.desktop.in:7
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
@@ -189,8 +189,9 @@ msgstr[1] ""
 #: src/app/qml/documentPage/DeleteFileDialog.qml:61
 #: src/app/qml/documentPage/DocumentDelegateActions.qml:25
 #: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:58
+#, fuzzy
 msgid "Delete"
-msgstr ""
+msgstr "Delete"
 
 #: src/app/qml/documentPage/DocumentDelegateActions.qml:44
 msgid "Share"
@@ -254,8 +255,9 @@ msgid "search in documents..."
 msgstr ""
 
 #: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:46
+#, fuzzy
 msgid "Select None"
-msgstr ""
+msgstr "Select None"
 
 #: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:46
 msgid "Select All"
