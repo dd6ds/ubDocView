@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lomiri-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-06 12:33+0000\n"
-"PO-Revision-Date: 2023-01-04 00:32+0000\n"
+"PO-Revision-Date: 2023-01-04 19:45+0000\n"
 "Last-Translator: Muhammad <muhammad23012009@hotmail.com>\n"
 "Language-Team: Urdu <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-docviewer-app/ur/>\n"
@@ -90,7 +90,7 @@ msgstr ""
 #: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:33
 #: src/app/qml/documentPage/SortSettingsDialog.qml:53
 msgid "Close"
-msgstr ""
+msgstr "بند کریں"
 
 #: src/app/qml/common/PickImportedDialog.qml:29
 msgid "Multiple documents imported"
