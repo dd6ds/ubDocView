@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-06 12:33+0000\n"
-"PO-Revision-Date: 2021-03-12 02:36+0000\n"
-"Last-Translator: Jan Christian Sherdahl <jan@sherdahl.no>\n"
-"Language-Team: Norwegian Bokmål <https://translate.ubports.com/projects/"
-"ubports/docviewer-app/nb/>\n"
+"PO-Revision-Date: 2023-01-04 08:05+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/lomiri/"
+"lomiri-docviewer-app/nb_NO/>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.11.3\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:49+0000\n"
 
 #: lomiri-docviewer-app.desktop.in:7
@@ -257,6 +257,7 @@ msgid "Documents"
 msgstr "Dokumenter"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
+#, fuzzy
 msgid "Search..."
 msgstr "Søk …"
 
@@ -456,7 +457,7 @@ msgstr ""
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:69
 msgid "Unlock"
-msgstr ""
+msgstr "Lås opp"
 
 #: src/app/qml/pdfView/LinkHint.qml:36
 #, qt-format
@@ -472,15 +473,15 @@ msgstr "Gå til side"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:28
 msgid "Open link externally"
-msgstr ""
+msgstr "Åpne lenke eksternt"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:29
 msgid "Are you sure?"
-msgstr ""
+msgstr "Er du sikker?"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:45
 msgid "Open"
-msgstr ""
+msgstr "Åpne"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:45
 #, fuzzy
