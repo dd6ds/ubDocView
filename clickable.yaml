@@ -21,7 +21,8 @@ libraries:
     prebuild:
     - cd ${ROOT} && ./fetch-libreoffice.py 41919946 $ARCH_TRIPLET
     build:
-    - mkdir -p ${INSTALL_DIR}/lib/libreoffice
-    - cp -rp instdir/* ${INSTALL_DIR}/lib/libreoffice
+    - mkdir -p ${INSTALL_DIR}/lib/libreoffice/
+    - cp -rp instdir/{presets,program,share} ${INSTALL_DIR}/lib/libreoffice/
+    - PATH=/usr/${ARCH_TRIPLET}/bin:$PATH find ${INSTALL_DIR}/lib/libreoffice/program -type f \( -name '*.so' -or -name '*.so.[0-9]*' \) -not -name '*.py' -exec strip -s {} +
     - mkdir -p ${INSTALL_DIR}/include
     - cp -rp include/LibreOfficeKit ${INSTALL_DIR}/include/
