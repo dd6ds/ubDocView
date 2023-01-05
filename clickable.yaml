@@ -19,7 +19,7 @@ libraries:
   libreoffice:
     builder: custom
     prebuild:
-    - cd ${ROOT} && ./fetch-libreoffice.py 41919946 $ARCH_TRIPLET
+    - cd ${ROOT} && ./tools/fetch-libreoffice.py 41919946 ${ARCH_TRIPLET}
     build:
     - mkdir -p ${INSTALL_DIR}/lib/libreoffice/
     - cp -rp instdir/{presets,program,share} ${INSTALL_DIR}/lib/libreoffice/

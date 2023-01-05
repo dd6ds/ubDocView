@@ -34,7 +34,8 @@ def fetch_libreoffice(project_id, ref, triplet):
     commit = str(pipeline_data[0]["sha"])
 
     jobs = requests.get(
-        f"https://gitlab.com/api/v4/projects/{urlquote(project_id)}/pipelines/{urlquote(pipeline_id)}/jobs"
+        f"https://gitlab.com/api/v4/projects/{urlquote(project_id)}/pipelines/"
+        f"{urlquote(pipeline_id)}/jobs"
     )
     jobs.raise_for_status()
     job_name = f"build-libs-{arch}"
@@ -46,12 +47,14 @@ def fetch_libreoffice(project_id, ref, triplet):
         raise FetchLibreOfficeException(f"no job for {arch} found")
 
     artifacts = requests.get(
-        f"https://gitlab.com/api/v4/projects/{urlquote(project_id)}/jobs/{urlquote(job_id)}/artifacts",
+        f"https://gitlab.com/api/v4/projects/{urlquote(project_id)}/jobs/"
+        f"{urlquote(job_id)}/artifacts",
         stream=True
     )
     artifacts.raise_for_status()
     print(
-        f"Fetched LibreOffice build of commit {commit} from project {project_id}"
+        f"Fetched LibreOffice build of commit {commit} from project "
+        f"{project_id}"
     )
     with tempfile.TemporaryFile() as tf:
         tf.write(artifacts.raw.read())
