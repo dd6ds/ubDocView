@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-06 12:33+0000\n"
-"PO-Revision-Date: 2023-01-04 08:05+0000\n"
+"PO-Revision-Date: 2023-01-07 02:52+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-docviewer-app/nb_NO/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: lomiri-docviewer-app.desktop.in:7
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
-msgstr ""
+msgstr "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 
 #: src/app/lomiri-docviewer-app.qml:134
 msgid "File does not exist."
@@ -33,32 +33,24 @@ msgid "Some of the provided arguments are not valid."
 msgstr "Noen av de angitte argumentene er ugyldige."
 
 #: src/app/qml/common/CommandLineProxy.qml:58
-#, fuzzy
-#| msgid "Open ubuntu-docviewer-app displaying the selected file"
 msgid "Open lomiri-docviewer-app displaying the selected file"
-msgstr "Åpne ubuntu-docviewer-app og vis valgt fil"
+msgstr "Åpne lomiri-docviewer-app og vis valgt fil"
 
 #: src/app/qml/common/CommandLineProxy.qml:65
 msgid "Run fullscreen"
 msgstr "Fullskjermvisning"
 
 #: src/app/qml/common/CommandLineProxy.qml:71
-#, fuzzy
-#| msgid "Open ubuntu-docviewer-app in pick mode. Used for tests only."
 msgid "Open lomiri-docviewer-app in pick mode. Used for tests only."
-msgstr "Åpne ubuntu-docviewer-app i utvalgsmodus. Kun brukt for tester."
+msgstr "Åpne lomiri-docviewer-app i utvalgsmodus. Kun brukt for tester."
 
 #: src/app/qml/common/CommandLineProxy.qml:77
-#, fuzzy
-#| msgid ""
-#| "Show documents from the given folder, instead of ~/Documents.\n"
-#| "The path must exist prior to running ubuntu-docviewer-app"
 msgid ""
 "Show documents from the given folder, instead of ~/Documents.\n"
 "The path must exist prior to running lomiri-docviewer-app"
 msgstr ""
 "Vis dokumenter fra gitt mappe, istedenfor ~/Dokumenter.\n"
-"Stien må finnes før du kjører ubuntu-docviewer-app"
+"Stien må finnes før du kjører lomiri-docviewer-app"
 
 #: src/app/qml/common/DetailsPage.qml:29
 #: src/app/qml/loView/LOViewDefaultHeader.qml:93
@@ -223,7 +215,7 @@ msgstr ""
 
 #: src/app/qml/documentPage/DocumentListDelegate.qml:75
 msgid "SD card"
-msgstr ""
+msgstr "SD-kort"
 
 #. TRANSLATORS: %1 refers to a time formatted as Locale.ShortFormat (e.g. hh:mm). It depends on system settings.
 #. http://qt-project.org/doc/qt-4.8/qlocale.html#FormatType-enum
@@ -357,16 +349,12 @@ msgid "Unknown LibreOffice document"
 msgstr "Ukjent LibreOffice-dokument"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:55
-#, fuzzy
-#| msgid "Unknown type document"
 msgid "Unknown document type"
 msgstr "Ukjent dokumenttype"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:72
-#, fuzzy
-#| msgid "Go to position"
 msgid "Go to position…"
-msgstr "Gå til posisjon"
+msgstr "Gå til posisjon …"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:86
 #: src/app/qml/pdfView/PdfView.qml:310
@@ -442,34 +430,31 @@ msgid "Automatic"
 msgstr "Automatisk"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
-#, fuzzy
-#| msgid "Document Viewer"
 msgid "Document is locked"
-msgstr "Dokumentvisning"
+msgstr "Dokument låst"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:26
 msgid "Please insert a password in order to unlock this document"
-msgstr ""
+msgstr "Skriv inn et passord for å låse opp dette dokumentet"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:50
 msgid "Entered password is not valid"
-msgstr ""
+msgstr "Innskrevet passord er feil"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:69
 msgid "Unlock"
 msgstr "Lås opp"
 
 #: src/app/qml/pdfView/LinkHint.qml:36
-#, qt-format
+#, fuzzy, qt-format
 msgid "Open link externally: %1"
-msgstr ""
+msgstr "Åpne lenke i annet program: %1"
 
 #: src/app/qml/pdfView/LinkHint.qml:37
 #: src/app/qml/pdfView/OpenLinkDialog.qml:28
-#, fuzzy, qt-format
-#| msgid "Go to page"
+#, qt-format
 msgid "Go to page %1"
-msgstr "Gå til side"
+msgstr "Gå til side %1"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:28
 msgid "Open link externally"
@@ -484,10 +469,8 @@ msgid "Open"
 msgstr "Åpne"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:45
-#, fuzzy
-#| msgid "Go to position"
 msgid "Go to destination"
-msgstr "Gå til posisjon"
+msgstr "Gå til mål"
 
 #. TRANSLATORS: "Contents" refers to the "Table of Contents" of a PDF document.
 #: src/app/qml/pdfView/PdfContentsPage.qml:31
@@ -517,11 +500,11 @@ msgstr "Presentasjon"
 
 #: src/app/qml/pdfView/PdfView.qml:324
 msgid "Rotate 90° right"
-msgstr ""
+msgstr "Roter 90° til høyre"
 
 #: src/app/qml/pdfView/PdfView.qml:341
 msgid "Rotate 90° left"
-msgstr ""
+msgstr "Roter 90° til venstre"
 
 #: src/app/qml/pdfView/PdfViewGotoDialog.qml:26
 msgid "Go to page"
