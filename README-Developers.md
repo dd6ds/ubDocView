@@ -1,12 +1,6 @@
-Dependencies
-============
-**DEPENDENCIES ARE NEEDED TO BE INSTALLED TO BUILD AND RUN THE APP**
+# Dependencies
 
-A complete list of dependencies for the project can be found in lomiri-docviewer-app/debian/control
-
-The following essential packages are also required to develop this app:
-* [ubuntu-sdk](http://developer.ubuntu.com/start)
-* intltool   - run  `sudo apt-get install intltool` 
+A complete list of dependencies for the project can be found in debian/control.
 
 Compiling
 =========
