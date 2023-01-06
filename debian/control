@@ -37,8 +37,9 @@ Depends: ${misc:Depends},
          qml-module-qtquick-window2,
          libreoffice-vanilla (>= 5.0.0) | libreoffice (>= 5.0.0),
          libpoppler-qt5-1,
-Description: Document Viewer application
- Core Document Viewer application
+Description: Lomiri Document Viewer application
+ A Document Viewer application capable of opening many common document file
+ formats including PDFs and those supported by LibreOffice.
 
 Package: lomiri-docviewer-app-autopilot
 Architecture: all
@@ -48,5 +49,5 @@ Depends: libautopilot-qt,
          lomiri-docviewer-app (>= ${source:Version}),
          lomiri-ui-toolkit-autopilot,
          ${misc:Depends}
-Description: Autopilot tests for Document Viewer Application
- This package contains the autopilot tests for the Document Viewer
+Description: Autopilot tests for Lomiri Document Viewer
+ This package contains the autopilot tests for Lomiri Document Viewer
