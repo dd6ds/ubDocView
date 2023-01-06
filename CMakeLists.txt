@@ -38,6 +38,10 @@ execute_process(
   OUTPUT_STRIP_TRAILING_WHITESPACE
 )
 
+if(NOT CLICK_MODE)
+    install(FILES lomiri-docviewer-app.1 DESTINATION "${MANDIR}/man1")
+endif(NOT CLICK_MODE)
+
 include(Click)
 
 # Tests
