@@ -1,6 +1,8 @@
 Running Autopilot tests
 =======================
 
+NOTE: autopilot is currently not available in UBports and the instructions below are no longer accurate.
+
 As of wily 15.10, some autopilot tests are broken in trunk. As such autopilot failures
 can be excused until they are fixed in trunk.
 
