@@ -1,8 +1,8 @@
 #!/bin/sh
 set -e
 
-echo "= pep8 ="
-for i in `find .. -iname '*.py'` ; do 
-    echo "Checking $i"
-    pep8 $i
+printf "= Running pep8 =\n"
+for f in $(git ls-files "*.py"); do
+    printf "Checking %s\n" "$f"
+    pep8 "$f"
 done
