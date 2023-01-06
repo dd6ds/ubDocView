@@ -13,7 +13,7 @@
             "urls": "lomiri-docviewer-app.url-dispatcher"
         }
     },
-    "version": "2.3.@GIT_REVNO@",
+    "version": "@PROJECT_VERSION@",
     "maintainer": "UBports <dev@ubports.com>",
     "x-test": {
         "autopilot": "@AUTOPILOT_DIR@"

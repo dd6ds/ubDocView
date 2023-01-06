@@ -1,5 +1,5 @@
-project(lomiri-docviewer-app C CXX)
-cmake_minimum_required(VERSION 2.8.9)
+cmake_minimum_required(VERSION 3.5)
+project(lomiri-docviewer-app VERSION 2.4 LANGUAGES CXX)
 
 set(MANIFEST_PATH "click/manifest.json.in" CACHE INTERNAL "Relative path to the manifest file")
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules")
@@ -24,14 +24,6 @@ set(DESKTOP_FILE        "${PROJECT_NAME}.desktop")
 set(ICON_FILE           docviewer-app.png)
 set(SPLASH_FILE         docviewer-app-splash.svg)
 set(AUTOPILOT_DIR       lomiri_docviewer_app)
-
-# Sets GIT_REVNO
-execute_process(
-    COMMAND git rev-list --first-parent --all --count
-    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-    OUTPUT_VARIABLE GIT_REVNO
-    OUTPUT_STRIP_TRAILING_WHITESPACE
-)
 
 # Find out the architecture for package building
 # to determine the plugin's installation path
