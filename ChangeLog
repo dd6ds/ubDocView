@@ -1,0 +1,5305 @@
+2023-01-10 Guido Berhoerster
+
+        * Release 3.0.0 (HEAD -> personal/gberh/release-3.0.0, tag:
+          3.0.0)
+        * Update pot file (d78eace)
+
+2023-01-06 Guido Berhoerster
+
+        * Improve Debian package descriptions (de5bcde)
+        * Add note about autopilot (c3b6a50)
+        * Update instructions for translators (d8c9576)
+        * Update review guidelines (d303a41)
+        * Update developer information (16114e6)
+        * Add manual page (002df53)
+        * Update README.md file (ea309e4)
+        * Update CMake requirements (1e0187a)
+        * Fix pep8 so it doesn't pick up unrelated files (56c071f)
+
+2023-01-05 Guido Berhoerster
+
+        * Move fetch-libreoffice.py to tools/ (6a34206)
+
+2023-01-10 Mike Gabriel
+
+        * Merge branch 'kingu-main-patch-50031' into 'main' (dd36678)
+
+2023-01-10 Allan Nordhøy
+
+        * Spelling: Ellipsis … (95eb46a)
+
+2023-01-04 Muhammad
+
+        * Translated using Weblate (Urdu) (8a92209)
+
+2023-01-05 Allan Nordhøy
+
+        * Translated using Weblate (Norwegian Bokmål) (001eaf1)
+
+2023-01-05 Hosted Weblate
+
+        * Update translation files (e584138)
+
+2023-01-04 Anonymous
+
+        * Translated using Weblate (Chinese (Min Nan)) (d2f872e)
+        * Translated using Weblate (Kurdish (Southern)) (25155b7)
+        * Translated using Weblate (Kurdish (Northern)) (1ba02d7)
+        * Translated using Weblate (Dhivehi) (e961dc3)
+        * Translated using Weblate (Burmese) (b0d83c3)
+        * Translated using Weblate (English (United States)) (1d5406e)
+        * Translated using Weblate (Macedonian) (f450e81)
+        * Translated using Weblate (Maori) (2102f26)
+        * Translated using Weblate (Malayalam) (2661300)
+        * Translated using Weblate (Friulian) (de35230)
+        * Translated using Weblate (Icelandic) (f7eb041)
+        * Translated using Weblate (Pashto) (1bb919f)
+        * Translated using Weblate (Bulgarian) (7df45e9)
+        * Translated using Weblate (Telugu) (d10c88f)
+        * Translated using Weblate (Turkmen) (f0402a6)
+        * Translated using Weblate (Valencian) (4b6c8a8)
+        * Translated using Weblate (Urdu) (1c1e9ca)
+
+2023-01-04 Muhammad
+
+        * Translated using Weblate (Urdu) (a5f7ab2)
+
+2023-01-04 Anonymous
+
+        * Translated using Weblate (Ido) (ae77514)
+        * Translated using Weblate (Tetum) (4f5cff3)
+        * Translated using Weblate (Scots) (60392a4)
+        * Translated using Weblate (Franco-Provençal) (bbbde2a)
+        * Translated using Weblate (Sindhi) (3a10316)
+        * Translated using Weblate (Kabyle) (a0f7818)
+        * Translated using Weblate (Pampanga) (1dc02ad)
+        * Translated using Weblate (Malagasy) (ef0b156)
+        * Translated using Weblate (Luxembourgish) (28c8845)
+        * Translated using Weblate (Tajik) (cbd49fd)
+        * Translated using Weblate (French (Switzerland)) (4f424e2)
+        * Translated using Weblate (Lojban) (3ddd450)
+        * Translated using Weblate (Lingala) (5cd1e3d)
+        * Translated using Weblate (Oromo) (55bbf98)
+        * Translated using Weblate (Bemba) (9099153)
+        * Translated using Weblate (Sinhala) (b7d41c9)
+        * Translated using Weblate (Shan) (915ce6e)
+        * Translated using Weblate (Nyanja) (37ed1f2)
+        * Translated using Weblate (Lao) (ed3d144)
+        * Translated using Weblate (Asturian) (ae3695e)
+
+2023-01-04 Mike Gabriel
+
+        * po/: Rename zh_Hant_HK.po to zh_HK.po. (9d4e20f)
+        * Revert "Deleted translation using Weblate (Chinese (Traditional,
+          Hong Kong))" (f645853)
+        * Revert "Added translation using Weblate (Chinese (Traditional, Hong
+          Kong))" (3d3228d)
+        * Merge branch 'personal/gberh/optimize-size' into 'main' (c2523ed)
+
+2023-01-04 Weblate
+
+        * Added translation using Weblate (Chinese (Traditional, Hong Kong))
+          (83d949b)
+
+2023-01-04 Allan Nordhøy
+
+        * Translated using Weblate (Norwegian Bokmål) (b958932)
+
+2023-01-04 Mike Gabriel
+
+        * Deleted translation using Weblate (Chinese (Traditional, Hong
+          Kong)) (b082bb9)
+
+2023-01-04 Weblate
+
+        * Added translation using Weblate (Chinese (Min Nan)) (12c9e77)
+        * Added translation using Weblate (Kurdish (Southern)) (d8fa0cd)
+        * Added translation using Weblate (Kurdish (Northern)) (ee15404)
+        * Added translation using Weblate (Afar) (d155ad2)
+        * Added translation using Weblate (Dhivehi) (c2776ac)
+        * Added translation using Weblate (English (Canada)) (568e1b1)
+        * Added translation using Weblate (Burmese) (f161eba)
+        * Added translation using Weblate (English (United States)) (34b0c06)
+        * Added translation using Weblate (Khmer (Central)) (d8d4a0b)
+        * Added translation using Weblate (Albanian) (e2fea6b)
+        * Added translation using Weblate (Georgian) (8486388)
+        * Added translation using Weblate (Azerbaijani) (f8fc0e8)
+        * Added translation using Weblate (Malay) (451dc87)
+        * Added translation using Weblate (Macedonian) (3077ce9)
+        * Added translation using Weblate (Maori) (7a179a5)
+        * Added translation using Weblate (Malayalam) (de9adb4)
+        * Added translation using Weblate (Friulian) (358f00d)
+        * Added translation using Weblate (Hindi) (49ea2aa)
+        * Added translation using Weblate (Armenian) (a85e84a)
+        * Added translation using Weblate (Icelandic) (d29f15b)
+        * Added translation using Weblate (Pashto) (3a8254e)
+        * Added translation using Weblate (Bulgarian) (eefb16b)
+        * Added translation using Weblate (Tamil) (304a0f6)
+        * Added translation using Weblate (Telugu) (6c57874)
+        * Added translation using Weblate (Turkmen) (25b18f6)
+        * Added translation using Weblate (Valencian) (88aab98)
+
+2023-01-03 Muhammad
+
+        * Translated using Weblate (Urdu) (a6a4a83)
+
+2023-01-04 Hosted Weblate
+
+        * Update translation files (2b58f55)
+
+2023-01-03 Weblate
+
+        * Added translation using Weblate (Urdu) (45d391d)
+        * Added translation using Weblate (Ido) (3a0a0ec)
+        * Added translation using Weblate (Tetum) (3711fc7)
+        * Added translation using Weblate (Scots) (f84ca20)
+        * Added translation using Weblate (Franco-Provençal) (38f94b7)
+        * Added translation using Weblate (Sindhi) (12de5d7)
+        * Added translation using Weblate (Kabyle) (5ff9f6d)
+        * Added translation using Weblate (Pampanga) (468206d)
+        * Added translation using Weblate (Malagasy) (7a50d12)
+        * Added translation using Weblate (Luxembourgish) (ba6ecef)
+        * Added translation using Weblate (French (Switzerland)) (ea06124)
+        * Added translation using Weblate (Tajik) (9ec5096)
+        * Added translation using Weblate (Lojban) (03c3b2b)
+        * Added translation using Weblate (Lingala) (bc19bc3)
+        * Added translation using Weblate (Oromo) (b1110c2)
+
+2023-01-03 Hosted Weblate
+
+        * Update translation files (215fc0b)
+
+2023-01-03 Weblate
+
+        * Added translation using Weblate (Bemba) (4a39079)
+
+2023-01-02 Guido Berhoerster
+
+        * Optimize click package size (86cb11f)
+
+2022-12-30 Guido Berhoerster
+
+        * gitlab-ci.yml: Remove fixed clickable version (e4afff3)
+
+2022-12-20 Marius Gripsgard
+
+        * Merge branch 'port-to-lomiri-focal' into 'main' (70fb651)
+
+2022-11-08 Guido Berhoerster
+
+        * Use custom-built LibreOfficeKit for the click package (a9da06a)
+
+2022-08-23 Guido Berhoerster
+
+        * CI: Do not fail builds on warnings and errors (2dd0782)
+
+2022-07-28 Guido Berhoerster
+
+        * Update GitLab CI configuration (92b791c)
+
+2022-10-06 Guido Berhoerster
+
+        * Update click packaging (2f69b2d)
+
+2022-06-20 Guido Berhoerster
+
+        * Update and move Jenkinsfile to debian/ (0045221)
+
+2022-06-17 Guido Berhoerster
+
+        * Update debian packaging (7d3b2cf)
+
+2022-10-06 Guido Berhoerster
+
+        * Update .pot file (ac8ed22)
+        * Modernize i18n (22ba2ed)
+
+2022-08-19 Guido Berhoerster
+
+        * Remove vendored libreofficekit headers (97274c7)
+
+2022-10-06 Guido Berhoerster
+
+        * Do not hardcode the click root path (80c64e3)
+
+2022-06-20 Guido Berhoerster
+
+        * Rename Application (1cf23c1)
+
+2022-06-17 Guido Berhoerster
+
+        * Port to Lomiri on focal (79a9f9a)
+
+2022-06-20 Guido Berhoerster
+
+        * Remove obsolete bzr-builddeb files (1599da0)
+        * Remove unused snap packaging (3718112)
+
+2022-09-28 Weblate
+
+        * Translated by Antoine Mailhot <capitaineam@outlook.com> using
+          Weblate (French (Canada)) - 98.9% (92 of 93 strings)
+          (de7c564)
+
+2022-04-25 Weblate
+
+        * Translated by creepen123 <eg.ermakov2016@gmail.com> using Weblate
+          (Russian) - 100.0% (93 of 93 strings) (8c877a9)
+
+2022-03-24 Weblate
+
+        * Translated by HEROBRINE7GAMER <tapermeerkat77@gmail.com> using
+          Weblate (Arabic) - 91.3% (85 of 93 strings) (ca90544)
+
+2022-03-10 Weblate
+
+        * Translated by Behzad <behzadasbahi@gmail.com> using Weblate
+          (Persian) - 100.0% (93 of 93 strings) (c339be3)
+
+2022-02-21 Weblate
+
+        * Translated by Ivo Xavier <ivofernandes12@gmail.com> using Weblate
+          (Portuguese) - 100.0% (93 of 93 strings) (5981127)
+
+2022-02-12 Weblate
+
+        * Translated by Герман Семенов (Разработчик)
+          <wipetmp+german_semenov@gmail.com> using Weblate (Russian)
+          - 100.0% (93 of 93 strings) (135d216)
+
+2022-02-05 Weblate
+
+        * Translated by Lundrin <berenyi.vilmos@tutanota.com> using Weblate
+          (Hungarian) - 100.0% (93 of 93 strings) (0e5cedc)
+
+2021-11-21 Weblate
+
+        * Translated by Adria <adriamartinmor@gmail.com> using Weblate
+          (Sardinian) - 100.0% (93 of 93 strings) (b11d504)
+
+2021-10-23 Weblate
+
+        * Translated by Jakob Fridesjö <jakob.fridesjo@tuta.io> using Weblate
+          (Swedish) - 100.0% (93 of 93 strings) (7f6927e)
+
+2021-10-14 Weblate
+
+        * Translated by Wannaphong Phatthiyaphaibun <wannaphong@yahoo.com>
+          using Weblate (Thai) - 20.0% (18 of 90 strings) (ca39ef9)
+
+2021-07-26 Weblate
+
+        * Translated by Rondy Andersson <rondarius@vivaldi.net> using Weblate
+          (Swedish) - 69.8% (65 of 93 strings) (7d9c225)
+
+2021-07-24 Weblate
+
+        * Translated by anonymous <noreply@weblate.org> using Weblate
+          (German) - 100.0% (93 of 93 strings) (43dc501)
+
+2021-06-13 Weblate
+
+        * Translated by Ito Rimai <ItoRimai@foxmail.com> using Weblate
+          (Chinese (Simplified)) - 100.0% (93 of 93 strings)
+          (8e0e05e)
+
+2021-06-06 Weblate
+
+        * Translated by Samson <sambelet@yahoo.com> using Weblate (Amharic) -
+          100.0% (93 of 93 strings) (4aea559)
+
+2021-05-23 Weblate
+
+        * Translated by Wannaphong Phatthiyaphaibun <wannaphong@yahoo.com>
+          using Weblate (Thai) - 17.7% (16 of 90 strings) (887d1ec)
+
+2021-05-22 Weblate
+
+        * Translated by Wannaphong Phatthiyaphaibun <wannaphong@yahoo.com>
+          using Weblate (Thai) - 15.5% (14 of 90 strings) (63a8135)
+
+2021-05-03 Weblate
+
+        * Translated by Enceka <enceka@yeah.net> using Weblate (Chinese
+          (Simplified)) - 100.0% (93 of 93 strings) (e3d8a00)
+
+2021-04-30 Weblate
+
+        * Translated by Milan Korecký <milan.korecky@gmail.com> using Weblate
+          (Czech) - 100.0% (93 of 93 strings) (491c35a)
+
+2021-04-12 Weblate
+
+        * Translated by Florian Leeber <flori@bin.org.in> using Weblate
+          (German) - 100.0% (93 of 93 strings) (1f25fdc)
+
+2021-03-26 Weblate
+
+        * Translated by vokaliz <vokaliz@protonmail.com> using Weblate
+          (Russian) - 100.0% (93 of 93 strings) (6246830)
+
+2021-03-23 Chris Clime
+
+        * Merge branch 'really-fix-ods' into 'master' (0ef93b2) (tag:
+          v2.3.567)
+
+2021-03-22 Rodney Dawes
+
+        * Include both harfbuzz-icu and harfbuzz libs, as icu lib is not in
+          rootfs. (88f150e)
+        * Fix gitlab CI config. (e0f4fc8)
+
+2021-03-23 Chris Clime
+
+        * Update DocumentLockedDialog.qml: - use correct function for the
+          unlock button - change input type of the text field to
+          password (dots) (5a498b3)
+        * Update .gitlab-ci.yml (clickable/ci-16.04-arm64:16.04.4-qt-5.9 ->
+          clickable/ci-16.04-arm64:16.04.4-qt5.9) (7904483)
+
+2021-03-22 Chris Clime
+
+        * Merge branch 'fix-ods' into 'master' (7fa91c7) (tag: v2.3.564)
+
+2021-03-22 Rodney Dawes
+
+        * Use the Qt 5.9 pinned clickable images for now. (a2d2c14)
+        * Don't pull in harfbuzz here. (efc16ba)
+
+2021-03-15 Weblate
+
+        * Translated by Josué <j2g2rp@gmail.com> using Weblate (Spanish) -
+          100.0% (93 of 93 strings) (e173137)
+
+2021-03-14 Weblate
+
+        * Translated by Jan Christian Sherdahl <jan@sherdahl.no> using
+          Weblate (Norwegian Bokmål) - 100.0% (93 of 93 strings)
+          (54398fe)
+
+2021-03-04 Weblate
+
+        * Translated by helabasa <R45XvezA@pm.me> using Weblate (Sinhala) -
+          7.7% (7 of 90 strings) (493c45e)
+
+2021-02-26 Weblate
+
+        * Translated by Darkness Hidden <kmd36rk@gmail.com> using Weblate
+          (Indonesian) - 100.0% (93 of 93 strings) (f3c10a2)
+
+2021-02-16 Weblate
+
+        * Translated by louies0623 <louies0623@gmail.com> using Weblate
+          (Chinese (Traditional)) - 100.0% (93 of 93 strings)
+          (7e021c2)
+
+2021-02-12 Weblate
+
+        * Translated by RedXXIII <redxxiii@zaclys.net> using Weblate
+          (Spanish) - 100.0% (93 of 93 strings) (fc6642e)
+
+2021-02-01 Weblate
+
+        * Translated by imrufbd <imrufbd@gmail.com> using Weblate (Bengali
+          (Bangladesh)) - 8.8% (8 of 90 strings) (e5bfc5e)
+
+2021-01-28 Weblate
+
+        * Translated by Adam <padamyno@gmail.com> using Weblate (Hungarian) -
+          100.0% (93 of 93 strings) (e2aad2a)
+
+2021-01-16 Weblate
+
+        * Translated by ierihon <idekovets@mail.ru> using Weblate (Russian) -
+          100.0% (93 of 93 strings) (3a3fa49)
+
+2021-01-08 Weblate
+
+        * Translated by Mike <miguel2000@livecom.it> using Weblate (Italian)
+          - 100.0% (93 of 93 strings) (d2277d7)
+
+2020-12-25 Weblate
+
+        * Translated by Yaron Shahrabani <sh.yaron@gmail.com> using Weblate
+          (Hebrew) - 100.0% (90 of 90 strings) (411a133)
+
+2020-12-18 Weblate
+
+        * Translated by Yaron Shahrabani <sh.yaron@gmail.com> using Weblate
+          (Hebrew) - 100.0% (90 of 90 strings) (3e3a094)
+
+2020-12-09 Weblate
+
+        * Translated by Zmicer <nashtlumach@gmail.com> using Weblate
+          (Belarusian) - 100.0% (90 of 90 strings) (87df32e)
+
+2020-12-05 Weblate
+
+        * Translated by Zmicer <nashtlumach@gmail.com> using Weblate
+          (Belarusian) - 2.2% (2 of 90 strings) (e9848cd)
+
+2020-12-05 Chris Clime
+
+        * fix page selection popup call (b07e5e0)
+
+2020-11-23 Weblate
+
+        * Translated by Jiri Grönroos <jiri.gronroos@iki.fi> using Weblate
+          (Finnish) - 100.0% (93 of 93 strings) (5e278e1)
+
+2020-11-15 Weblate
+
+        * Translated by abidin <abidin24@tutanota.com> using Weblate (Arabic)
+          - 90.3% (84 of 93 strings) (34dc9c5)
+
+2020-11-13 Weblate
+
+        * Translated by abidin <abidin24@tutanota.com> using Weblate (Arabic)
+          - 90.3% (84 of 93 strings) (7bc596d)
+
+2020-11-06 Weblate
+
+        * Translated by abidin <abidin24@tutanota.com> using Weblate (Arabic)
+          - 90.3% (84 of 93 strings) (7f12c8b)
+
+2020-10-26 Heimen Stoffels
+
+        * Translated by Heimen Stoffels <vistausss@outlook.com> using Weblate
+          (Dutch) - 100.0% (93 of 93 strings) (bc95a0b)
+
+2020-10-21 Chris Clime
+
+        * Merge branch 'xenial_-_qt-5-12' into 'master' (cb434e7) (tag:
+          v2.3.541)
+
+2020-10-09 Stefano Verzegnassi
+
+        * [PdfViewer-NEW] Added copyright headers (6031a5c)
+
+2020-10-05 Rodney Dawes
+
+        * Build without the 5.12 repo. (4cdf093)
+        * Try to import the rewrittend poppler plug-in from Stefano (fa553ee)
+        * Fix typo (8955092)
+        * try with a newer cmake (cf7c5ad)
+        * braces for variable in clickable json (0efea46)
+        * Attempt to build against qt 5.12 for testing (e57a940)
+
+2020-09-16 Chris Clime
+
+        * Merge branch 'fix-new-qt' into 'master' (e59d979) (tag: v2.3.540)
+
+2020-09-15 Marius Gripsgard
+
+        * Don't set leadingActionBar.actions (qlist) to null, as this breaks
+          qt 5.12++ (4d19e5e)
+
+2020-09-05 Rüdiger Kupper
+
+        * Translated by Rüdiger Kupper <ruediger.kupper+launchpad@gmail.com>
+          using Weblate (German) - 100.0% (93 of 93 strings)
+          (7512c61)
+
+2020-09-05 tamer dab
+
+        * Translated by tamer dab <dabsantamer@yahoo.com> using Weblate
+          (Hebrew) - 100.0% (90 of 90 strings) (1909010)
+        * Translated by tamer dab <dabsantamer@yahoo.com> using Weblate
+          (Hebrew) - 98.8% (89 of 90 strings) (c9323c4)
+
+2020-09-04 tamer dab
+
+        * Translated by tamer dab <dabsantamer@yahoo.com> using Weblate
+          (Arabic) - 90.3% (84 of 93 strings) (f64e550)
+        * Translated by tamer dab <dabsantamer@yahoo.com> using Weblate
+          (Hebrew) - 75.5% (68 of 90 strings) (acc1080)
+        * Added translation using Weblate (Hebrew) (666c160)
+
+2020-08-31 Florian Leeber
+
+        * Translated by Florian Leeber <flori@bin.org.in> using Weblate
+          (German) - 100.0% (93 of 93 strings) (b67d6d1)
+
+2020-08-25 Arvid Brodin
+
+        * Translated by Arvid Brodin <arvidb@fripost.org> using Weblate
+          (Swedish) - 68.8% (64 of 93 strings) (c7f0341)
+
+2020-08-17 Anne Onyme
+
+        * Translated by Anne Onyme <anneonyme017@netcourrier.com> using
+          Weblate (French) - 100.0% (93 of 93 strings) (c4f2c98)
+
+2020-08-15 Efstathios Iosifidis
+
+        * Translated by Efstathios Iosifidis <iefstathios@gmail.com> using
+          Weblate (Greek) - 100.0% (93 of 93 strings) (86a3166)
+
+2020-08-09 Rüdiger Kupper
+
+        * Translated by Rüdiger Kupper <ruediger.kupper+launchpad@gmail.com>
+          using Weblate (German) - 100.0% (93 of 93 strings)
+          (4ef6bd5)
+        * Translated by Rüdiger Kupper <ruediger.kupper+launchpad@gmail.com>
+          using Weblate (German) - 100.0% (93 of 93 strings)
+          (8c4d043)
+
+2020-08-08 satriocode
+
+        * Translated by satriocode <satrioismail52@gmail.com> using Weblate
+          (Indonesian) - 100.0% (93 of 93 strings) (91b1a38)
+
+2020-08-03 Chris Clime
+
+        * Merge branch 'config-updates' into 'master' (b8393bd)
+
+2020-08-02 Brian Douglass
+
+        * Updated gitlab config (6aeea49)
+
+2020-07-31 Young Kim
+
+        * Translated by Young Kim <rsyh93@gmail.com> using Weblate (Korean) -
+          18.2% (17 of 93 strings) (f08e60d)
+        * Translated by Young Kim <rsyh93@gmail.com> using Weblate (Korean) -
+          17.2% (16 of 93 strings) (e5e46ba)
+        * Translated by Young Kim <rsyh93@gmail.com> using Weblate (Korean) -
+          16.1% (15 of 93 strings) (a1a573e)
+        * Translated by Young Kim <rsyh93@gmail.com> using Weblate (Korean) -
+          15.0% (14 of 93 strings) (d111da5)
+        * Translated by Young Kim <rsyh93@gmail.com> using Weblate (Korean) -
+          13.9% (13 of 93 strings) (e0836b3)
+        * Translated by Young Kim <rsyh93@gmail.com> using Weblate (Korean) -
+          12.9% (12 of 93 strings) (d1d0d5f)
+        * Translated by Young Kim <rsyh93@gmail.com> using Weblate (Korean) -
+          11.8% (11 of 93 strings) (440204e)
+
+2020-07-30 Young Kim
+
+        * Translated by Young Kim <rsyh93@gmail.com> using Weblate (Korean) -
+          10.7% (10 of 93 strings) (2b9320a)
+        * Translated by Young Kim <rsyh93@gmail.com> using Weblate (Korean) -
+          9.6% (9 of 93 strings) (11f42df)
+        * Translated by Young Kim <rsyh93@gmail.com> using Weblate (Korean) -
+          7.5% (7 of 93 strings) (2c5eb1a)
+        * Translated by Young Kim <rsyh93@gmail.com> using Weblate (Korean) -
+          4.3% (4 of 93 strings) (61e1fc8)
+
+2020-07-29 Young Kim
+
+        * Translated by Young Kim <rsyh93@gmail.com> using Weblate (Korean) -
+          2.1% (2 of 93 strings) (be57ef5)
+
+2020-07-22 Anne Onyme
+
+        * Translated by Anne Onyme <anneonyme017@netcourrier.com> using
+          Weblate (French) - 100.0% (93 of 93 strings) (4e4f35e)
+
+2020-07-22 Max Libre
+
+        * Translated by Max Libre <libremax@protonmail.com> using Weblate
+          (French) - 100.0% (93 of 93 strings) (96032ad)
+        * Translated by Max Libre <libremax@protonmail.com> using Weblate
+          (French) - 100.0% (93 of 93 strings) (9b08605)
+
+2020-07-19 Chris Clime
+
+        * Revert "Update .gitlab-ci.yml (remove --arch arm64)" (e6ad21a)
+        * Update .gitlab-ci.yml (remove --arch arm64) (b436da7)
+        * add dependency "libxslt1.1" to docviewer-libs.json (all
+          architectures) (56d6ba3)
+        * Update clickable.json (71394e9)
+
+2020-07-17 Anne Onyme
+
+        * Translated using Weblate (French) (3a4680f)
+
+2020-07-07 Heimen Stoffels
+
+        * Translated using Weblate (Dutch) (c009aba)
+
+2020-07-07 Max Libre
+
+        * Translated using Weblate (French) (86ce6d1)
+
+2020-07-05 Heimen Stoffels
+
+        * Translated using Weblate (Dutch) (e89cb41)
+
+2020-07-03 Heimen Stoffels
+
+        * Translated using Weblate (Dutch) (f3ef1cc)
+
+2020-07-03 Stoian Minaiev
+
+        * Translated using Weblate (Ukrainian) (4045d95)
+
+2020-06-30 PPNplus
+
+        * Translated using Weblate (Thai) (1d758f0)
+        * Added translation using Weblate (Thai) (7f16ac8)
+
+2020-06-16 Milan Korecký
+
+        * Translated using Weblate (Czech) (5bdd69e)
+
+2020-05-22 demode-root
+
+        * Translated using Weblate (Czech) (bde18b2)
+
+2020-05-18 Pavel Borecki
+
+        * Translated using Weblate (Czech) (0468c49)
+
+2020-04-22 Adrià
+
+        * Translated using Weblate (Sardinian) (f10bd30)
+
+2020-04-09 Neutrum N
+
+        * Translated using Weblate (Galician) (c3ab437)
+
+2020-04-06 Neutrum N
+
+        * Translated using Weblate (Galician) (7644175)
+
+2020-03-31 Neutrum N
+
+        * Translated using Weblate (Galician) (05a9991)
+
+2020-03-31 Pavel Borecki
+
+        * Translated using Weblate (Czech) (cc2e656)
+
+2020-03-15 Mohamed Sayed
+
+        * Translated using Weblate (Arabic) (b5fa236)
+
+2020-03-11 Ryan Argente
+
+        * Translated using Weblate (French (Canada)) (95e1262)
+
+2020-03-06 Weblate
+
+        * Merge branch 'origin/master' into Weblate. (4488628)
+
+2020-03-06 Chris Clime
+
+        * Revert "Merge branch 'deletedialog' into 'master'" (f721e88)
+
+2020-03-06 Neutrum N
+
+        * Translated using Weblate (Galician) (4a65bea)
+
+2020-03-05 Neutrum N
+
+        * Translated using Weblate (Galician) (30e05a9)
+
+2020-03-02 Pavel Borecki
+
+        * Translated using Weblate (Czech) (d6f1da5)
+
+2020-02-28 Pavel Borecki
+
+        * Translated using Weblate (Czech) (82b455d)
+
+2020-02-26 Ryan Argente
+
+        * Translated using Weblate (French (Canada)) (3bd4997)
+
+2020-02-17 Riccardo Riccio
+
+        * Translated using Weblate (Slovenian) (008fb11)
+
+2020-02-09 Oi Suomi On!
+
+        * Translated using Weblate (Finnish) (41e71ac)
+
+2020-02-10 HSN80
+
+        * Translated using Weblate (Persian) (6c5917d)
+
+2020-02-09 Rodrigo Benedito
+
+        * Translated using Weblate (Portuguese (Brazil)) (d4021f4)
+
+2020-02-01 Jean Joubert
+
+        * Translated using Weblate (Afrikaans) (f4ee0fa)
+
+2020-01-23 louies0623
+
+        * Translated using Weblate (Chinese (Traditional)) (31a93f0)
+
+2020-01-19 Weblate
+
+        * Merge branch 'origin/master' into Weblate. (700f5ef)
+
+2019-12-20 M.Sugahara
+
+        * Translated using Weblate (Japanese) (959e135)
+
+2019-12-27 Moo
+
+        * Translated using Weblate (Lithuanian) (c218b7e)
+
+2019-12-12 Sami Törmänen
+
+        * Translated using Weblate (Finnish) (c1b9bc5)
+
+2020-01-10 Chris Clime
+
+        * Merge branch 'splash' into 'master' (4677e7a)
+        * Merge branch 'deletedialog' into 'master' (f0ed91c)
+
+2020-01-10 Daniel Frost
+
+        * Deletedialog (cb762f9)
+
+2020-01-07 Danfro
+
+        * fix #49 by adding some color to splash screen background (2a09d15)
+
+2019-12-22 Chris Clime
+
+        * only publish with changelog for one architecture (31a29ae)
+
+2019-12-21 Chris Clime
+
+        * version 2.3 (56c7e60) (tag: v2.3.472)
+        * version 2.3 - Fix #40 "Plain Text file: No Visible Text When Using
+          System Suru Dark Theme" - add splash screen - first
+          release that includes arm64 architecture - updated
+          translations, thank you translators ! (bd074be) (tag:
+          v2.3)
+
+2019-12-17 Chris Clime
+
+        * Merge branch 'patch-1' into 'master' (36cf1b2)
+
+2019-12-17 Christian Pauly
+
+        * Build and publish all architectures (79aa42d)
+
+2019-11-25 Sam Zhang
+
+        * Translated using Weblate (Chinese (Simplified)) (df780b0)
+
+2019-11-21 Alberto
+
+        * Translated using Weblate (Galician) (f0010c4)
+
+2019-11-18 Anne Onyme
+
+        * Translated using Weblate (French) (4c7db09)
+
+2019-11-14 Chris Clime
+
+        * Merge branch 'FixDarkMode' into 'master' (16e57eb)
+
+2019-11-14 Joan CiberSheep
+
+        * Fix text not visible with SuruDark (e207fa3)
+
+2019-11-02 Ege Öz
+
+        * Translated using Weblate (Turkish) (9ec8d00)
+
+2019-10-28 enolp
+
+        * Translated using Weblate (Asturian) (5ad02ac)
+
+2019-10-27 enolp
+
+        * Translated using Weblate (Asturian) (27e20bc)
+
+2019-10-12 Weblate
+
+        * Merge branch 'origin/master' into Weblate. (d9a8834)
+
+2019-10-12 Chris Clime
+
+        * extend get-click-deps tool with arm64 (c48c11b)
+
+2019-10-12 Weblate
+
+        * Merge branch 'origin/master' into Weblate. (fcc1a3f)
+
+2019-10-12 Chris Clime
+
+        * correct get_deps.sh (363fa15)
+
+2019-10-12 Weblate
+
+        * Merge branch 'origin/master' into Weblate. (a918c22)
+
+2019-10-12 Chris Clime
+
+        * adapt clickable.json / get_deps.sh to support armhf and arm64
+          (c433cfe)
+
+2019-10-12 Weblate
+
+        * Merge branch 'origin/master' into Weblate. (51a3b72)
+
+2019-10-12 Chris Clime
+
+        * add arm64 libs (9a77b06)
+
+2019-10-12 Weblate
+
+        * Merge branch 'origin/master' into Weblate. (a2ed777)
+
+2019-10-12 Chris Clime
+
+        * Merge branch 'arm64' into 'master' (4b6b5b8)
+
+2019-10-11 Marius Gripsgard
+
+        * Build for arm64 (c4094f9)
+
+2019-10-06 Anne Onyme
+
+        * Translated using Weblate (French) (533523c)
+
+2019-10-04 Sami Törmänen
+
+        * Translated using Weblate (Finnish) (36f372a)
+
+2019-10-03 Sander
+
+        * Translated using Weblate (Dutch) (b13d3b0)
+
+2019-09-15 Chris Clime
+
+        * Merge branch 'update-gitlab-ci' into 'master' (380f6e6)
+
+2019-09-09 advocatux
+
+        * Translated using Weblate (Spanish) (d17a1a5)
+
+2019-09-09 Brian Douglass
+
+        * Update gitlab ci for clickable v6 (39fe5b7)
+
+2019-08-31 Moo
+
+        * Translated using Weblate (Lithuanian) (bc222b4)
+
+2019-08-30 Jiri Grönroos
+
+        * Translated using Weblate (Finnish) (fc1b6d7)
+
+2019-08-10 Moo
+
+        * Translated using Weblate (Lithuanian) (226556d)
+
+2019-08-04 Joan CiberSheep
+
+        * Translated using Weblate (Catalan) (b387bad)
+
+2019-07-31 Moo
+
+        * Translated using Weblate (Lithuanian) (927d74a)
+        * Added translation using Weblate (Lithuanian) (3b0f072)
+
+2019-07-15 Yasser Lotfy
+
+        * Translated using Weblate (Arabic) (8645c1e)
+
+2019-07-05 Aitzol Berasategi
+
+        * Translated using Weblate (Basque) (af98691)
+
+2019-07-02 Moshe Lazar
+
+        * Translated using Weblate (Russian) (39d14b9)
+
+2019-06-26 Tom Dom
+
+        * Translated using Weblate (Dutch) (a1cca7d)
+
+2019-06-26 Samson
+
+        * Translated using Weblate (Amharic) (033ab58)
+
+2019-06-22 Samson
+
+        * Translated using Weblate (Amharic) (ad8bd59)
+
+2019-06-02 Ari Börde Kröyer
+
+        * Translated using Weblate (Norwegian Bokmål) (ad9bcf9)
+
+2019-05-08 Ivo Xavier
+
+        * Translated using Weblate (Portuguese) (95c75d5)
+
+2019-05-08 louies0623
+
+        * Translated using Weblate (Chinese (Traditional)) (4fa185a)
+        * Translated using Weblate (Chinese (Hong Kong)) (4fdc4f1)
+
+2019-05-07 Chris Clime
+
+        * Merge branch 'SplashScreen' into 'master' (1ffb624)
+
+2019-05-05 Aurelio Cilia
+
+        * Translated using Weblate (Italian) (9ac2891)
+
+2019-05-01 louies0623
+
+        * Translated using Weblate (Chinese (Traditional)) (a336774)
+
+2019-04-29 Joan CiberSheep
+
+        * Translated using Weblate (Catalan) (6400c68)
+
+2019-05-03 Weblate
+
+        * Merge branch 'master' of gitlab.com:/ubports/app-dev/docviewer-app
+          (5bb4825)
+
+2019-04-27 Jiri Grönroos
+
+        * Translated using Weblate (Finnish) (46d56ed)
+
+2019-04-26 Chris Clime
+
+        * Merge branch 'update-maintainer' into 'master' (4ffc1ef)
+
+2019-04-25 Vinícius F
+
+        * Translated using Weblate (Portuguese (Brazil)) (c8a7b8e)
+
+2019-04-25 Anne Onyme
+
+        * Translated using Weblate (French) (cef38bc)
+
+2019-04-25 Brian Douglass
+
+        * Updated maintainer to UBports (51ab67c)
+
+2019-04-23 Anne Onyme
+
+        * Translated using Weblate (French) (95da4b1)
+
+2019-04-03 Tom Dom
+
+        * Translated using Weblate (Dutch) (48abb8a)
+
+2019-04-12 Aashrut
+
+        * Added translation using Weblate (Gujarati) (d0da0d1)
+
+2019-04-08 Joan CiberSheep
+
+        * Add splash screen (937befd)
+
+2019-03-27 Ettore Atalan
+
+        * Translated using Weblate (German) (a8683d0)
+
+2019-03-26 Tom Dom
+
+        * Translated using Weblate (Dutch) (0cd3ff6)
+
+2019-03-12 Anne Onyme
+
+        * Translated using Weblate (French) (aed19e8)
+
+2019-03-12 Milan Korecký
+
+        * Translated using Weblate (Czech) (6ebe8bf)
+
+2019-03-08 Brian Douglass
+
+        * Updated gitlab ci to use commit messages for the changelog
+          (9be9b46)
+
+2019-03-07 Weblate
+
+        * Merge branch 'master' of gitlab.com:/ubports/app-dev/docviewer-app
+          (08a4fd7)
+
+2019-02-09 Heimen Stoffels
+
+        * Translated using Weblate (Dutch) (6796383)
+
+2019-02-19 Chris Clime
+
+        * Update .gitlab-ci.yml (add publish for tags) (e6ea596) (tag:
+          v2.2.419)
+        * Merge branch xenial (83f0796)
+        * split "dependencies" to "dependencies_build" (curl) and
+          "dependencies_target" (other dependencies) (5a48680)
+        * Add .gitlab-ci.yml (e63537b)
+
+2019-02-12 Brian Douglass
+
+        * Merge branch 'xenial' into 'master' (7c16431)
+
+2019-02-07 Chris Clime
+
+        * "sdk" flag is no longer supported in clickable.json (16f39a4) (tag:
+          v2.2.414)
+        * Merge branch 'master' into 'xenial' (8c8a63a)
+
+2019-01-21 louies0623
+
+        * Translated using Weblate (Japanese) (258da58)
+
+2019-01-25 Anastopoulos Theocharis
+
+        * Translated using Weblate (Greek) (343545e)
+
+2019-01-21 louies0623
+
+        * Added translation using Weblate (Korean) (961e9a9)
+
+2019-01-03 Ennio Lavagnini
+
+        * Translated using Weblate (Italian) (c26b0ca)
+
+2019-01-01 Jaume Angrill
+
+        * Translated using Weblate (Catalan) (4c8fb34)
+
+2018-12-17 Rondy Andersson
+
+        * Translated using Weblate (Swedish) (662f7cb)
+
+2018-12-20 M.Sugahara
+
+        * Translated using Weblate (Japanese) (e167998)
+
+2018-12-16 Max Libre
+
+        * Translated using Weblate (French) (d26302c)
+
+2018-12-19 Hussain Hashem Aljafri
+
+        * Translated using Weblate (Arabic) (5c533ce)
+
+2018-11-26 Florian Leeber
+
+        * Merge pull request #41 from
+          ubports-weblate/weblate-ubports-docviewer-app (d4079d0)
+
+2018-11-20 M.Sugahara
+
+        * Translated using Weblate (Japanese) (f561b8b)
+
+2018-11-22 Louies
+
+        * Translated using Weblate (Chinese (Hong Kong)) (5e0f264)
+        * Added translation using Weblate (Chinese (Hong Kong)) (94b1bd5)
+
+2018-11-18 Weblate
+
+        * Merge branch 'origin/master' into Weblate (aeb87d6)
+
+2018-11-14 M.Sugahara
+
+        * Translated using Weblate (Japanese) (e1658d4)
+
+2018-11-16 Milan Korecký
+
+        * Translated using Weblate (Czech) (93f83d3)
+
+2018-11-13 Louies
+
+        * Translated using Weblate (Chinese (Traditional)) (9fe1cb7)
+
+2018-11-11 Samson
+
+        * Translated using Weblate (Amharic) (ae442ab)
+
+2018-11-18 Florian Leeber
+
+        * Merge pull request #40 from
+          ubports-weblate/weblate-ubports-docviewer-app (b208dc7)
+
+2018-11-11 Weblate
+
+        * Merge branch 'origin/master' into Weblate (9a4c52e)
+
+2018-11-05 M.Sugahara
+
+        * Translated using Weblate (Japanese) (428ccfc)
+
+2018-11-11 Florian Leeber
+
+        * Merge pull request #39 from
+          ubports-weblate/weblate-ubports-docviewer-app (dd43708)
+
+2018-11-08 Aurelio Cilia
+
+        * Translated using Weblate (Italian) (d1bc5d2)
+
+2018-11-05 Daniel Frost
+
+        * Translated using Weblate (German) (6a2249e)
+
+2018-11-05 Milan Korecký
+
+        * Translated using Weblate (Czech) (433acdc)
+
+2018-11-05 Louies
+
+        * Translated using Weblate (Chinese (Traditional)) (e9b7e85)
+
+2018-11-04 Weblate
+
+        * Merge branch 'origin/master' into Weblate (c9313b2)
+
+2018-11-03 xqqy
+
+        * Translated using Weblate (Chinese (Simplified)) (6c38509)
+
+2018-11-04 Florian Leeber
+
+        * Merge pull request #38 from
+          ubports-weblate/weblate-ubports-docviewer-app (919830a)
+
+2018-10-28 advocatux
+
+        * Translated using Weblate (Spanish) (1d6ff4b)
+
+2018-10-31 ierihon
+
+        * Translated using Weblate (Russian) (74f77e2)
+
+2018-10-28 Allan Nordhøy
+
+        * Translated using Weblate (Norwegian Bokmål) (c9c16ce)
+
+2018-10-31 Mike
+
+        * Translated using Weblate (Italian) (95eaaf6)
+
+2018-11-02 honigwald
+
+        * Translated using Weblate (German) (112d738)
+
+2018-10-31 Anne Onyme
+
+        * Translated using Weblate (French) (121f673)
+
+2018-10-29 Louies
+
+        * Translated using Weblate (Chinese (Traditional)) (81846df)
+
+2018-10-28 Joan CiberSheep
+
+        * Translated using Weblate (Catalan) (75723c2)
+
+2018-10-29 Gianmarco
+
+        * Translated using Weblate (Italiano) (642a9db)
+
+2018-10-28 Weblate
+
+        * Merge branch 'origin/master' into Weblate (06dbbca)
+
+2018-10-28 Sergio Reyes
+
+        * Translated using Weblate (Spanish) (152d6df)
+
+2018-10-28 Ivo Xavier
+
+        * Translated using Weblate (Portuguese) (b3fe843)
+
+2018-10-28 Florian Leeber
+
+        * Translated using Weblate (German) (9200a48)
+
+2018-10-28 Milan Korecký
+
+        * Translated using Weblate (Czech) (7f1c34b)
+
+2018-10-28 Florian Leeber
+
+        * Merge pull request #37 from
+          ubports-weblate/weblate-ubports-docviewer-app (2d901f5)
+
+2018-10-25 P.-H. Lin
+
+        * Translated using Weblate (Chinese (Traditional)) (cfcd1cb)
+
+2018-10-22 Louies
+
+        * Translated using Weblate (Chinese (Traditional)) (a61271f)
+
+2018-10-21 Florian Leeber
+
+        * Merge pull request #36 from
+          ubports-weblate/weblate-ubports-docviewer-app (2231433)
+
+2018-10-17 M.Sugahara
+
+        * Translated using Weblate (Japanese) (c7d02c6)
+
+2018-10-14 Florian Leeber
+
+        * Merge pull request #34 from
+          ubports-weblate/weblate-ubports-docviewer-app (8bde48b)
+
+2018-09-02 Rondy Andersson
+
+        * Translated using Weblate (Schwedisch) (f27c3ea)
+
+2018-09-04 ArashiHino
+
+        * Translated using Weblate (Japanisch) (b0714ac)
+
+2018-10-01 Ben van Hartingsveldt
+
+        * Translated using Weblate (Niederländisch) (3623912)
+
+2018-10-05 Milan Korecký
+
+        * Translated using Weblate (Tschechisch) (01e5cfe)
+        * Translated using Weblate (Czech) (9989d94)
+
+2018-10-01 Ben van Hartingsveldt
+
+        * Translated using Weblate (Dutch) (b090dd7)
+
+2018-09-15 Tom Rausner
+
+        * Translated using Weblate (Danish) (67b30ad)
+
+2018-09-02 Florian Leeber
+
+        * Merge pull request #33 from
+          ubports-weblate/weblate-ubports-docviewer-app (35b4ee7)
+
+2018-09-02 Weblate
+
+        * Merge remote-tracking branch 'origin/master' (e945311)
+
+2018-09-01 ubports-weblate
+
+        * Update from Weblate. (#32) (faadce3)
+
+2018-08-19 ArashiHino
+
+        * Translated using Weblate (Japanese) (2f17032)
+
+2018-08-31 Simone
+
+        * Translated using Weblate (Italian) (b9374db)
+
+2018-08-19 Anne Onyme
+
+        * Translated using Weblate (French) (34dd311)
+
+2018-08-26 Øjvind Fritjof Arnfred
+
+        * Translated using Weblate (Danish) (dbe3f0a)
+
+2018-08-19 Tom Rausner
+
+        * Translated using Weblate (Danish) (e3eca50)
+
+2018-08-20 Florian Leeber
+
+        * Merge branch 'xenial' of git@github.com:ubports/docviewer-app.git
+          into xenial (76015f6)
+        * POT file update (9d6567b)
+        * Merge pull request #31 from ubports/xenial_-_colorspacetwist
+          (53a4bf8)
+        * Trying to fix #30 (f84ec6e)
+
+2018-08-19 Anne Onyme
+
+        * Translated using Weblate (French) (8b6f5a3)
+        * Translated using Weblate (French) (ec9b3d2)
+        * Translated using Weblate (French) (413ff7f)
+        * Translated using Weblate (French) (713f6c4)
+        * Translated using Weblate (French) (f2b2aad)
+
+2018-08-19 Tom Rausner
+
+        * Translated using Weblate (Danish) (09b06ee)
+        * Translated using Weblate (Danish) (6fbb2ab)
+
+2018-08-19 ubports-weblate
+
+        * Update from Weblate. (#29) (95684c5)
+
+2018-08-12 Chris Clime
+
+        * Xenial initial compatibility (#27) (4702d22)
+
+2018-08-12 Florian Leeber
+
+        * Merge pull request #28 from
+          ubports-weblate/weblate-ubports-docviewer-app (fb15867)
+
+2018-07-29 Tom Rausner
+
+        * Translated using Weblate (Danish) (7196f3a)
+
+2018-07-31 Florian Leeber
+
+        * removing whitespace, adding newline. Sigh. (ebcee4e)
+
+2018-07-31 Chris Clime
+
+        * same PR for the xenial branch (#25) (7559689)
+
+2018-07-31 Florian Leeber
+
+        * Adding whitespace (6f12f83)
+        * Update changelog for our CI (555d835)
+        * Syncing with master to enable CI builds (#26) (e2409da)
+
+2018-07-19 Florian Leeber
+
+        * Created Jenkinsfile (08a2760)
+
+2018-07-09 ubports-weblate
+
+        * Update from Weblate. (#23) (b4cb164)
+
+2018-06-13 Allan Nordhøy
+
+        * Spelling: Unknown document type, ellipsis (#21) (5493234) (tag:
+          vivid)
+
+2018-04-29 ubports-weblate
+
+        * Update from Weblate. (#20) (052741e)
+
+2018-03-18 ubports-weblate
+
+        * Translated using Weblate (Basque) (#19) (089a547)
+
+2018-02-25 ubports-weblate
+
+        * Update from Weblate. (#18) (5560a4f)
+
+2018-02-18 Florian Leeber
+
+        * Merge pull request #17 from
+          ubports-weblate/weblate-ubports-docviewer-app (04d71b8)
+
+2018-02-18 Weblate
+
+        * Repair commit (0a46319)
+
+2018-02-08 Florian Leeber
+
+        * Merge pull request #16 from
+          ubports-weblate/weblate-ubports-docviewer-app (4b40f33)
+
+2018-02-08 Weblate
+
+        * Merge remote-tracking branch 'origin/master' (9fa038d)
+
+2018-01-18 Noock
+
+        * Translated using Weblate (Portuguese (Brazil)) (3ff0d04)
+
+2018-02-05 ubports_arabic
+
+        * Translated using Weblate (Arabic) (5869ab6)
+
+2018-01-18 Noock
+
+        * Translated using Weblate (Portuguese (Brazil)) (7fdbfd9)
+
+2018-01-07 Florian Leeber
+
+        * Merge pull request #15 from
+          ubports-weblate/weblate-ubports-docviewer-app (c3ff5a4)
+
+2018-01-03 Johannes Ledermüller
+
+        * Translated using Weblate (German) (9033c3b)
+
+2017-12-23 Samson
+
+        * Translated using Weblate (Amharic) (b210578)
+
+2017-12-03 Florian Leeber
+
+        * Merge pull request #14 from
+          ubports-weblate/weblate-ubports-docviewer-app (db1715f)
+
+2017-12-03 Weblate
+
+        * Merge remote-tracking branch 'origin/master' (ec08b51)
+
+2017-11-26 advocatux
+
+        * Translated using Weblate (Spanish) (ab5397a)
+
+2017-11-30 Joeke de Graaf
+
+        * Translated using Weblate (Dutch) (28ffc24)
+
+2017-11-26 Arda Canbolat
+
+        * Translated using Weblate (Turkish) (5a6ac08)
+
+2017-11-26 Florian Leeber
+
+        * Merge pull request #13 from
+          ubports-weblate/weblate-ubports-docviewer-app (6af85f8)
+
+2017-11-26 Weblate
+
+        * Merge remote-tracking branch 'origin/master' (204282e)
+
+2017-11-26 Arda Canbolat
+
+        * Translated using Weblate (Turkish) (ff5254a)
+
+2017-11-22 Alexey Balmashnov
+
+        * Translated using Weblate (Russian) (01459f9)
+
+2017-11-25 Mevlüt Erdem Güven
+
+        * Translated using Weblate (Turkish) (3435e31)
+
+2017-11-22 Pablo Foche
+
+        * Translated using Weblate (Esperanto) (1cef21d)
+
+2017-11-20 Alexey Balmashnov
+
+        * Translated using Weblate (Russian) (a21712a)
+
+2017-11-19 Florian Leeber
+
+        * Merge pull request #12 from
+          ubports-weblate/weblate-ubports-docviewer-app (ad2f24f)
+
+2017-11-19 Weblate
+
+        * Merge remote-tracking branch 'origin/master' (a3abeb0)
+
+2017-11-13 Peter Nerlich
+
+        * Translated using Weblate (German) (7e9d2b5)
+
+2017-11-15 Henrik Holm
+
+        * Translated using Weblate (Danish) (7151d38)
+
+2017-11-12 Florian Leeber
+
+        * Merge pull request #11 from
+          ubports-weblate/weblate-ubports-docviewer-app (8eb3862)
+
+2017-11-12 Weblate
+
+        * Merge remote-tracking branch 'origin/master' (76668fb)
+
+2017-11-09 Brînzariu Cristian
+
+        * Translated using Weblate (Romanian) (bc639f1)
+
+2017-11-05 Florian Leeber
+
+        * Merge pull request #10 from
+          ubports-weblate/weblate-ubports-docviewer-app (0171254)
+
+2017-11-05 Weblate
+
+        * Merge remote-tracking branch 'origin/master' (ca69b3f)
+
+2017-11-04 Brînzariu Cristian
+
+        * Translated using Weblate (Romanian) (d2dd7b7)
+
+2017-11-04 Mutse Young
+
+        * Translated using Weblate (Chinese (Simplified)) (f21a2a3)
+
+2017-11-01 Terence Sambo
+
+        * Translated using Weblate (Dutch) (2166aa8)
+
+2017-10-29 Aitzol Berasategi
+
+        * Translated using Weblate (Basque) (2ad8157)
+
+2017-10-29 Florian Leeber
+
+        * Merge pull request #9 from
+          ubports-weblate/weblate-ubports-docviewer-app (14d44e6)
+
+2017-10-29 Weblate
+
+        * Merge remote-tracking branch 'origin/master' (d65d8a4)
+
+2017-10-24 Mutse Young
+
+        * Translated using Weblate (Chinese (Simplified)) (64d0e87)
+
+2017-10-24 Florian Leeber
+
+        * Merge pull request #8 from
+          ubports-weblate/weblate-ubports-docviewer-app (fff6ddf)
+
+2017-10-22 Weblate
+
+        * Merge remote-tracking branch 'origin/master' (550502a)
+
+2017-10-21 Mutse Young
+
+        * Translated using Weblate (Chinese (Simplified)) (b27b2d1)
+
+2017-10-15 Ivan Semkin
+
+        * Translated using Weblate (Russian) (fac90a5)
+
+2017-10-18 Ivo Xavier
+
+        * Translated using Weblate (Portuguese) (5ccd924)
+
+2017-10-10 Daniel Frańczak
+
+        * Translated using Weblate (Polish) (7a53a2b)
+
+2017-10-15 Florian Leeber
+
+        * Merge pull request #7 from
+          ubports-weblate/weblate-ubports-docviewer-app (c1fd135)
+
+2017-10-15 Weblate
+
+        * Merge remote-tracking branch 'origin/master' (fff5675)
+
+2017-10-10 Daniel Frańczak
+
+        * Translated using Weblate (Polish) (555518d)
+
+2017-10-11 Jiri Grönroos
+
+        * Translated using Weblate (Finnish) (36b1b27)
+
+2017-10-08 Mutse Young
+
+        * Translated using Weblate (Chinese (Simplified)) (b136f62)
+
+2017-10-09 Jean Joubert
+
+        * Translated using Weblate (Afrikaans) (8b76228)
+
+2017-10-10 RedXXIII
+
+        * Translated using Weblate (French) (3b9f409)
+
+2017-10-08 Florian Leeber
+
+        * Merge pull request #6 from
+          ubports-weblate/weblate-ubports-docviewer-app (a7755a9)
+
+2017-10-08 Weblate
+
+        * Merge remote-tracking branch 'origin/master' (919e5de)
+
+2017-10-07 Jean Joubert
+
+        * Translated using Weblate (Afrikaans) (ae2ab26)
+
+2017-09-30 Francisco Molinero
+
+        * Translated using Weblate (Spanish) (1a8ab88)
+
+2017-09-30 Peter Valachovič
+
+        * Translated using Weblate (Slovak) (986f61f)
+
+2017-10-05 Jonasz Potoniec
+
+        * Translated using Weblate (Polish) (eca1408)
+
+2017-10-06 Twinkybot
+
+        * Translated using Weblate (German) (227d9f5)
+
+2017-10-05 RedXXIII
+
+        * Translated using Weblate (French) (21a1d90)
+
+2017-10-01 Henrik Holm
+
+        * Translated using Weblate (Danish) (7537e85)
+
+2017-10-02 Milan Korecký
+
+        * Translated using Weblate (Czech) (a87bc01)
+
+2017-09-30 Stefano Melchior
+
+        * Translated using Weblate (Catalan) (3c0fabb)
+
+2017-10-07 Jean Joubert
+
+        * Added translation using Weblate (Afrikaans) (e338a2a)
+
+2017-10-05 Florian Leeber
+
+        * Translated using Weblate (German) (01e124b)
+
+2017-10-05 Twinkybot
+
+        * Translated using Weblate (German) (cd88327)
+
+2017-10-01 Florian Leeber
+
+        * Translated using Weblate (German) (c434fc0)
+
+2017-10-01 Milan Korecký
+
+        * Translated using Weblate (Czech) (e0db351)
+
+2017-10-01 Florian Leeber
+
+        * Merge pull request #5 from
+          ubports-weblate/weblate-ubports-docviewer-app (6d39c77)
+
+2017-09-28 Ivo Xavier
+
+        * Translated using Weblate (Portuguese) (f175498)
+
+2017-09-27 Daniel Frańczak
+
+        * Translated using Weblate (Polish) (52d7e70)
+
+2017-09-28 Stefano Melchior
+
+        * Translated using Weblate (Italian) (e344b30)
+
+2017-09-28 Philipp Leibelt
+
+        * Translated using Weblate (German) (a19a462)
+
+2017-09-28 Henrik Holm
+
+        * Translated using Weblate (Danish) (7336ba1)
+
+2017-08-01 Florian Leeber
+
+        * Merge pull request #3 from sverzegnassi/master (d20c36c)
+
+2017-07-27 Stefano Verzegnassi
+
+        * [DocviewerUtils] Create destination folder if it doesn't exist
+          (bdbee8e)
+
+2017-07-20 Stefano Verzegnassi
+
+        * adding .gitignore file for real. (25303d4)
+        * added .gitignore file (117a2c6)
+        * Fix error missing stdc++ (4703fd1)
+        * Updated maintainer field in manifest.json (62a8eb2)
+        * Support for git versioning (b27c4c4)
+
+2017-06-29 Stefano Verzegnassi
+
+        * Save ContentHub imported files in a subfolder (45a986b)
+
+2017-04-05 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (aee5dbf)
+
+2017-03-23 Renato Araujo Oliveira Filho
+
+        * [snap] Connect with mir-libs content share. (ada80be)
+        * Use correct mir slot name. (f79fc3d)
+        * [snap] Connect with mir-libs content share. (6799be8)
+
+2017-02-23 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (34ac3da)
+
+2017-02-15 Renato Araujo Oliveira Filho
+
+        * [snap] Added "mir" interface on plug list (3a66e0e)
+
+2017-02-08 Renato Araujo Oliveira Filho
+
+        * [snap] Added "mir" interface on plug list (f73e78b)
+
+2016-12-17 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (82628e0)
+
+2016-12-16 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (9972fcb)
+
+2016-12-12 Renato Araujo Oliveira Filho
+
+        * Added snap metadata. (fb93da1)
+        * Fix icon path. (e79657c)
+        * Added snap metadata. (a5a3cdc)
+
+2016-12-09 Renato Araujo Oliveira Filho
+
+        * Create snapcract package. (b30774f)
+        * Avoid build problems if qmake fail to report the correct QML_DIR.
+          (b96dddc)
+        * Filter files packed into the snap. (e84e947)
+        * Create  snapcract package. (3b2c437)
+
+2016-11-30 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (a76f8d1)
+
+2016-09-29 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (35414e2)
+
+2016-09-21 Stefano Verzegnassi
+
+        * Do not initialize content-hub asynchronously, otherwise a transfer
+          can not be finalized if the app is not already launched.
+          This bug likely exists since months, but after the recent
+          changes in content-hub it seems easier to trigger.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1588485. (3b3aff6)
+
+2016-09-13 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (366dd92)
+
+2016-09-12 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (0529e72)
+
+2016-09-07 Tim Peeters
+
+        * Workaround for bug 1577277.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1577277. (5600f29)
+
+2016-08-31 Tim Peeters
+
+        * Workaround for bug 1577277 (90a9850)
+
+2016-08-31 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (02aa61a)
+
+2016-08-29 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (0bc8545)
+
+2016-06-29 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (da2b438)
+
+2016-06-08 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (b28f6f9)
+
+2016-06-07 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (f857022)
+
+2016-05-18 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (40c9cb8)
+
+2016-05-17 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (aa4c5e5)
+
+2016-05-15 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (b5b3287)
+
+2016-05-09 Stefano Verzegnassi
+
+        * Do not init content-hub asynchronously, otherwise a transfer can
+          not be finalized if the app is not already launched. This
+          bug likely exists since months, but after the recent
+          changes in content-hub it seems easier to trigger.
+          (2b874da)
+
+2016-05-07 Stefano Verzegnassi
+
+        * PdfViewer - Presentation mode: use a single-tap gesture (instead of
+          double tap) to show/hide header.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1545142. (46ed38f)
+
+2016-04-28 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (71a88aa)
+
+2016-04-27 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (31dbf02)
+
+2016-04-26 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (849ced2)
+
+2016-04-25 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (989a403)
+
+2016-04-20 Stefano Verzegnassi
+
+        * Fixed the keyboard input issues in DocumentsPage, caused by the
+          migration to the new PageHeader component. In particular:
+          * OSK visible on app start-up;  It was possible to type
+          chars into the searchField (and then filter the document
+          entries out) even if the searchFiled was not visible;  OSK
+          still visible after the search header was closed (through
+          the 'Cancel' button).
+          Fixes:
+          https://bugs.launchpad.net/bugs/1566899,
+          https://bugs.launchpad.net/bugs/1566902. (a3b5218)
+
+2016-04-17 Stefano Verzegnassi
+
+        * Fixed wrong alignment of the peer picker in SharePage.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1566903. (6a00a11)
+
+2016-04-17 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (77dc774)
+
+2016-04-11 Stefano Verzegnassi
+
+        * Properly fix keyboard focus of PageHeader(s) (c4054c4)
+
+2016-04-11 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (d07a380)
+
+2016-04-10 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (f3b4f46)
+
+2016-04-07 Stefano Verzegnassi
+
+        * PdfViewer - Presentation mode: use a single-tap gesture (instead of
+          double tap) to show/hide header (7342169)
+
+2016-04-07 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (e6834ad)
+
+2016-04-06 Stefano Verzegnassi
+
+        * Fixed wrong alignment of the peer picker in SharePage. (abe5bd1)
+        * Fixed the keyboard input issues in DocumentsPage, caused by the
+          migration to the new PageHeader component. In particular:
+          * OSK visible on app start-up;  It was possible to type
+          chars into the searchField (and then filter the document
+          entries out) even if the searchFiled was not visible;  OSK
+          still visible after the search header was closed (through
+          the 'Cancel' button) (a4913d3)
+
+2016-04-05 Stefano Verzegnassi
+
+        * Bumped framework to 15.04.4;  Fixed broken night mode (i.e. app
+          background is still white when the mode is enabled.
+          Updated changelog. (a81410d)
+        * Bumped framework to 15.04.4;  Fixed broken night mode (i.e. app
+          background is still white when the mode is enabled.
+          Updated changelog (d986396)
+
+2016-03-31 Stefano Verzegnassi
+
+        * Use PageHeader and ScrollView in documents page (a5da3e2)
+        * Pdf viewer:;  Removed 'search' action (unused);  Fixed keyboard
+          hooks in the 'GoTo' dialog;  Fixed presentation mode color
+          palette;  Use ScrollView component . (482e57b)
+        * Updated copyright;  Removed usage of deprecated colors (e.g.
+          UbuntuColors.midAubergine);  Align to the latest clock-app
+          specs (i.e. don't use purple as accent color);  Use the
+          section divider from the latest calendar-app specs;  Don't
+          use DemiBold in PDF ToC;  Fixed font color broken after
+          UITK theming changes in Silo 50 (OTA 10.
+          ResizeableSidebar: fixed vertical divider margins.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1551259. (da72244)
+        * WORKAROUND: make the lok-viewer header static (avoid
+          unpredictable binding);  Use new PageHeader and ScrollView
+          components;  UI: Show an empty header when loading
+          LibreOffice. (a70dbfe)
+
+2016-03-30 Stefano Verzegnassi
+
+        * Fixed flickable (c7a3483)
+        * Declare TextualButtonStyle in a separate document;  Updated
+          Ubuntu.Contents to 1.3 (fc6a123)
+        * Updated comment (c4a9868)
+        * [TextView] Switch to UITK 1.3 PageHeader component. (3d1da48)
+
+2016-03-30 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (1e7976a)
+
+2016-03-26 Stefano Verzegnassi
+
+        * Updated copyright (f13e8b6)
+        * Updated copyright (bc0013c)
+        * Updated copyright (6946df1)
+        * PdfView: removed 'search' action (unused);  PdfView: fixed
+          keyboard hooks for the 'GoTo' dialog;  PdfView: fixed
+          presentation mode color palette (76afa54)
+        * DocumentPageSearchHeader: use search header style recently
+          introduced in unity8-dash;  DocumentPagePickModeHeader:
+          added debug output (925656c)
+
+2016-03-23 Stefano Verzegnassi
+
+        * Use PageHeader and ScrollView in details page. (a49b60c)
+        * emit DocumentModel::dataChanged() Sometimes the UI was not notified
+          about changes in model entries (e.g. file size still
+          equals to zero after file has been successfully copied).
+
+          Fixes: https://bugs.launchpad.net/bugs/1483218. (e9631b8)
+
+2016-03-23 nskaggs
+
+        * Create cache folder during cmake copy. (304cc0e)
+
+2016-03-22 Stefano Verzegnassi
+
+        * [pdfView] Use ScrollView component (f3950ff)
+
+2016-03-21 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (52fda1f)
+
+2016-03-20 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (a16320e)
+
+2016-03-18 Stefano Verzegnassi
+
+        * Fixed ScrollView + lok-viewer keyboard handlers;  Workaround:
+          make the lok-viewer header static (avoid unpredictable
+          binding) (d6200d9)
+
+2016-03-17 Stefano Verzegnassi
+
+        * Use new PageHeader;  Use new ScrollView;  Show an empty header
+          when loading LibreOffice (37084d7)
+
+2016-03-16 nskaggs
+
+        * Restore AP test shell. (e707326)
+
+2016-03-12 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (c62ccfb)
+
+2016-03-11 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (a35c294)
+
+2016-03-11 Stefano Verzegnassi
+
+        * Minor code style changes. (a1d9f4a)
+        * [TextView] Switch to UITK 1.3 PageHeader component (74a8351)
+
+2016-03-10 nskaggs
+
+        * use make directory (2e7fe4b)
+        * create cache dir for depends (7325387)
+
+2016-03-10 Stefano Verzegnassi
+
+        * emit DocumentModel::dataChanged() Sometimes the UI was not notified
+          about changes in model entries (e.g. file size still
+          equals to zero after file has been successfully copied)
+          (a6d5193)
+        * typo (i.e. we were pushing the wrong file through content hub)
+          (2446444)
+        * Fixed broken content-hub export (i.e. typo - 'rootItem' renamed
+          as 'pickModeHeader');  Use
+          theme.palette.selected.backgroundText color when 'Pick'
+          button is enabled (cdd00ba)
+
+2016-03-09 Stefano Verzegnassi
+
+        * Use a 'Label' instead of the SD card icon. Sure, it's a bit ugly
+          but it has no alignment issue. In any case, we should
+          replace the current documents view soon. (483557c)
+
+2016-03-09 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (def4f29)
+
+2016-03-08 nskaggs
+
+        * move files, delete old test (526609d)
+        * flake8 (7a8edfa)
+        * example test working (d2de0d3)
+        * remove disabled tests, start restoration (c17503b)
+
+2016-03-06 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (33405ca)
+
+2016-03-04 nskaggs
+
+        * add jenkins info and mp readme. (590dde2)
+        * add jenkins info (406c7ed)
+
+2016-03-04 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (1e7952f)
+
+2016-03-03 Stefano Verzegnassi
+
+        * Use PageHeader and ScrollView in documents page;  Removed width
+          limitation of units.gu(80) from documents pag.
+          Refactoring;  Minor UI changes to headers (b5b6c86)
+        * Minor code style changes (bd11d6c)
+        * Updated copyright (2608f25)
+        * Use PageHeader and ScrollView in details page (fd4b217)
+        * Removed usage of deprecated colors (e.g.
+          UbuntuColors.midAubergine);  Align to the latest clock-app
+          specs (i.e. don't use purple as accent color);  Use the
+          section divider from the latest calendar-app specs;  Don't
+          use DemiBold in PDF ToC (097ac4c)
+        * Fixed font color broken after UITK theming changes in Silo 50
+          (OTA 10);  ResizeableSidebar: fixed vertical divider
+          margins (31c7df6)
+
+2016-03-03 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (9812a76)
+
+2016-03-02 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (a6b18cd)
+
+2016-03-01 Stefano Verzegnassi
+
+        * [lok-viewer] Fixed ZoomSelector visibility on frieza (BQ M10).
+
+          Fixes: https://bugs.launchpad.net/bugs/1551254. (d4b1dd8)
+
+2016-03-01 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (0ee43f7)
+
+2016-02-29 Stefano Verzegnassi
+
+        * [lok-viewer] Fixed ZoomSelector visibility on frieza (BQ M10)
+          (e0c1672)
+
+2016-02-26 Stefano Verzegnassi
+
+        * Allow to disable .click dependencies caching through a CMake
+          option.
+          Fixes: https://bugs.launchpad.net/bugs/1547059.
+          (332995e)
+
+2016-02-22 Stefano Verzegnassi
+
+        * Allow to disable .click dependencies caching through a CMake option
+          (1a441fd)
+
+2016-02-22 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (2586375)
+
+2016-02-19 Stefano Verzegnassi
+
+        * [PdfView] Disable bottom edge gesture if the current document does
+          not provide any ToC.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1546164. (350eb26)
+
+2016-02-18 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (17546de)
+
+2016-02-16 Stefano Verzegnassi
+
+        * [PdfView] Disable bottom edge gesture if the current document does
+          not provide any ToC (ab48b85)
+
+2016-02-13 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (459d462)
+
+2016-02-12 Stefano Verzegnassi
+
+        * Release Ubuntu DocViewer 2.1;  Updated changelog. (61da3d2)
+        * Fixed ContentTransferHint being visible during an export.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1544149. (27caf12)
+        * Restore the browse mode when the content transfer is completed or
+          aborted (4329fc3)
+        * Fixed DocumentPagePickModeHeader:;  Use UCListItem 1.2+ APIs;  Use
+          content-hub properly (70d3a62)
+
+2016-02-12 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (40f0b4c)
+
+2016-02-11 Stefano Verzegnassi
+
+        *  * Release Ubuntu DocViewer 2.1;  Updated changelog (432692d)
+        * [PdfPresentation] Disable screen saver during a presentation.
+          (697acee)
+
+2016-02-11 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (b914427)
+
+2016-02-10 Stefano Verzegnassi
+
+        * Fixed ContentTransferHint being visible during an export (7bbcc1f)
+
+2016-02-10 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (e9feb7a)
+
+2016-02-08 Stefano Verzegnassi
+
+        * sync trunk (90d31bb)
+        * Handle screen saver from the main qml file (76b9b9f)
+
+2016-02-07 Stefano Verzegnassi
+
+        * Re-enable screen saver when the app is not focused (0fde2b5)
+        * Added keep-display-on policy (44e5537)
+
+2016-02-06 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (d2e65ac)
+
+2016-02-05 Stefano Verzegnassi
+
+        * Use QQuickAsyncImageProvider in LOPartsImageProvider class. This is
+          backported on Ubuntu/Ubuntu Touch since Qt 5.4.1-1ubuntu7.
+          On any other distro/OS it works only with Qt 5.6 (or
+          later). (848f45e)
+        * Removed Jenkins debug (184deb3)
+        * Fixed LOK viewer going full-screen with a .odp/.ppt(x) document.
+          Both PDF full-screen presentation mode and LOK viewer were
+          using a 'isPresentation' property with two different
+          meaning. My fault, sorry! :/ (3463e91)
+        * Merged trunk + fixed .pot conflict (d715831)
+        * [PdfPresentation] Go automatically full-screen. (01cb6d0)
+
+2016-02-05 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (a58cae6)
+
+2016-02-04 Stefano Verzegnassi
+
+        * LibreOffice viewer:;  Show the viewer content at the center of the
+          canvas (excluded spreadsheets);  Fixed some bug in
+          ScalingPinchArea;  Added a ScalingMouseArea component, for
+          handling the double-tap-to-zoom gesture;  Set the zoom
+          behaviour according to the parameters returned by LOZoom
+          class;  Changed background color for the viewer;  Fixed
+          'rebound' behaviour for the LOK Viewer;  Added missing
+          signal emissions in LOZoom.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1501424,
+          https://bugs.launchpad.net/bugs/1515655,
+          https://bugs.launchpad.net/bugs/1541582. (c2bc768)
+
+2016-02-04 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (d9f657b)
+
+2016-02-03 Stefano Verzegnassi
+
+        * Use the parameters from ZoomSettings for setting the behaviour of
+          the ScalingPinchArea and the ScalingMouseArea;  Added
+          missing signal emissions in LOZoom (016c112)
+        * Changed background color for LibreOffice viewer;  Fixed 'rebound'
+          behaviour for LOK Viewer (1070fc7)
+        * Merged trunk (903f6fa)
+        * Restored "Start presentation" action in the PDF viewer. After the
+          merging of the branch with the new bottom-edge component,
+          PdfViewDefaultHeader.qml document has been removed and the
+          action hasn't been added to the header replacement.
+          (aa494d0)
+        * Restored 'Start presentation' action in the PDF viewer - gone lost
+          after new bottom-edge branch merging (846344b)
+
+2016-02-03 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (0d21cfc)
+
+2016-02-03 Stefano Verzegnassi
+
+        * LibreOffice viewer:;  Added a sheet selector;  Show an empty state
+          when the current sheet has no content;  Fixed
+          "currentPart" usage, partially broken after a recent
+          commit in trunk.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1537755,
+          https://bugs.launchpad.net/bugs/1537756. (072a82b)
+        * Merged trunk + updated .pot (37f9303)
+
+2016-02-02 Stefano Verzegnassi
+
+        * Apply new style for empty state everywhere. (802dafd)
+        * Merged trunk, updated .pot (2522192)
+        * Merged trunk, updated .pot (d6c86de)
+
+2016-02-02 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (c06f2a5)
+
+2016-01-31 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (69cf453)
+
+2016-01-30 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (7f51d5e)
+
+2016-01-29 Stefano Verzegnassi
+
+        * SGTileItem: keep QImage data so that QSG don't fail on repainting.
+          (2c8dbbd)
+        * Use UITK 1.3 BottomEdge instead of old PageWithBottomEdge
+          component.;  Updated framework version to 15.04.3.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1535320. (152b6f0)
+        * [PdfPresentation] Hide mouse cursor when there's no on-going mouse
+          event. (e68e87b)
+        * typos (b618e43)
+        * Merged trunk, fixed conflicts. (8be3ed2)
+        * Merged trunk, fixed conflicts. (ab94ac8)
+
+2016-01-27 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (79e2004)
+
+2016-01-26 Stefano Verzegnassi
+
+        * Debugging Jenkins issue with QQuickAsyncImageProvider (7e38bca)
+        * SGTileItem: keep QImage data so that QSG don't fail on repainting
+          (52018a9)
+        * LibreOffice QML plugin:;  Provide zoom settings as grouped
+          properties;  Added a minimum and a maximum value for the
+          zoom factor;  Removed any reference to zoomFactor from
+          SGTileItem;  Expose to QML the values for 'fitToWidth',
+          'fitToHeight' and 'Automatic' zoom. (100725a)
+        * Reduce the size of that comment. (0cfd224)
+
+2016-01-25 Stefano Verzegnassi
+
+        * Merged trunk. Updated translation template. (f22e2e7)
+        * Apply new style for empty state everywhere (e8b454a)
+        * removed log (fc15131)
+        * Removed documentPartChanged() signal (3bfd503)
+        * New style for the "blank sheet" empty state (98bb7ed)
+        * Forgot to completely remove documentPart from LODocument;  Show
+          an EmptyState when an empty/blank sheet is requested
+          (c07ac76)
+
+2016-01-24 Stefano Verzegnassi
+
+        * Restored 'cache:false' so that we don't display a thumbnail from a
+          different document (a94ea2b)
+        * Merged trunk. Updated translation template. (9c494e8)
+        * Moved all the RenderEngine code in LOPartsImageResponse to
+          LOPartsImageProvider (5cddea1)
+
+2016-01-23 Stefano Verzegnassi
+
+        * [PdfPresentatin] Disable screen saver during a presentation
+          (737a608)
+        * [PdfPresentation] Go automatically full-screen (69be53d)
+        * [PdfPresentation] Hide mouse cursor when there's no on-going mouse
+          event (4020c06)
+        * Disable spell checking in LibreOffice: (794d562)
+
+2016-01-23 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (58a3657)
+
+2016-01-22 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (1f91dc3)
+
+2016-01-21 Stefano Verzegnassi
+
+        * LibreOffice Viewer - LibreOfficeKit QML plugin: - Open spreadsheet
+          with manual zoom (1.0x factor) - Added "Fit to height" and
+          "Automatic" zoom behaviours - Added a "zoomModesAvailable"
+          which returns the zoom modes available for a given
+          document. - Use UCUnits when converting TWIPs in pixels
+          (and vice versa) - Minor changes.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1513960,
+          https://bugs.launchpad.net/bugs/1515649,
+          https://bugs.launchpad.net/bugs/1535264. (22e869b)
+        * Don't allow a zoomFactor value outside the [minimumZoom,
+          maximumZoom] interval (668dba7)
+
+2016-01-21 Roman Shchekin
+
+        * RenderEngine: thread safety. (64d193b)
+
+2016-01-21 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (9cad970)
+
+2016-01-21 Stefano Verzegnassi
+
+        * Removed 'zoomFactor' parameter from SGTileItem (67ec99f)
+
+2016-01-20 Stefano Verzegnassi
+
+        * LibreOffice QML plugin:;  Provide zoom settings as grouped
+          properties;  Provide minimum and maximum zoom value.
+          Export to QML values for 'fitToWidth', 'fitToHeight' and
+          'Automatic' zoom (407bd2d)
+        * added python3-lxml package as dependency. (3b8132a)
+        * [loview] Added drop shadow effect to partsview thumbnails.
+          (e9e1eb1)
+
+2016-01-19 Stefano Verzegnassi
+
+        * WORKAROUND: Use a smaller minimumZoom value. On BQ E5, the
+          'fitToWidth' zoom value is < 0.25. We urge to fix the
+          TWIPs conversion using UITK UCUnits. (342c2e1)
+        * Last fixes for ScalingPinchArea;  Added a MousePinchArea
+          component for handling double-tap-to-zoom gestures. Fake
+          scaling animations are not perfect, but good enough for
+          giving the impression of a correct scaling during the
+          100ms they are running. (62def98)
+
+2016-01-19 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (3dedbb0)
+
+2016-01-18 Stefano Verzegnassi
+
+        * Center the content using 'topMargin' and 'leftMargin', so
+          contentWidth and contentHeight are more *predictable*
+          Fixed some issue in ScalingPinchArea (contentX and
+          contentY setting + interactivity + returning to legal
+          bounds) (5c523cf)
+
+2016-01-18 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (6ca68a3)
+
+2016-01-18 Stefano Verzegnassi
+
+        * Added UCUnits class from UITK. Forgot to 'bzr add' them in the
+          previous commit (89414d4)
+        * Convert TWIPs to pixels (and vice versa) using UCUnits from Ubuntu
+          UI Toolkit, instead of DPI (a728b19)
+
+2016-01-17 Stefano Verzegnassi
+
+        * Merged trunk (2fab7e2)
+        * pt.2 (7701f4f)
+        * Merged second part of the fix for RenderEngine (b8825b0)
+        * take ownership of the task (8bb346f)
+        * RenderEngine::dequeueTask() missing the owner check (a36cb79)
+        * Disable spell checking in LibreOffice: (7a67d69)
+        * Merged lp:~mrqtros/ubuntu-docviewer-app/ubuntu-docviewer-app-re-fix
+          Roman's fixes for RenderEngine thread safety (484c023)
+        * Merged trunk (bcea8e0)
+
+2016-01-17 Roman Shchekin
+
+        * AbstractRenderTask now can be marked as caller owned. (aba22cb)
+        * Thread safety. (c61b120)
+        * Right order of method call. (25c629a)
+
+2016-01-17 Stefano Verzegnassi
+
+        * Use a Qt::BlockingQueuedConnection (329d860)
+        * [loview] Added drop shadow effect to partsview thumbnails (ace9eb6)
+
+2016-01-17 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (90e48cb)
+
+2016-01-16 Roman Shchekin
+
+        * Upstream libs caching.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1534933. (c79f094)
+
+2016-01-16 Stefano Verzegnassi
+
+        * [lok-qml] Moved 'currentPart' property from LODocument to LOView.
+          (e556f8f)
+        * Added a spreadsheet selector. Please note that switching to an
+          empty sheet may completely mess up the zoom factor value,
+          since the size of the sheet is 0x0 (Required a fix for
+          that). (39bafd8)
+        * Merged trunk - updated translation template (fbf3924)
+
+2016-01-16 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (b1c1afe)
+
+2016-01-15 Stefano Verzegnassi
+
+        * Night shader updated. (be98224)
+
+2016-01-15 Michael Hall
+
+        * Add a basic presentation mode to PDF docments.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1534761. (1b19712)
+
+2016-01-15 Stefano Verzegnassi
+
+        * Disabled current Autopilot tests. Added a dummy test instead.
+          (2be0054)
+        * missing CMakeLists.txt file (a79f6db)
+        * Disabled current Autopilot tests. Added a dummy test instead.
+          (f768a28)
+
+2016-01-14 Stefano Verzegnassi
+
+        * added python3-lxml package as dependency (d39f215)
+
+2016-01-14 Roman Shchekin
+
+        * Upstream libs caching. (f0ba670)
+
+2016-01-14 Stefano Verzegnassi
+
+        * Suggested fixes from Stefano (a440718)
+        * PDF presentation mode:  * Use PageHeader component  * UI design
+          changes  * Fix for Night Mode shader  * Fix for
+          PdfViewDelegate  * Use 'slideshow' icon for the 'Play
+          presentation' action in PdfView (11aeb62)
+
+2016-01-13 Michael Hall
+
+        * Fix header content positioning to remove gap on the left (b57d40a)
+        * Preserve slide aspect ration, and allow double-tap to get out of
+          presentation mode on touch screens (7e783e4)
+        * Add presentation mode for PDFs (44dfbe8)
+
+2016-01-13 Stefano Verzegnassi
+
+        * Apply BottomEdge workaround as seen in address-book-app (37292dd)
+        * Looks like header actions order is inverted on dekstop... which is
+          the bloody right order?! (23aab28)
+        * Use new PageHeader component in PdfView page and PdfContentsPage
+          * Use ListItemLayout for PdfView header content;  PdfView
+          header configuration declared in the PdfView.qml document
+          (d41de3b)
+
+2016-01-12 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (e8f2ea6)
+
+2016-01-08 Stefano Verzegnassi
+
+        * Night shader updated (e5beec3)
+        * Merged lp:ubuntu-docviewer-app and fixed conflicts (dee1cab)
+
+2016-01-08 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (8dde155)
+
+2016-01-07 Stefano Verzegnassi
+
+        * DocumentListDelegate: wrap title text anywhere. Fix bug #1523113.
+
+          Fixes: https://bugs.launchpad.net/bugs/1523113. (3c940fe)
+        * updated framework to 15.04.3 (2292ecd)
+        * [loviewer] PartsView: Ensure that items next to the current item
+          are always visible.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1521386. (8681ced)
+        * Merge lp:ubuntu-docviewer-app (82db662)
+        * Merged lp:ubuntu-docviewer-app (ebbb1e9)
+        * Renamed LODocument::paintThumbnail to paintPart (5aff244)
+
+2016-01-07 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (bc4002c)
+
+2016-01-06 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (c2d24cc)
+
+2016-01-05 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (e97f998)
+
+2016-01-04 Stefano Verzegnassi
+
+        * [DetailsPage] Split file name and file path into two separate
+          fields. Allow multiline subtext.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1523106. (47c3006)
+
+2016-01-04 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (a9251b5)
+
+2016-01-03 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (7bc2121)
+
+2016-01-02 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (fd38594)
+
+2015-12-31 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (20aa590)
+
+2015-12-30 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (3e54e84)
+
+2015-12-29 Stefano Verzegnassi
+
+        * DocumentListDelegate: wrap title text anywhere. Fix bug #1523113.
+          (904f96b)
+        * [lok-qml] Display the content at the center of the Flickable, when
+          it's smaller than the flickable itself. This change does
+          not affect the Spreadsheet viewer. (8f3aea1)
+        * Fixing automatic zoom update issue. Also, trying to provide a
+          better explanation for how updateVisibleRect() works.
+          (a0b187f)
+
+2015-12-29 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (4d495d9)
+
+2015-12-28 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (1dd052b)
+
+2015-12-27 Stefano Verzegnassi
+
+        * Cleaning ZoomSelector code a bit (a336dd4)
+        * [lok-qml] Use a flag for 'zoomModesAvailable' property (removed the
+          three booleans previously used). (fe6a222)
+        * [lok-qml] Changed default zoom behaviour for presentation type
+          (044fa8d)
+        * [lok-qml] Added 'adjustToAutomaticZoom()' (869246e)
+        * [lok-qml] Added 'adjustToFitHeight()' (b1ec8ad)
+        * [lok-qml] Added checkers for 'fit to height' and 'automatic' zoom
+          modes availability.;  [loviewer] Added controls for modes
+          above in ZoomSelector. (93ef0cd)
+        * [lok-qml][loviewer] Do not show 'Fit to width' mode in Zoom
+          selector when not available (b98f0d3)
+        * [lok-qml] Preliminar moving of the adjustZoomToWidth() call in
+          QML to C++;  [lok-qml] Open spreadsheet documents with
+          manual zoom (1.0x factor) (96cf912)
+        * [DetailsPage] Split file name and file path into two separate
+          fields. Allow multiline subtext. (4831a9b)
+        * Added Flickable in DetailsPage. Content can be scrolled when bigger
+          than the page.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1523112. (fc92a20)
+        * Don't show file extension in the viewer's header.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1523886. (22fb286)
+        * [lok-qml] Fixed warning about document not loaded. Now it properly
+          informs that the document may be protected by a password.
+
+          Fixes: https://bugs.launchpad.net/bugs/1524712. (a0f9d6d)
+        * Updated AppArmor template. It fixes the deletion of a document
+          stored on a SD card.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1524293. (5e733c3)
+
+2015-12-26 Stefano Verzegnassi
+
+        * Added Flickable in DetailsPage. Content can be scrolled when bigger
+          than the page. (2c24193)
+        * [lok-qml] Fixed warning about document not loaded. Now it properly
+          informs that the document may be protected by a password.
+          (b8e27d1)
+        * Removed file extension from viewer header (c3c7cb7)
+        * Updated AppArmor template. It fixes the deletion of a document
+          stored on a SD card. (8a2ecf4)
+
+2015-12-24 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (941f49b)
+
+2015-12-23 Roman Shchekin
+
+        * RenderEngine now become application-wide tool . (32e5581)
+
+2015-12-24 Roman Shchekin
+
+        * RenderEngine now become application-wide tool - commit. (b2ef095)
+
+2015-12-23 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (1a8e955)
+
+2015-12-21 Girish Rawat
+
+        * Updated and expanded READMEs. (fb5b760)
+        * Updated READMEs (8f8287e)
+
+2015-12-21 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (42b4869)
+
+2015-12-20 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (e1f03f9)
+
+2015-12-20 Girish Rawat
+
+        * Updated and expanded READMEs. (048e7d6)
+
+2015-12-18 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (011e764)
+
+2015-12-17 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (d421a5e)
+
+2015-12-15 Stefano Verzegnassi
+
+        * Use UITK 1.3 BottomEdge (480790a)
+
+2015-12-14 Stefano Verzegnassi
+
+        * Removed wip comments (a414a79)
+        * Clean up;  Use QSize for rendering thumbnails. (this will be
+          useful for the full-screen presentation mode) (4e83870)
+        * Cosmetics (aefa8d0)
+        * Clean up partsmodel (25b5919)
+        * pt.2 (08c7c9b)
+        * [lok-qml] Migration to QQuickAsyncImageProvider - pt.1 (c0103d5)
+        * [lok-qml] Moved 'currentPart' property from LODocument to LOView.
+          Still wip. (24bba9f)
+
+2015-12-12 Roman Shchekin
+
+        * RenderEngine now become application-wide tool. (89a669d)
+
+2015-12-11 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (f4b2c86)
+
+2015-12-10 Stefano Verzegnassi
+
+        * Align 'no document found' empty state design to music-app.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1523122. (5d64eec)
+        * Align 'no document found' empty state design to music-app (d66fc78)
+
+2015-12-09 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (d145422)
+
+2015-12-08 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (40d8dcb)
+
+2015-12-07 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (efe542f)
+
+2015-12-06 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (6aa3aa0)
+
+2015-12-05 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (7185007)
+
+2015-12-04 Stefano Verzegnassi
+
+        * Re-bump framework and AppArmor policy version. (8d0b8ca)
+        * Re-bump to sdk 15.04.1 (b6d22ab)
+        * Fixed url-dispatcher missing in the click package. (feb8875)
+        * Remove last reference to (61dac5a)
+        * Fixed url-dispatcher missing in the click package (164cb46)
+
+2015-12-04 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (6a1eeb1)
+
+2015-12-03 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (94163e7)
+
+2015-12-02 Stefano Verzegnassi
+
+        * Backported fix for stage mode being forced on Nexus 10;  Fixed
+          wrong string shown in the splash screen.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1479483. (cc1006c)
+        * Err... it's Wednesday (c4e4092)
+        * Backported fix for stage mode being forced on Nexus 10;  Fixed
+          wrong string shown in the splash screen (887d665)
+        * Bump app version to 2.0;  Updated changelog. (9be8a6d)
+        * Updated changelog. Removed all the references to our LibreOffice
+          QML plugin bugs since it will be released for the first
+          time. Removed also all the redundant entries. (e7dcbaa)
+        * Merged 'reboot' branch (72ccc0e)
+
+2015-12-02 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (5247c0e)
+
+2015-12-01 Stefano Verzegnassi
+
+        * Fixed translatable strings. (fe78416)
+
+2015-12-01 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (008bff3)
+
+2015-12-01 Stefano Verzegnassi
+
+        * Fixed a further string (ae3c93c)
+        * Fixed translatable strings (02dfab1)
+        * [loviewer] PartsView: Ensure that items next to the current item
+          are always visible (3dfc21d)
+
+2015-11-30 Stefano Verzegnassi
+
+        * Added splashscreen for loViewer;  Moved the async logic that
+          loads loViewer in another component;  Removed
+          'PanelButton' component - no longer used;  Changed the
+          behaviour of the header in the loViewer: if (textDocument)
+          hideableHeader = true;  Don't use a global 'graphics'
+          folder. Assets are now placed in the module which uses
+          them.
+          Fixes: https://bugs.launchpad.net/bugs/1495079.
+          (6661ba9)
+        * Updated app icon. (81187f4)
+        * Updated app icon (55a38e0)
+        * Forgot to use 'isPresentation' property in some binding (8e28ebf)
+        * Removed 'PanelButton' component - no longer used (8be4bcf)
+        * Added splashscreen for loViewer;  Move the async logic in another
+          component;  Don't use a global 'graphics' folder. Assets
+          are now placed in the module which uses them. (9c9adca)
+
+2015-11-30 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (28cd2e7)
+
+2015-11-29 Roman Shchekin
+
+        * Code cleanup - phase 2. (9f921f2)
+
+2015-11-29 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (cb0d7b8)
+
+2015-11-29 Roman Shchekin
+
+        * Code cleanup - phase 2. (1dd9e6c)
+        * Code cleanup - phase 1. (b99599e)
+
+2015-11-28 Roman Shchekin
+
+        * Little improvements:  * getNextId() used twice for LOPartEntry  *
+          m_document renamed to m_lokDocument (we already have
+          m_document inside another class) (045afe6)
+
+2015-11-28 Stefano Verzegnassi
+
+        * Updated changelog (7835d73)
+        * Merged 'reboot' (5af729c)
+        * Use UITK 1.3 ListItemLayout. (f1afe6e)
+
+2015-11-28 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (fa45f38)
+
+2015-11-27 Stefano Verzegnassi
+
+        * Switch to Ubuntu Toolkit 1.3;  UI updated;  Improved support for
+          zoom on desktop;  Updated framework to 14.04.1;  Moved
+          components in the 'upstreamComponents' folder into
+          'common';  Use the new BottomEdgeHint component in order
+          to provide mouse/keyb controls for the bottom edge.
+          Changed Header behaviour to default in the PDF viewe.
+          Use an horizontal PartsView for switching slides in
+          portrait, small-width mode, instead of using the
+          SlideControllerPanel component + BottomEdge.;  Removed
+          some obsolete code.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1453403,
+          https://bugs.launchpad.net/bugs/1508363,
+          https://bugs.launchpad.net/bugs/1513843. (c5e3f1d)
+        * [loview] removed double-click-to-(un)zoom. to be added later.
+          (51b8fe4)
+        * Merged 'reboot' branch (3323289)
+        * [textview] Removed file description from title (af7b91e)
+        * [pdfview] Removed last reference to 'toggleHeaderVisibility'
+          (752afe4)
+
+2015-11-26 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (1fb6465)
+
+2015-11-25 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (64ba7dc)
+
+2015-11-24 Stefano Verzegnassi
+
+        * Changes to the project structure;  Provide DocViewer plugins as
+          separate .deb packages;  Added exception for '*.user.*' in
+          .bzrignore file. (3cde392)
+        * Updated .pot (8cf3a55)
+        * Merged 'reboot' - .pot not updated (e9a9f26)
+
+2015-11-24 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (df800e9)
+
+2015-11-23 Stefano Verzegnassi
+
+        * Error detection branch has been merged without a 'fix' as per diff
+          inline comments. Not relevant stuff, just code styling.
+          (6825fb0)
+
+2015-11-23 Roman Shchekin
+
+        * Zoom in LO. (ca36a71)
+
+2015-11-23 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (feee02b)
+
+2015-11-22 Stefano Verzegnassi
+
+        * Merged 'reboot' - Fixed conflicts (5a32c31)
+        * error detection branch has been merged without a 'fix' as per diff
+          inline comments (6f7633c)
+        * LibreofficeKit-qml-plugin:   * Fix wrong size for last tile in a
+          row/column   * Don't create tiles outside the
+          visible/buffer grid (i.e. wrong size for m_visibleArea and
+          m_gridArea).
+          Fixes:
+          https://bugs.launchpad.net/bugs/1516239,
+          https://bugs.launchpad.net/bugs/1516241. (ab065c9)
+
+2015-11-22 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (e5005af)
+
+2015-11-21 Roman Shchekin
+
+        * Resolved conflict. (a6f7efd)
+        * Anchors. (0b74ab2)
+        * Whoops... (ff19111)
+        * Code cleanup & ready for merge! (a2a947a)
+
+2015-11-21 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (2a7e280)
+
+2015-11-20 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (b7ca1b0)
+
+2015-11-19 Stefano Verzegnassi
+
+        * [lok-qml] Fixed broken SHOW_TILE_BORDER mode.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1515037. (6e573ff)
+        * [loviewer] Adding error detection;  [loviewer] Removed
+          updateZoomIfAutomatic() function in LOView, its code was a
+          bit cryptic;  Added a debug option in CMakeLists;  added
+          '*.user.*' filter in .bzrignore file.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1514458. (89650a3)
+        * Disable file locking in LibreOffice.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1517074. (dfe3756)
+
+2015-11-19 nskaggs
+
+        * Fix internet check for jenkins. (2fedafe)
+        * modify internet check for jenkins (poll launchpad, not google)
+          (f1b19ed)
+
+2015-11-19 Roman Shchekin
+
+        * Made some things reusable. (6cd32d2)
+
+2015-11-18 Stefano Verzegnassi
+
+        * Disable debug flags (639b70a)
+
+2015-11-17 Stefano Verzegnassi
+
+        * Disable file locking in LibreOffice (b2f4be8)
+
+2015-11-15 Stefano Verzegnassi
+
+        * generateTiles() styling (169a3d4)
+        * Improved the calculation of visible and buffer areas (028d1fb)
+
+2015-11-14 Roman Shchekin
+
+        * First working version. (d561b79)
+
+2015-11-14 Stefano Verzegnassi
+
+        * Addressing following issues:       * Tiles in the last column/row
+          have the wrong size (256.0px is hard-coded)       * LOView
+          creates tiles out of the visible/buffer grid (db5d531)
+
+2015-11-13 Stefano Verzegnassi
+
+        * Merged prerequisite branch (101cb79)
+        * component renamed (4c936d5)
+        * Removed obsolete 'backAction' code from viewers' header (86c1646)
+        * Changed PDF viewer background (cd6d02d)
+        * Remove experimental code used in the desktop mode (17cc2c2)
+        * Provide a more extended description of the error (cb1ca74)
+        * [lok-qml] Fixed broken SHOW_TILE_BORDER mode (fcb7779)
+
+2015-11-11 Stefano Verzegnassi
+
+        * Disable debug build (ae19c76)
+        * [loviewer] Adding error detection [loviewer] Removed
+          updateZoomIfAutomatic() function in LOView, was a bit
+          cryptic (8363792)
+
+2015-11-06 Roman Shchekin
+
+        * Code of RenderEngine become more SOLID (still a lot of work to do).
+          (3fc4570)
+
+2015-11-06 Alan Pope
+
+        * Remove unconfined from apparmor profile. Tested on device, and
+          we're still able to open pdfs and office docs just fine.
+          (7d55f51)
+        * No longer need to be unconfined (bf69da0)
+
+2015-11-06 Stefano Verzegnassi
+
+        * Automatically fetch dependencies for LibreOffice viewer and put
+          them inside the .click package. (c5308b2)
+
+2015-11-02 Stefano Verzegnassi
+
+        * Oops... better to specify which is the source of the bug (6a3e0d8)
+        * Fixing comment in the PDF viewer (f2b6962)
+        * [loView] Removed SlideControllerPanel & bottom edge usage since
+          were incompatible on phone. Use an horizontal PartsView
+          instead. (22b96c8)
+        * Show/hide bottom edge tip of Flickable scrolling (5956742)
+
+2015-11-01 Stefano Verzegnassi
+
+        * Use default header behaviour in PdfView (the earlier is broken with
+          OTA-8) (b975ef4)
+        * Completed refactor of ZoomSelector:;  Moved part of the code of
+          ZoomSelector in some new components, since we'll probably
+          reuse them in future (706ac03)
+        * Restore old .pot again (bdad07e)
+        * Use BottomEdgeHint to provide desktop controls for the bottom edge
+          panel (8045c0d)
+        * Moved 'UpstreamComponents' to 'common' folder (4a9f6d5)
+
+2015-10-31 Roman Shchekin
+
+        * Code of RenderEngine become more SOLID (still a lot of work to do).
+          (275e103)
+
+2015-10-29 Stefano Verzegnassi
+
+        * fixes (eada355)
+
+2015-10-28 Stefano Verzegnassi
+
+        * Merged prerequisite 'reboot-uitk13' branch (8b2ff55)
+        * Reverted Autopilot tests fixes - they have been moved in another
+          branch (757f598)
+        * Merged
+          'lp:~verzegnassi-stefano/ubuntu-docviewer-app/reboot-cmake-refactor'
+          branch;  Updated changelog (083412f)
+        * Restored pot from trunk. It will be updated in a different branch.
+          (42c0720)
+        * Fixed url dispatcher not found during debian pkg building (8f03087)
+
+2015-10-27 Stefano Verzegnassi
+
+        * Fixed left sidebar anchoring in LoView;  Backported ZoomSelector
+          from uitk1.3-listitemlayout branch (dca1991)
+        * Forgot to update 'debian/rules' file (5c0997f)
+        * Removed some bit from LoView's PinchArea, in order to make diff
+          smaller (1eaad0d)
+        * Provide DocViewer plugins as separate .deb packages (e935e7f)
+        * Fixed  not found;  Moved 'get-click-deps' CMake stuff in the
+          proper file;  Add exception for '*.user.*' in .bzrignore
+          file (a914aca)
+        * Merged lp:~verzegnassi-stefano/ubuntu-docviewer-app/get-click-deps
+          (06e5588)
+        * Added a comment about PDFView's 'GoToPage' dialog test failing
+          (552de71)
+        * Fixed Autopilot 'test_toc' test (103cd44)
+        * Fixing ZoomSelector pt.1 (ff8aa29)
+        * Added click dependencies for 'amd64' and 'i386' archs (7822817)
+        * Merged 'reboot' branch (aca958d)
+        * Restored +x permission to 'get-click-deps' script (064bdce)
+
+2015-10-26 Stefano Verzegnassi
+
+        * Merged
+          lp:~verzegnassi-stefano/ubuntu-docviewer-app/reboot-resizeable-partsview
+          (fff4abe)
+
+2015-10-23 Stefano Verzegnassi
+
+        * Updated .deb dependency on ubuntu-ui-toolkit (45e6e31)
+        * Reverted Ubuntu.Content import - version 1.3 is not included in
+          OTA-7 (1d39c9a)
+        * Updated to ListItemLayout. Still some TODO/FIXME task. (dc51080)
+        * Updated framework version in the manifest file (5901188)
+        * Removed usage of deprecated 'Theme' singleton. Use 'theme' instead.
+          (35e6a66)
+        * [UITK13-Labels] Use 'textSize' enum property instead of 'fontSize'
+          string one (2666cc5)
+        * Updated imports (439c892)
+        * Merged 'reboot' branch (40a4349)
+
+2015-10-22 Stefano Verzegnassi
+
+        * Fixed comment (de0a01a)
+        * Added ResizeableSidebar component (b2db4a8)
+
+2015-10-21 Stefano Verzegnassi
+
+        * CMake files refactor - part 1 (c991d4b)
+
+2015-10-20 Stefano Verzegnassi
+
+        * Switch to Ubuntu.Components 1.2;  Minor UI changes;  Temporarily
+          removed GridView from documents browser page;  Fixed wrong
+          default date format (now it is middle-endian format,
+          default for US English);  Limit ListViews width to
+          units.gu(80) on wide screens.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1470897. (89a0bde)
+        * Updated translation template (b5c5a1d)
+        * Merged 'reboot' branch (d0965f3)
+        * Refactored cpp init;  Moved command line parser to QML. (5f7ce6f)
+        * Fixed app launch when running from QtCreator or an installed .deb
+          package (806a075)
+        * Added SubtitledListItem (6cc28f7)
+        * Updated translation template (633dadf)
+        * Merged 'reboot' branch (a37de9e)
+
+2015-10-19 Stefano Verzegnassi
+
+        * Hide viewers head captions in desktop mode (95c3f47)
+        * New ZoomSelector and first work on pinch-to-zoom gesture (948f657)
+        * Switch to UITK 1.3;  Give more space to lok parts view on wide
+          screens (ba11fc0)
+        * Fixed imports of new components from 'reboot' branch;  Updated
+          translation template (14ff0fa)
+        * Merged 'reboot' branch (66bd567)
+
+2015-10-19 Roman Shchekin
+
+        * More OOP in RenderEngine (preparations for migration of PDF plugin
+          to tile rendering). (6a8293a)
+
+2015-10-19 Stefano Verzegnassi
+
+        * Don't fill the whole width in DetailsPage when page's width >
+          units.gu(80);  SortSettingsDialog's 'Close' button color
+          to green (e183c84)
+        * Bump app version to 2.0 (59e4e4d)
+
+2015-10-19 Roman Shchekin
+
+        * More OOP in RenderEngine. Part 2: bugfixes and cleanup. (11cf669)
+
+2015-10-18 Roman Shchekin
+
+        * More OOP in RenderEngine. (05ba455)
+
+2015-10-18 Stefano Verzegnassi
+
+        * updated (03ddb57)
+
+2015-10-17 Stefano Verzegnassi
+
+        * fix pt.2 (10fd1d0)
+        * fixes pt.1 (84ee1b5)
+        * new init (1d820ef)
+
+2015-10-15 Stefano Verzegnassi
+
+        * [loview] Resizeable PartsView - bits stolen from UITK1.3's
+          AdaptivePageLayout (ee66b25)
+        * update get-click-deps to python3 (dd1f934)
+        * [loviewer] Moved ZoomSelector in the default header (8b116a2)
+        * Restored full DeleteFileDialog functionalities (a975117)
+
+2015-10-13 Stefano Verzegnassi
+
+        * Rewritten Config::getLibreOfficePath() and
+          Config::getLibreOfficeProfilePath() (6c64b2c)
+        * Read/write LibreOffice profile from docviewer's
+          XDG_CONFIG_HOME/<APP_PKGNAME> location (12c6b83)
+        * [loviewer] Fixed 'singleShot' property not set for m_updateTimer.
+          (58709d9)
+        * [loviewer] Fixed singleShot missing in scheduleVisibleRectUpdate()
+          (bd08a73)
+
+2015-10-12 Stefano Verzegnassi
+
+        * Moved command line parameters and UriHandler stuff to QML (be7c925)
+        * Moved fullscreen control to QML (366adee)
+        * [loview] Fixed leak and tiles that stay visible even after their
+          removal. (01208bb)
+        * [loviewer] Fixed memory leak while zooming (274cf7f)
+
+2015-10-11 Roman Shchekin
+
+        * RenderEngine - impress support. (942b3ce)
+        * UPD (75760de)
+
+2015-10-11 Stefano Verzegnassi
+
+        * Forgot a fix for LOViewGotoDialog header action (6155212)
+        * Removed unused code in LOViewDefaultHeader (413ae00)
+        * Updated translation template (69bced3)
+        * Merged 'reboot' branch (a0ab7b0)
+        * Minor changes during the MP of the branch (d40ecdb)
+
+2015-10-10 Stefano Verzegnassi
+
+        * [loviewer] Improved support for presentation document typ.
+          [loviewer] Added keyboard shortcuts.;  [loviewer] Added an
+          image provider for slides thumbnails, sync'd with
+          RenderEngine;  [loviewer] Conditional layout for the
+          presentation view: use a bottom edge or a sidebar to show
+          the list of slides;  [loviewer] Moved zoom controls into a
+          separate page head;  Updated translation template.
+          (0e5ad55)
+        * Updated translation template (2d6a3ae)
+        * Merged 'reboot' branch (0ad2384)
+        * [loviewer] Implemented zoom:;  Added a manual zoom mode;  Added an
+          automatic zoom mode (fit zoom to flickable width);  Added
+          a bottom panel with a zoom selector (which includes a
+          TextField and an OptionSelector). (6019b55)
+        * Updated translation template (d7268cd)
+        * Merged 'reboot' trunk (62f9763)
+        * Switch to Ubuntu.Components 1.2;  Minor UI changes, trying to
+          match latest design guidelines (DeleteFileDialog is
+          currently broken, it will be fixed with the following
+          commits) (21ce5a6)
+
+2015-10-08 Roman Shchekin
+
+        * RenderEngine - impress support, part 8 (default image for
+          thumbnail). (1917e49)
+
+2015-10-06 Roman Shchekin
+
+        * RenderEngine - impress support, part 7. Done. (69735a4)
+        * RenderEngine - impress support, part 6. (b296f12)
+        * RenderEngine - impress support part 5. (f52b9bb)
+        * RenderEngine impress support, part 4. (8eb3139)
+
+2015-10-05 Roman Shchekin
+
+        * RenderEngine - impress support, part 3. (af6f83f)
+        * RenderEngine impress support big rework. (2339591)
+
+2015-10-04 Roman Shchekin
+
+        * RenderEngine - impress support. (9e45cf4)
+
+2015-10-04 Stefano Verzegnassi
+
+        * Fixed typo (e17d4f6)
+        * Use UTF8 for converting char* to QString (63e6a27)
+
+2015-10-03 Stefano Verzegnassi
+
+        * Fixed an issue in root CMakeLists file;  Use LD_LIBRARY_PATH to
+          get a list of possible paths for LibreOffice binaries when
+          running from a .click package (79be5bc)
+
+2015-10-02 Stefano Verzegnassi
+
+        * LibreOffice Viewer:  * Changes to UI design of ZoomSelector  * Use
+          a more declarative approach in ZoomSelector  * Updated
+          translation template (553072d)
+
+2015-10-01 Stefano Verzegnassi
+
+        * LibreOffice viewer:  * Added pinch-to-zoom gesture (not tested)  *
+          Added double-click-to-zoom gesture  * Preserve content
+          position on zoom changes  * Fixes for ZoomSelector (broken
+          after async loading of viewer) (18bed93)
+        * [loviewer] Use percentage for 'go to' dialog.;  [loviewer] Enable
+          'go to' dialog only for LibreOffice.TextDocument type.
+          (5294f7f)
+        * Updated pot (d19d25b)
+        * Merged 'reboot' branch (d81d39e)
+
+2015-09-26 Stefano Verzegnassi
+
+        * Added go-first-part and go-last-part actions;  Added part
+          management functions in DocumentViewer.LibreOffice.Viewer
+          (6845adc)
+
+2015-09-23 Stefano Verzegnassi
+
+        * forgot to fix a typo (d6dcbbd)
+        * Updated keyboard shortcuts;  Fixes to loviewer PartsVie.
+          Improvements to LibreOffice viewer UI;  Sync render engine
+          and thumbnailers provider   (tiles from different parts
+          are no longer mixed up);  Updated translation template
+          (f83e380)
+
+2015-09-22 Stefano Verzegnassi
+
+        * Merged 'reboot' branch (3debbc5)
+        * Merged 'reboot' branch (454f2e5)
+
+2015-09-21 Stefano Verzegnassi
+
+        * [ContentHub] Check if a file has been already imported in the past,
+          and don't import it if that's the case.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1432394. (d019404)
+        * Fixed class name not properly set after merge (b7a4ebe)
+        * Merged lp:ubuntu-docviewer-app/reboot (99c9fec)
+        * Updated translation template. (cea9e51)
+        * Merged lp:ubuntu-docviewer-app/reboot (128cf36)
+        * Use QML APIs for Content Hub;  Remove toast notifications for
+          imported documents (open documents automatically).
+          Fixes:
+          https://bugs.launchpad.net/bugs/1469422. (8c6974c)
+
+2015-09-19 Stefano Verzegnassi
+
+        * Fixes as per MP review (6e605e4)
+
+2015-09-19 Roman Shchekin
+
+        * Async lok loading .
+          Fixes: https://bugs.launchpad.net/bugs/1495069.
+          (7d47a4f)
+
+2015-09-19 Stefano Verzegnassi
+
+        * Renamed DocumentViewerSingleton as DocviewerUtils (3ece211)
+
+2015-09-19 Roman Shchekin
+
+        * [LibreOffice-plugin] Get screen DPIs at runtime. (c6f2f2c)
+        * New method of multithreaded rendering. (326de67)
+        * Misaccurate copy-paste. (9e3d101)
+
+2015-09-19 Stefano Verzegnassi
+
+        * Removed dependency on ContentHub C++ APIs and updated the others
+          (9703da6)
+        * Forgotten bits (d4aa6bf)
+
+2015-09-19 Roman Shchekin
+
+        * Pot. (5c46358)
+        * LOView.qml was renamed to LOViewPage.qml (8632b28)
+        * Fix for
+          https://bugs.launchpad.net/ubuntu-docviewer-app/+bug/1495069
+          (e599839)
+        * And the last comment... (a2845a9)
+        * Removed few unused blocks of code/comments. (32930ae)
+
+2015-09-19 Stefano Verzegnassi
+
+        * Merged prerequisite branch:
+          lp:~verzegnassi-stefano/ubuntu-docviewer-app/10-reboot-contenthub-switch-to-qml-apis
+          (c47124a)
+        * Updated translation template (25611b9)
+        * Merged prerequisite branch:
+          lp:~verzegnassi-stefano/ubuntu-docviewer-app/10-reboot-contenthub-switch-to-qml-apis
+          (329a0e0)
+        * Merged reboot branch (ef0f547)
+
+2015-09-18 Stefano Verzegnassi
+
+        * [loviewer] Use percentage for 'go to' dialog.;  [loviewer] Enable
+          'go to' dialog only for LibreOffice.TextDocument type
+          (0d427a1)
+
+2015-09-18 Roman Shchekin
+
+        * Fixed broken functionality. (fd57df8)
+        * Redundant hash removed. (3a97094)
+        * Old performance with thread safety, almost ready for merge.
+          (431a3cc)
+        * Code cleanup. (4f4debe)
+        * Working version of RenderEngine rendering. (887ffb1)
+        * SGTileItem prepared for RenderEngine. LOView to go. (ee8b369)
+        * RenderEngine added. (da082da)
+
+2015-09-17 Stefano Verzegnassi
+
+        * Check for null value of getLogicalDotsPerInch() (f5442d4)
+
+2015-09-16 Roman Shchekin
+
+        * Smart DPI caching. (e026870)
+
+2015-09-16 Stefano Verzegnassi
+
+        * Removed QStorageInfo sources. Build depends on Qt 5.4. (8a6cd5e)
+
+2015-09-16 Roman Shchekin
+
+        * Smart caching of DPI. (fe2ec12)
+
+2015-09-16 Stefano Verzegnassi
+
+        * Added share option in documentsPage.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1494818. (67fb175)
+        * Use SD card icon from official Suru theme.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1476659. (e7d70ab)
+        * Updated empty state strings in DocumentsPage. (79cdfab)
+
+2015-09-15 Stefano Verzegnassi
+
+        * Added keyboard controls (PgUp, PgDown, Up, Down, Left, Right) in
+          the LOK plugin (see src/app/qml/loView/KeybHelper.js.
+          Improved support for presentation document typ.
+          Conditional layout for the presentation view: use a bottom
+          edge or a sidebar to show the list of slides;  Added an
+          image provider for slides thumbnails;  Moved zoom controls
+          into a separate page head (1252284)
+
+2015-09-14 Stefano Verzegnassi
+
+        * Implemented zoom:;  Added an automatic zoom mode
+          (fitZoomToFlickableWidth);  Added a bottom panel with a
+          zoom selector (which includes a TextField and an
+          OptionSelector);  Removed unnecessary files from loView
+          plugin;  Some change in main.cpp so that we can enable QML
+          Analyzer;  Fixes for DEBUG_VERBOSE;  Improvements to the
+          logic that handles automatic zooming (907f249)
+
+2015-09-12 Stefano Verzegnassi
+
+        * [ContentHub] Check if a file has been already imported in the past,
+          and don't import it if that's the case (5ab137e)
+
+2015-09-11 Roman Shchekin
+
+        * QtQuick SceneGraph rendering, with multithreading support. Includes
+          changes from:
+          lp:~mrqtros/ubuntu-docviewer-app/docviewer-sg-rendering.
+          (4e3e2b3)
+
+2015-09-11 Stefano Verzegnassi
+
+        * Get screen DPIs at runtime (2e2af84)
+        * Updated translation template (2d87f78)
+        * Revert a few changes in DocumentViewerSingleton class (1055094)
+        * Use QML APIs for Content Hub;  Remove toast notifications for
+          imported documents (open documents automatically)
+          (7752e58)
+        * Removed forward declaration of TileItem class in LOView (b947fa5)
+        * Restored DEBUG_SHOW_TILE_BORDER option (e7e63cb)
+
+2015-09-10 Stefano Verzegnassi
+
+        * Added TODO task for tiles border (4823e41)
+        * Fixes as per MP review:
+          https://code.launchpad.net/~mrqtros/ubuntu-docviewer-app/docviewer-sg-rendering/+merge/270157
+          (d10e9cc)
+
+2015-09-09 Stefano Verzegnassi
+
+        * Merged Roman Shchekin's work on scenegraph rendering (57989c6)
+        * Removed QStorageInfo sources. Build depends on Qt 5.4 (8b8fb77)
+        * Added share option in documentsPage (7e3aff5)
+        * Added reference to SD card support in the documentPage empty state
+          (8678463)
+        * Merged trunk - fixed conflict (d185276)
+        * First attempt to include get-click-deps in docviewer. Some
+          CMakeLists line comes from popey and its get-click-deps
+          integration work for filemanager-app. (6958ad5)
+
+2015-09-02 Roman Shchekin
+
+        * Multithreaded rendering. (88e8972)
+        * Bugfixes. (7a99220)
+        * Preliminary, but already working version. (b8998fa)
+        * SGTileItem class added. (52e0d9f)
+        * Cosmetic fixes - check against nullptr and correct naming of
+          viewer. (15a7f85)
+
+2015-08-30 Stefano Verzegnassi
+
+        * Merged trunk (rev. 181) into "reboot" branch. (85f1624)
+        * Use sdcard icon from suru-icon-theme (0ef420d)
+
+2015-08-26 Stefano Verzegnassi
+
+        * Added LibreOfficeKit headers. (d681c6c)
+        * Added LibreOfficeKit headers (c78fe2e)
+
+2015-08-04 Stefano Verzegnassi
+
+        * Merged trunk into reboot branch (2fdd8d1)
+
+2015-08-01 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (5496496)
+
+2015-07-30 Stefano Verzegnassi
+
+        * Fixed DocumentsModel's duplicated entries when reading from FAT
+          file systems.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1477713. (db32cdf)
+        * Fixed duplicated entries in FAT file systems (19a132e)
+        * Implemented cache buffer (139a094)
+
+2015-07-26 Stefano Verzegnassi
+
+        * Implemented cache buffer (6007400)
+
+2015-07-25 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (00e92e4)
+
+2015-07-24 Stefano Verzegnassi
+
+        * Simplified the translation for some string in DocumentListDelegate.
+
+          Fixes: https://bugs.launchpad.net/bugs/1477502. (a7b0ad4)
+        * Simplified the translation for some string in DocumentListDelegate
+          (87583a6)
+
+2015-07-23 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (df01558)
+
+2015-07-23 Stefano Verzegnassi
+
+        * [LOK-plugin] Use a QTimer to avoid multiple updates when
+          contentX/contentY change (eb699ed)
+        * [lo-plugin] Added saveAs function (98d17e4)
+        * Improvements in debug output management (0413f25)
+
+2015-07-22 Stefano Verzegnassi
+
+        * Improvements in debug output management (9100b31)
+        * Do not use a pointer for QTimer (6f5a410)
+        * Added support for all (OpenDocument/OpenXMLFormat/MS)
+          (text/spreadsheet/presentation) documents in DocViewer's
+          documentModel and plugin loader. (93b1087)
+
+2015-07-21 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (33a7b3e)
+
+2015-07-20 Roman Shchekin
+
+        * Inlining can make code more efficient in such cases. (35f1d14)
+
+2015-07-20 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (7791dba)
+
+2015-07-19 Stefano Verzegnassi
+
+        * - Restored swipe gesture in DocumentListDelegate - Added contextual
+          actions to DocumentGridDelegate - Added a new TileBase
+          component as base for DocumentGridDelegate.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1447995. (043ee85)
+
+2015-07-19 Roman Shchekin
+
+        * Inlining can make code more efficient in such cases. (59b410f)
+
+2015-07-19 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (00d5aa1)
+
+2015-07-18 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (05b2131)
+
+2015-07-17 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (9c34b01)
+
+2015-07-17 Stefano Verzegnassi
+
+        * Improved code consistency for TileItem class.;  Removed the
+          unnecessary painter->eraseRect() from the paint function
+          of LOView (19f80c0)
+        * [lo-plugin] Added saveAs function (db77813)
+
+2015-07-16 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (1614244)
+
+2015-07-14 Stefano Verzegnassi
+
+        * Merged all the trunk revisions up to r169 (d24504f)
+        * Merged trunk - Solve conflict in DocumentGridDelegate (521d161)
+        * Fixed things as per MP review and simplified actionsOverflowPopover
+          logic (b5e4caa)
+        * Use proper English verb... (e7bbccb)
+        * Updated AUTHORS file. (0203061)
+        * Add support for all OpenDocument/OpenXMLFormats/MS
+          text/spreadsheet/presentation documents (a06a2ec)
+        * [LOK-plugin] Use a QTimer to avoid multiple updates when
+          contentX/contentY change (90d70d9)
+        * Updated AUTHORS file (9e76a3b)
+        * Merged
+          lp:~ubuntu-docviewer-dev/ubuntu-docviewer-app/lo-tiled-rendering
+          in order to solve the conflict in LOView class (4e72d21)
+        * As Roman suggested:;  Use const QRect& for TileItem area;  Moved
+          TileItem::requestTexture() after the connection to the
+          LOView::update() slot (34e6764)
+
+2015-07-13 Roman Shchekin
+
+        * Format_RGB32 used instead of Format_ARGB32 (renders ~3 times
+          faster). I have string feeling that LO toolkit won't
+          provide tiles with alpha.  * Memory leak fixed.  * Member
+          m_office now become static s_office. (a872e11)
+
+2015-07-13 Stefano Verzegnassi
+
+        * Properly set sizes inside QtQuick.Layouts. (fa3ffb8)
+        * Improved code consistency in TileItem class (647dbb4)
+
+2015-07-13 Roman Shchekin
+
+        * Format_RGB32 used instead of Format_ARGB32 (renders ~3 times
+          faster). I have string feeling that LO toolkit won't
+          provide tiles with alpha.  * Memory leak fixed.  * Member
+          m_office now become static s_office. (95efc89)
+
+2015-07-12 Stefano Verzegnassi
+
+        * Use C++11 features (27234c0)
+        * Removed not necessary painter->eraseRect() (ee8c5c1)
+
+2015-07-12 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (b280801)
+
+2015-07-11 Roman Shchekin
+
+        * Seems that LoDocument uses BGR rather than RGB. Fixed. (acf7c90)
+        * Seems that LoDocument uses BGR rather than RGB. Fixed. (263037c)
+
+2015-07-11 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (cda8a8d)
+
+2015-07-10 Alan Pope
+
+        * Add AUTHORS file. (fec9ace)
+
+2015-07-08 Roman Shchekin
+
+        * Multithreading improved. (9a94b61)
+
+2015-07-08 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (267b661)
+
+2015-07-07 Stefano Verzegnassi
+
+        * Fixed CMakeLists file in LOK-QML plugin (3511e86)
+
+2015-07-08 Roman Shchekin
+
+        * Multithreading improved. (b32030a)
+
+2015-07-06 Alan Pope
+
+        * Add AUTHORS file (cd6ad9f)
+
+2015-07-05 Stefano Verzegnassi
+
+        * rows and columns in the tile logic were swapped. use the less
+          ambiguous 'x' and 'y' (d9958f5)
+
+2015-07-04 Stefano Verzegnassi
+
+        * Update visibleArea size when the width/height of the
+          parentFlickable change (c762d4f)
+        * Dropped deprecated dependencies on Qt5 private imports (48b0076)
+        * First work on tiled rendering for LibreOfficeKit QML plugin
+          (f8325c8)
+
+2015-07-03 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (a9dd747)
+
+2015-07-01 Stefano Verzegnassi
+
+        * Restored translations from trunk (1ed5e10)
+        * Merged with trunk - Fixed .pot conflict (2b08874)
+        * - Restored swipe gesture in DocumentListDelegate - Added contextual
+          actions to DocumentGridDelegate - Added a new TileBase
+          component as base for DocumentGridDelegate (e9dbdb8)
+
+2015-07-01 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (733b1f7)
+
+2015-06-30 Stefano Verzegnassi
+
+        * Extended fix for QtQuick.Layouts where appropriate (d2c1b19)
+        * Merge 'fix-layouts-with-icons' branch from Michael Zanetti
+          (0786f57)
+
+2015-06-30 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (15d944f)
+
+2015-06-29 David Planella
+
+        * Added information on how to compile the LO viewer support (541adfc)
+        * Merged from trunk (9233278)
+
+2015-06-29 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (31c5898)
+
+2015-06-28 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (26dda8b)
+
+2015-06-27 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (f7280e3)
+
+2015-06-26 David Planella
+
+        * Merged Stefano Verzegnassi's LO viewer prototype (cc39a92)
+
+2015-06-26 Stefano Verzegnassi
+
+        * Added document type property to LibreOffice plugin LODocument class
+          (0d69d1a)
+
+2015-06-26 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (315fb34)
+
+2015-06-25 Bartosz Kosiorek
+
+        * Fix missing icon for desktop: #1468418  .
+          Fixes:
+          https://bugs.launchpad.net/bugs/1466518. (0b531c9)
+
+2015-06-25 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (daed67d)
+
+2015-06-24 Bartosz Kosiorek
+
+        *  Fix missing icon for desktop. (ae90d0b)
+
+2015-06-24 Stefano Verzegnassi
+
+        * A first (far from being perfect) prototype of the LibreOffice QML
+          plugin, which reuses the components ofthe Poppler QML
+          plugin (84225d0)
+
+2015-06-24 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (09ed6ea)
+
+2015-06-23 Stefano Verzegnassi
+
+        * Added a search mode for the DocumentPage and a list of sorting
+          options.
+          Fixes: https://bugs.launchpad.net/bugs/1450837.
+          (c6097e4)
+
+2015-06-23 David Planella
+
+        * Added sample LibreOffice Toolkit code, by Bjoern Michaelsen
+          (f313a4c)
+
+2015-06-22 Stefano Verzegnassi
+
+        * Position view at beginning when the sortMode value is changed
+          (670c6d8)
+        * Fixed badly formatted date-time in the subText of
+          DocumentListDelegate when a sort rule, different than 'by
+          date' is used. (f9e83b8)
+        * Fixed date-time of the subText of the DocumentListDelegate
+          (dateDiff value changed when we started to use an Enum for
+          it) (7a91ab7)
+        * Fixed case sensitivity for alphabetic sort (7e4bf50)
+        * Updated the title of DocumentPage (b84b2c5)
+
+2015-06-18 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (3fed049)
+
+2015-06-16 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (ac5769f)
+
+2015-06-15 Stefano Verzegnassi
+
+        * Re-enable delete action in DocumentListDelegate (2b1512b)
+
+2015-06-14 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (ab691ad)
+
+2015-06-13 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (27615a4)
+
+2015-06-12 Stefano Verzegnassi
+
+        * That's a 'sorting settings', there's nothing related to filters...
+          (8293da5)
+        * Reset search filter when switching to the pick mode (a.k.a.
+          content-hub export mode) (a297eff)
+        * Disable predictive text for document search (3741d6d)
+
+2015-06-10 Stefano Verzegnassi
+
+        * Fixed the misspelled 'misspelled' word... (2fe2d3b)
+        * Added sort options and allow search of available documents
+          (a77413e)
+
+2015-05-31 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (e7c9c64)
+
+2015-05-22 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (0c746f2)
+
+2015-05-21 Stefano Verzegnassi
+
+        * SD Card support. (2000a68)
+
+2015-05-19 Stefano Verzegnassi
+
+        * Merged trunk - translations updated (62f4b78)
+        * Removed debug output (336a21c)
+
+2015-05-19 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (5554d74)
+
+2015-05-18 Stefano Verzegnassi
+
+        * - Moved DocumentsModel class in the DocumentViewer module. -
+          Refactored DocviewerFile class - Refactored DocumentsModel
+          class - Use SortFilterModel from Ubuntu.Components,
+          instead of QSortFilterProxyModel - Renamed
+          com.ubuntu.popplerqmlplugin module in DocumentViewer.PDF -
+          Renamed com.ubuntu.fileqmlplugin module in DocumentViewer
+          - Removed FileReader class - Added support for testing
+          DocumentsModel class through Autopilot.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1445011. (b6f619b)
+        * pot updated (dbf5512)
+        * Added some output for debug (14e7502)
+
+2015-05-16 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (044e82a)
+
+2015-05-15 carla-sella
+
+        * First test for testing Docviewer app TOC.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1418652. (bffb370)
+
+2015-05-13 Stefano Verzegnassi
+
+        * First prototype for sd-card read support (5dc0585)
+
+2015-05-11 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (182a3c1)
+
+2015-05-10 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (fcdf5fd)
+
+2015-05-08 carla-sella
+
+        * Deleted logger.warn. (7accaff)
+
+2015-05-07 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (a00006f)
+
+2015-05-06 carla-sella
+
+        * Fixed while loop. (a22c9a6)
+        * Fixed code as Nicholas asked to. (ac98e27)
+
+2015-05-04 carla-sella
+
+        * Inserted fixes suggested by Stefano for Bottom Edge and content
+          items not visible. (7319d24)
+
+2015-05-02 carla-sella
+
+        * First try to fix bottome edge issue. (9f1fbcd)
+        * Added comment on PdfContentPage.qml propery. (ce458e5)
+        * Fixed regression on test test_go_to_page_pdf_file. (5b9d849)
+        * Fixed little error. (994b3e1)
+        * Completed first test for TOC. (a08319d)
+
+2015-05-01 carla-sella
+
+        * Still need to fix scrolling. (0aaac00)
+        * Completed first part of test_go_to_chapters_in_toc. (716a670)
+        * Implemented clickin on TOC chapter. (5cefdb0)
+
+2015-04-30 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (087182a)
+
+2015-04-29 Stefano Verzegnassi
+
+        * Cleaning DocviewerFile class a bit (02d3f51)
+        * Fixed SortFilterModel not sorting (999fab0)
+
+2015-04-29 carla-sella
+
+        * For merging trunk. (597b43b)
+        * WIP test_pdf_toc (803bee5)
+
+2015-04-29 Stefano Verzegnassi
+
+        * Fixed an issue when customDir is set (8d48938)
+        * - Refactored DocumentModel class - Moved QFileSystemWatcher in an
+          external class (763210e)
+        * Sync po/CMakeLists.txt with trunk (5d73281)
+        * Merge with trunk (c182430)
+        * Various minor changes to DocumentModel class - pt #2 (651906b)
+        * Various minor changes to DocumentModel class (db1e871)
+        * - Added arguments for testing DocumentsModel through Autopilot -
+          Fixed an issue while trying to open a document previously
+          loaded (4d96729)
+        * Move DocumentModel and File classes in an external plugin (d137581)
+
+2015-04-29 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (625582b)
+
+2015-04-28 carla-sella
+
+        * For merging trunk. (691ee7a)
+
+2015-04-28 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (87f9584)
+
+2015-04-27 Stefano Verzegnassi
+
+        * - Rename a file as 'filename (copy x).ext' (instead of
+          'filename.x.ext') if a file with the same name already
+          exists. - Fixed bad renaming of a file that already has
+          "(copy x)" suffix in its name.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1432403,
+          https://bugs.launchpad.net/bugs/1432408. (8d386d2)
+        * Fixed files permissions (d95396e)
+        * Merge with trunk (abe9118)
+        * Fixed the issue with QFileInfo::baseName() (d6851d1)
+        * [PDF] Fixed docviewer crash when selecting the last entry of the
+          ToC.
+          Fixes: https://bugs.launchpad.net/bugs/1444972.
+          (4fcf617)
+        * Fixed autolanding (translations conflict) (84eaaab)
+
+2015-04-26 Stefano Verzegnassi
+
+        * [PDF] Fixed an issue while going to the first not visible item in
+          VerticalView.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1444971. (92a02e6)
+
+2015-04-24 carla-sella
+
+        * Merged trunk. (7a15c73)
+
+2015-04-23 carla-sella
+
+        * Commit for merging trunk. (2f61896)
+        * Added pdf for test toc. (8f870b7)
+        * Started new test test_pdf_toc. (fdf9cbe)
+
+2015-04-23 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (57cf923)
+
+2015-04-22 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (666cbf8)
+
+2015-04-21 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (8949917)
+
+2015-04-20 Stefano Verzegnassi
+
+        * - Don't add a second suffix to the file name if there's already one
+          - Reflowed code of ContentCommunicator::handle_import -
+          Updated comments for ContentCommunicator::handle_import -
+          Updated translations - Use a localized string to identify
+          a copied file (93cbb31)
+        * Format imported document name as 'filename (x).ext' instead of
+          'filename.x.ext' (771e8f6)
+
+2015-04-20 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (5aeb36b)
+
+2015-04-19 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (02a854d)
+
+2015-04-18 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (886df0b)
+
+2015-04-17 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (114f247)
+
+2015-04-16 Stefano Verzegnassi
+
+        * Enabled landscape support.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1428721. (1d3b9ec)
+        * Fix #1444972 - Is today Friday the 17th? (856a14d)
+        * Fixed stupid off-by-one error (7a93b22)
+
+2015-04-16 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (7ff3428)
+
+2015-04-15 Stefano Verzegnassi
+
+        * Fixed wrong copyright editing in revision 124 (6004907)
+        * Renamed com.ubuntu.popplerqmlplugin module in DocumentViewer.PDF
+          (d2ba9b9)
+        * Refactored DocviewerFile class and fixed an issue when setting its
+          'file' property (630dd41)
+        * Moved the DocviewerFile class in the DocumentViewer module
+          (be44f3e)
+
+2015-04-15 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (b771e18)
+
+2015-04-14 Stefano Verzegnassi
+
+        * Fixed autopilot test (ab913e7)
+        * Fixing misc typos (6e09724)
+        * Hide Unity 8 indicators bar when screen orientation is landscape
+          and screen width < units.gu(51) (7431a04)
+
+2015-04-14 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (7e93ed2)
+
+2015-04-13 Stefano Verzegnassi
+
+        * Enabled landscape support (4dd7e7e)
+        * - Fix #1437622: Show a dialog when an unsupported file is imported
+          through Content-Hub - Fix #1437626: Show a toast
+          notification that allows user to open an imported
+          document.
+          Fixes: https://bugs.launchpad.net/bugs/1437622,
+          https://bugs.launchpad.net/bugs/1437626. (a227260)
+        * Merge with trunk - Updated .pot file (8b650fd)
+
+2015-04-13 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (fd5786f)
+
+2015-04-12 Stefano Verzegnassi
+
+        * Open a document in fullscreen mode on devices.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1428718. (dc192b1)
+        * - Fix #1432696: Show a downward chevron as 'back' action in ToC
+          page - Fix #1435304: Highlight the current page in the
+          table of contents - Fix: Make page header visible when the
+          ToC view is expanded.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1432696,
+          https://bugs.launchpad.net/bugs/1435304. (2281915)
+        * Merge with trunk - solved conflict with fr translation (728d96d)
+        * Fixed plural forms (c0c78aa)
+
+2015-04-11 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (a496ef0)
+
+2015-04-10 Stefano Verzegnassi
+
+        * Merge with trunk (bb005d0)
+        * Fixed wrong text color in PickImported dialog (b48274d)
+        * Removed 'Needs testing' tags from code (4a61a9b)
+        * Merge with
+          lp:~verzegnassi-stefano/ubuntu-docviewer-app/pdf-toc-improvements
+          and avoid conflicts with earlier changes in
+          PdfContentsPage (a94b402)
+        * Added fullscreen support (b7920fa)
+
+2015-04-10 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (2d7b371)
+
+2015-04-09 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (d8ac610)
+
+2015-04-08 Stefano Verzegnassi
+
+        * Use a downward chevron in ToC page (bae826a)
+        * Make pdfPage header visible if ToC page is expanded (c309c5d)
+        * Highlight the current page in PDF ToC view (9875afc)
+
+2015-04-08 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (b473531)
+
+2015-04-08 Stefano Verzegnassi
+
+        * Show a notification when a document is imported (dd35c6e)
+        * Added toast notifications (24ecdcb)
+
+2015-04-07 Stefano Verzegnassi
+
+        * Show an error dialog when an imported document is not supported
+          (2dd10b8)
+        * Return list of imported document from the import handler (b7b2d92)
+        * Show/Hide header on tap in PdfView.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1419468. (1b10cd6)
+        * Merge with trunk / Updated pot (742e267)
+        * Added night mode.
+          Fixes: https://bugs.launchpad.net/bugs/1432420.
+          (6a1e7f9)
+        * Merge with trunk / Update pot (dafb4bd)
+
+2015-04-03 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (4d3fdf1)
+
+2015-04-02 Stefano Verzegnassi
+
+        * Fix for string length > 79 chars in autopilot test (03dfa9d)
+        * Fix autopilot test (0680416)
+        * Tap to show/hide header in PdfView (37d9131)
+
+2015-04-01 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (4f8836c)
+
+2015-03-27 Stefano Verzegnassi
+
+        * Moved the DocviewerFile class in the DocumentViewer module
+          (dd218ea)
+
+2015-03-27 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (507ec0d)
+
+2015-03-26 Stefano Verzegnassi
+
+        * Workaround for multi-core support on ARM SoCs.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1432412. (e22292c)
+        * Err... it actually works on device - Removed wrong comment
+          (e90d8c4)
+        * Added night mode (0579d7a)
+
+2015-03-25 Stefano Verzegnassi
+
+        * Workaround for bug #1432412 (835a75e)
+
+2015-03-24 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (832fcf3)
+
+2015-03-23 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (3eea439)
+
+2015-03-20 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (cd9e2e1)
+
+2015-03-18 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (83fc444)
+
+2015-03-17 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (d23cbbc)
+
+2015-03-16 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (5808974)
+
+2015-03-14 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (a9aa0ac)
+
+2015-03-13 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (18df9c6)
+
+2015-03-12 Stefano Verzegnassi
+
+        * Added a TRANSLATORS comment for 'Contents' in PDF view.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1431488. (818a70b)
+        * Added a TRANSLATORS comment for 'Contents' in PDF view (3f2133b)
+
+2015-03-10 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (768ea69)
+
+2015-03-09 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (637ae72)
+
+2015-03-08 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (9ba8fd4)
+
+2015-03-07 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (058dbd4)
+
+2015-03-06 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (9d45b1a)
+
+2015-03-05 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (75f4bdd)
+
+2015-03-04 Stefano Verzegnassi
+
+        * [DocumentGridDelegate] Moved file size label on a 3rd line.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1428248. (0302c2e)
+        * Merge with trunk (90ef44a)
+        * [DocumentGridDelegate] Fixed alignment of text (f33df64)
+        * [DocumentGridDelegate] Move file size on a 3rd line (b562375)
+        * Several translation fixes.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1428092,
+          https://bugs.launchpad.net/bugs/1428096. (a643d21)
+        * Fix #1428248 (f4d98d3)
+        * Use standard SI prefixes for file size (4dfc443)
+        * Fix translation issues (5139c9e)
+
+2015-03-04 Richard Somlói
+
+        * Make the "Go to page..." string translatable with i18n.tr() and
+          update the translation template. (0b4bd59)
+        * Make the "Go to page..." string translatable and update the
+          translation template (6335910)
+
+2015-03-04 Adolfo Jayme Barrientos
+
+        * Grammar: proper use of comparative in translatable string.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1427911. (3a8a677)
+
+2015-03-04 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (8b41cd6)
+
+2015-03-03 Adolfo Jayme Barrientos
+
+        * Grammar: proper use of comparative in translatable string (3108376)
+
+2015-03-03 Stefano Verzegnassi
+
+        * List of changes:  - Refactored project structure (too much QML
+          files in the same folder)  - Added full content-hub
+          support  - Uri handler support  - In-app browser  -
+          Document Viewer has now rw permissions in HOME/Documents
+          - Dropped support for Image and Other file type  - Use new
+          splash screen features.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1377638,
+          https://bugs.launchpad.net/bugs/1395111,
+          https://bugs.launchpad.net/bugs/1398765,
+          https://bugs.launchpad.net/bugs/1399729,
+          https://bugs.launchpad.net/bugs/1417113. (6ac23a4)
+        * Revert 'setOrganizationName' change (f044d95)
+        * Fixes for the minor issues found in the last review (f624a7c)
+        * Remove 'debug' policy from apparmor profile (56724c2)
+
+2015-03-02 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (157693c)
+
+2015-03-01 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (a45bc20)
+
+2015-02-27 Stefano Verzegnassi
+
+        * Fixed revision 89 (0db7778)
+        * Terribly bad-designed workaround for looking QML files path up in
+          QStandardPaths::DataLocations (3b91afa)
+
+2015-02-26 Stefano Verzegnassi
+
+        * Updated pot again (in order to avoid any possible conflict)
+          (0ec86ab)
+        * Merge with trunk (6fdb235)
+        * Fixed DocumentEmptyState not shown on screen (53c8b66)
+        * Updated pot (153e12b)
+        * Fixed zoom performance.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1418651. (3db8060)
+
+2015-02-24 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (3f87a83)
+
+2015-02-23 Stefano Verzegnassi
+
+        * Removed unused 'Contains' module from AP test (de6698d)
+        * Updated debian package - bump version to 0.3.0 (a487ac7)
+
+2015-02-20 Stefano Verzegnassi
+
+        * Implemented new splash screen features (538b10e)
+        *
+          Fixes:  - DocumentModel rowCount after addition/deletion of a
+          document in/from the folder  - PdfView releasing page
+          resources when zooming in/out (b09856a)
+
+2015-02-16 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (4424982)
+
+2015-02-15 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (3992cf8)
+
+2015-02-13 Stefano Verzegnassi
+
+        * Basically:  - Refactored project structure (too much QML files in
+          the same folder)  - Added full content-hub support  - Uri
+          handler support  - In-app browser  - Document Viewer has
+          now rw permissions in /home/stefano/Documents (bcd8496)
+
+2015-02-12 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (5e10a6a)
+
+2015-02-11 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (a629e54)
+
+2015-02-11 Stefano Verzegnassi
+
+        * Removed image_test resources (b014e55)
+        * Drop support for image formats (75e0df7)
+
+2015-02-10 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (7756068)
+
+2015-02-09 Stefano Verzegnassi
+
+        * Fix zoom performance (d3c5d58)
+
+2015-02-09 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (930c012)
+
+2015-02-08 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (178289c)
+
+2015-02-07 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (8e72b0f)
+
+2015-02-05 Stefano Verzegnassi
+
+        * Added scrollbars in PdfView & fixed a typo in ToC model.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1418649. (41e0353)
+        * Added scrollbar in PdfView & fixed a typo in ToC model (1eeed4f)
+        * PdfView: Added Table of Content.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1398767. (a3904b3)
+        * Forgot to remove a signal from PdfContentsPage (2cd47d8)
+        * PdfView bottom edge enabled only when ToC is not empty (4ac9251)
+        * Fixed some issue when ToC does not exist (96ba2a2)
+
+2015-02-05 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (aae6f8b)
+
+2015-02-04 Stefano Verzegnassi
+
+        * Updated app version (bc37f77)
+        * [PDF] Added ToC model (76baaa0)
+        * New header style. (0ecc904)
+        * Enable zoom in PDF view & multithreading support.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1399978. (44cd354)
+        * Fixed last bits of autopilot test (4b9579f)
+        * Fixed last bits of autopilot test (995a9e1)
+        * Merged prerequisite branch changes (8ed670a)
+        * Fixed broken autopilot tests (770fca8)
+        * Fixed broken debian package building (ef3fa74)
+        * Merge with prerequisite branch (341cac7)
+        * Any comma is important, thank you Jenkins for such lesson (43f21f7)
+        * Merge with trunk - solved conflict in debian/control (00987f6)
+
+2015-02-04 Daniel Holbach
+
+        * Essentially just:  - fix a typo  - bump Standards-Version  - and
+          fix FTBFS (in pbuilder) by removing qmake from build-deps
+            it's what filemanager does too which has a similar
+          setup. (c9a750a)
+        * bring build-deps in line with filemanager, fixes FTBFS (967680f)
+        * informations → information (822adcb)
+        * update standards-version (d6cdbd6)
+        * remove qt5-default build-dep, it's a meta-package and its depends
+          are already build-depends (00adda3)
+
+2015-02-04 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (15fd5e2)
+
+2015-02-03 Stefano Verzegnassi
+
+        * Merge with prerequisite branch - Updated pot - Fixed things asked
+          in MP comments (54dee3f)
+        * Merge with trunk - Updated pot (7545ff6)
+        * Renamed classes in QML Poppler plugin. (a9afa45)
+        * Pot. (3988f45)
+        * Merge with trunk (b23d1cf)
+        * Spring cleaning (013539e)
+        * Dark background in ImageView.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1416176. (4226340)
+
+2015-02-02 Stefano Verzegnassi
+
+        * Dark background in ImageView (08840b9)
+        * Reduce PdfView cachebuffer by half (37f8be1)
+
+2015-01-31 Stefano Verzegnassi
+
+        * Revert previous commit, try to fix deb package (91f7afd)
+        * Fix broken package (b9bc09b)
+        * PDF image provider index now starts at 0 (f837407)
+
+2015-01-31 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (4cbb7fc)
+
+2015-01-30 Stefano Verzegnassi
+
+        * Increment version number (0eea7fa)
+        * Fixed an error while importing new code in PdfView (36ce7e1)
+        * Fix an error in PdfViewDelegateHeader (49935a1)
+        * New header style with ActivityIndicator (05a39d2)
+        * Use PDF.VerticalView and enable zoom in PDF view (703a79d)
+        * Add VerticalView class in popplerqmlplugin (but not use it for now)
+          (e473848)
+        * Multithread PDF pages provider (79cca19)
+        * Expose QQuickView object to QML (76ec9b9)
+        * Updated pot -.-" (344c291)
+        * Renamed PagesWorkerThread class in PdfThread (popplerqmlplugin)
+          (c2428cf)
+        * Renamed PdfPage class in PdfItem (popplerqmlplugin) (eda0179)
+        * Renamed PageImageProvider class in PdfImageProvider and clean up
+          the code (popplerqmlplugin (e02b276)
+        * Clean ImageProvider code (popplerqmlplugin) (501bd8d)
+        * Code styling in PdfDocument class (popplerqmlplugin) (14e57d6)
+        * Renamed PdfModel to Document (4d0f57e)
+        * Reorder CMakeLists files. (784b2f7)
+        * Fix code style and use UITK features.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1416068. (b1f85ea)
+        * Text view header description. (d4a15d3)
+        * Fix some error in rev 50. (05e3bc1)
+        * Trigger Jenkins rebuild (a56b46d)
+
+2015-01-30 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (6ad3c2a)
+
+2015-01-29 Stefano Verzegnassi
+
+        * Boring bit that Stefano had to do. (01c2cb3)
+        * Updated Debian package. (4a0759c)
+        * [deb-pkg] Added locale (d5bd679)
+        * Hi all! (ea9e7cd)
+        * [deb-pkg] Remove unnecessary dependencies (4825dab)
+        * Fix #1416068 (7bec220)
+        * JS code styling (8ed9166)
+        * Refactoring dialogs (8bc2252)
+        * Just some reordering of CMakeLists files (a8b242c)
+        * Added license headers where missing (459ed5d)
+
+2015-01-29 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (63d75df)
+
+2015-01-27 Stefano Verzegnassi
+
+        * Mime type description in TextView header (cf893e1)
+
+2015-01-27 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (936adf0)
+
+2015-01-26 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (b168d55)
+
+2015-01-25 Launchpad Translations on behalf of ubuntu-docviewer-dev
+
+        * Launchpad automatic translations update. (e49e1c7)
+
+2015-01-24 Bartosz Kosiorek
+
+        * Introduce translation support for DocViewer.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1413673. (9170025)
+        * Introduce translation support for DocViewer (c06b889)
+
+2015-01-23 Stefano Verzegnassi
+
+        * Fix error from last merge: Use TextViewDefaultHeader in TextView
+          (b1acf2b)
+        * Fix error from last merge: Remove Scrollbar (already included in
+          TextArea) (45ee7f5)
+
+2015-01-21 Stefano Verzegnassi
+
+        * Added Empty State in Welcome screen.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1395065. (0074e33)
+        * Ellipsize document name and use new header style in all the views.
+
+          Fixes: https://bugs.launchpad.net/bugs/1390683. (20541f0)
+        * Update framework to 'ubuntu-sdk-14.10'.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1401718. (6dbfb30)
+        * Update framework to 'ubuntu-sdk-14.10 (04b8948)
+
+2015-01-16 Stefano Verzegnassi
+
+        * Merge with trunk (26512e8)
+        * Update framework to 'ubuntu-sdk-14.10-qml' (c1b5659)
+        * Added EmptyState in Welcome screen (9143a01)
+
+2015-01-13 carla-sella
+
+        * Autopilot test for ubuntu-docviewer-app.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1400877. (aae54f2)
+
+2014-12-16 carla-sella
+
+        * Autopilot test for ubuntu-docviewer-app for opening pdf file.
+
+          Fixes: https://bugs.launchpad.net/bugs/1400852. (385060d)
+
+2014-12-14 carla-sella
+
+        * Added new test: test_go_to_page_pdf_file. (a9ddc4c)
+        * Refactored  open_pdf_file test. (176e1db)
+
+2014-12-11 nskaggs
+
+        * Update AP structure.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1387029. (88e8a3d)
+
+2014-12-10 nskaggs
+
+        * add sampledir (9628160)
+        * flake8 (5c68ac0)
+        * simplify docviewer tests (94151d7)
+        * fix launch and docviewer (9ef66bd)
+        * flake8 fixes (c1ce972)
+        * change path check for tests (5598187)
+        * remove debug (3781f0a)
+        * merge down (2c6bec3)
+        * fix launching (98c95e4)
+        * update home patching (695ea63)
+        * remerge revamp of AP tests (04b8c4d)
+
+2014-12-08 Stefano Verzegnassi
+
+        * Removed deprecated code from TextView.qml and TextView bg color set
+          to white.
+          Fixes: https://bugs.launchpad.net/bugs/1399266.
+          (0cfbdba)
+        * Fixed document size format.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1394723. (f92ad93)
+        * 'Loading...' is now translatable + fixed a typo (fec8416)
+
+2014-12-05 Stefano Verzegnassi
+
+        * Remove deprecated code from TextView - fix #1399266 (405a7ab)
+        * Use the same code for textPage.head.contents (146997c)
+        * Use *ViewDefaultHeader also in the image view and the text view
+          (138df9c)
+
+2014-12-04 Stefano Verzegnassi
+
+        * Ellipsize the document name if too long (fd8c509)
+        * Fix document size format - lp:1394723 (9ccd631)
+
+2014-11-29 Stefano Verzegnassi
+
+        * Use ZoomableImage from Unity 8 to show images. (56ec8f8)
+
+2014-11-28 Stefano Verzegnassi
+
+        * Added a GoToPage dialog in pdfView.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1390684. (f1dbb0e)
+
+2014-11-10 nskaggs
+
+        * fix manifest for builds. (dd04e07)
+        * tweak manifest (601aaab)
+
+2014-11-08 Stefano Verzegnassi
+
+        * Restore header actions in imageView (311e016)
+
+2014-11-08 David Planella
+
+        * Minor doctype visualization improvements on the welcome screen.
+
+          Fixes: https://bugs.launchpad.net/bugs/1390685,
+          https://bugs.launchpad.net/bugs/1390686. (675c253)
+
+2014-11-08 Stefano Verzegnassi
+
+        * Fixed autopilot tests failures (952bf57)
+        * Use ZoomableImage from Unity8 to show pictures (1a856a8)
+
+2014-11-08 David Planella
+
+        * Renamed 'Unknown' to be more user-friendly, reordered doc types
+          (ff56f22)
+
+2014-11-07 Stefano Verzegnassi
+
+        * Added ContentHub support.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1387025,
+          https://bugs.launchpad.net/bugs/1387026. (b072cee)
+        * Fixed a problem with AppArmor while trying to get mime type for a
+          file with QProcess and /usr/bin/file. (lp:1387651);  Added
+          creation date property in file-qml-plugin (lp:1387023.
+          Workaround for an issue in poppler-qml-plugin (PDF pages
+          were loaded twice);  Now 'architecture' field value in
+          manifest.json.in is set by CMake while building the
+          project.
+          Fixes: https://bugs.launchpad.net/bugs/1387023,
+          https://bugs.launchpad.net/bugs/1387651. (4b7d9c9)
+        * Added GoToPage dialog (b3acba5)
+        * tidy pdfView code up (8adec44)
+
+2014-11-04 Stefano Verzegnassi
+
+        * Fixed issue with ContentPeerPicker (binding loop for visible
+          property while importing a file from an external source)
+          (47ceb48)
+
+2014-11-03 Arto Jalkanen
+
+        * Compilation instructions. (ce4a616)
+
+2014-11-03 Stefano Verzegnassi
+
+        * It's called head.backAction... (4da72b1)
+        * Added header backAction in imageView and textView (33d7616)
+
+2014-11-03 Arto Jalkanen
+
+        * Fixed launch information. (fe26e36)
+
+2014-11-01 Arto Jalkanen
+
+        * Compilation instructions. (0c2514e)
+
+2014-11-01 Stefano Verzegnassi
+
+        * Fixed autopilot error: 'Too many blank lines' (56db49d)
+
+2014-10-31 Stefano Verzegnassi
+
+        * Updating autopilot tests (8cc298a)
+        * Set the 'architecture' value in manifest.json while building
+          project with CMake (af0d7db)
+        * Fixed manifest.json.in (sometimes QtCreator automatically changes
+          maintainer field value) (7eb8a2b)
+        * Added support for ContentHub (bc4d6f9)
+        * Removed unused import and fixed manifest.json.in (1359f12)
+        * Workaround for an issue with poppler-qml-plugin (and PDF pages
+          layout changed) (aca6888)
+        * Fix bugs #1387651 and #1387023 (5789e90)
+
+2014-10-29 David Planella
+
+        * New UI design for plain text viewer. (29762a9)
+        * Use the new Poppler QML plugin (with asynchronous page loading) in
+          Pdf view.
+          Fixes: https://bugs.launchpad.net/bugs/1387021.
+          (f87aa6e)
+        * Adds the file plugin to the source tree. (9e2313d)
+
+2014-10-28 David Planella
+
+        * Removed leftover file (7c2e5f7)
+        * Fixed some i18n strings (96d43a7)
+        * Merged New UI for plain text viewer (a7e7ec3)
+        * Added additional build dependency (55c261a)
+        * Changed plugin path to com.ubuntu... (c92edd9)
+        * Merged branch to add Poppler plugin (16c3d5c)
+        * Updated ignore file (2a48edd)
+        * Removed logging (c1341bc)
+        * Fixed check for binary file on tests (4c9f302)
+        * Removed unneeded import to make pyflakes happy (42ea2ab)
+        * Removed unnecessary check for arch dir (d04f8a0)
+        * Added fixes to correctly load the plugin, thanks to Arto Jalkanen
+          (3172b2e)
+
+2014-10-25 Arto Jalkanen
+
+        * Fixing plugin usage so that application can be started. (41b6bfa)
+
+2014-10-23 David Planella
+
+        * Really really fix tests (12debbe)
+
+2014-10-23 Daniel Holbach
+
+        * fix location of binary for tests (05e93ec)
+
+2014-10-21 David Planella
+
+        * Properly fixed import (691b66c)
+        * Fixed missing import (be8d947)
+
+2014-10-21 Daniel Holbach
+
+        * add missing import (deb8aef)
+
+2014-10-21 David Planella
+
+        * Added local pep8 check (4a01d9c)
+
+2014-10-21 Daniel Holbach
+
+        * make sure pep8 is run during build (215f3d8)
+        * fix pep8 issues (a3c8d4c)
+
+2014-10-21 David Planella
+
+        * Fixed pep8 issues (fa4fa7f)
+
+2014-10-21 Stefano Verzegnassi
+
+        * Fixed dependencies and naming issues, thanks to Daniel Holbach
+          (7c3c6fd)
+
+2014-10-21 David Planella
+
+        * Fixed autopilot tests by adapting name of the binary to latest
+          changes (a361420)
+
+2014-10-21 Stefano Verzegnassi
+
+        * Fixed autopilot tests broken after commit 46 (01dd990)
+        * New design for TextView (988aa93)
+
+2014-10-21 David Planella
+
+        * Fixed dependencies and naming issues, thanks to Daniel Holbach
+          (9ca0993)
+
+2014-10-21 Daniel Holbach
+
+        * add missing depends, run wrap-and-sort (a2b52c8)
+
+2014-10-21 Stefano Verzegnassi
+
+        * Fixed typo in autopilot tests (4f17f8b)
+        * Disabled header actions which are not still implemented (d9af667)
+        * Fixed typos and added Poppler QML Plugin into trunk (ce1e470)
+
+2014-10-21 Daniel Holbach
+
+        * add  to Depends (b10f1f9)
+        * install bits into the right place, rename docviewer and
+          docviewer-app to ubuntu-docviewer-app (f20dc92)
+        * replace qt5-default with qtbase5-dev build-dep (49c05f2)
+        * add qtdeclarative5-dev as build-dep (55de442)
+        * ran wrap-and-sort (53475da)
+
+2014-10-20 Stefano Verzegnassi
+
+        * Including Qml Poppler plugin (500dd6c)
+
+2014-10-20 David Planella
+
+        * Merged Autopilot fixes from Stefano Verzegnassi (441d895)
+
+2014-10-20 Stefano Verzegnassi
+
+        * Use PageStack to load the right view (and latest App Header)
+          (cb00508)
+        * Fix autopilot tests (12732ff)
+        * Fix file-qml-plugin and resolve relative path using currentDir
+          (e758b43)
+
+2014-10-08 David Planella
+
+        * Merged from trunk, fixed a typo (3315bcf)
+        * Finished integration of the file plugin into the source tree
+          (a64c6ba)
+        * Project can now be opened in Qt Creator, only qt5_use_modules macro
+          needs to be sorted (411dbd8)
+        * Fixed all cmake files, reorg of QML files (1559d2c)
+        * Re-added app sources (0a74fb8)
+        * Reorganized files to prepare inclusion of the file QML plugin into
+          the source tree (991f716)
+
+2014-10-06 Akiva Abraham
+
+        * Update component imports. (b685322)
+        * Merged from Trunk (7263f69)
+
+2014-09-28 Fabio Colella
+
+        * Adding some install directives (a916dd2)
+
+2014-09-26 Akiva Avraham
+
+        * Updated library imports to qtquick-2.3. (ddfa115)
+
+2014-09-26 Fabio Colella
+
+        * Initial work to make file-qml-plugin work (8a69039)
+
+2014-09-24 Akiva Avraham
+
+        * Changed the details list items with long text contents to
+          Subtitled, this way they can see the full string.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1364248. (b1351a4)
+
+2014-09-24 David Planella
+
+        * Some cmake fixes for the app to build from Qt Creator or plain
+          cmake. (f3c5a04)
+        * Added revno for Qt Creator builds. For some reason, the cmake
+          execute_process command does not work to execute 'bzr
+          revno' (6d354f5)
+        * More cmake fixes (1e85187)
+        * Some cmake improvements (5a659ae)
+
+2014-09-21 Akiva Avraham
+
+        * Changed the details list items with long text contents to
+          Subtitled, this way they can see the full string (b95a2ef)
+
+2014-09-20 Akiva Avraham
+
+        * Updated library imports to qtquick-2.3 (44c3846)
+
+2014-09-18 Fabio Colella
+
+        * Removed qmlproject and added proper CMakeLists to enable the
+          development with cmake. Also removed the desktop file
+          which is now created by cmake from a desktop.in.in file.
+
+          Fixes: https://bugs.launchpad.net/bugs/1366007,
+          https://bugs.launchpad.net/bugs/1368310. (574439b)
+        * Reverted to 53 (fec54be)
+        * Make the tests follow the python* environment (33dc5c6)
+        * migrating tests to python3 (56d2328)
+        * Upgraded to python 3 (40d703f)
+
+2014-09-17 Fabio Colella
+
+        * Removing latest changes before the Holbach fix (c06be29)
+        * Reverted to r47 (e2ecd2b)
+        * Merged Daniel Holbach fixes for packaging (84abd1e)
+        * testing (3eb9f50)
+
+2014-09-17 Daniel Holbach
+
+        * fix paths for installation (e089dcc)
+        * fix not-binnmuable-all-depends-any problem for
+          ubuntu-docviewer-app-autopilot (d32cb93)
+        * remove duplicate Section definition (c444330)
+        * ran wrap-and-sort (7657168)
+        * add  for ubuntu-docviewer-app-autopilot (9b52935)
+
+2014-09-16 nskaggs
+
+        * revamp ubuntu doc viewer tests (6d20984)
+
+2014-09-16 Fabio Colella
+
+        * This way works better, revert 45 (312f4be)
+        * changed cmake for test (43d585c)
+        * Needed change to properly install tests (e157466)
+        * python2 is only python (e10530a)
+        * Reverting unneded changes (c00b9a8)
+        * Reverting to python2 (0335129)
+
+2014-09-15 Fabio Colella
+
+        * Enabled python3 support for autopilot (d930fff)
+
+2014-09-14 Fabio Colella
+
+        * Edited test folder name in root CMakeLists (191590a)
+        * Edited test/autopilot/CmakeLists.txt to install tests (54b938d)
+        * Added necessary file docviewer-app.in (864edaa)
+        * Updated policy to 1.2 (26ea4a5)
+        * Merged to trunk, updated CMakeLists to use the new icon and added
+          needed dependancies to debian/control (2f81af3)
+        * Added the new icon with origami design. (7685218)
+
+2014-09-13 Fabio Colella
+
+        * Merge of trunk (8bee9bf)
+        * Changed desktop file to avoid absolute path for the icon (1b4dc2b)
+
+2014-09-12 Fabio Colella
+
+        * Corrected minor difference on the lines of the icon (059288d)
+        * Updated manifest.json and docviewer.apparmor (519aabc)
+        * Changed debian/rules to dh_auto_configure -- -DCLICK_MODE=OFF
+          (89972af)
+        * Corrected CMakeLists.txt to not use url-disptcher (ef44fe0)
+        * New icon added (4951537)
+        * Removed qmlproject and desktop files. The first is no longer needed
+          and the second is generated by cmake (e39e271)
+
+2014-09-11 Akiva Avraham
+
+        * Merged with trunk (4315d7f)
+
+2014-09-11 Andrew Hayzen
+
+        * Fix for pep8 issues;  Show py files in qtcreator. (673e056)
+        * Rerun jenkins (47a3f6a)
+
+2014-09-11 Fabio Colella
+
+        * Committed the CMakeLists (244e649)
+        * Added CMakeLists.txt (131f6da)
+        * Porting to cmake (9ece6a8)
+        * Porting to cmake (222d919)
+
+2014-09-11 Andrew Hayzen
+
+        * rerun jenkins (f6b0cd2)
+        * Fix for pep8 issues;  Show py files in qtcreator (e4924be)
+
+2014-09-02 Akiva Avraham
+
+        * upgraded imports to: ubuntu.components 1.1 ubuntu.compontens.xxxx
+          1.0 (f6f2e5e)
+
+2014-05-21 Alan Pope
+
+        * pep8 and pyflakes updates - fix bug 1317198.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1317198. (34f21a8)
+
+2014-05-20 Alan Pope
+
+        * pep8 and pyflakes cleanup (3d0615d)
+
+2014-05-08 Bartosz Kosiorek
+
+        * Added keyboard support, improve opening text files (now all text
+          files are opening in TextView), add Creation Time row to
+          Details tab, improve horizontal scalability of the Details
+          Tab, fix "unknow" typo and localize all remaining texts.
+
+          Fixes: https://bugs.launchpad.net/bugs/1292115. (c646560)
+        * Fix Autopilot Unknown file type test (edd8df9)
+        * Update autopilot test (6a543c5)
+
+2014-03-13 Bartosz Kosiorek
+
+        * Improve Ubuntu-docviewer-app for desktop (9cb55e4)
+
+2013-10-14 Granger Anthony
+
+        * First version of zoom feature. (181e14b)
+        * First version of zoom feature (6857f06)
+
+2013-10-07 Carla Sella
+
+        * Integrated emulator. (0c1ec86)
+
+2013-10-05 Francis Ginther
+
+        * Moved ubuntu-ui-toolkit-autopilot from a build dependency to a
+          dependency for the test package. (a305110)
+
+2013-09-30 Carla Sella
+
+        * Added another missing comma. (deeff40)
+        * fixe missing comma. (6bc5eaf)
+        * Added ubuntu-ui-toolkit-autopilot dependency in debian/control.
+          (243337b)
+
+2013-09-28 Carla Sella
+
+        * Added test open PDF file  mimetype. (8ed10f1)
+        * Added open PDF file type test. (6b4fb44)
+        * Added open PDF file type test. (48571ee)
+
+2013-09-27 Carla Sella
+
+        * Integrated emulator. (961c76d)
+        * WIP (5549a44)
+        * WIP Integrating emulator. (e150a3d)
+
+2013-09-26 Granger Anthony
+
+        * Put the path of the file to open before the path of
+          ubuntu-docviewer-app in the .desktop file. (5f4c41a)
+        * Change order of arguments in .desktop (30b0ff8)
+
+2013-09-26 Sergio Schvezov
+
+        * Dropping the wrapper script. (a5d2791)
+        * Removing the install rule (e3b9181)
+
+2013-09-25 Sergio Schvezov
+
+        * Getting rid of wrapper script (bd50c73)
+
+2013-09-25 Granger Anthony
+
+        * Add the usage of the new file-qml-plugin. (8dd49ef)
+        * Add file-qml-plugin in dependances (147ea31)
+
+2013-09-24 Granger Anthony
+
+        * Fix ubuntu-docviwer-app sh script (f2d7473)
+        * Fix autopilot tests (f21a1c9)
+        * Remove the launcher and all files link to it, update the README,
+          add the ubuntu-docviewer-app script, add PDF into the
+          .desktop (4404379)
+
+2013-09-05 Granger Anthony
+
+        * Add the usage of the new file-qml-plugin (48bc257)
+
+2013-08-09 Granger Anthony
+
+        * Fix to display the last page of a PDF. (ab3bb75)
+        * Fix the bug that the last page of the pdf can't be seen (f643929)
+
+2013-08-08 Granger Anthony
+
+        * Add the support of pdf. (847589e)
+        * Added qtdeclarative5-poppler-qml-plugin in deps (1531a5b)
+
+2013-08-07 Granger Anthony
+
+        * Make Yes/No buttons of the unknow mimetype dialog working.
+          (fd12fe1)
+
+2013-08-05 Omer Akram
+
+        * fixes the failing autopilot tests on touch devices. (4016979)
+
+2013-08-04 Granger Anthony
+
+        * Yes/No buttons of the unknow mimetype dialog now work (b42438b)
+
+2013-08-04 Omer Akram
+
+        * revert dummy changelog entry (9f75d20)
+        * fix failing tests on touch devices (72ef659)
+
+2013-08-01 xeranas
+
+        * Autopilot test for opening unknown file type. Currently
+          "unknown.type" is just archived & renamed plaintext.txt
+          file.
+          Fixes: https://bugs.launchpad.net/bugs/1188766.
+          (4f94bfc)
+
+2013-08-01 mhall119
+
+        * Updated attribution in debian/copyright. (7e1550b)
+
+2013-07-30 xeranas
+
+        * #1188766 autopilot test for unknown types (91c2d0c)
+
+2013-07-24 mhall119
+
+        * Add individual contributors to debian/copyright (81108da)
+
+2013-07-19 Granger Anthony
+
+        * Starting working on the pdf viewer (42011f3)
+
+2013-07-03 Granger Anthony
+
+        * A simple testcase to check if docviewer can open a plain text file.
+
+          Fixes: https://bugs.launchpad.net/bugs/1188757,
+          https://bugs.launchpad.net/bugs/1188758,
+          https://bugs.launchpad.net/bugs/1188759,
+          https://bugs.launchpad.net/bugs/1188760. (6f1b306)
+        * Base for all future autopilot testcases. (ff36f55)
+
+2013-06-30 Granger Anthony
+
+        * Add testcases for opening an image and read image meta-data
+          (b84a8ea)
+
+2013-06-29 Granger Anthony
+
+        * Added a testcase to read mimetype of a text file (35ee5b1)
+        * openFile testcase added (3729665)
+
+2013-06-28 Granger Anthony
+
+        * Fix for -testability (d9a1e1e)
+
+2013-06-27 Granger Anthony
+
+        * Fix to launch the application with autopilot (6dc3448)
+
+2013-06-13 nskaggs
+
+        * first pass at autopilot tests (d3fa849)
+
+2013-06-04 Omer Akram
+
+        * initial autopilot skeleton for the document app. (9fa044d)
+
+2013-06-01 Granger Anthony
+
+        * Fix for bug #1176592.
+          Fixes:
+          https://bugs.launchpad.net/bugs/1176592. (d70eb4a)
+
+2013-05-31 Granger Anthony
+
+        * Fix for bug #1176592 (c2f3b28)
+
+2013-05-31 mhall119
+
+        * Update to allow opening by XDG. (b37076e)
+
+2013-05-31 Omer Akram
+
+        * fix (d28ede3)
+        * add initial autopilot skeleton and packaging (c69a91b)
+
+2013-05-30 mhall119
+
+        * Update to allow opening by XDG (a7ef8c4)
+
+2013-04-28 Granger Anthony
+
+        * Fix for the 'utils.js unavailable' error. (72c9cd7)
+        * Fix 'utils.js unavailable' error (d20ea91)
+
+2013-04-25 Granger Anthony
+
+        * Added file type recognition, added dynamic component loading, added
+          image component . (e88e6eb)
+        * Changed architecture from all to any in debian/control (dadef87)
+        * Make images flickable (8d7aada)
+        * Added file type recognition, added dynamic component loading, added
+          image component (8964e91)
+
+2013-04-23 Granger Anthony
+
+        * This branch fix some bugs that made the launcher did not run.
+          (bb204e2)
+        * Fix bad path in .qmlproject (baca48c)
+
+2013-04-22 Granger Anthony
+
+        * Fix bad QML file path, fix QML filename, fix bad exec path in
+          .desktop, fix error when the QML file is not found
+          (601bb11)
+
+2013-04-22 Francis Ginther
+
+        * Version bump. (2978c9b)
+
+2013-04-22 Granger Anthony
+
+        * Initial support for opening text files, includes a C++ wrapper for
+          reading commandline arguments. (fd80243)
+
+2013-04-20 Granger Anthony
+
+        * Fix build depends (5e92fe4)
+        * Fix build depends (800c599)
+        *  (98a8314)
+
+2013-04-19 mhall119
+
+        * Fix build depends (dedfa49)
+
+2013-04-20 Granger Anthony
+
+        * Added qtchooser in debian/control (8e984cd)
+        * Fix for debuild errors (f68c6e4)
+
+2013-04-19 Granger Anthony
+
+        * Fix debuild errors (a156841)
+
+2013-04-19 Francis Ginther
+
+        * Version bump (aed735b)
+
+2013-04-19 Granger Anthony
+
+        * Merged from lp:~didrocks/ubuntu-docviewer-app/build-fix (d92e99e)
+
+2013-04-19 Didier Roche
+
+        * add a .pro file at the root of the directory so that debhelper
+          builds with it. Rename the .pro to .pri for the included
+          qmake file as it's the rule, and change paths (d9ca170)
+
+2013-04-19 Granger Anthony
+
+        * Fix conflicts (0fb03d6)
+
+2013-04-18 Olivier Tilloy
+
+        * Updates packaging for a better install. (bed371c)
+
+2013-04-18 Granger Anthony
+
+        * Updated .bzrignore (965860c)
+        * Cleaning some files and directories (0623ccf)
+        * New README (e6ff5c8)
+
+2013-04-17 Granger Anthony
+
+        * Added the plain text file viewer and details tab (cc993f3)
+
+2013-04-11 mhall119
+
+        * Merge from template branch (7a5700b)
+        * Add applicationName to MainView (97d2572)
+
+2013-04-11 David Planella
+
+        * Merged packaging improvements from
+          lp:~osomon/ubuntu-phone-commons/appTemplate-packaging-fixes
+          (205ebc4)
+
+2013-04-08 Olivier Tilloy
+
+        * Remove again the fallback dependency on qt-components-ubuntu. It is
+          really not needed any longer, as the ubuntu-sdk-team
+          release PPA contains the latest
+          qtdeclarative5-ubuntu-ui-toolkit-plugin for quantal.
+          (db98667)
+        * Set split mode for bzr builddeb plugin (see
+          http://jameswestby.net/bzr/builddeb/user_manual/split.html).
+          (2becdd8)
+
+2013-04-05 Olivier Tilloy
+
+        * Revert the last change, after all the fallback dependency is still
+          needed for Quantal desktops. (ad23fd6)
+        * Remove the fallback dependency on the old UI toolkit package name,
+          it is not needed any longer. (0478543)
+        * Move back special dependencies to the beginning of the list, this
+          seems to be a widely used convention. (c101f0e)
+
+2013-04-04 Olivier Tilloy
+
+        * Add bzr ignore rules. (b03e3e6)
+        * Largely simplified install rules. (03d53b3)
+        * Removed unused substitution variable. (52af2b7)
+        * Removed useless section specifier for the binary package. (388cf3f)
+        * Add a Vcs-Bzr field to the control file. (d242d6c)
+        * Re-order runtime dependencies. (6fe2447)
+        * Updated source format to 1.0. (31783ac)
+        * Removed unused file. (76ffbf2)
+        * Minor updates to the copyright info. (50c3097)
+        * Enhanced package description. (f46b871)
+        * Updated dependency on the Ubuntu UI toolkit package. (422568c)
+        * Make the package architecture-independent. (2a47428)
+        * Bump standards version to 3.9.4. (65c2b33)
+        * Bump debhelper dependency to 9. (c1279c5)
+        * Updated maintainer field of the control file. (8024452)
+
+2013-02-12 Michael Hall
+
+        * Modifications for Document Viewer app (a7dbdef)
+        * Initial code template (19ebe52)

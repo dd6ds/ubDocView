@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(lomiri-docviewer-app VERSION 2.4 LANGUAGES CXX)
+project(lomiri-docviewer-app VERSION 3.0.0 LANGUAGES CXX)
 
 set(MANIFEST_PATH "click/manifest.json.in" CACHE INTERNAL "Relative path to the manifest file")
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules")
