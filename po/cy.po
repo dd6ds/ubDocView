@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2015-11-19 18:20+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Welsh <cy@li.org>\n"
@@ -24,9 +24,15 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
-msgstr ""
+#: lomiri-docviewer-app.desktop.in:8
+#, fuzzy
+#| msgid "Document Viewer"
+msgid "Document Viewer"
+msgstr "Syllwr Dogfen"
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
+msgstr "dogfennau;syllwr;pdf;darllenydd;"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -251,12 +257,16 @@ msgid "Documents"
 msgstr "Dogfennau"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-msgid "Search..."
+#, fuzzy
+#| msgid "Search..."
+msgid "Search…"
 msgstr "Chwilio..."
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
-msgstr "Gosodiadau didoli..."
+#, fuzzy
+#| msgid "Sorting settings"
+msgid "Sorting settings…"
+msgstr "Gosodiadau didoli"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -298,7 +308,9 @@ msgid "Earlier this month"
 msgstr "Yn gynharach y mis hwn"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+#, fuzzy
+#| msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr "Hyd yn oed yn gynt..."
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -431,6 +443,10 @@ msgstr ""
 msgid "Automatic"
 msgstr ""
 
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr ""
+
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 #, fuzzy
 #| msgid "Document Viewer"
@@ -540,6 +556,9 @@ msgstr "Mynd i dudalen"
 msgid "copy %1"
 msgstr "copi %1"
 
+#~ msgid "Sorting settings..."
+#~ msgstr "Gosodiadau didoli..."
+
 #~ msgid "Switch to single column list"
 #~ msgstr "Newid i restr un golofn"
 
@@ -548,9 +567,6 @@ msgstr "copi %1"
 
 #~ msgid "Back"
 #~ msgstr "Nôl"
-
-#~ msgid "documents;viewer;pdf;reader;"
-#~ msgstr "dogfennau;syllwr;pdf;darllenydd;"
 
 #~ msgid "File does not exist"
 #~ msgstr "Nid yw'r ffeil yn bodoli"

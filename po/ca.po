@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2019-08-05 22:49+0000\n"
 "Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
 "Language-Team: Catalan <https://translate.ubports.com/projects/ubports/"
@@ -24,9 +24,15 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
-msgstr "El fitxer no existeix."
+#: lomiri-docviewer-app.desktop.in:8
+#, fuzzy
+#| msgid "Document Viewer"
+msgid "Document Viewer"
+msgstr "Visualitzador de documents"
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
+msgstr "documents;visualitzador;pdf;lector;"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -259,12 +265,16 @@ msgid "Documents"
 msgstr "Documents"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-msgid "Search..."
-msgstr "Cerca..."
+#, fuzzy
+#| msgid "Search"
+msgid "Search…"
+msgstr "Cerca"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
-msgstr "Paràmetres d'ordenació..."
+#, fuzzy
+#| msgid "Sorting settings"
+msgid "Sorting settings…"
+msgstr "Paràmetres d'ordenació"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -306,7 +316,9 @@ msgid "Earlier this month"
 msgstr "Fa unes setmanes"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+#, fuzzy
+#| msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr "Fa molt de temps..."
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -443,6 +455,10 @@ msgstr "Ajusta l'alçada"
 msgid "Automatic"
 msgstr "Automàtic"
 
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr "El fitxer no existeix."
+
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 #, fuzzy
 #| msgid "Document Viewer"
@@ -554,6 +570,12 @@ msgstr "Vés a la pàgina"
 msgid "copy %1"
 msgstr "còpia %1"
 
+#~ msgid "Search..."
+#~ msgstr "Cerca..."
+
+#~ msgid "Sorting settings..."
+#~ msgstr "Paràmetres d'ordenació..."
+
 #~ msgid "Switch to single column list"
 #~ msgstr "Canvia a llista de columna única"
 
@@ -565,9 +587,6 @@ msgstr "còpia %1"
 
 #~ msgid "Go to position..."
 #~ msgstr "Vés a la posició..."
-
-#~ msgid "documents;viewer;pdf;reader;"
-#~ msgstr "documents;visualitzador;pdf;lector;"
 
 #~ msgid "File does not exist"
 #~ msgstr "El fitxer no existeix"

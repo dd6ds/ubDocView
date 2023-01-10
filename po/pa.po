@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2015-11-19 18:20+0000\n"
 "Last-Translator: Gursharnjit_Singh <ubuntuser13@gmail.com>\n"
 "Language-Team: Punjabi <pa@li.org>\n"
@@ -23,9 +23,15 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
-msgstr ""
+#: lomiri-docviewer-app.desktop.in:8
+#, fuzzy
+#| msgid "Document Viewer"
+msgid "Document Viewer"
+msgstr "ਦਸਤਾਵੇਜ ਦਰਸ਼ਕ"
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
+msgstr "ਦਸਤਾਵੇਜ;ਦਰਸਕ;pdf;ਰੀਡਰ;"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -242,12 +248,16 @@ msgid "Documents"
 msgstr "ਦਸਤਾਵੇਜ਼"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-msgid "Search..."
+#, fuzzy
+#| msgid "Search..."
+msgid "Search…"
 msgstr "ਖੋਜ..."
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
-msgstr "ਕਿਸਮ ਵੰਡ ਸੈਟਿੰਗ..."
+#, fuzzy
+#| msgid "Sorting settings"
+msgid "Sorting settings…"
+msgstr "ਕਿਸਮ ਵੰਡ ਸੈਟਿੰਗਾਂ"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -287,7 +297,9 @@ msgid "Earlier this month"
 msgstr "ਇਸ ਮਹੀਨੇ ਪਹਿਲੋਂ"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+#, fuzzy
+#| msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr "ਇਸ ਤੋਂ ਪਹਿਲਾਂ..."
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -420,6 +432,10 @@ msgstr ""
 msgid "Automatic"
 msgstr ""
 
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr ""
+
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 #, fuzzy
 #| msgid "Document Viewer"
@@ -529,6 +545,9 @@ msgstr "ਸਫ਼ੇ ਤੇ ਜਾਓ"
 msgid "copy %1"
 msgstr "ਕਾਪੀ %1"
 
+#~ msgid "Sorting settings..."
+#~ msgstr "ਕਿਸਮ ਵੰਡ ਸੈਟਿੰਗ..."
+
 #~ msgid "Switch to single column list"
 #~ msgstr "ਇੱਕਲੀ ਕਾਲਮ ਸੂਚੀ ਤੇ ਸਵਿੱਚ ਕਰੋ"
 
@@ -537,9 +556,6 @@ msgstr "ਕਾਪੀ %1"
 
 #~ msgid "Back"
 #~ msgstr "ਪਿੱਛੇ"
-
-#~ msgid "documents;viewer;pdf;reader;"
-#~ msgstr "ਦਸਤਾਵੇਜ;ਦਰਸਕ;pdf;ਰੀਡਰ;"
 
 #~ msgid "File does not exist"
 #~ msgstr "ਫਾਇਲ ਮੌਜੂਦ ਨਹੀਂ"

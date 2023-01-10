@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2015-11-20 05:11+0000\n"
 "Last-Translator: Joel Addison <jaddi27@gmail.com>\n"
 "Language-Team: English (Australia) <en_AU@li.org>\n"
@@ -23,9 +23,15 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
-msgstr ""
+#: lomiri-docviewer-app.desktop.in:8
+#, fuzzy
+#| msgid "Document Viewer"
+msgid "Document Viewer"
+msgstr "Document Viewer"
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
+msgstr "documents;viewer;pdf;reader;"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -242,12 +248,16 @@ msgid "Documents"
 msgstr "Documents"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-msgid "Search..."
+#, fuzzy
+#| msgid "Search..."
+msgid "Search…"
 msgstr "Search..."
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
-msgstr "Sorting settings..."
+#, fuzzy
+#| msgid "Sorting settings"
+msgid "Sorting settings…"
+msgstr "Sorting settings"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -288,7 +298,9 @@ msgid "Earlier this month"
 msgstr "Earlier this month"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+#, fuzzy
+#| msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr "Even earlier..."
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -421,6 +433,10 @@ msgstr ""
 msgid "Automatic"
 msgstr ""
 
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr ""
+
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 #, fuzzy
 #| msgid "Document Viewer"
@@ -530,6 +546,9 @@ msgstr "Go to page"
 msgid "copy %1"
 msgstr "copy %1"
 
+#~ msgid "Sorting settings..."
+#~ msgstr "Sorting settings..."
+
 #~ msgid "Switch to single column list"
 #~ msgstr "Switch to single column list"
 
@@ -538,9 +557,6 @@ msgstr "copy %1"
 
 #~ msgid "Back"
 #~ msgstr "Back"
-
-#~ msgid "documents;viewer;pdf;reader;"
-#~ msgstr "documents;viewer;pdf;reader;"
 
 #~ msgid "File does not exist"
 #~ msgstr "File does not exist"

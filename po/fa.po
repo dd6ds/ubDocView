@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2022-03-10 09:21+0000\n"
 "Last-Translator: Behzad <behzadasbahi@gmail.com>\n"
 "Language-Team: Persian <https://translate.ubports.com/projects/ubports/"
@@ -24,9 +24,15 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
-msgstr "پرونده وجود ندارد"
+#: lomiri-docviewer-app.desktop.in:8
+#, fuzzy
+#| msgid "Document Viewer"
+msgid "Document Viewer"
+msgstr "نمایشگر سند"
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
+msgstr "documents;viewer;pdf;reader;"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -254,12 +260,16 @@ msgid "Documents"
 msgstr "مستندات"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-msgid "Search..."
-msgstr "جست‌وجو…"
+#, fuzzy
+#| msgid "Search"
+msgid "Search…"
+msgstr "جست‌وجو"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
-msgstr "تنظیمات چینش…"
+#, fuzzy
+#| msgid "Sorting settings"
+msgid "Sorting settings…"
+msgstr "تنظیمات چینش"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -300,7 +310,9 @@ msgid "Earlier this month"
 msgstr "پیش‌تر در این ماه"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+#, fuzzy
+#| msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr "حتا قبل‌تر…"
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -437,6 +449,10 @@ msgstr "اندازهٔ عرض"
 msgid "Automatic"
 msgstr "خودکار"
 
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr "پرونده وجود ندارد"
+
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 #, fuzzy
 #| msgid "Document Viewer"
@@ -548,6 +564,12 @@ msgstr "رفتن به صفحه"
 msgid "copy %1"
 msgstr "رونوشت %1"
 
+#~ msgid "Search..."
+#~ msgstr "جست‌وجو…"
+
+#~ msgid "Sorting settings..."
+#~ msgstr "تنظیمات چینش…"
+
 #~ msgid "Switch to single column list"
 #~ msgstr "تعویض به فهرست تک ستونی"
 
@@ -559,9 +581,6 @@ msgstr "رونوشت %1"
 
 #~ msgid "Go to position..."
 #~ msgstr "رفتن به موقعیّت…"
-
-#~ msgid "documents;viewer;pdf;reader;"
-#~ msgstr "documents;viewer;pdf;reader;"
 
 #~ msgid "File does not exist"
 #~ msgstr "پرونده وجود ندارد"

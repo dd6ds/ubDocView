@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2016-03-20 14:09+0000\n"
 "Last-Translator: Kenan Gutić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -24,9 +24,15 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
-msgstr "Datoteka ne postoji."
+#: lomiri-docviewer-app.desktop.in:8
+#, fuzzy
+#| msgid "Document Viewer"
+msgid "Document Viewer"
+msgstr "Preglednik dokumenta"
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
+msgstr "dokumenti;preglednik;pdf;čitač;"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -263,12 +269,16 @@ msgid "Documents"
 msgstr "Dokumenti"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-msgid "Search..."
-msgstr "Traži..."
+#, fuzzy
+#| msgid "Search"
+msgid "Search…"
+msgstr "Traži"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
-msgstr "Sortiram postavke..."
+#, fuzzy
+#| msgid "Sorting settings"
+msgid "Sorting settings…"
+msgstr "Sortiram postavke"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -310,7 +320,9 @@ msgid "Earlier this month"
 msgstr "Ranije ovog mjeseca"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+#, fuzzy
+#| msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr "Još ranije..."
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -447,6 +459,10 @@ msgstr "Uklopi visinu"
 msgid "Automatic"
 msgstr "Automatski"
 
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr "Datoteka ne postoji."
+
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 #, fuzzy
 #| msgid "Document Viewer"
@@ -558,6 +574,12 @@ msgstr "Idi na stranicu"
 msgid "copy %1"
 msgstr "kopija %1"
 
+#~ msgid "Search..."
+#~ msgstr "Traži..."
+
+#~ msgid "Sorting settings..."
+#~ msgstr "Sortiram postavke..."
+
 #~ msgid "Switch to single column list"
 #~ msgstr "Prebaci na listu sa jednom kolonom"
 
@@ -569,9 +591,6 @@ msgstr "kopija %1"
 
 #~ msgid "Go to position..."
 #~ msgstr "Idi na poziciju..."
-
-#~ msgid "documents;viewer;pdf;reader;"
-#~ msgstr "dokumenti;preglednik;pdf;čitač;"
 
 #~ msgid "File does not exist"
 #~ msgstr "Datoteka ne postoji"

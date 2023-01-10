@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2016-09-12 06:22+0000\n"
 "Last-Translator: Fohanno Thierry <thierry.fohanno@ofis-bzh.org>\n"
 "Language-Team: Breton <br@li.org>\n"
@@ -23,9 +23,15 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
-msgstr "N'eus ket eus ar restr"
+#: lomiri-docviewer-app.desktop.in:8
+#, fuzzy
+#| msgid "Document Viewer"
+msgid "Document Viewer"
+msgstr "Lenner teulioù"
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
+msgstr "teulioù;diskouezer;pdf;lenner"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -258,12 +264,16 @@ msgid "Documents"
 msgstr "Teulioù"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-msgid "Search..."
-msgstr "Klask..."
+#, fuzzy
+#| msgid "Search"
+msgid "Search…"
+msgstr "Klask"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
-msgstr "Arvetennoù renkañ..."
+#, fuzzy
+#| msgid "Sorting settings"
+msgid "Sorting settings…"
+msgstr "Arventennoù renkañ"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -303,7 +313,9 @@ msgid "Earlier this month"
 msgstr "Abretoc'h er miz-mañ"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+#, fuzzy
+#| msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr "Abretoc'h c'hoazh..."
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -440,6 +452,10 @@ msgstr "Keidañ gant an uhelder"
 msgid "Automatic"
 msgstr "Emgefreek"
 
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr "N'eus ket eus ar restr"
+
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 #, fuzzy
 #| msgid "Document Viewer"
@@ -551,6 +567,12 @@ msgstr "Mont d'ar bajenn"
 msgid "copy %1"
 msgstr "eilañ %1"
 
+#~ msgid "Search..."
+#~ msgstr "Klask..."
+
+#~ msgid "Sorting settings..."
+#~ msgstr "Arvetennoù renkañ..."
+
 #~ msgid "Switch to single column list"
 #~ msgstr "Ober gant ur roll war ur bann hepken"
 
@@ -562,9 +584,6 @@ msgstr "eilañ %1"
 
 #~ msgid "Go to position..."
 #~ msgstr "Mont d'al lec'h..."
-
-#~ msgid "documents;viewer;pdf;reader;"
-#~ msgstr "teulioù;diskouezer;pdf;lenner"
 
 #~ msgid "File does not exist"
 #~ msgstr "Ar restr n'eus ket anezhi"

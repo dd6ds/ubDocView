@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2023-01-07 02:52+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/lomiri/"
@@ -24,9 +24,15 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
-msgstr "Filen finnes ikke."
+#: lomiri-docviewer-app.desktop.in:8
+#, fuzzy
+#| msgid "Document is locked"
+msgid "Document Viewer"
+msgstr "Dokument låst"
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
+msgstr "dokumenter;visning;pdf;leser;"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -250,12 +256,15 @@ msgstr "Dokumenter"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
 #, fuzzy
-msgid "Search..."
-msgstr "Søk …"
+#| msgid "Search"
+msgid "Search…"
+msgstr "Søk"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
-msgstr "Sorterer innstillinger …"
+#, fuzzy
+#| msgid "Sorting settings"
+msgid "Sorting settings…"
+msgstr "Sorteringsoppsett"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -296,7 +305,9 @@ msgid "Earlier this month"
 msgstr "Tidligere denne måneden"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+#, fuzzy
+#| msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr "Enda tidligere …"
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -429,6 +440,10 @@ msgstr "Juster til høyde"
 msgid "Automatic"
 msgstr "Automatisk"
 
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr "Filen finnes ikke."
+
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 msgid "Document is locked"
 msgstr "Dokument låst"
@@ -535,6 +550,13 @@ msgstr "Gå til side"
 msgid "copy %1"
 msgstr "kopi nr. %1"
 
+#, fuzzy
+#~ msgid "Search..."
+#~ msgstr "Søk …"
+
+#~ msgid "Sorting settings..."
+#~ msgstr "Sorterer innstillinger …"
+
 #~ msgid "Switch to single column list"
 #~ msgstr "Bytt til liste med én kolonne"
 
@@ -546,9 +568,6 @@ msgstr "kopi nr. %1"
 
 #~ msgid "Go to position..."
 #~ msgstr "Gå til posisjon…"
-
-#~ msgid "documents;viewer;pdf;reader;"
-#~ msgstr "dokumenter;visning;pdf;leser;"
 
 #~ msgid "File does not exist"
 #~ msgstr "Fila finnes ikke"

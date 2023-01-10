@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2021-06-06 00:41+0000\n"
 "Last-Translator: Samson <sambelet@yahoo.com>\n"
 "Language-Team: Amharic <https://translate.ubports.com/projects/ubports/"
@@ -24,9 +24,15 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
-msgstr "ፋይሉ አልነበረም"
+#: lomiri-docviewer-app.desktop.in:8
+#, fuzzy
+#| msgid "Document Viewer"
+msgid "Document Viewer"
+msgstr "ሰነድ መመልከቻ"
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
+msgstr "ሰነዶች: መመልከቻ: pdf: ማንበቢያ:"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -257,12 +263,16 @@ msgid "Documents"
 msgstr "ሰነዶች"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-msgid "Search..."
-msgstr "መፈለጊያ..."
+#, fuzzy
+#| msgid "Search"
+msgid "Search…"
+msgstr "መፈለጊያ"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
-msgstr "መለያ ማሰናጃዎች..."
+#, fuzzy
+#| msgid "Sorting settings"
+msgid "Sorting settings…"
+msgstr "መለያ ማሰናጃዎች"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -302,7 +312,9 @@ msgid "Earlier this month"
 msgstr "በዚህ ወር መጀመሪያ"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+#, fuzzy
+#| msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr "ከዚያ ቀደም ብሎ..."
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -439,6 +451,10 @@ msgstr "በ እርዝመቱ ልክ"
 msgid "Automatic"
 msgstr "ራስ በራሱ"
 
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr "ፋይሉ አልነበረም"
+
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 #, fuzzy
 #| msgid "Document Viewer"
@@ -550,6 +566,12 @@ msgstr "መሄጃ ወደ ገጽ"
 msgid "copy %1"
 msgstr "ኮፒ %1"
 
+#~ msgid "Search..."
+#~ msgstr "መፈለጊያ..."
+
+#~ msgid "Sorting settings..."
+#~ msgstr "መለያ ማሰናጃዎች..."
+
 #~ msgid "Switch to single column list"
 #~ msgstr "ወደ አንድ አምድ ዝርዝር መቀየሪያ"
 
@@ -561,9 +583,6 @@ msgstr "ኮፒ %1"
 
 #~ msgid "Go to position..."
 #~ msgstr "መሄጃ ወደ ቦታ..."
-
-#~ msgid "documents;viewer;pdf;reader;"
-#~ msgstr "ሰነዶች: መመልከቻ: pdf: ማንበቢያ:"
 
 #~ msgid "File does not exist"
 #~ msgstr "ፋይሉ አልተገኘም"

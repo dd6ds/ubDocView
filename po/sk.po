@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2017-09-30 05:43+0000\n"
 "Last-Translator: Peter Valachovič <peter.valachovic@gmail.com>\n"
 "Language-Team: Slovak <https://translate.ubports.com/projects/ubports/"
@@ -24,9 +24,15 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
-msgstr "Súbor neexistuje."
+#: lomiri-docviewer-app.desktop.in:8
+#, fuzzy
+#| msgid "Document Viewer"
+msgid "Document Viewer"
+msgstr "Prehliadač dokumentov"
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
+msgstr "dokumenty;prehliadač ;pdf;reader;"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -261,12 +267,16 @@ msgid "Documents"
 msgstr "Dokumenty"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-msgid "Search..."
-msgstr "Hľadať..."
+#, fuzzy
+#| msgid "Search"
+msgid "Search…"
+msgstr "Hľadať"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
-msgstr "Nastavenie triedenia..."
+#, fuzzy
+#| msgid "Sorting settings"
+msgid "Sorting settings…"
+msgstr "Nastavenie triedenia"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -306,7 +316,9 @@ msgid "Earlier this month"
 msgstr "Začiatkom tohto mesiaca"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+#, fuzzy
+#| msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr "Dokonca skoršie..."
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -443,6 +455,10 @@ msgstr "Prispôsobiť výške"
 msgid "Automatic"
 msgstr "Automaticky"
 
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr "Súbor neexistuje."
+
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 #, fuzzy
 #| msgid "Document Viewer"
@@ -554,6 +570,12 @@ msgstr "Prejsť na stranu"
 msgid "copy %1"
 msgstr "kópia %1"
 
+#~ msgid "Search..."
+#~ msgstr "Hľadať..."
+
+#~ msgid "Sorting settings..."
+#~ msgstr "Nastavenie triedenia..."
+
 #~ msgid "Switch to single column list"
 #~ msgstr "Prepnúť do zoznamu jedného stĺpca"
 
@@ -565,6 +587,3 @@ msgstr "kópia %1"
 
 #~ msgid "Go to position..."
 #~ msgstr "Na pozíciu..."
-
-#~ msgid "documents;viewer;pdf;reader;"
-#~ msgstr "dokumenty;prehliadač ;pdf;reader;"

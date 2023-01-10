@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2019-07-07 09:48+0000\n"
 "Last-Translator: Aitzol Berasategi <aitzol@disroot.org>\n"
 "Language-Team: Basque <https://translate.ubports.com/projects/ubports/"
@@ -24,9 +24,15 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
-msgstr ""
+#: lomiri-docviewer-app.desktop.in:8
+#, fuzzy
+#| msgid "Document Viewer"
+msgid "Document Viewer"
+msgstr "Dokumentu-ikustailea"
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
+msgstr "dokumentu;ikustailea;pdf;irakurlea"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -243,11 +249,13 @@ msgid "Documents"
 msgstr ""
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-msgid "Search..."
-msgstr "Bilatu..."
+#, fuzzy
+#| msgid "Search"
+msgid "Search…"
+msgstr "Bilatu"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
+msgid "Sorting settings…"
 msgstr ""
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
@@ -288,7 +296,7 @@ msgid "Earlier this month"
 msgstr "Hil honetan"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr ""
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -421,6 +429,10 @@ msgstr ""
 msgid "Automatic"
 msgstr ""
 
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr ""
+
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 #, fuzzy
 #| msgid "Document Viewer"
@@ -530,6 +542,9 @@ msgstr "Joan orrira"
 msgid "copy %1"
 msgstr ""
 
+#~ msgid "Search..."
+#~ msgstr "Bilatu..."
+
 #~ msgid "Switch to single column list"
 #~ msgstr "Aldatu zutabe bakarreko zerrendara"
 
@@ -538,9 +553,6 @@ msgstr ""
 
 #~ msgid "Back"
 #~ msgstr "Atzera"
-
-#~ msgid "documents;viewer;pdf;reader;"
-#~ msgstr "dokumentu;ikustailea;pdf;irakurlea"
 
 #~ msgid "File does not exist"
 #~ msgstr "Fitxategia ez da existitzen"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2015-11-19 18:20+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Faroese <fo@li.org>\n"
@@ -23,9 +23,15 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
-msgstr ""
+#: lomiri-docviewer-app.desktop.in:8
+#, fuzzy
+#| msgid "Document Viewer"
+msgid "Document Viewer"
+msgstr "Skjalhyggjari"
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
+msgstr "skjøl;hyggjari;psf;lesari;"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -242,12 +248,16 @@ msgid "Documents"
 msgstr "Skjøl"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-msgid "Search..."
+#, fuzzy
+#| msgid "Search..."
+msgid "Search…"
 msgstr "Leita..."
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
-msgstr "Raðingastillingar..."
+#, fuzzy
+#| msgid "Sorting settings"
+msgid "Sorting settings…"
+msgstr "Raðingastillingar"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -289,7 +299,9 @@ msgid "Earlier this month"
 msgstr "Fyrr í mánaðin"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+#, fuzzy
+#| msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr "Uppaftur fyrr..."
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -422,6 +434,10 @@ msgstr ""
 msgid "Automatic"
 msgstr ""
 
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr ""
+
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 #, fuzzy
 #| msgid "Document Viewer"
@@ -531,6 +547,9 @@ msgstr "Far til síðu"
 msgid "copy %1"
 msgstr "avrit %1"
 
+#~ msgid "Sorting settings..."
+#~ msgstr "Raðingastillingar..."
+
 #~ msgid "Switch to single column list"
 #~ msgstr "Skift til lista við einum teigi"
 
@@ -539,9 +558,6 @@ msgstr "avrit %1"
 
 #~ msgid "Back"
 #~ msgstr "Aftur"
-
-#~ msgid "documents;viewer;pdf;reader;"
-#~ msgstr "skjøl;hyggjari;psf;lesari;"
 
 #~ msgid "File does not exist"
 #~ msgstr "Fílan er ikki til"

@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2023-01-04 19:45+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Asturian <https://hosted.weblate.org/projects/lomiri/"
-"lomiri-docviewer-app/ast/>\n"
+"Language-Team: Asturian <https://hosted.weblate.org/projects/lomiri/lomiri-"
+"docviewer-app/ast/>\n"
 "Language: ast\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,8 +24,12 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
+#: lomiri-docviewer-app.desktop.in:8
+msgid "Document Viewer"
+msgstr ""
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
 msgstr ""
 
 #: src/app/qml/common/CommandLineProxy.qml:49
@@ -243,11 +247,13 @@ msgid "Documents"
 msgstr ""
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-msgid "Search..."
+#, fuzzy
+#| msgid "Search..."
+msgid "Search…"
 msgstr "Guetar…"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
+msgid "Sorting settings…"
 msgstr ""
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
@@ -289,7 +295,7 @@ msgid "Earlier this month"
 msgstr ""
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr ""
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -418,6 +424,10 @@ msgstr ""
 #: src/app/qml/loView/ZoomSelector.qml:124
 #: src/app/qml/pdfView/ZoomSelector.qml:121
 msgid "Automatic"
+msgstr ""
+
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
 msgstr ""
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25

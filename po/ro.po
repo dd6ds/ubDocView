@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2020-11-03 11:19+0000\n"
 "Last-Translator: Mihai <michael.mozart@protonmail.com>\n"
 "Language-Team: Romanian <https://translate.ubports.com/projects/ubports/"
@@ -25,9 +25,15 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
-msgstr "Fișierul nu există."
+#: lomiri-docviewer-app.desktop.in:8
+#, fuzzy
+#| msgid "Document Viewer"
+msgid "Document Viewer"
+msgstr "Vizualizator documente"
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
+msgstr "documente;vizualizator;pdf;cititor;"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -264,12 +270,16 @@ msgid "Documents"
 msgstr "Documente"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-msgid "Search..."
-msgstr "Căutare...."
+#, fuzzy
+#| msgid "Search"
+msgid "Search…"
+msgstr "Caută"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
-msgstr "Setări de ordonare..."
+#, fuzzy
+#| msgid "Sorting settings"
+msgid "Sorting settings…"
+msgstr "Setări de ordonare"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -310,7 +320,9 @@ msgid "Earlier this month"
 msgstr "Luna aceasta"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+#, fuzzy
+#| msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr "Chiar mai devreme..."
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -447,6 +459,10 @@ msgstr "Ajustează înălțimea"
 msgid "Automatic"
 msgstr "Automat"
 
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr "Fișierul nu există."
+
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 #, fuzzy
 #| msgid "Document Viewer"
@@ -558,6 +574,12 @@ msgstr "Mergi la pagina"
 msgid "copy %1"
 msgstr "copiază %1"
 
+#~ msgid "Search..."
+#~ msgstr "Căutare...."
+
+#~ msgid "Sorting settings..."
+#~ msgstr "Setări de ordonare..."
+
 #~ msgid "Switch to single column list"
 #~ msgstr "Treci la listarea pe o singură coloană"
 
@@ -569,6 +591,3 @@ msgstr "copiază %1"
 
 #~ msgid "Go to position..."
 #~ msgstr "Mergi la poziția..."
-
-#~ msgid "documents;viewer;pdf;reader;"
-#~ msgstr "documente;vizualizator;pdf;cititor;"

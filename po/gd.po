@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2016-04-27 01:37+0000\n"
 "Last-Translator: GunChleoc <Unknown>\n"
 "Language-Team: Fòram na Gàidhlig\n"
@@ -24,9 +24,17 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
-msgstr "Chan eil am faidhle ann."
+#: lomiri-docviewer-app.desktop.in:8
+#, fuzzy
+#| msgid "Document Viewer"
+msgid "Document Viewer"
+msgstr "Sealladair sgrìobhainnean"
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
+msgstr ""
+"documents;viewer;pdf;reader;sgrìobhainnean;sealladair;leughadair;inneal-"
+"leughaidh;"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -276,12 +284,16 @@ msgid "Documents"
 msgstr "Sgrìobhainnean"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-msgid "Search..."
-msgstr "Lorg..."
+#, fuzzy
+#| msgid "Search"
+msgid "Search…"
+msgstr "Lorg"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
-msgstr "Roghainnean an t-seòrsachaidh..."
+#, fuzzy
+#| msgid "Sorting settings"
+msgid "Sorting settings…"
+msgstr "Roghainnean an t-seòrsachaidh"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -323,7 +335,9 @@ msgid "Earlier this month"
 msgstr "Nas tràithe am mìos seo"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+#, fuzzy
+#| msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr "Fiù 's nas tràithe..."
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -461,6 +475,10 @@ msgstr "Co-fhreagair an àirde"
 msgid "Automatic"
 msgstr "Fèin-obrachail"
 
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr "Chan eil am faidhle ann."
+
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 #, fuzzy
 #| msgid "Document Viewer"
@@ -572,6 +590,12 @@ msgstr "Rach gu duilleag"
 msgid "copy %1"
 msgstr "lethbhreac %1"
 
+#~ msgid "Search..."
+#~ msgstr "Lorg..."
+
+#~ msgid "Sorting settings..."
+#~ msgstr "Roghainnean an t-seòrsachaidh..."
+
 #~ msgid "Switch to single column list"
 #~ msgstr "Seall 'na liosta le colbh a-mhàin"
 
@@ -583,11 +607,6 @@ msgstr "lethbhreac %1"
 
 #~ msgid "Go to position..."
 #~ msgstr "Rach dhan ionad..."
-
-#~ msgid "documents;viewer;pdf;reader;"
-#~ msgstr ""
-#~ "documents;viewer;pdf;reader;sgrìobhainnean;sealladair;leughadair;inneal-"
-#~ "leughaidh;"
 
 #~ msgid "File does not exist"
 #~ msgstr "Chan eil am faidhle ann"

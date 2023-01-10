@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2020-11-23 18:30+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://translate.ubports.com/projects/ubports/"
@@ -24,9 +24,15 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
-msgstr "Tiedostoa ei ole olemassa."
+#: lomiri-docviewer-app.desktop.in:8
+#, fuzzy
+#| msgid "Document Viewer"
+msgid "Document Viewer"
+msgstr "Asiakirjakatselin"
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
+msgstr "documents;viewer;pdf;reader;asiakirjat;dokumentit;katselin;lukija;"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -259,12 +265,16 @@ msgid "Documents"
 msgstr "Asiakirjat"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-msgid "Search..."
-msgstr "Etsi..."
+#, fuzzy
+#| msgid "Search"
+msgid "Search…"
+msgstr "Etsi"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
-msgstr "Järjestysasetukset..."
+#, fuzzy
+#| msgid "Sorting settings"
+msgid "Sorting settings…"
+msgstr "Järjestysasetukset"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -306,7 +316,9 @@ msgid "Earlier this month"
 msgstr "Aiemmin tässä kuussa"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+#, fuzzy
+#| msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr "Vielä aiemmin..."
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -443,6 +455,10 @@ msgstr "Sovita korkeuteen"
 msgid "Automatic"
 msgstr "Automaattinen"
 
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr "Tiedostoa ei ole olemassa."
+
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 #, fuzzy
 #| msgid "Document Viewer"
@@ -554,6 +570,12 @@ msgstr "Siirry sivulle"
 msgid "copy %1"
 msgstr "kopio %1"
 
+#~ msgid "Search..."
+#~ msgstr "Etsi..."
+
+#~ msgid "Sorting settings..."
+#~ msgstr "Järjestysasetukset..."
+
 #~ msgid "Switch to single column list"
 #~ msgstr "Vaihda yhden sarakkeen luetteloon"
 
@@ -565,9 +587,6 @@ msgstr "kopio %1"
 
 #~ msgid "Go to position..."
 #~ msgstr "Siirry sijaintiin..."
-
-#~ msgid "documents;viewer;pdf;reader;"
-#~ msgstr "documents;viewer;pdf;reader;asiakirjat;dokumentit;katselin;lukija;"
 
 #~ msgid "File does not exist"
 #~ msgstr "Tiedostoa ei ole olemassa"

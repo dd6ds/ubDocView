@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2020-02-18 17:21+0000\n"
 "Last-Translator: Riccardo Riccio <rickyriccio@tiscali.it>\n"
 "Language-Team: Slovenian <https://translate.ubports.com/projects/ubports/"
@@ -25,9 +25,15 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
-msgstr "Datoteka ne obstaja."
+#: lomiri-docviewer-app.desktop.in:8
+#, fuzzy
+#| msgid "Document Viewer"
+msgid "Document Viewer"
+msgstr "Pregledovalnik dokumentov"
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
+msgstr "dokumenti;pregledovalnik;pdf;bralnik;"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -266,12 +272,16 @@ msgid "Documents"
 msgstr "Dokumenti"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-msgid "Search..."
-msgstr "Iskanje ..."
+#, fuzzy
+#| msgid "Search"
+msgid "Search…"
+msgstr "Poišči"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
-msgstr "Nastavitve razvrščanja ..."
+#, fuzzy
+#| msgid "Sorting settings"
+msgid "Sorting settings…"
+msgstr "Nastavitve razvrščanja"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -313,7 +323,9 @@ msgid "Earlier this month"
 msgstr "V začetku tega meseca"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+#, fuzzy
+#| msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr "Še prej ..."
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -450,6 +462,10 @@ msgstr "Prilagodi višini"
 msgid "Automatic"
 msgstr "Samodejno"
 
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr "Datoteka ne obstaja."
+
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 #, fuzzy
 #| msgid "Document Viewer"
@@ -561,6 +577,12 @@ msgstr "Pojdi na stran"
 msgid "copy %1"
 msgstr "kopija %1"
 
+#~ msgid "Search..."
+#~ msgstr "Iskanje ..."
+
+#~ msgid "Sorting settings..."
+#~ msgstr "Nastavitve razvrščanja ..."
+
 #~ msgid "Switch to single column list"
 #~ msgstr "preklopi na seznam z enim stolpcem"
 
@@ -572,9 +594,6 @@ msgstr "kopija %1"
 
 #~ msgid "Go to position..."
 #~ msgstr "Pojdi na ..."
-
-#~ msgid "documents;viewer;pdf;reader;"
-#~ msgstr "dokumenti;pregledovalnik;pdf;bralnik;"
 
 #~ msgid "File does not exist"
 #~ msgstr "Datoteka ne obstaja"

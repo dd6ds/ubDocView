@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2021-02-15 17:19+0000\n"
 "Last-Translator: louies0623 <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
@@ -24,9 +24,15 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
-msgstr "檔案並不存在。"
+#: lomiri-docviewer-app.desktop.in:8
+#, fuzzy
+#| msgid "Document Viewer"
+msgid "Document Viewer"
+msgstr "文件檢視器"
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
+msgstr "文件;檢視器;PDF;閱讀器;"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -253,12 +259,16 @@ msgid "Documents"
 msgstr "文件"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-msgid "Search..."
-msgstr "搜尋..."
+#, fuzzy
+#| msgid "Search"
+msgid "Search…"
+msgstr "搜尋"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
-msgstr "排列設定..."
+#, fuzzy
+#| msgid "Sorting settings"
+msgid "Sorting settings…"
+msgstr "排序設定"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -298,7 +308,9 @@ msgid "Earlier this month"
 msgstr "本月稍早之前"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+#, fuzzy
+#| msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr "更早..."
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -435,6 +447,10 @@ msgstr "符合高度"
 msgid "Automatic"
 msgstr "自動"
 
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr "檔案並不存在。"
+
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 #, fuzzy
 #| msgid "Document Viewer"
@@ -546,6 +562,12 @@ msgstr "前往頁數"
 msgid "copy %1"
 msgstr "複製 %1"
 
+#~ msgid "Search..."
+#~ msgstr "搜尋..."
+
+#~ msgid "Sorting settings..."
+#~ msgstr "排列設定..."
+
 #~ msgid "Switch to single column list"
 #~ msgstr "切換到單列列表"
 
@@ -557,9 +579,6 @@ msgstr "複製 %1"
 
 #~ msgid "Go to position..."
 #~ msgstr "到位置..."
-
-#~ msgid "documents;viewer;pdf;reader;"
-#~ msgstr "文件;檢視器;PDF;閱讀器;"
 
 #~ msgid "File does not exist"
 #~ msgstr "檔案不存在"

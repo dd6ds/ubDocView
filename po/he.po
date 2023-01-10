@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2020-12-24 08:57+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://translate.ubports.com/projects/ubports/"
@@ -24,9 +24,15 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
-msgstr "הקובץ אינו קיים."
+#: lomiri-docviewer-app.desktop.in:8
+#, fuzzy
+#| msgid "Document Viewer"
+msgid "Document Viewer"
+msgstr "מציג המסמכים"
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
+msgstr "מסמכים; צופה; pdf; קורא;"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -265,12 +271,16 @@ msgid "Documents"
 msgstr "מסמכים"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-msgid "Search..."
+#, fuzzy
+#| msgid "Search..."
+msgid "Search…"
 msgstr "חיפוש…"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
-msgstr "הגדרות מיון ..."
+#, fuzzy
+#| msgid "Sorting settings"
+msgid "Sorting settings…"
+msgstr "הגדרות מיון"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -310,7 +320,9 @@ msgid "Earlier this month"
 msgstr "מוקדם יותר החודש"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+#, fuzzy
+#| msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr "אפילו מוקדם יותר..."
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -443,6 +455,10 @@ msgstr "התאם גובה"
 msgid "Automatic"
 msgstr "אוטומטי"
 
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr "הקובץ אינו קיים."
+
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 #, fuzzy
 #| msgid "Document Viewer"
@@ -556,5 +572,8 @@ msgstr "עבור לעמוד"
 msgid "copy %1"
 msgstr "העתק %1"
 
-#~ msgid "documents;viewer;pdf;reader;"
-#~ msgstr "מסמכים; צופה; pdf; קורא;"
+#~ msgid "Search..."
+#~ msgstr "חיפוש…"
+
+#~ msgid "Sorting settings..."
+#~ msgstr "הגדרות מיון ..."

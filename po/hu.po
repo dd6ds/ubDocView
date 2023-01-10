@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2022-02-05 09:32+0000\n"
 "Last-Translator: Lundrin <berenyi.vilmos@tutanota.com>\n"
 "Language-Team: Hungarian <https://translate.ubports.com/projects/ubports/"
@@ -24,9 +24,15 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
-msgstr "A fájl nem létezik."
+#: lomiri-docviewer-app.desktop.in:8
+#, fuzzy
+#| msgid "Document Viewer"
+msgid "Document Viewer"
+msgstr "Dokumentum-megjelenítő"
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
+msgstr "dokumentumok;megtekintő;pdf;olvasó;"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -261,12 +267,16 @@ msgid "Documents"
 msgstr "Dokumentumok"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-msgid "Search..."
-msgstr "Keresés…"
+#, fuzzy
+#| msgid "Search"
+msgid "Search…"
+msgstr "Keresés"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
-msgstr "Rendezési beállítások…"
+#, fuzzy
+#| msgid "Sorting settings"
+msgid "Sorting settings…"
+msgstr "Rendezési beállítások"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -308,7 +318,9 @@ msgid "Earlier this month"
 msgstr "Korábban a hónapban"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+#, fuzzy
+#| msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr "Még korábban…"
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -445,6 +457,10 @@ msgstr "Teljes magasság"
 msgid "Automatic"
 msgstr "Automatikus"
 
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr "A fájl nem létezik."
+
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 #, fuzzy
 #| msgid "Document Viewer"
@@ -556,6 +572,12 @@ msgstr "Ugrás megadott oldalhoz"
 msgid "copy %1"
 msgstr "másolat %1"
 
+#~ msgid "Search..."
+#~ msgstr "Keresés…"
+
+#~ msgid "Sorting settings..."
+#~ msgstr "Rendezési beállítások…"
+
 #~ msgid "Switch to single column list"
 #~ msgstr "Átváltás egyoszlopos listára"
 
@@ -567,9 +589,6 @@ msgstr "másolat %1"
 
 #~ msgid "Go to position..."
 #~ msgstr "Ugrás pozícióhoz…"
-
-#~ msgid "documents;viewer;pdf;reader;"
-#~ msgstr "dokumentumok;megtekintő;pdf;olvasó;"
 
 #~ msgid "File does not exist"
 #~ msgstr "A fájl nem létezik"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2015-11-19 18:20+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -23,8 +23,14 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
+#: lomiri-docviewer-app.desktop.in:8
+#, fuzzy
+#| msgid "Document Viewer"
+msgid "Document Viewer"
+msgstr "پۈتۈك كۆرگۈ"
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
 msgstr ""
 
 #: src/app/qml/common/CommandLineProxy.qml:49
@@ -238,12 +244,16 @@ msgid "Documents"
 msgstr "پۈتۈكلەر"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-msgid "Search..."
+#, fuzzy
+#| msgid "Search..."
+msgid "Search…"
 msgstr "ئىزدەش…"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
-msgstr "تەرتىپ تەڭشەكلىرى ..."
+#, fuzzy
+#| msgid "Sorting settings"
+msgid "Sorting settings…"
+msgstr "تەرتىپ تەڭشەكلىرى"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -284,7 +294,7 @@ msgid "Earlier this month"
 msgstr "مۇشۇ ئايدا"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr ""
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -417,6 +427,10 @@ msgstr ""
 msgid "Automatic"
 msgstr ""
 
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr ""
+
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 #, fuzzy
 #| msgid "Document Viewer"
@@ -525,6 +539,9 @@ msgstr "بەتكە يۆتكەل"
 #, qt-format
 msgid "copy %1"
 msgstr "كۈچۈر %1"
+
+#~ msgid "Sorting settings..."
+#~ msgstr "تەرتىپ تەڭشەكلىرى ..."
 
 #~ msgid "Back"
 #~ msgstr "قايتىش"

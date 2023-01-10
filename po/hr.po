@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2018-02-18 21:56+0000\n"
 "Last-Translator: gogogogi <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <https://translate.ubports.com/projects/ubports/"
@@ -25,8 +25,12 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
+#: lomiri-docviewer-app.desktop.in:8
+msgid "Document Viewer"
+msgstr ""
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
 msgstr ""
 
 #: src/app/qml/common/CommandLineProxy.qml:49
@@ -244,11 +248,13 @@ msgid "Documents"
 msgstr ""
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-msgid "Search..."
-msgstr "Pretraga..."
+#, fuzzy
+#| msgid "Search"
+msgid "Search…"
+msgstr "Pretraži"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
+msgid "Sorting settings…"
 msgstr ""
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
@@ -289,7 +295,7 @@ msgid "Earlier this month"
 msgstr ""
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr ""
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -420,6 +426,10 @@ msgstr ""
 msgid "Automatic"
 msgstr ""
 
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr ""
+
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 msgid "Document is locked"
 msgstr ""
@@ -523,6 +533,9 @@ msgstr ""
 #, qt-format
 msgid "copy %1"
 msgstr ""
+
+#~ msgid "Search..."
+#~ msgstr "Pretraga..."
 
 #~ msgid "Back"
 #~ msgstr "Natrag"

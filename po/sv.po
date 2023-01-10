@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2021-10-23 11:09+0000\n"
 "Last-Translator: Jakob Fridesjö <jakob.fridesjo@tuta.io>\n"
 "Language-Team: Swedish <https://translate.ubports.com/projects/ubports/"
@@ -24,9 +24,15 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
-msgstr "Fil existerar inte."
+#: lomiri-docviewer-app.desktop.in:8
+#, fuzzy
+#| msgid "Document Viewer"
+msgid "Document Viewer"
+msgstr "Dokumentvisare"
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
+msgstr "dokument;visare;pdf;läsare;"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -257,12 +263,16 @@ msgid "Documents"
 msgstr "Dokument"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-msgid "Search..."
-msgstr "Sök…"
+#, fuzzy
+#| msgid "Search"
+msgid "Search…"
+msgstr "Sök"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
-msgstr "Sorterar inställningar..."
+#, fuzzy
+#| msgid "Sorting settings"
+msgid "Sorting settings…"
+msgstr "Sorterar inställningar"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -302,7 +312,9 @@ msgid "Earlier this month"
 msgstr "Tidigare denna månad"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+#, fuzzy
+#| msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr "Ännu äldre..."
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -439,6 +451,10 @@ msgstr "Passa höjd"
 msgid "Automatic"
 msgstr "Automatisk"
 
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr "Fil existerar inte."
+
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 #, fuzzy
 #| msgid "Document Viewer"
@@ -550,6 +566,12 @@ msgstr "Gå till sida"
 msgid "copy %1"
 msgstr "kopia %1"
 
+#~ msgid "Search..."
+#~ msgstr "Sök…"
+
+#~ msgid "Sorting settings..."
+#~ msgstr "Sorterar inställningar..."
+
 #~ msgid "Switch to single column list"
 #~ msgstr "Växla till listvy"
 
@@ -561,9 +583,6 @@ msgstr "kopia %1"
 
 #~ msgid "Go to position..."
 #~ msgstr "Gå till position..."
-
-#~ msgid "documents;viewer;pdf;reader;"
-#~ msgstr "dokument;visare;pdf;läsare;"
 
 #~ msgid "File does not exist"
 #~ msgstr "Filen finns inte"

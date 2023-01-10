@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2015-11-22 07:42+0000\n"
 "Last-Translator: Rūdolfs Mazurs <Unknown>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
@@ -24,9 +24,15 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
-msgstr ""
+#: lomiri-docviewer-app.desktop.in:8
+#, fuzzy
+#| msgid "Document Viewer"
+msgid "Document Viewer"
+msgstr "Dokumentu skatītājs"
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
+msgstr "dokumenti;skatītājs;pdf;lasītājs;"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -247,12 +253,16 @@ msgid "Documents"
 msgstr "Dokumenti"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-msgid "Search..."
+#, fuzzy
+#| msgid "Search..."
+msgid "Search…"
 msgstr "Meklēt..."
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
-msgstr "Kārtošanas iestatījumi..."
+#, fuzzy
+#| msgid "Sorting settings"
+msgid "Sorting settings…"
+msgstr "Kārtošanas iestatījumi"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -294,7 +304,9 @@ msgid "Earlier this month"
 msgstr "Agrāk šomēnes"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+#, fuzzy
+#| msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr "Vēl agrāk..."
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -429,6 +441,10 @@ msgstr ""
 msgid "Automatic"
 msgstr ""
 
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr ""
+
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 #, fuzzy
 #| msgid "Document Viewer"
@@ -540,6 +556,9 @@ msgstr "Iet uz lappusi"
 msgid "copy %1"
 msgstr "kopēt %1"
 
+#~ msgid "Sorting settings..."
+#~ msgstr "Kārtošanas iestatījumi..."
+
 #~ msgid "Switch to single column list"
 #~ msgstr "Pārslēgties uz vienas kolonnas sarakstu"
 
@@ -551,9 +570,6 @@ msgstr "kopēt %1"
 
 #~ msgid "Go to position..."
 #~ msgstr "Iet uz pozīciju..."
-
-#~ msgid "documents;viewer;pdf;reader;"
-#~ msgstr "dokumenti;skatītājs;pdf;lasītājs;"
 
 #~ msgid "File does not exist"
 #~ msgstr "Datne neeksistē"

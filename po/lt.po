@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2020-01-19 01:00+0000\n"
 "Last-Translator: Moo <moose@mail.ru>\n"
 "Language-Team: Lithuanian <https://translate.ubports.com/projects/ubports/"
@@ -25,9 +25,15 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
-msgstr "Failo nėra."
+#: lomiri-docviewer-app.desktop.in:8
+#, fuzzy
+#| msgid "Document Viewer"
+msgid "Document Viewer"
+msgstr "Dokumentų žiūryklė"
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
+msgstr "dokumentai;žiūryklė;ziurykle;pdf;skaitytuvė;skaitytuve;"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -250,12 +256,16 @@ msgid "Documents"
 msgstr "Dokumentai"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-msgid "Search..."
+#, fuzzy
+#| msgid "Search..."
+msgid "Search…"
 msgstr "Ieškoti..."
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
-msgstr "Rikiavimo nustatymai..."
+#, fuzzy
+#| msgid "Sorting settings"
+msgid "Sorting settings…"
+msgstr "Rikiavimo nustatymai"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -295,7 +305,7 @@ msgid "Earlier this month"
 msgstr ""
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr ""
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -428,6 +438,10 @@ msgstr "Talpinti į aukštį"
 msgid "Automatic"
 msgstr ""
 
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr "Failo nėra."
+
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 #, fuzzy
 #| msgid "Document Viewer"
@@ -536,5 +550,8 @@ msgstr ""
 msgid "copy %1"
 msgstr "kopija %1"
 
-#~ msgid "documents;viewer;pdf;reader;"
-#~ msgstr "dokumentai;žiūryklė;ziurykle;pdf;skaitytuvė;skaitytuve;"
+#~ msgid "Search..."
+#~ msgstr "Ieškoti..."
+
+#~ msgid "Sorting settings..."
+#~ msgstr "Rikiavimo nustatymai..."

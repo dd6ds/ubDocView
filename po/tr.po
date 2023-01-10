@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2019-11-03 20:36+0000\n"
 "Last-Translator: Ege Öz <ege.oz@tutanota.com>\n"
 "Language-Team: Turkish <https://translate.ubports.com/projects/ubports/"
@@ -24,9 +24,15 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
-msgstr "Dosya bulunmuyor."
+#: lomiri-docviewer-app.desktop.in:8
+#, fuzzy
+#| msgid "Document Viewer"
+msgid "Document Viewer"
+msgstr "Belge Görüntüleyici"
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
+msgstr "belgeler;görüntüleyici;pdf;okuyucu;"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -259,12 +265,16 @@ msgid "Documents"
 msgstr "Belgeler"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-msgid "Search..."
-msgstr "Ara..."
+#, fuzzy
+#| msgid "Search"
+msgid "Search…"
+msgstr "Ara"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
-msgstr "Ayarların sıralanması…"
+#, fuzzy
+#| msgid "Sorting settings"
+msgid "Sorting settings…"
+msgstr "Sıralama ayarları"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -306,7 +316,9 @@ msgid "Earlier this month"
 msgstr "Bu ay'ın başlarında"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+#, fuzzy
+#| msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr "Daha da eski..."
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -443,6 +455,10 @@ msgstr "Yüksekliğe Sığdır"
 msgid "Automatic"
 msgstr "Otomatik"
 
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr "Dosya bulunmuyor."
+
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 #, fuzzy
 #| msgid "Document Viewer"
@@ -554,6 +570,12 @@ msgstr "Sayfaya git"
 msgid "copy %1"
 msgstr "kopyala %1"
 
+#~ msgid "Search..."
+#~ msgstr "Ara..."
+
+#~ msgid "Sorting settings..."
+#~ msgstr "Ayarların sıralanması…"
+
 #~ msgid "Switch to single column list"
 #~ msgstr "Tek sütunlu listeye geç"
 
@@ -565,9 +587,6 @@ msgstr "kopyala %1"
 
 #~ msgid "Go to position..."
 #~ msgstr "Konuma git..."
-
-#~ msgid "documents;viewer;pdf;reader;"
-#~ msgstr "belgeler;görüntüleyici;pdf;okuyucu;"
 
 #~ msgid "File does not exist"
 #~ msgstr "Dosya mevcut değil"

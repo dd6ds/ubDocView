@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2020-08-15 16:21+0000\n"
 "Last-Translator: Efstathios Iosifidis <iefstathios@gmail.com>\n"
 "Language-Team: Greek <https://translate.ubports.com/projects/ubports/"
@@ -24,9 +24,15 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
-msgstr "Το αρχείο δεν υπάρχει."
+#: lomiri-docviewer-app.desktop.in:8
+#, fuzzy
+#| msgid "Document Viewer"
+msgid "Document Viewer"
+msgstr "Προβολή εγγράφων"
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
+msgstr "documents;viewer;pdf;reader;έγγραφα;προβολή;πδφ;αναγνώστης;διάβασμα;"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -261,12 +267,16 @@ msgid "Documents"
 msgstr "Έγγραφα"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-msgid "Search..."
-msgstr "Αναζήτηση..."
+#, fuzzy
+#| msgid "Search"
+msgid "Search…"
+msgstr "Αναζήτηση"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
-msgstr "Ρυθμίσεις ταξινόμησης..."
+#, fuzzy
+#| msgid "Sorting settings"
+msgid "Sorting settings…"
+msgstr "Ρυθμίσεις ταξινόμησης"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -308,7 +318,9 @@ msgid "Earlier this month"
 msgstr "Νωρίτερα αυτό τον μήνα"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+#, fuzzy
+#| msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr "Ακόμα νωρίτερα..."
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -446,6 +458,10 @@ msgstr "Προσαρμογή στο ύψος"
 msgid "Automatic"
 msgstr "Αυτόματο"
 
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr "Το αρχείο δεν υπάρχει."
+
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 #, fuzzy
 #| msgid "Document Viewer"
@@ -557,6 +573,12 @@ msgstr "Μετάβαση στη σελίδα"
 msgid "copy %1"
 msgstr "αντίγραφο %1"
 
+#~ msgid "Search..."
+#~ msgstr "Αναζήτηση..."
+
+#~ msgid "Sorting settings..."
+#~ msgstr "Ρυθμίσεις ταξινόμησης..."
+
 #~ msgid "Switch to single column list"
 #~ msgstr "Αλλαγή σε λίστα μονής στήλης"
 
@@ -568,10 +590,6 @@ msgstr "αντίγραφο %1"
 
 #~ msgid "Go to position..."
 #~ msgstr "Μετάβαση στη θέση..."
-
-#~ msgid "documents;viewer;pdf;reader;"
-#~ msgstr ""
-#~ "documents;viewer;pdf;reader;έγγραφα;προβολή;πδφ;αναγνώστης;διάβασμα;"
 
 #~ msgid "File does not exist"
 #~ msgstr "Το αρχείο δεν υπάρχει"

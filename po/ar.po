@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 12:33+0000\n"
+"POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2022-03-24 05:37+0000\n"
 "Last-Translator: HEROBRINE7GAMER <tapermeerkat77@gmail.com>\n"
 "Language-Team: Arabic <https://translate.ubports.com/projects/ubports/"
@@ -25,9 +25,15 @@ msgstr ""
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
-#: src/app/lomiri-docviewer-app.qml:134
-msgid "File does not exist."
-msgstr "الملف غير موجود."
+#: lomiri-docviewer-app.desktop.in:8
+#, fuzzy
+#| msgid "Document Viewer"
+msgid "Document Viewer"
+msgstr "عارض المستندات"
+
+#: lomiri-docviewer-app.desktop.in:9
+msgid "documents;viewer;pdf;reader;"
+msgstr "مستندات;عارض;قاريء;قارئ;مستند;المستندات;المستند;"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -268,12 +274,16 @@ msgid "Documents"
 msgstr "المستندات"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-msgid "Search..."
-msgstr "ابحث..."
+#, fuzzy
+#| msgid "Search"
+msgid "Search…"
+msgstr "ابحث"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-msgid "Sorting settings..."
-msgstr "إعدادات الفرز..."
+#, fuzzy
+#| msgid "Sorting settings"
+msgid "Sorting settings…"
+msgstr "إعدادات الفرز"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -315,7 +325,9 @@ msgid "Earlier this month"
 msgstr "في وقت سابق من هذا الشهر"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-msgid "Even earlier..."
+#, fuzzy
+#| msgid "Even earlier..."
+msgid "Even earlier…"
 msgstr "حتى وقت سابق..."
 
 #: src/app/qml/documentPage/SharePage.qml:28
@@ -452,6 +464,10 @@ msgstr "ملائمة الارتفاع"
 msgid "Automatic"
 msgstr "تلقائيا"
 
+#: src/app/qml/lomiri-docviewer-app.qml:134
+msgid "File does not exist."
+msgstr "الملف غير موجود."
+
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 #, fuzzy
 #| msgid "Document Viewer"
@@ -563,6 +579,12 @@ msgstr "اذهب إلى الصفحة"
 msgid "copy %1"
 msgstr "نسخة %1"
 
+#~ msgid "Search..."
+#~ msgstr "ابحث..."
+
+#~ msgid "Sorting settings..."
+#~ msgstr "إعدادات الفرز..."
+
 #~ msgid "Switch to single column list"
 #~ msgstr "التحويل إلى نمط القائمة العمودية"
 
@@ -574,9 +596,6 @@ msgstr "نسخة %1"
 
 #~ msgid "Go to position..."
 #~ msgstr "الذهاب للموضع..."
-
-#~ msgid "documents;viewer;pdf;reader;"
-#~ msgstr "مستندات;عارض;قاريء;قارئ;مستند;المستندات;المستند;"
 
 #~ msgid "File does not exist"
 #~ msgstr "الملف غير موجود"
