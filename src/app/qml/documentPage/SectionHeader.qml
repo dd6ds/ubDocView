@@ -38,7 +38,7 @@ Rectangle {
                 if (section == DocumentsModel.LastMonth)
                     return i18n.tr("Earlier this month")
 
-                return i18n.tr("Even earlier...")
+                return i18n.tr("Even earlier…")
             }
 
             return ""
