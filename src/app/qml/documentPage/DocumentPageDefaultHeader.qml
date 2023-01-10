@@ -29,14 +29,14 @@ PageHeader {
 
     trailingActionBar.actions: [
         Action {
-            text: i18n.tr("Search...")
+            text: i18n.tr("Search…")
             iconName: "search"
             onTriggered: parentPage.searchMode = true
             visible: folderModel.count !== 0
         },
 
         Action {
-            text: i18n.tr("Sorting settings...")
+            text: i18n.tr("Sorting settings…")
             iconName: "settings"
             onTriggered: PopupUtils.open(Qt.resolvedUrl("SortSettingsDialog.qml"))
             visible: folderModel.count !== 0
