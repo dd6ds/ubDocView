@@ -1,9 +1,5 @@
 if(CLICK_MODE)
-  if(NOT GIT_REVNO)
-    set(GIT_REVNO "latest")
-  endif(NOT GIT_REVNO)
-
-  configure_file(manifest.json.in ${CMAKE_CURRENT_BINARY_DIR}/manifest.json)
+  configure_file(manifest.json.in ${CMAKE_CURRENT_BINARY_DIR}/manifest.json @ONLY)
   install(FILES ${CMAKE_CURRENT_BINARY_DIR}/manifest.json DESTINATION ${CMAKE_INSTALL_PREFIX})
   install(FILES docviewer.apparmor docviewer-content.json lomiri-docviewer-app.url-dispatcher DESTINATION ${CMAKE_INSTALL_PREFIX})
 endif(CLICK_MODE)

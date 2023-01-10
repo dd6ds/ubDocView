@@ -1,30 +1,19 @@
-ReadMe - Lomiri Doc Viewer App
-==============================
-Lomiri Doc Viewer App is the official document viewer app for Ubuntu Touch. We follow an open
-source model where the code is available to anyone to branch and hack on. The
-lomiri doc viewer app follows a test driven development (TDD) where tests are
-written in parallel to feature implementation to help spot regressions easier.
+# Lomiri Document Viewer Application
 
-Usage
-=====
-lomiri-docviewer-app [filename]
+The Lomiri Document Viewer Application is the official document viewer
+application for Ubuntu Touch capable of opening many common document file
+formats including PDFs and those supported by LibreOffice.
 
-filename : The path where the file you want to open is located.
+## Building
 
-Dependencies
-============
-**DEPENDENCIES ARE NEEDED TO BE INSTALLED TO BUILD AND RUN THE APP**.
+See README-Developers.md for the details on how to build this project.
 
-A complete list of dependencies for the project can be found in lomiri-docviewer-app/debian/control
+## i18n: Translating lomiri-docviewer-app into your Language
 
-The following essential packages are also required to develop this app:
-* [ubuntu-sdk](http://developer.ubuntu.com/start)
-* intltool   - run  `sudo apt-get install intltool`
+You can easily contribute to the localization of this project (i.e. the
+translation into your language) by visiting (and signing up with) the
+Hosted Weblate service:
+https://hosted.weblate.org/projects/lomiri/lomiri-docviewer-app
 
-Useful Links
-============
-Here are some useful links with regards to the Doc Viewer App development.
-
-* [Home Page](https://gitlab.com/ubports/development/apps/docviewer-app)
-* [Doc Viewer App Wiki](https://wiki.ubuntu.com/Touch/CoreApps/DocViewer)
-* [Project page](https://gitlab.com/ubports/development/apps/docviewer-app)
+The localization platform of this project is sponsored by Hosted Weblate
+via their free hosting plan for Libre and Open Source Projects.

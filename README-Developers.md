@@ -1,43 +1,25 @@
-Dependencies
-============
-**DEPENDENCIES ARE NEEDED TO BE INSTALLED TO BUILD AND RUN THE APP**
+# Building from source
 
-A complete list of dependencies for the project can be found in lomiri-docviewer-app/debian/control
+The app can be built from source using CMake.
 
-The following essential packages are also required to develop this app:
-* [ubuntu-sdk](http://developer.ubuntu.com/start)
-* intltool   - run  `sudo apt-get install intltool` 
+## Dependencies
 
-Compiling
-=========
+A complete list of dependencies for the project can be found in debian/control.
 
-**A working internet connection is required in order to build the project. A number of Debian packages are downloaded when the project is loaded the first times**
+# Building click packages
 
-* Install poppler's development files:
-    sudo apt install libpoppler-qt5-dev
+click packages can be built using
+[clickable](https://clickable-ut.dev/en/latest/).
 
-* Install Qt5 private development files:
-    sudo apt install qtdeclarative5-private-dev qtbase5-private-dev
+## LibreOfficeKit
 
-* If you want to compile an arm click package, you need to install that package
-  to the arm compilation environment. For example when using QtCreator for
-  Ubuntu Touch, open Options -> Ubuntu -> Maintain, and then enter:
+The project depends on LibreOfficeKit which is very resource-intensive to
+build.  The clickable build recipe to built the LibreOfficeKit libaries thus
+exists in a [separate project][1].  By default clickable will download the
+build results of that project from GitLab CI when building
+lomiri-docviewer-app.  Alternatively, LibreOfficeKit can be built from source
+using above project in which case the build result need to be placed into the
+clickable library build directory of lomiri-docviewer-app before starting a
+clickable build.
 
-    apt install libpoppler-qt5-dev:armhf qtdeclarative5-private-dev:armhf qtbase5-private-dev:armhf
-
-LibreOffice viewer support
-==========================
-
-* If you want to enable the LibreOffice viewer feature, you'll need to have a
-  LibreOffice 5.0 installation on your development environment. 
-  To do so, type the following commands on a terminal:
-
-    sudo apt-get purge libreoffice-core
-    sudo add-apt-repository ppa:libreoffice/libreoffice-5-0
-    sudo apt-get update
-    sudo apt-get install libreoffice
-
-* Then to compile the LibreOffice viewer plugin you'll simply need to install
-  the LibreOffice Kit development files:
-
-    sudo apt install libreofficekit-dev
+[1]: https://gitlab.com/ubports/development/apps/lomiri-docviewer-app-libreoffice
