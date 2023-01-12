@@ -8,26 +8,24 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
-"PO-Revision-Date: 2022-04-25 08:35+0000\n"
-"Last-Translator: creepen123 <eg.ermakov2016@gmail.com>\n"
-"Language-Team: Russian <https://translate.ubports.com/projects/ubports/"
-"docviewer-app/ru/>\n"
+"PO-Revision-Date: 2023-01-14 23:41+0000\n"
+"Last-Translator: Sergii Horichenko <m@sgg.im>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/lomiri/"
+"lomiri-docviewer-app/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.11.3\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:49+0000\n"
 
 #: lomiri-docviewer-app.desktop.in:7
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
-msgstr ""
+msgstr "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 
 #: lomiri-docviewer-app.desktop.in:8
-#, fuzzy
-#| msgid "Document Viewer"
 msgid "Document Viewer"
 msgstr "Программа просмотра документов"
 
@@ -40,8 +38,6 @@ msgid "Some of the provided arguments are not valid."
 msgstr "Некоторые из приведенных аргументов некорректны."
 
 #: src/app/qml/common/CommandLineProxy.qml:58
-#, fuzzy
-#| msgid "Open ubuntu-docviewer-app displaying the selected file"
 msgid "Open lomiri-docviewer-app displaying the selected file"
 msgstr "Открыть выбранный файл в приложении для просмотра документов"
 
@@ -50,18 +46,12 @@ msgid "Run fullscreen"
 msgstr "Запустить в полноэкранном режиме"
 
 #: src/app/qml/common/CommandLineProxy.qml:71
-#, fuzzy
-#| msgid "Open ubuntu-docviewer-app in pick mode. Used for tests only."
 msgid "Open lomiri-docviewer-app in pick mode. Used for tests only."
 msgstr ""
 "Открыть приложение для просмотра документов в режиме выбора. Используется "
 "только для тестирования."
 
 #: src/app/qml/common/CommandLineProxy.qml:77
-#, fuzzy
-#| msgid ""
-#| "Show documents from the given folder, instead of ~/Documents.\n"
-#| "The path must exist prior to running ubuntu-docviewer-app"
 msgid ""
 "Show documents from the given folder, instead of ~/Documents.\n"
 "The path must exist prior to running lomiri-docviewer-app"
@@ -237,7 +227,7 @@ msgstr ""
 
 #: src/app/qml/documentPage/DocumentListDelegate.qml:75
 msgid "SD card"
-msgstr ""
+msgstr "SD-карта"
 
 #. TRANSLATORS: %1 refers to a time formatted as Locale.ShortFormat (e.g. hh:mm). It depends on system settings.
 #. http://qt-project.org/doc/qt-4.8/qlocale.html#FormatType-enum
@@ -271,16 +261,12 @@ msgid "Documents"
 msgstr "Документы"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-#, fuzzy
-#| msgid "Search"
 msgid "Search…"
-msgstr "Поиск"
+msgstr "Поиск…"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-#, fuzzy
-#| msgid "Sorting settings"
 msgid "Sorting settings…"
-msgstr "Настройки сортировки"
+msgstr "Настройки сортировки…"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -321,10 +307,8 @@ msgid "Earlier this month"
 msgstr "Ранее в этом месяце"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-#, fuzzy
-#| msgid "Even earlier..."
 msgid "Even earlier…"
-msgstr "Ещё раньше..."
+msgstr "Ещё раньше…"
 
 #: src/app/qml/documentPage/SharePage.qml:28
 msgid "Share to"
@@ -376,16 +360,12 @@ msgid "Unknown LibreOffice document"
 msgstr "Неизвестный документ LibreOffice"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:55
-#, fuzzy
-#| msgid "Unknown type document"
 msgid "Unknown document type"
 msgstr "Неизвестный тип документа"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:72
-#, fuzzy
-#| msgid "Go to position"
 msgid "Go to position…"
-msgstr "Перейти"
+msgstr "Перейти на позицию…"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:86
 #: src/app/qml/pdfView/PdfView.qml:310
@@ -465,52 +445,47 @@ msgid "File does not exist."
 msgstr "Файл не существует."
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
-#, fuzzy
-#| msgid "Document Viewer"
 msgid "Document is locked"
-msgstr "Программа просмотра документов"
+msgstr "Документ заблокирован"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:26
 msgid "Please insert a password in order to unlock this document"
-msgstr ""
+msgstr "Пожалуйста, для разблокировки документа, введите пароль"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:50
 msgid "Entered password is not valid"
-msgstr ""
+msgstr "Введён неправильный пароль"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:69
 msgid "Unlock"
-msgstr ""
+msgstr "Разблокировать"
 
 #: src/app/qml/pdfView/LinkHint.qml:36
 #, qt-format
 msgid "Open link externally: %1"
-msgstr ""
+msgstr "Открыть ссылку вовне: %1"
 
 #: src/app/qml/pdfView/LinkHint.qml:37
 #: src/app/qml/pdfView/OpenLinkDialog.qml:28
-#, fuzzy, qt-format
-#| msgid "Go to page"
+#, qt-format
 msgid "Go to page %1"
-msgstr "Перейти на страницу"
+msgstr "Перейти на страницу %1"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:28
 msgid "Open link externally"
-msgstr ""
+msgstr "Открыть ссылку вовне"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:29
 msgid "Are you sure?"
-msgstr ""
+msgstr "Вы уверены?"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:45
 msgid "Open"
-msgstr ""
+msgstr "Открыть"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:45
-#, fuzzy
-#| msgid "Go to position"
 msgid "Go to destination"
-msgstr "Перейти"
+msgstr "Перейти к назначению"
 
 #. TRANSLATORS: "Contents" refers to the "Table of Contents" of a PDF document.
 #: src/app/qml/pdfView/PdfContentsPage.qml:31
@@ -540,11 +515,11 @@ msgstr "Презентация"
 
 #: src/app/qml/pdfView/PdfView.qml:324
 msgid "Rotate 90° right"
-msgstr ""
+msgstr "Повернуть на 90° вправо"
 
 #: src/app/qml/pdfView/PdfView.qml:341
 msgid "Rotate 90° left"
-msgstr ""
+msgstr "Повернуть на 90° влево"
 
 #: src/app/qml/pdfView/PdfViewGotoDialog.qml:26
 msgid "Go to page"
@@ -556,10 +531,8 @@ msgid "Choose a page between 1 and %1"
 msgstr "Выберите страницу между 1 и %1"
 
 #: src/app/qml/pdfView/ZoomSelector.qml:120
-#, fuzzy
-#| msgid "Go to page"
 msgid "Fit page"
-msgstr "Перейти на страницу"
+msgstr "Подогнать под страницу"
 
 #. TRANSLATORS: This string is used for renaming a copied file,
 #. when a file with the same name already exists in user's
