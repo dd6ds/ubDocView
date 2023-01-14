@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2023-01-14 23:41+0000\n"
-"Last-Translator: Sergii Horichenko <m@sgg.im>\n"
+"Last-Translator: Dan <denqwerta@gmail.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-docviewer-app/uk/>\n"
 "Language: uk\n"
@@ -26,8 +26,6 @@ msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 
 #: lomiri-docviewer-app.desktop.in:8
-#, fuzzy
-#| msgid "Document Viewer"
 msgid "Document Viewer"
 msgstr "Перегляд документів"
 
@@ -37,36 +35,40 @@ msgstr "documents;viewer;pdf;reader;документи;перегляд;пдф;�
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
-msgstr ""
+msgstr "Деякі з наведених аргументів недійсні."
 
 #: src/app/qml/common/CommandLineProxy.qml:58
 msgid "Open lomiri-docviewer-app displaying the selected file"
-msgstr ""
+msgstr "Відкрити застосунок lomiri-docviewer, який відображає вибраний файл"
 
 #: src/app/qml/common/CommandLineProxy.qml:65
 msgid "Run fullscreen"
-msgstr ""
+msgstr "Запустити повноекранний режим"
 
 #: src/app/qml/common/CommandLineProxy.qml:71
 msgid "Open lomiri-docviewer-app in pick mode. Used for tests only."
 msgstr ""
+"Відкрити застосунок lomiri-docviewer у режимі вибору. Використовується "
+"тільки для тестів."
 
 #: src/app/qml/common/CommandLineProxy.qml:77
 msgid ""
 "Show documents from the given folder, instead of ~/Documents.\n"
 "The path must exist prior to running lomiri-docviewer-app"
 msgstr ""
+"Показувати документи з вказаної папки, замість ~/Documents.\n"
+"Шлях повинен існувати до запуску застосунку lomiri-docviewer"
 
 #: src/app/qml/common/DetailsPage.qml:29
 #: src/app/qml/loView/LOViewDefaultHeader.qml:93
 #: src/app/qml/pdfView/PdfView.qml:317
 #: src/app/qml/textView/TextViewDefaultHeader.qml:55
 msgid "Details"
-msgstr "Подробиці"
+msgstr "Деталі"
 
 #: src/app/qml/common/DetailsPage.qml:42
 msgid "File"
-msgstr ""
+msgstr "Файл"
 
 #: src/app/qml/common/DetailsPage.qml:47
 msgid "Location"
@@ -78,7 +80,7 @@ msgstr "Розмір"
 
 #: src/app/qml/common/DetailsPage.qml:57
 msgid "Created"
-msgstr "Дата створення"
+msgstr "Створено"
 
 #: src/app/qml/common/DetailsPage.qml:62
 msgid "Last modified"
@@ -137,6 +139,8 @@ msgid ""
 "This file is not supported.\n"
 "Do you want to open it as a plain text?"
 msgstr ""
+"Цей файл не підтримується.\n"
+"Хочете відкрити його як звичайний текст?"
 
 #: src/app/qml/common/UnknownTypeDialog.qml:38
 #: src/app/qml/documentPage/DeleteFileDialog.qml:55
@@ -210,17 +214,19 @@ msgstr "Поділитися"
 
 #: src/app/qml/documentPage/DocumentEmptyState.qml:27
 msgid "No documents found"
-msgstr ""
+msgstr "Документів не знайдено"
 
 #: src/app/qml/documentPage/DocumentEmptyState.qml:28
 msgid ""
 "Connect your device to any computer and simply drag files to the Documents "
 "folder or insert removable media containing documents."
 msgstr ""
+"Підключіть пристрій до будь-якого комп’ютера та просто перетягніть файли в "
+"папку «Документи» або вставте знімний носій з документами."
 
 #: src/app/qml/documentPage/DocumentListDelegate.qml:75
 msgid "SD card"
-msgstr ""
+msgstr "SD-карта"
 
 #. TRANSLATORS: %1 refers to a time formatted as Locale.ShortFormat (e.g. hh:mm). It depends on system settings.
 #. http://qt-project.org/doc/qt-4.8/qlocale.html#FormatType-enum
@@ -241,13 +247,13 @@ msgstr "Вчора, %1"
 #: src/app/qml/documentPage/DocumentListDelegate.qml:112
 #: src/app/qml/documentPage/DocumentListDelegate.qml:131
 msgid "yyyy/MM/dd hh:mm"
-msgstr ""
+msgstr "рррр/ММ/дд год:хв"
 
 #. TRANSLATORS: this is a datetime formatting string,
 #. see http://qt-project.org/doc/qt-5/qml-qtqml-date.html#details for valid expressions.
 #: src/app/qml/documentPage/DocumentListDelegate.qml:125
 msgid "dddd, hh:mm"
-msgstr "dddd, hh:mm"
+msgstr "дддд, год:хв"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:27
 msgid "Documents"
@@ -258,10 +264,8 @@ msgid "Search…"
 msgstr "Пошук…"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-#, fuzzy
-#| msgid "Sorting settings"
 msgid "Sorting settings…"
-msgstr "Параметри упорядковування"
+msgstr "Сортування налаштувань…"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -303,14 +307,12 @@ msgid "Earlier this month"
 msgstr "Раніше цього місяця"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-#, fuzzy
-#| msgid "Even earlier..."
 msgid "Even earlier…"
-msgstr "Раніше…"
+msgstr "Ще раніше…"
 
 #: src/app/qml/documentPage/SharePage.qml:28
 msgid "Share to"
-msgstr ""
+msgstr "Поділитися з"
 
 #: src/app/qml/documentPage/SortSettingsDialog.qml:26
 msgid "Sorting settings"
@@ -339,33 +341,31 @@ msgstr "Завантаження…"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:45
 msgid "LibreOffice text document"
-msgstr ""
+msgstr "Текстовий документ LibreOffice"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:47
 msgid "LibreOffice spread sheet"
-msgstr ""
+msgstr "Таблиця LibreOffice"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:49
 msgid "LibreOffice presentation"
-msgstr ""
+msgstr "Презентація LibreOffice"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:51
 msgid "LibreOffice Draw document"
-msgstr ""
+msgstr "Документ LibreOffice Draw"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:53
 msgid "Unknown LibreOffice document"
-msgstr ""
+msgstr "Невідомий документ LibreOffice"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:55
-#, fuzzy
-#| msgid "Unknown file type"
 msgid "Unknown document type"
-msgstr "Невідомий тип файла"
+msgstr "Невідомий тип документу"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:72
 msgid "Go to position…"
-msgstr ""
+msgstr "Перейти до позиції…"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:86
 #: src/app/qml/pdfView/PdfView.qml:310
@@ -381,11 +381,11 @@ msgstr "Увімкнути нічний режим"
 
 #: src/app/qml/loView/LOViewGotoDialog.qml:30
 msgid "Go to position"
-msgstr ""
+msgstr "Перейти до позиції"
 
 #: src/app/qml/loView/LOViewGotoDialog.qml:31
 msgid "Choose a position between 1% and 100%"
-msgstr ""
+msgstr "Виберіть позицію від 1% до 100%"
 
 #: src/app/qml/loView/LOViewGotoDialog.qml:62
 #: src/app/qml/pdfView/PdfViewGotoDialog.qml:58
@@ -394,99 +394,98 @@ msgstr "ВПЕРЕД!"
 
 #: src/app/qml/loView/LOViewPage.qml:173
 msgid "LibreOffice binaries not found."
-msgstr ""
+msgstr "Бінарні файли LibreOffice не знайдено."
 
 #: src/app/qml/loView/LOViewPage.qml:176
 msgid "Error while loading LibreOffice."
-msgstr ""
+msgstr "Помилка під час завантаження LibreOffice."
 
 #: src/app/qml/loView/LOViewPage.qml:179
 msgid ""
 "Document not loaded.\n"
 "The requested document may be corrupt or protected by a password."
 msgstr ""
+"Документ не завантажено.\n"
+"Запитуваний документ може бути пошкоджено або захищено паролем."
 
 #: src/app/qml/loView/LOViewPage.qml:231
 msgid "This sheet has no content."
-msgstr ""
+msgstr "Цей аркуш не має вмісту."
 
 #. TRANSLATORS: 'LibreOfficeKit' is the name of the library used by
 #. Document Viewer for rendering LibreOffice/MS-Office documents.
 #. Ref. https://docs.libreoffice.org/libreofficekit.html
 #: src/app/qml/loView/Splashscreen.qml:45
 msgid "Powered by LibreOfficeKit"
-msgstr ""
+msgstr "За підтримки LibreOfficeKit"
 
 #. TRANSLATORS: Please don't add any space between "Sheet" and "%1".
 #. This is the default name for a sheet in LibreOffice.
 #: src/app/qml/loView/SpreadsheetSelector.qml:64
 #, qt-format
 msgid "Sheet%1"
-msgstr ""
+msgstr "Аркуш%1"
 
 #: src/app/qml/loView/ZoomSelector.qml:122
 #: src/app/qml/pdfView/ZoomSelector.qml:119
 msgid "Fit width"
-msgstr ""
+msgstr "За шириною"
 
 #: src/app/qml/loView/ZoomSelector.qml:123
 msgid "Fit height"
-msgstr ""
+msgstr "За висотою"
 
 #: src/app/qml/loView/ZoomSelector.qml:124
 #: src/app/qml/pdfView/ZoomSelector.qml:121
 msgid "Automatic"
-msgstr ""
+msgstr "Автоматично"
 
 #: src/app/qml/lomiri-docviewer-app.qml:134
 msgid "File does not exist."
-msgstr ""
+msgstr "Файлу не існує."
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
-#, fuzzy
-#| msgid "Document Viewer"
 msgid "Document is locked"
-msgstr "Перегляд документів"
+msgstr "Документ заблоковано"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:26
 msgid "Please insert a password in order to unlock this document"
-msgstr ""
+msgstr "Будь ласка, введіть пароль, щоб розблокувати цей документ"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:50
 msgid "Entered password is not valid"
-msgstr ""
+msgstr "Введений пароль недійсний"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:69
 msgid "Unlock"
-msgstr ""
+msgstr "Розблокувати"
 
 #: src/app/qml/pdfView/LinkHint.qml:36
 #, qt-format
 msgid "Open link externally: %1"
-msgstr ""
+msgstr "Відкрити зовнішнє посилання: %1"
 
 #: src/app/qml/pdfView/LinkHint.qml:37
 #: src/app/qml/pdfView/OpenLinkDialog.qml:28
-#, fuzzy, qt-format
-#| msgid "Go to page"
+#, qt-format
 msgid "Go to page %1"
-msgstr "Перехід до сторінки"
+msgstr "Перейти до сторінки %1"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:28
 msgid "Open link externally"
-msgstr ""
+msgstr "Відкрити зовнішнє посилання"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:29
 msgid "Are you sure?"
-msgstr ""
+msgstr "Ви впевнені?"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:45
 msgid "Open"
-msgstr ""
+msgstr "Відкрити"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:45
 msgid "Go to destination"
-msgstr ""
+msgstr "Перейти до позиції"
 
 #. TRANSLATORS: "Contents" refers to the "Table of Contents" of a PDF document.
 #: src/app/qml/pdfView/PdfContentsPage.qml:31
@@ -504,7 +503,7 @@ msgstr "Сторінка %1 з %2"
 
 #: src/app/qml/pdfView/PdfView.qml:284
 msgid "Search"
-msgstr ""
+msgstr "Пошук"
 
 #: src/app/qml/pdfView/PdfView.qml:294
 msgid "Go to page..."
@@ -512,15 +511,15 @@ msgstr "Перейти до сторінки…"
 
 #: src/app/qml/pdfView/PdfView.qml:303
 msgid "Presentation"
-msgstr ""
+msgstr "Презентація"
 
 #: src/app/qml/pdfView/PdfView.qml:324
 msgid "Rotate 90° right"
-msgstr ""
+msgstr "Повернути на 90° праворуч"
 
 #: src/app/qml/pdfView/PdfView.qml:341
 msgid "Rotate 90° left"
-msgstr ""
+msgstr "Повернути на 90° ліворуч"
 
 #: src/app/qml/pdfView/PdfViewGotoDialog.qml:26
 msgid "Go to page"
@@ -532,10 +531,8 @@ msgid "Choose a page between 1 and %1"
 msgstr "Виберіть сторінку від 1 до %1"
 
 #: src/app/qml/pdfView/ZoomSelector.qml:120
-#, fuzzy
-#| msgid "Go to page"
 msgid "Fit page"
-msgstr "Перехід до сторінки"
+msgstr "Підігнати сторінку"
 
 #. TRANSLATORS: This string is used for renaming a copied file,
 #. when a file with the same name already exists in user's
