@@ -1,7 +1,69 @@
+2023-01-18 Guido Berhoerster
+
+        * Release 3.0.1 (HEAD -> main, tag: v3.0.1)
+
+2023-01-18 Mike Gabriel
+
+        * Merge branch 'personal/gberh/cmake-fix' into 'main' (68f4c3d)
+
+2023-01-18 Guido Berhoerster
+
+        * Export symbols from lomiri-docviewer-app executable (b5f2751)
+
+2023-01-15 Sergii Horichenko
+
+        * Translated using Weblate (Ukrainian) (ad4069c)
+
+2023-01-14 Sergii Horichenko
+
+        * Translated using Weblate (Russian) (09ae74e)
+
+2023-01-14 Dan
+
+        * Translated using Weblate (Ukrainian) (0c9bd3a)
+
+2023-01-13 Sergii Horichenko
+
+        * Translated using Weblate (Ukrainian) (05d9c28)
+
+2023-01-12 Sergii Horichenko
+
+        * Translated using Weblate (Russian) (aa11309)
+
+2023-01-13 Ivo Xavier
+
+        * Translated using Weblate (Portuguese) (3d54152)
+
+2023-01-13 Timothy G
+
+        * Translated using Weblate (French) (0c70b11)
+
+2023-01-11 Dan
+
+        * Translated using Weblate (Ukrainian) (d185448)
+
+2023-01-10 Mike Gabriel
+
+        * Translated using Weblate (German) (bd18915)
+
+2023-01-11 Guido Berhoerster
+
+        * CI: Increase timeout for upload to Open Store (5fa751f)
+
 2023-01-10 Guido Berhoerster
 
-        * Release 3.0.0 (HEAD -> personal/gberh/release-3.0.0, tag:
-          3.0.0)
+        * Release 3.0.0 (2be2be4) (tag: v3.0.0)
+
+2023-01-10 Hosted Weblate
+
+        * Update translation files (de84f12)
+
+2023-01-10 Mike Gabriel
+
+        * Merge branch 'personal/gberh/cleanup' into 'main' (6c432f0)
+
+2023-01-10 Guido Berhoerster
+
         * Update pot file (d78eace)
 
 2023-01-06 Guido Berhoerster
