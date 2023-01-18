@@ -30,6 +30,7 @@ set(docviewer_SRCS
 )
 
 add_executable(lomiri-docviewer-app ${docviewer_SRCS})
+set_property(TARGET lomiri-docviewer-app PROPERTY ENABLE_EXPORTS True)
 
 qt5_use_modules(lomiri-docviewer-app Gui Qml Quick)
 target_link_libraries(lomiri-docviewer-app stdc++)
