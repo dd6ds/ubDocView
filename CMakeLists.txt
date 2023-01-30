@@ -41,7 +41,7 @@ if(CLICK_MODE)
 endif(CLICK_MODE)
 
 if(NOT CLICK_MODE)
-    install(FILES lomiri-docviewer-app.1 DESTINATION "${MANDIR}/man1")
+    install(FILES lomiri-docviewer-app.1 DESTINATION "${CMAKE_INSTALL_FULL_MANDIR}/man1")
 endif(NOT CLICK_MODE)
 
 include(Click)
