@@ -25,18 +25,20 @@ set(ICON_FILE           docviewer-app.png)
 set(SPLASH_FILE         docviewer-app-splash.svg)
 set(AUTOPILOT_DIR       lomiri_docviewer_app)
 
+if(CLICK_MODE)
 # Find out the architecture for package building
 # to determine the plugin's installation path
-execute_process(
-  COMMAND dpkg-architecture -qDEB_HOST_MULTIARCH
-  OUTPUT_VARIABLE ARCH_TRIPLET
-  OUTPUT_STRIP_TRAILING_WHITESPACE
-)
-execute_process(
-  COMMAND dpkg-architecture -qDEB_HOST_ARCH
-  OUTPUT_VARIABLE CLICK_ARCH
-  OUTPUT_STRIP_TRAILING_WHITESPACE
-)
+    execute_process(
+      COMMAND dpkg-architecture -qDEB_HOST_MULTIARCH
+      OUTPUT_VARIABLE ARCH_TRIPLET
+      OUTPUT_STRIP_TRAILING_WHITESPACE
+    )
+    execute_process(
+      COMMAND dpkg-architecture -qDEB_HOST_ARCH
+      OUTPUT_VARIABLE CLICK_ARCH
+      OUTPUT_STRIP_TRAILING_WHITESPACE
+    )
+endif(CLICK_MODE)
 
 if(NOT CLICK_MODE)
     install(FILES lomiri-docviewer-app.1 DESTINATION "${MANDIR}/man1")
