@@ -1,6 +1,60 @@
+2023-02-03 Guido Berhoerster
+
+        * Release 3.0.2 (HEAD -> main, tag: v3.0.2)
+        * Merge branch 'personal/sunweaver/manpage' into 'main' (2c91a9f)
+
+2023-01-30 Mike Gabriel
+
+        * CMakeLists.txt: Fix man page installation path. (2ca94b2)
+        * lomiri-docviewer-app.1: Typo fix. (14e9c05)
+
+2023-01-31 Mike Gabriel
+
+        * Translated using Weblate (German) (95cac18)
+
+2023-01-30 Guido Berhoerster
+
+        * Merge branch 'personal/sunweaver/desktop-file-mime-handling' into
+          'main' (bdf7157)
+
+2023-01-30 Mike Gabriel
+
+        * data/lomiri-docviewer-app.desktop.in.in: Enable MIME handling via
+          Exec= key. Also add TryExec= key. (4925300)
+
+2023-01-30 Guido Berhoerster
+
+        * Merge branch 'personal/sunweaver/cmake-portable' into 'main'
+          (d495520)
+
+2023-01-30 Mike Gabriel
+
+        * CMakeLists.txt: Don't use dpkg tools if not in CLICK_MODE. Makes
+          the CMake configuration (more) portable. (76708d1)
+
+2023-01-26 gnu-ewm
+
+        * Translated using Weblate (Polish) (ab13dca)
+
+2023-01-25 gnu-ewm
+
+        * Translated using Weblate (Polish) (5093c41)
+
+2023-01-23 Allan Nordhøy
+
+        * Translated using Weblate (Norwegian Bokmål) (ffa6e99)
+
+2023-01-22 Sergii Horichenko
+
+        * Translated using Weblate (Ukrainian) (f0a1218)
+
+2023-01-18 Allan Nordhøy
+
+        * Translated using Weblate (Norwegian Bokmål) (6748730)
+
 2023-01-18 Guido Berhoerster
 
-        * Release 3.0.1 (HEAD -> main, tag: v3.0.1)
+        * Release 3.0.1 (56831af) (tag: v3.0.1)
 
 2023-01-18 Mike Gabriel
 
