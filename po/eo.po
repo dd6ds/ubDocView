@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
-"PO-Revision-Date: 2023-02-16 22:38+0000\n"
+"PO-Revision-Date: 2023-02-20 18:39+0000\n"
 "Last-Translator: phlostically <phlostically@mailinator.com>\n"
 "Language-Team: Esperanto <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-docviewer-app/eo/>\n"
@@ -473,7 +473,7 @@ msgstr ""
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:69
 msgid "Unlock"
-msgstr ""
+msgstr "Malŝlosi"
 
 #: src/app/qml/pdfView/LinkHint.qml:36
 #, qt-format
