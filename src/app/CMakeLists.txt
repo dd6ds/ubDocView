@@ -49,3 +49,5 @@ if(CLICK_MODE)
 else()
   install(TARGETS lomiri-docviewer-app RUNTIME DESTINATION bin)
 endif()
+
+install(PROGRAMS lomiri-docviewer-app-migrate.py DESTINATION ${DATA_DIR})

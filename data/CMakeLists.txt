@@ -2,19 +2,21 @@ if(CLICK_MODE)
   set(ICON ${ICON_FILE})
   set(SPLASH ${SPLASH_FILE})
   set(DESKTOP_DIR ${DATA_DIR})
+  set(EXEC "lomiri-docviewer-app-migrate.py ${APP_NAME}")
 
   install(FILES ${ICON_FILE} DESTINATION ${DATA_DIR})
   install(FILES ${SPLASH_FILE} DESTINATION ${DATA_DIR})
 else(CLICK_MODE)
   set(ICON "${CMAKE_INSTALL_PREFIX}/${DATA_DIR}/${ICON_FILE}")
   set(DESKTOP_DIR ${CMAKE_INSTALL_DATADIR}/applications)
+  set(EXEC "${APP_NAME}")
 
   install(DIRECTORY icons/hicolor DESTINATION ${CMAKE_INSTALL_DATADIR}/icons
     FILES_MATCHING PATTERN *.png
   )
 endif(CLICK_MODE)
 
-set(EXEC "${APP_NAME}")
+set(TRYEXEC "${APP_NAME}")
 
 configure_file(${DESKTOP_FILE}.in.in ${DESKTOP_FILE}.in @ONLY)
 
