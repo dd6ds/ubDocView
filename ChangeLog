@@ -1,6 +1,35 @@
+2023-02-27 Guido Berhoerster
+
+        * Release 3.0.3 (HEAD -> main, tag: v3.0.3)
+
+2023-02-20 Sergii Horichenko
+
+        * Translated using Weblate (Ukrainian) (c31a8f9)
+
+2023-02-21 Heimen Stoffels
+
+        * Translated using Weblate (Dutch) (7e6ce64)
+
+2023-02-19 phlostically
+
+        * Translated using Weblate (Esperanto) (02e1cb8)
+
+2023-02-16 phlostically
+
+        * Translated using Weblate (Esperanto) (1595fa4)
+
+2023-02-14 Luna Jernberg
+
+        * Translated using Weblate (Swedish) (5bcb2b3)
+
+2023-02-13 Adolfo Jayme Barrientos
+
+        * Translated using Weblate (Spanish) (ddbfcef)
+        * Translated using Weblate (Spanish) (c3feb9c)
+
 2023-02-03 Guido Berhoerster
 
-        * Release 3.0.2 (HEAD -> main, tag: v3.0.2)
+        * Release 3.0.2 (4913bdb) (tag: v3.0.2)
         * Merge branch 'personal/sunweaver/manpage' into 'main' (2c91a9f)
 
 2023-01-30 Mike Gabriel
