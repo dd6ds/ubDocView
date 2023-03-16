@@ -3,6 +3,7 @@ Priority: extra
 Maintainer: UBports Developers <devs@ubports.com>
 Build-Depends: cmake,
                debhelper-compat (=12),
+               dh-migrations,
                libpoppler-qt5-dev,
                libreofficekit-dev,
                pep8,
@@ -29,6 +30,7 @@ Architecture: any
 Depends: ${misc:Depends},
          ${shlibs:Depends},
          suru-icon-theme (>= 14.04+15.10.20150707-0ubuntu1),
+         python3:any,
          qml-module-qtquick2,
          qml-module-lomiri-components,
          qml-module-lomiri-layouts,
