@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
-"PO-Revision-Date: 2021-04-30 20:44+0000\n"
-"Last-Translator: Milan Korecký <milan.korecky@gmail.com>\n"
-"Language-Team: Czech <https://translate.ubports.com/projects/ubports/"
-"docviewer-app/cs/>\n"
+"PO-Revision-Date: 2023-03-28 17:38+0000\n"
+"Last-Translator: Jozef Mlich <jmlich83@gmail.com>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/lomiri/"
+"lomiri-docviewer-app/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 3.11.3\n"
+"X-Generator: Weblate 4.17-dev\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:48+0000\n"
 
 #: lomiri-docviewer-app.desktop.in:7
@@ -25,8 +25,6 @@ msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
 #: lomiri-docviewer-app.desktop.in:8
-#, fuzzy
-#| msgid "Document Viewer"
 msgid "Document Viewer"
 msgstr "Prohlížeč dokumentů"
 
@@ -39,33 +37,25 @@ msgid "Some of the provided arguments are not valid."
 msgstr "Některé ze zadaných argumentů nejsou platné."
 
 #: src/app/qml/common/CommandLineProxy.qml:58
-#, fuzzy
-#| msgid "Open ubuntu-docviewer-app displaying the selected file"
 msgid "Open lomiri-docviewer-app displaying the selected file"
-msgstr "Otevřít ubuntu-docviewer-app a zobrazit v něm vybraný soubor"
+msgstr "Otevřít lomiri-docviewer-app a zobrazit v něm vybraný soubor"
 
 #: src/app/qml/common/CommandLineProxy.qml:65
 msgid "Run fullscreen"
 msgstr "Celá obrazovka"
 
 #: src/app/qml/common/CommandLineProxy.qml:71
-#, fuzzy
-#| msgid "Open ubuntu-docviewer-app in pick mode. Used for tests only."
 msgid "Open lomiri-docviewer-app in pick mode. Used for tests only."
 msgstr ""
-"Otevřít ubuntu-docviewer-app v režimu výběru. Používá se pouze pro testování."
+"Otevřít lomiri-docviewer-app v režimu výběru. Používá se pouze pro testování."
 
 #: src/app/qml/common/CommandLineProxy.qml:77
-#, fuzzy
-#| msgid ""
-#| "Show documents from the given folder, instead of ~/Documents.\n"
-#| "The path must exist prior to running ubuntu-docviewer-app"
 msgid ""
 "Show documents from the given folder, instead of ~/Documents.\n"
 "The path must exist prior to running lomiri-docviewer-app"
 msgstr ""
-"Zobrazit dokumenty z dané složky namísto  ~/Dokumenty.\n"
-"Je třeba, aby popis umístění existoval už před spuštěním ubuntu-docviewer-app"
+"Zobrazit dokumenty z dané složky namísto ~/Dokumenty.\n"
+"Je třeba, aby popis umístění existoval už před spuštěním lomiri-docviewer-app"
 
 #: src/app/qml/common/DetailsPage.qml:29
 #: src/app/qml/loView/LOViewDefaultHeader.qml:93
@@ -108,7 +98,7 @@ msgstr "Chyba"
 #: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:33
 #: src/app/qml/documentPage/SortSettingsDialog.qml:53
 msgid "Close"
-msgstr "Ukončit"
+msgstr "Zavřít"
 
 #: src/app/qml/common/PickImportedDialog.qml:29
 msgid "Multiple documents imported"
@@ -268,10 +258,8 @@ msgid "Documents"
 msgstr "Dokumenty"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-#, fuzzy
-#| msgid "Search"
 msgid "Search…"
-msgstr "Hledat"
+msgstr "Hledat…"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
 #, fuzzy
@@ -500,7 +488,7 @@ msgstr ""
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:45
 msgid "Open"
-msgstr ""
+msgstr "Otevřít"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:45
 #, fuzzy
