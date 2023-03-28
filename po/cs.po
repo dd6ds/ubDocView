@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
-"PO-Revision-Date: 2023-03-28 17:38+0000\n"
+"PO-Revision-Date: 2023-03-29 18:37+0000\n"
 "Last-Translator: Jozef Mlich <jmlich83@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-docviewer-app/cs/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: lomiri-docviewer-app.desktop.in:7
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
-msgstr ""
+msgstr "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 
 #: lomiri-docviewer-app.desktop.in:8
 msgid "Document Viewer"
