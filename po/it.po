@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
-"PO-Revision-Date: 2023-03-30 13:46+0000\n"
+"PO-Revision-Date: 2023-04-02 03:46+0000\n"
 "Last-Translator: Sylke Vicious <silkevicious@tuta.io>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-docviewer-app/it/>\n"
@@ -22,13 +22,11 @@ msgstr ""
 
 #: lomiri-docviewer-app.desktop.in:7
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
-msgstr ""
+msgstr "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 
 #: lomiri-docviewer-app.desktop.in:8
-#, fuzzy
-#| msgid "Document Viewer"
 msgid "Document Viewer"
-msgstr "Visualizzatore di documenti"
+msgstr "Visualizzatore Documenti"
 
 #: lomiri-docviewer-app.desktop.in:9
 msgid "documents;viewer;pdf;reader;"
@@ -39,11 +37,9 @@ msgid "Some of the provided arguments are not valid."
 msgstr "Alcuni degli argomenti forniti non sono validi."
 
 #: src/app/qml/common/CommandLineProxy.qml:58
-#, fuzzy
-#| msgid "Open ubuntu-docviewer-app displaying the selected file"
 msgid "Open lomiri-docviewer-app displaying the selected file"
 msgstr ""
-"Avviare l'app per la visualizzazione dei documenti di Ubuntu mostrando il "
+"Avviare l'app per la visualizzazione dei documenti di Lomiri mostrando il "
 "file selezionato"
 
 #: src/app/qml/common/CommandLineProxy.qml:65
@@ -51,25 +47,19 @@ msgid "Run fullscreen"
 msgstr "Esegui a schermo intero"
 
 #: src/app/qml/common/CommandLineProxy.qml:71
-#, fuzzy
-#| msgid "Open ubuntu-docviewer-app in pick mode. Used for tests only."
 msgid "Open lomiri-docviewer-app in pick mode. Used for tests only."
 msgstr ""
-"Avviare l'app per la visualizzazione dei documenti di Ubuntu in modalità "
+"Avviare l'app per la visualizzazione dei documenti di Lomiri in modalità "
 "«selezione». Usata solo per i test."
 
 #: src/app/qml/common/CommandLineProxy.qml:77
-#, fuzzy
-#| msgid ""
-#| "Show documents from the given folder, instead of ~/Documents.\n"
-#| "The path must exist prior to running ubuntu-docviewer-app"
 msgid ""
 "Show documents from the given folder, instead of ~/Documents.\n"
 "The path must exist prior to running lomiri-docviewer-app"
 msgstr ""
 "Mostra i documenti dalla cartella data, anziché dalla cartella ~/Documenti.\n"
 "Il percorso deve esistere prima dell'avvio dell'applicazione per la "
-"visualizzazione dei documenti"
+"visualizzazione dei documenti di Lomiri"
 
 #: src/app/qml/common/DetailsPage.qml:29
 #: src/app/qml/loView/LOViewDefaultHeader.qml:93
@@ -166,7 +156,7 @@ msgstr "Annulla"
 
 #: src/app/qml/common/UnknownTypeDialog.qml:44
 msgid "Yes"
-msgstr "Sì"
+msgstr "Si"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
 #: src/app/qml/common/utils.js:22
@@ -234,7 +224,7 @@ msgstr ""
 
 #: src/app/qml/documentPage/DocumentListDelegate.qml:75
 msgid "SD card"
-msgstr ""
+msgstr "Scheda SD"
 
 #. TRANSLATORS: %1 refers to a time formatted as Locale.ShortFormat (e.g. hh:mm). It depends on system settings.
 #. http://qt-project.org/doc/qt-4.8/qlocale.html#FormatType-enum
@@ -272,10 +262,8 @@ msgid "Search…"
 msgstr "Cerca…"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-#, fuzzy
-#| msgid "Sorting settings"
 msgid "Sorting settings…"
-msgstr "Impostazioni ordinamento"
+msgstr "Impostazioni ordinamento…"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -317,10 +305,8 @@ msgid "Earlier this month"
 msgstr "Questo mese"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-#, fuzzy
-#| msgid "Even earlier..."
 msgid "Even earlier…"
-msgstr "Più vecchi..."
+msgstr "Più vecchi…"
 
 #: src/app/qml/documentPage/SharePage.qml:28
 msgid "Share to"
@@ -372,16 +358,12 @@ msgid "Unknown LibreOffice document"
 msgstr "Documento di LibreOffice sconosciuto"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:55
-#, fuzzy
-#| msgid "Unknown type document"
 msgid "Unknown document type"
 msgstr "Tipo di documento sconosciuto"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:72
-#, fuzzy
-#| msgid "Go to position"
 msgid "Go to position…"
-msgstr "Va alla posizioni"
+msgstr "Va alla posizione…"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:86
 #: src/app/qml/pdfView/PdfView.qml:310
@@ -397,7 +379,7 @@ msgstr "Abilitare modalità notte"
 
 #: src/app/qml/loView/LOViewGotoDialog.qml:30
 msgid "Go to position"
-msgstr "Va alla posizioni"
+msgstr "Va alla posizione"
 
 #: src/app/qml/loView/LOViewGotoDialog.qml:31
 msgid "Choose a position between 1% and 100%"
@@ -462,52 +444,47 @@ msgid "File does not exist."
 msgstr "Il file non esiste."
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
-#, fuzzy
-#| msgid "Document Viewer"
 msgid "Document is locked"
-msgstr "Visualizzatore di documenti"
+msgstr "Il documento è bloccato"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:26
 msgid "Please insert a password in order to unlock this document"
-msgstr ""
+msgstr "Per favore inserisci una password per sbloccare questo documento"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:50
 msgid "Entered password is not valid"
-msgstr ""
+msgstr "La password inserita non è valida"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:69
 msgid "Unlock"
-msgstr ""
+msgstr "Sblocca"
 
 #: src/app/qml/pdfView/LinkHint.qml:36
 #, qt-format
 msgid "Open link externally: %1"
-msgstr ""
+msgstr "Apri collegamento esternamente: %1"
 
 #: src/app/qml/pdfView/LinkHint.qml:37
 #: src/app/qml/pdfView/OpenLinkDialog.qml:28
-#, fuzzy, qt-format
-#| msgid "Go to page"
+#, qt-format
 msgid "Go to page %1"
-msgstr "Vai alla pagina"
+msgstr "Vai alla pagina %1"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:28
 msgid "Open link externally"
-msgstr ""
+msgstr "Apri collegamento esternamente"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:29
 msgid "Are you sure?"
-msgstr ""
+msgstr "Sei sicuro?"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:45
 msgid "Open"
-msgstr ""
+msgstr "Apri"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:45
-#, fuzzy
-#| msgid "Go to position"
 msgid "Go to destination"
-msgstr "Va alla posizioni"
+msgstr "Va alla destinazione"
 
 #. TRANSLATORS: "Contents" refers to the "Table of Contents" of a PDF document.
 #: src/app/qml/pdfView/PdfContentsPage.qml:31
@@ -537,11 +514,11 @@ msgstr "Presentazione"
 
 #: src/app/qml/pdfView/PdfView.qml:324
 msgid "Rotate 90° right"
-msgstr ""
+msgstr "Ruota 90° a destra"
 
 #: src/app/qml/pdfView/PdfView.qml:341
 msgid "Rotate 90° left"
-msgstr ""
+msgstr "Ruota 90° a sinistra"
 
 #: src/app/qml/pdfView/PdfViewGotoDialog.qml:26
 msgid "Go to page"
@@ -553,10 +530,8 @@ msgid "Choose a page between 1 and %1"
 msgstr "Scegliere una pagina tra 1 e %1"
 
 #: src/app/qml/pdfView/ZoomSelector.qml:120
-#, fuzzy
-#| msgid "Go to page"
 msgid "Fit page"
-msgstr "Vai alla pagina"
+msgstr "Adatta alla pagina"
 
 #. TRANSLATORS: This string is used for renaming a copied file,
 #. when a file with the same name already exists in user's
