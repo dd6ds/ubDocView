@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
-"PO-Revision-Date: 2023-02-14 05:37+0000\n"
-"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
+"PO-Revision-Date: 2023-04-06 21:55+0000\n"
+"Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-docviewer-app/es/>\n"
 "Language: es\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 4.17-dev\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:49+0000\n"
 
 #: lomiri-docviewer-app.desktop.in:7
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
-msgstr ""
+msgstr "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 
 #: lomiri-docviewer-app.desktop.in:8
 msgid "Document Viewer"
@@ -258,10 +258,8 @@ msgid "Search…"
 msgstr "Buscar…"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-#, fuzzy
-#| msgid "Sorting settings"
 msgid "Sorting settings…"
-msgstr "Ordenación"
+msgstr "Ordenando los ajustes…"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -302,10 +300,8 @@ msgid "Earlier this month"
 msgstr "Este mes"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-#, fuzzy
-#| msgid "Even earlier..."
 msgid "Even earlier…"
-msgstr "Aún antes…"
+msgstr "Incluso antes…"
 
 #: src/app/qml/documentPage/SharePage.qml:28
 msgid "Share to"
@@ -387,7 +383,7 @@ msgstr "Seleccione una posición entre 1 y 100 %"
 #: src/app/qml/loView/LOViewGotoDialog.qml:62
 #: src/app/qml/pdfView/PdfViewGotoDialog.qml:58
 msgid "GO!"
-msgstr "Ir"
+msgstr "¡IR!"
 
 #: src/app/qml/loView/LOViewPage.qml:173
 msgid "LibreOffice binaries not found."
