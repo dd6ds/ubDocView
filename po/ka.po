@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lomiri-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
-"PO-Revision-Date: 2023-04-11 19:48+0000\n"
+"PO-Revision-Date: 2023-04-11 20:27+0000\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-docviewer-app/ka/>\n"
@@ -58,7 +58,7 @@ msgstr ""
 #: src/app/qml/pdfView/PdfView.qml:317
 #: src/app/qml/textView/TextViewDefaultHeader.qml:55
 msgid "Details"
-msgstr ""
+msgstr "დაწვრილებით"
 
 #: src/app/qml/common/DetailsPage.qml:42
 msgid "File"
@@ -259,7 +259,7 @@ msgstr ""
 
 #: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:46
 msgid "Select None"
-msgstr ""
+msgstr "მონიშვნის მოხსნა"
 
 #: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:46
 msgid "Select All"
@@ -276,11 +276,11 @@ msgstr ""
 
 #: src/app/qml/documentPage/SectionHeader.qml:30
 msgid "Today"
-msgstr ""
+msgstr "დღეს"
 
 #: src/app/qml/documentPage/SectionHeader.qml:33
 msgid "Yesterday"
-msgstr ""
+msgstr "გუშინ"
 
 #: src/app/qml/documentPage/SectionHeader.qml:36
 msgid "Earlier this week"
@@ -296,7 +296,7 @@ msgstr ""
 
 #: src/app/qml/documentPage/SharePage.qml:28
 msgid "Share to"
-msgstr ""
+msgstr "გაზიარება"
 
 #: src/app/qml/documentPage/SortSettingsDialog.qml:26
 msgid "Sorting settings"
@@ -463,7 +463,7 @@ msgstr ""
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:45
 msgid "Open"
-msgstr ""
+msgstr "გახსნა"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:45
 msgid "Go to destination"
