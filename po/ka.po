@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lomiri-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
-"PO-Revision-Date: 2023-04-11 20:27+0000\n"
+"PO-Revision-Date: 2023-04-13 05:14+0000\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-docviewer-app/ka/>\n"
@@ -21,15 +21,15 @@ msgstr ""
 
 #: lomiri-docviewer-app.desktop.in:7
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
-msgstr ""
+msgstr "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 
 #: lomiri-docviewer-app.desktop.in:8
 msgid "Document Viewer"
-msgstr ""
+msgstr "დოკუმენტების მნახველი"
 
 #: lomiri-docviewer-app.desktop.in:9
 msgid "documents;viewer;pdf;reader;"
-msgstr ""
+msgstr "documents;viewer;pdf;reader;დოკუმენტები;"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -62,27 +62,27 @@ msgstr "დაწვრილებით"
 
 #: src/app/qml/common/DetailsPage.qml:42
 msgid "File"
-msgstr ""
+msgstr "ფაილი"
 
 #: src/app/qml/common/DetailsPage.qml:47
 msgid "Location"
-msgstr ""
+msgstr "მდებარეობა"
 
 #: src/app/qml/common/DetailsPage.qml:52
 msgid "Size"
-msgstr ""
+msgstr "ზომა"
 
 #: src/app/qml/common/DetailsPage.qml:57
 msgid "Created"
-msgstr ""
+msgstr "შექმნილია"
 
 #: src/app/qml/common/DetailsPage.qml:62
 msgid "Last modified"
-msgstr ""
+msgstr "ბოლო ცვლილება"
 
 #: src/app/qml/common/DetailsPage.qml:69
 msgid "MIME type"
-msgstr ""
+msgstr "MIME ტიპი"
 
 #: src/app/qml/common/ErrorDialog.qml:23
 msgid "Error"
@@ -98,17 +98,17 @@ msgstr "დახურვა"
 
 #: src/app/qml/common/PickImportedDialog.qml:29
 msgid "Multiple documents imported"
-msgstr ""
+msgstr "შემოტანილია ბევრი დოკუმენტი"
 
 #: src/app/qml/common/PickImportedDialog.qml:30
 msgid "Choose which one to open:"
-msgstr ""
+msgstr "აირჩიეთ, რომელი გავხსნა:"
 
 #: src/app/qml/common/RejectedImportDialog.qml:28
 msgid "File not supported"
 msgid_plural "Files not supported"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ფაილი მხარდაჭერილი არაა"
+msgstr[1] "ფაილი მხარდაჭერილი არაა"
 
 #: src/app/qml/common/RejectedImportDialog.qml:29
 msgid "Following document has not been imported:"
@@ -120,11 +120,11 @@ msgstr[1] ""
 #: src/app/qml/common/TextualButtonStyle.qml:51
 #: src/app/qml/documentPage/DocumentPagePickModeHeader.qml:54
 msgid "Pick"
-msgstr ""
+msgstr "აირჩიეთ"
 
 #: src/app/qml/common/UnknownTypeDialog.qml:27
 msgid "Unknown file type"
-msgstr ""
+msgstr "ფაილის უცნობი ტიპი"
 
 #: src/app/qml/common/UnknownTypeDialog.qml:28
 msgid ""
@@ -152,43 +152,43 @@ msgstr "დიახ"
 #: src/app/qml/common/utils.js:22
 #, qt-format
 msgid "%1 GB"
-msgstr ""
+msgstr "%1 გბ"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
 #: src/app/qml/common/utils.js:26
 #, qt-format
 msgid "%1 MB"
-msgstr ""
+msgstr "%1 მბ"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
 #: src/app/qml/common/utils.js:30
 #, qt-format
 msgid "%1 kB"
-msgstr ""
+msgstr "%1 კბ"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in byte
 #: src/app/qml/common/utils.js:33
 #, qt-format
 msgid "%1 byte"
-msgstr ""
+msgstr "%1 ბაიტი"
 
 #: src/app/qml/documentPage/DeleteFileDialog.qml:39
 msgid "Delete file"
-msgstr ""
+msgstr "Ფაილის წაშლა"
 
 #: src/app/qml/documentPage/DeleteFileDialog.qml:40
 #, qt-format
 msgid "Delete %1 file"
 msgid_plural "Delete %1 files"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 ფაილის წაშლა"
+msgstr[1] "%1 ფაილის წაშლა"
 
 #: src/app/qml/documentPage/DeleteFileDialog.qml:41
 #: src/app/qml/documentPage/DeleteFileDialog.qml:42
 msgid "Are you sure you want to permanently delete this file?"
 msgid_plural "Are you sure you want to permanently delete these files?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "დარწმუნებული ბრძანდებით, რომ გნებავთ, წაშალოთ ეს ფაილი?"
+msgstr[1] "დარწმუნებული ბრძანდებით, რომ გნებავთ, წაშალოთ ეს ფაილები?"
 
 #: src/app/qml/documentPage/DeleteFileDialog.qml:61
 #: src/app/qml/documentPage/DocumentDelegateActions.qml:25
@@ -202,7 +202,7 @@ msgstr "გაზიარება"
 
 #: src/app/qml/documentPage/DocumentEmptyState.qml:27
 msgid "No documents found"
-msgstr ""
+msgstr "დოკუმენტები ვერ ვიპოვე"
 
 #: src/app/qml/documentPage/DocumentEmptyState.qml:28
 msgid ""
@@ -212,38 +212,38 @@ msgstr ""
 
 #: src/app/qml/documentPage/DocumentListDelegate.qml:75
 msgid "SD card"
-msgstr ""
+msgstr "SD ბარათი"
 
 #. TRANSLATORS: %1 refers to a time formatted as Locale.ShortFormat (e.g. hh:mm). It depends on system settings.
 #. http://qt-project.org/doc/qt-4.8/qlocale.html#FormatType-enum
 #: src/app/qml/documentPage/DocumentListDelegate.qml:100
 #, qt-format
 msgid "Today, %1"
-msgstr ""
+msgstr "დღეს, %1"
 
 #. TRANSLATORS: %1 refers to a time formatted as Locale.ShortFormat (e.g. hh:mm). It depends on system settings.
 #. http://qt-project.org/doc/qt-4.8/qlocale.html#FormatType-enum
 #: src/app/qml/documentPage/DocumentListDelegate.qml:105
 #, qt-format
 msgid "Yesterday, %1"
-msgstr ""
+msgstr "გუშინ, %1"
 
 #. TRANSLATORS: this is a datetime formatting string,
 #. see http://qt-project.org/doc/qt-5/qml-qtqml-date.html#details for valid expressions.
 #: src/app/qml/documentPage/DocumentListDelegate.qml:112
 #: src/app/qml/documentPage/DocumentListDelegate.qml:131
 msgid "yyyy/MM/dd hh:mm"
-msgstr ""
+msgstr "წწწწ/თთ/დდ სთ:წთ"
 
 #. TRANSLATORS: this is a datetime formatting string,
 #. see http://qt-project.org/doc/qt-5/qml-qtqml-date.html#details for valid expressions.
 #: src/app/qml/documentPage/DocumentListDelegate.qml:125
 msgid "dddd, hh:mm"
-msgstr ""
+msgstr "დდდდ, სთ:წთ"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:27
 msgid "Documents"
-msgstr ""
+msgstr "დოკუმენტები"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
 msgid "Search…"
@@ -251,7 +251,7 @@ msgstr "ძებნა…"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
 msgid "Sorting settings…"
-msgstr ""
+msgstr "დალაგების მორგება…"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -325,47 +325,47 @@ msgstr "იტვირთება..."
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:45
 msgid "LibreOffice text document"
-msgstr ""
+msgstr "LibreOffice-ის ტექსტური დოკუმენტი"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:47
 msgid "LibreOffice spread sheet"
-msgstr ""
+msgstr "LibreOffice-ის ელცხრილი"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:49
 msgid "LibreOffice presentation"
-msgstr ""
+msgstr "LibreOffice-ის პრეზენტაცია"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:51
 msgid "LibreOffice Draw document"
-msgstr ""
+msgstr "LibreOffice-ის ნახატი"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:53
 msgid "Unknown LibreOffice document"
-msgstr ""
+msgstr "უცნობი LibreOffice-ის დოკუმენტი"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:55
 msgid "Unknown document type"
-msgstr ""
+msgstr "დოკუმენტის უცნობი ტიპი"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:72
 msgid "Go to position…"
-msgstr ""
+msgstr "პოზიციაზე გადასვლა…"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:86
 #: src/app/qml/pdfView/PdfView.qml:310
 #: src/app/qml/textView/TextViewDefaultHeader.qml:49
 msgid "Disable night mode"
-msgstr ""
+msgstr "ღამის რეჟიმის გამორთვა"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:86
 #: src/app/qml/pdfView/PdfView.qml:310
 #: src/app/qml/textView/TextViewDefaultHeader.qml:49
 msgid "Enable night mode"
-msgstr ""
+msgstr "ღამის რეჟიმის ჩართვა"
 
 #: src/app/qml/loView/LOViewGotoDialog.qml:30
 msgid "Go to position"
-msgstr ""
+msgstr "პოზიციაზე გადასვლა"
 
 #: src/app/qml/loView/LOViewGotoDialog.qml:31
 msgid "Choose a position between 1% and 100%"
@@ -374,15 +374,15 @@ msgstr ""
 #: src/app/qml/loView/LOViewGotoDialog.qml:62
 #: src/app/qml/pdfView/PdfViewGotoDialog.qml:58
 msgid "GO!"
-msgstr ""
+msgstr "წავიდა!"
 
 #: src/app/qml/loView/LOViewPage.qml:173
 msgid "LibreOffice binaries not found."
-msgstr ""
+msgstr "LibreOffice-ის გამშვები ფაილები აღმოჩენილი არაა."
 
 #: src/app/qml/loView/LOViewPage.qml:176
 msgid "Error while loading LibreOffice."
-msgstr ""
+msgstr "LibreOffice-ის ჩატვირთვის შეცდომა."
 
 #: src/app/qml/loView/LOViewPage.qml:179
 msgid ""
@@ -399,36 +399,36 @@ msgstr ""
 #. Ref. https://docs.libreoffice.org/libreofficekit.html
 #: src/app/qml/loView/Splashscreen.qml:45
 msgid "Powered by LibreOfficeKit"
-msgstr ""
+msgstr "იყენებს LibreOfficeKit-ს"
 
 #. TRANSLATORS: Please don't add any space between "Sheet" and "%1".
 #. This is the default name for a sheet in LibreOffice.
 #: src/app/qml/loView/SpreadsheetSelector.qml:64
 #, qt-format
 msgid "Sheet%1"
-msgstr ""
+msgstr "ფურცელი%1"
 
 #: src/app/qml/loView/ZoomSelector.qml:122
 #: src/app/qml/pdfView/ZoomSelector.qml:119
 msgid "Fit width"
-msgstr ""
+msgstr "სიგანეში ჩატევა"
 
 #: src/app/qml/loView/ZoomSelector.qml:123
 msgid "Fit height"
-msgstr ""
+msgstr "სიმაღლის ჩატევა"
 
 #: src/app/qml/loView/ZoomSelector.qml:124
 #: src/app/qml/pdfView/ZoomSelector.qml:121
 msgid "Automatic"
-msgstr ""
+msgstr "ავტომატური"
 
 #: src/app/qml/lomiri-docviewer-app.qml:134
 msgid "File does not exist."
-msgstr ""
+msgstr "ფაილი არ არსებობს."
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 msgid "Document is locked"
-msgstr ""
+msgstr "დოკუმენტი დაბლოკილია"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:26
 msgid "Please insert a password in order to unlock this document"
@@ -436,7 +436,7 @@ msgstr ""
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:50
 msgid "Entered password is not valid"
-msgstr ""
+msgstr "შეყვანილი პაროლი არასწორია"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:69
 msgid "Unlock"
@@ -445,21 +445,21 @@ msgstr "განბლოკვა"
 #: src/app/qml/pdfView/LinkHint.qml:36
 #, qt-format
 msgid "Open link externally: %1"
-msgstr ""
+msgstr "ბმულის გარე პროგრამით გახსნა: %1"
 
 #: src/app/qml/pdfView/LinkHint.qml:37
 #: src/app/qml/pdfView/OpenLinkDialog.qml:28
 #, qt-format
 msgid "Go to page %1"
-msgstr ""
+msgstr "%1-ე გვერდზე გადასვლა"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:28
 msgid "Open link externally"
-msgstr ""
+msgstr "ბმულის გარე პროგრამით გახსნა"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:29
 msgid "Are you sure?"
-msgstr ""
+msgstr "დარწმუნებული ბრძანდებით?"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:45
 msgid "Open"
@@ -467,13 +467,13 @@ msgstr "გახსნა"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:45
 msgid "Go to destination"
-msgstr ""
+msgstr "დანიშნულებაზე გადასვლა"
 
 #. TRANSLATORS: "Contents" refers to the "Table of Contents" of a PDF document.
 #: src/app/qml/pdfView/PdfContentsPage.qml:31
 #: src/app/qml/pdfView/PdfView.qml:230
 msgid "Contents"
-msgstr ""
+msgstr "შიგთავსი"
 
 #. TRANSLATORS: the first argument (%1) refers to the page currently shown on the screen,
 #. while the second one (%2) refers to the total pages count.
@@ -481,7 +481,7 @@ msgstr ""
 #: src/app/qml/pdfView/PdfView.qml:49
 #, qt-format
 msgid "Page %1 of %2"
-msgstr ""
+msgstr "გვერდი %1 %2-დან"
 
 #: src/app/qml/pdfView/PdfView.qml:284
 msgid "Search"
@@ -489,23 +489,23 @@ msgstr "ძებნა"
 
 #: src/app/qml/pdfView/PdfView.qml:294
 msgid "Go to page..."
-msgstr ""
+msgstr "გვერდზე გადასვლა..."
 
 #: src/app/qml/pdfView/PdfView.qml:303
 msgid "Presentation"
-msgstr ""
+msgstr "პრეზენტაცია"
 
 #: src/app/qml/pdfView/PdfView.qml:324
 msgid "Rotate 90° right"
-msgstr ""
+msgstr "90° -ით მარჯვნივ მობრუნება"
 
 #: src/app/qml/pdfView/PdfView.qml:341
 msgid "Rotate 90° left"
-msgstr ""
+msgstr "90°-ით მარცხნივ შებრუნება"
 
 #: src/app/qml/pdfView/PdfViewGotoDialog.qml:26
 msgid "Go to page"
-msgstr ""
+msgstr "გვერდზე გადასვლა"
 
 #: src/app/qml/pdfView/PdfViewGotoDialog.qml:27
 #, qt-format
@@ -514,7 +514,7 @@ msgstr ""
 
 #: src/app/qml/pdfView/ZoomSelector.qml:120
 msgid "Fit page"
-msgstr ""
+msgstr "გვერდის ჩატევა"
 
 #. TRANSLATORS: This string is used for renaming a copied file,
 #. when a file with the same name already exists in user's
@@ -528,4 +528,4 @@ msgstr ""
 #: src/plugin/file-qml-plugin/docviewerutils.cpp:119
 #, qt-format
 msgid "copy %1"
-msgstr ""
+msgstr "%1-ის კოპირება"
