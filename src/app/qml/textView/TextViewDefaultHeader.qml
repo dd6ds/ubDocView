@@ -48,6 +48,9 @@ PageHeader {
             iconName: "night-mode"
             text: mainView.nightModeEnabled ? i18n.tr("Disable night mode") : i18n.tr("Enable night mode")
             onTriggered: mainView.nightModeEnabled = !mainView.nightModeEnabled
+            visible: mainView.theme.name != 'Lomiri.Components.Themes.SuruDark' ||
+                     mainView.previousTheme != 'Lomiri.Components.Themes.SuruDark' &&
+                     mainView.nightModeEnabled
         },
 
         Action {
