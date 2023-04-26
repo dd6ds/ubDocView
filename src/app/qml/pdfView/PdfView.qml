@@ -106,7 +106,7 @@ Page {
             // We need to set a different color, otherwise pages
             // boundaries are not visible.
             anchors.fill: parent
-            color: "#f5f5f5"
+            color: mainView.nightModeEnabled ? "#111111" : "#f5f5f5"
         }
 
         ScrollView {
@@ -116,6 +116,10 @@ Page {
                 id: pdfView
                 objectName: "pdfView"
                 anchors.fill: parent
+
+                layer.effect: NightModeShader {}
+                layer.enabled: mainView.nightModeEnabled &&
+                               !pageStack.currentPage.isPresentationMode
 
                 function updateContentSize(tgtScale) {
                     zoomSettings.zoomFactor = tgtScale

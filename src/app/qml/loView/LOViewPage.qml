@@ -132,7 +132,7 @@ ViewerPage {
                     // We need to set a different color, otherwise pages
                     // boundaries are not visible.
                     anchors.fill: parent
-                    color: "#f5f5f5"
+                    color: mainView.nightModeEnabled ? "#111111" : "#f5f5f5"
                 }
 
                 ScrollView {
@@ -149,6 +149,10 @@ ViewerPage {
                         id: loView
                         objectName: "loView"
                         anchors.fill: parent
+
+                        layer.effect: NightModeShader {}
+                        layer.enabled: mainView.nightModeEnabled &&
+                                        !pageStack.currentPage.isPresentationMode
 
                         documentPath: file.path
 

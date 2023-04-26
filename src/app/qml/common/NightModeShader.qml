@@ -28,6 +28,9 @@ ShaderEffect {
             p.g = min(0.8, (1.0 - p.g) * 0.8 + 0.1);
             p.b = min(0.8, (1.0 - p.b) * 0.8 + 0.1);
             gl_FragColor = vec4(vec3(dot(p.rgb, vec3(0.299, 0.587, 0.114))), p.a) * qt_Opacity;
+            if (p.a == 0.0) {
+                gl_FragColor = vec4(0.0, 0.0, 0.0, 0.0);
+            }
         }
     "
 }
