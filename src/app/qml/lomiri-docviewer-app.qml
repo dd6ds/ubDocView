@@ -32,6 +32,7 @@ MainView {
     property bool pickMode: commandLineProxy.pickMode
     property alias contentHubProxy: contentHubLoader.item
     property bool nightModeEnabled: false
+    property string previousTheme: 'Lomiri.Components.Themes.Ambiance'
 
     // If device orientation is landscape and screen width is limited,
     // force hiding Unity 8 indicators panel.
@@ -106,6 +107,15 @@ MainView {
             while (pageStack.depth > 1) {
                 pageStack.pop()
             }
+        }
+    }
+
+    onNightModeEnabledChanged: {
+        if (nightModeEnabled) {
+            previousTheme = mainView.theme.name
+            mainView.theme.name = 'Lomiri.Components.Themes.SuruDark'
+        } else {
+            mainView.theme.name = previousTheme
         }
     }
 
