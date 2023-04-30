@@ -32,6 +32,7 @@ MainView {
     property bool pickMode: commandLineProxy.pickMode
     property alias contentHubProxy: contentHubLoader.item
     property bool nightModeEnabled: false
+    property string previousTheme: 'Lomiri.Components.Themes.Ambiance'
 
     // If device orientation is landscape and screen width is limited,
     // force hiding Unity 8 indicators panel.
@@ -93,11 +94,6 @@ MainView {
     width: units.gu(150)
     height: units.gu(75)
 
-    layer.effect: NightModeShader {}
-    layer.enabled: nightModeEnabled &&
-                   (pageStack.depth > 1) &&
-                   !pageStack.currentPage.isPresentationMode
-
     onFullscreenChanged: {
         if (mainView.fullscreen)
             window.visibility = Window.FullScreen
@@ -111,6 +107,15 @@ MainView {
             while (pageStack.depth > 1) {
                 pageStack.pop()
             }
+        }
+    }
+
+    onNightModeEnabledChanged: {
+        if (nightModeEnabled) {
+            previousTheme = mainView.theme.name
+            mainView.theme.name = 'Lomiri.Components.Themes.SuruDark'
+        } else {
+            mainView.theme.name = previousTheme
         }
     }
 
@@ -178,15 +183,6 @@ MainView {
         sortCaseSensitivity: Qt.CaseInsensitive
 
         filter.property: "name"
-    }
-
-    // WORKAROUND: mainView backgroundColor is an alias for the window color, and does not
-    // refer to a child QML Rectangle anymore. This breaks our night mode shader; for that
-    // reason we need to re-add that QML Rectangle.
-    Rectangle {
-        anchors.fill: parent
-        color: mainView.backgroundColor
-        visible: nightModeEnabled
     }
 
     PageStack {
