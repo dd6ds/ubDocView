@@ -1,6 +1,127 @@
+2023-10-15 Mike Gabriel
+
+        * Release 3.0.4 (HEAD -> main, tag: v3.0.4)
+
+2023-08-21 NPL
+
+        * Translated using Weblate (Japanese) (8aab09b)
+
+2023-08-12 NPL
+
+        * Translated using Weblate (Japanese) (53d22a2)
+
+2023-08-13 Abdullah AL Shohag
+
+        * Translated using Weblate (Bengali (Bangladesh)) (455c99b)
+
+2023-06-30 Rudra Harsh V.Singh
+
+        * Translated using Weblate (Sanskrit) (f3d3748)
+
+2023-07-01 NPL
+
+        * Translated using Weblate (Japanese) (f11f911)
+
+2023-07-01 Hosted Weblate
+
+        * Update translation files (c8409ed)
+
+2023-06-30 Weblate
+
+        * Added translation using Weblate (Sanskrit) (6c8949f)
+
+2023-06-27 Rudra Harsh V.Singh
+
+        * Translated using Weblate (English (Canada)) (770b5a7)
+
+2023-06-26 Rudra Harsh V.Singh
+
+        * Translated using Weblate (Hindi) (33d6c6c)
+
+2023-06-28 J. Lavoie
+
+        * Translated using Weblate (French) (f482e7c)
+        * Translated using Weblate (German) (6e437ce)
+
+2023-06-08 Mike Gabriel
+
+        * Merge branch 'add_ignore_review' into 'main' (92d4b7c)
+
+2023-03-30 Danfro
+
+        * add ignore review errors to clickable.yaml to allow local building
+          (0d06588)
+
+2023-05-13 abidin toumi
+
+        * Translated using Weblate (Arabic) (2a5008f)
+
+2023-04-12 Temuri Doghonadze
+
+        * Translated using Weblate (Georgian) (40ade7c)
+
+2023-04-30 Mike Gabriel
+
+        * Merge branch 'nightmode-fixes' into 'main' (aba0d4a)
+
+2023-04-26 Capsia
+
+        * Disable nightMode switch when viewing text files with SuruDark
+          (85f9f46)
+        * Switch UI theme to SuruDark when night mode is enabled (a0be526)
+        * Apply night mode to document instead of mainView (fc7199e)
+
+2023-04-11 Temuri Doghonadze
+
+        * Translated using Weblate (Georgian) (d9d6ab7)
+        * Translated using Weblate (Georgian) (27ff9b5)
+
+2023-04-04 gallegonovato
+
+        * Translated using Weblate (Spanish) (b25f72b)
+
+2023-03-30 Sylke Vicious
+
+        * Translated using Weblate (Italian) (806e12c)
+        * Translated using Weblate (Italian) (4b4c72f)
+
+2023-03-30 Jozef Mlich
+
+        * Translated using Weblate (Czech) (d29f678)
+
+2023-03-28 Jozef Mlich
+
+        * Translated using Weblate (Czech) (39cbb3d)
+
+2023-03-27 Jozef Mlich
+
+        * Translated using Weblate (Czech) (1d38762)
+
+2023-03-22 phlostically
+
+        * Translated using Weblate (Esperanto) (cabfe0f)
+
+2023-03-16 Mike Gabriel
+
+        * Merge branch 'personal/gberh/click-migrate' into 'main' (ae5c96b)
+
+2023-02-28 Guido Berhoerster
+
+        * Fix dh_installman manpage installation path (5567ef4)
+        * Use session-migration for migration in Debian (dc7f508)
+
+2023-02-23 Guido Berhoerster
+
+        * Add migrations to manifest (f869acb)
+        * Add migration wrapper script (7d9131c)
+
+2023-02-26 Luna Jernberg
+
+        * Translated using Weblate (Swedish) (dc080f9)
+
 2023-02-27 Guido Berhoerster
 
-        * Release 3.0.3 (HEAD -> main, tag: v3.0.3)
+        * Release 3.0.3 (7aa6018) (tag: v3.0.3)
 
 2023-02-20 Sergii Horichenko
 
