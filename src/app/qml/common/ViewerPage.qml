@@ -31,6 +31,8 @@ Page {
     property alias loaderProgress: contentLoader.progress
     property alias loaderStatus: contentLoader.status
 
+    property bool isPresentationMode: false
+
     signal contentLoaded()
 
     Loader {
@@ -45,7 +47,7 @@ Page {
                     return parent.top
 
                 if (!viewerPage.header.flickable)
-                    return viewerPage.header.bottom
+                    return viewerPage.isPresentationMode ? parent.top : viewerPage.header.bottom
                 else
                     return parent.top
             }
