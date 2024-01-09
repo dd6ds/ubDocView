@@ -24,6 +24,7 @@ PageHeader {
     id: rootItem
 
     property alias activityRunning: activity.running
+    property Page page: null
 
     contents: ListItemLayout {
         anchors.centerIn: parent
@@ -45,6 +46,25 @@ PageHeader {
 
     trailingActionBar.actions: [
         Action {
+            id: startPresentation
+            objectName:"presentationmode"
+            iconName: "slideshow"
+            text: i18n.tr("Presentation")
+            enabled: !rootItem.page.isPresentationMode
+            visible: enabled
+            shortcut: "F5"
+            onTriggered: rootItem.page.isPresentationMode = true
+        },
+        Action {
+            id: exitPresentation
+            iconName: "cancel"
+            enabled: rootItem.page.isPresentationMode
+            visible: enabled
+            text: i18n.tr("Exit presentation mode")
+            shortcut: StandardKey.Cancel
+            onTriggered: rootItem.page.isPresentationMode = false
+        },
+        Action {
             iconName: "night-mode"
             text: mainView.nightModeEnabled ? i18n.tr("Disable night mode") : i18n.tr("Enable night mode")
             onTriggered: mainView.nightModeEnabled = !mainView.nightModeEnabled
@@ -57,6 +77,8 @@ PageHeader {
             objectName: "detailsAction"
             text: i18n.tr("Details")
             iconName: "info"
+            enabled: !rootItem.page.isPresentationMode
+            visible: enabled
             onTriggered: pageStack.push(Qt.resolvedUrl("../common/DetailsPage.qml"))
         }
     ]

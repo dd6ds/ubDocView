@@ -38,7 +38,9 @@ MainView {
     // force hiding Unity 8 indicators panel.
     property bool fullscreen: commandLineProxy.fullscreen ||
                               (!desktopMode && isLandscape && narrowWindow) ||
-                              pageStack.currentPage.hasOwnProperty("isPresentationMode")
+                              (pageStack.currentPage.hasOwnProperty("isPresentationMode")
+                                    && pageStack.currentPage.isPresentationMode)
+    readonly property bool hasKeyboard: keyboardModel.count > 0
 
     readonly property bool desktopMode: DocumentViewer.desktopMode
 
@@ -95,10 +97,12 @@ MainView {
     height: units.gu(75)
 
     onFullscreenChanged: {
-        if (mainView.fullscreen)
+        if (mainView.fullscreen) {
             window.visibility = Window.FullScreen
-        else
+            fullscreenHintComponent.createObject(mainView)
+        } else {
             window.visibility = Window.Windowed
+        }
     }
 
     onPickModeChanged: {
@@ -218,5 +222,43 @@ MainView {
     ScreenSaver {
         // Turn off screen saver during a full-screen presentation when the app is focused.
         screenSaverEnabled: !(Qt.application.active && pageStack.currentPage.isPresentationMode)
+    }
+
+    Component {
+        id: fullscreenHintComponent
+
+        FullScreenHint {
+            anchors {
+                horizontalCenter: parent.horizontalCenter
+                margins: units.gu(2)
+                bottom: parent.bottom
+                bottomMargin : units.gu(5)
+            }
+        }
+    }
+
+    // For checking if there's a physical keyboard present
+    FilteredKeyboardModel {
+        id: keyboardModel
+    }
+
+    // Bottom gesture for exiting fullscreen/presentation mode
+    SwipeArea {
+        enabled: (pageStack.currentPage.hasOwnProperty("isPresentationMode")
+                                    && pageStack.currentPage.isPresentationMode)
+        visible: enabled
+        direction: SwipeArea.Upwards
+        height: units.gu(2)
+        anchors {
+            bottom: parent.bottom
+            left: parent.left
+            right: parent.right
+        }
+
+        onDraggingChanged: {
+            if (dragging && pageStack.currentPage.hasOwnProperty("isPresentationMode")) {
+                pageStack.currentPage.isPresentationMode = false
+            }
+        }
     }
 }
