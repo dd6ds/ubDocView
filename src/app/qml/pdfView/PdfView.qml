@@ -270,6 +270,13 @@ Page {
         }
     }
 
+    PresentationModeTapHandler {
+        anchors.fill: pinchArea
+        enabled: pdfPage.isPresentationMode
+        onLeftClicked: nextPage.trigger()
+        onRightClicked: previousPage.trigger()
+    }
+
     SwipeArea {
         readonly property bool isDragging: Math.abs(distance) > units.gu(2)
         enabled: pdfPage.isPresentationMode

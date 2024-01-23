@@ -317,6 +317,13 @@ ViewerPage {
             }
         }
 
+        PresentationModeTapHandler {
+            anchors.fill: parent
+            enabled: loPage.isPresentationMode
+            onLeftClicked: defaultHeader.nextPage()
+            onRightClicked: defaultHeader.previousPage()
+        }
+
         SwipeArea {
             readonly property bool isDragging: Math.abs(distance) > units.gu(2)
             enabled: loPage.isPresentationMode && loPage.isPresentation
