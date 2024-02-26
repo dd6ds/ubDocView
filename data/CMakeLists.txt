@@ -11,9 +11,7 @@ else(CLICK_MODE)
   set(DESKTOP_DIR ${CMAKE_INSTALL_DATADIR}/applications)
   set(EXEC "${APP_NAME}")
 
-  install(DIRECTORY icons/hicolor DESTINATION ${CMAKE_INSTALL_DATADIR}/icons
-    FILES_MATCHING PATTERN *.png
-  )
+  install(FILES ${ICON_FILE} DESTINATION ${DATA_DIR})
 endif(CLICK_MODE)
 
 set(TRYEXEC "${APP_NAME}")
