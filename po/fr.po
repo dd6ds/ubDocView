@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
-"PO-Revision-Date: 2024-01-26 02:44+0000\n"
-"Last-Translator: Vlad Nirky <vlad.nirky@laposte.net>\n"
+"PO-Revision-Date: 2024-03-11 08:26+0000\n"
+"Last-Translator: saveurlinux <cosse@codelutin.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-docviewer-app/fr/>\n"
 "Language: fr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:48+0000\n"
 
 #: lomiri-docviewer-app.desktop.in:7
@@ -25,14 +25,12 @@ msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 
 #: lomiri-docviewer-app.desktop.in:8
-#, fuzzy
-#| msgid "Document Viewer"
 msgid "Document Viewer"
 msgstr "Visionneuse de document"
 
 #: lomiri-docviewer-app.desktop.in:9
 msgid "documents;viewer;pdf;reader;"
-msgstr "documents;visionneuse;pdf;lecteur;"
+msgstr "documents ;visionneuse ;pdf ;lecteur ;"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -358,8 +356,6 @@ msgid "Unknown LibreOffice document"
 msgstr "Document LibreOffice inconnu"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:55
-#, fuzzy
-#| msgid "Unknown type document"
 msgid "Unknown document type"
 msgstr "Document de type inconnu"
 
@@ -390,7 +386,7 @@ msgstr "Sélectionner une position entre 1 % et 100 %"
 #: src/app/qml/loView/LOViewGotoDialog.qml:62
 #: src/app/qml/pdfView/PdfViewGotoDialog.qml:58
 msgid "GO!"
-msgstr "ALLER!"
+msgstr "ALLER !"
 
 #: src/app/qml/loView/LOViewPage.qml:173
 msgid "LibreOffice binaries not found."
