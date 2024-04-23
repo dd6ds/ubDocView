@@ -120,6 +120,8 @@ MainView {
     }
 
     Component.onCompleted: {
+        i18n.domain = "lomiri-docviewer-app";
+
         // WORKAROUND: Mouse detection is not included in the SDK yet
         QuickUtils.mouseAttached = true
 
