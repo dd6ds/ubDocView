@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
-"PO-Revision-Date: 2020-07-31 10:50+0000\n"
-"Last-Translator: Young Kim <rsyh93@gmail.com>\n"
-"Language-Team: Korean <https://translate.ubports.com/projects/ubports/"
-"docviewer-app/ko/>\n"
+"PO-Revision-Date: 2024-05-16 17:56+0000\n"
+"Last-Translator: Daniel Soohan Park <soobak0313@outlook.com>\n"
+"Language-Team: Korean <https://hosted.weblate.org/projects/lomiri/"
+"lomiri-docviewer-app/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.11.3\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 #: lomiri-docviewer-app.desktop.in:7
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
@@ -222,7 +222,7 @@ msgstr ""
 #: src/app/qml/documentPage/DocumentListDelegate.qml:105
 #, qt-format
 msgid "Yesterday, %1"
-msgstr ""
+msgstr "어제, %1"
 
 #. TRANSLATORS: this is a datetime formatting string,
 #. see http://qt-project.org/doc/qt-5/qml-qtqml-date.html#details for valid expressions.
