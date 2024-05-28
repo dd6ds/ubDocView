@@ -8,25 +8,23 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
-"PO-Revision-Date: 2019-11-03 20:36+0000\n"
-"Last-Translator: Ege Öz <ege.oz@tutanota.com>\n"
-"Language-Team: Turkish <https://translate.ubports.com/projects/ubports/"
-"docviewer-app/tr/>\n"
+"PO-Revision-Date: 2024-05-29 17:23+0000\n"
+"Last-Translator: Ali Beyaz <alipolatbeyaz@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/lomiri/"
+"lomiri-docviewer-app/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.8\n"
+"X-Generator: Weblate 5.6-dev\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:49+0000\n"
 
 #: lomiri-docviewer-app.desktop.in:7
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
-msgstr ""
+msgstr "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 
 #: lomiri-docviewer-app.desktop.in:8
-#, fuzzy
-#| msgid "Document Viewer"
 msgid "Document Viewer"
 msgstr "Belge Görüntüleyici"
 
@@ -39,33 +37,25 @@ msgid "Some of the provided arguments are not valid."
 msgstr "Sağlanan argümanlardan bazıları geçerli değil."
 
 #: src/app/qml/common/CommandLineProxy.qml:58
-#, fuzzy
-#| msgid "Open ubuntu-docviewer-app displaying the selected file"
 msgid "Open lomiri-docviewer-app displaying the selected file"
-msgstr "Seçili dosyayı görüntüleyen ubuntu-docviewer-app dosyasını açın"
+msgstr "Seçilen dosyayı görüntüleyen lomiri-docviewer-app'i açın"
 
 #: src/app/qml/common/CommandLineProxy.qml:65
 msgid "Run fullscreen"
 msgstr "Tam ekran çalıştır"
 
 #: src/app/qml/common/CommandLineProxy.qml:71
-#, fuzzy
-#| msgid "Open ubuntu-docviewer-app in pick mode. Used for tests only."
 msgid "Open lomiri-docviewer-app in pick mode. Used for tests only."
 msgstr ""
-"Seçim modunda ubuntu-docviewer-app'yi açın. Yalnızca testler için kullanılır."
+"Lomiri-docviewer-app'i seçim modunda açın. Yalnızca deneme amaçlı kullanılır."
 
 #: src/app/qml/common/CommandLineProxy.qml:77
-#, fuzzy
-#| msgid ""
-#| "Show documents from the given folder, instead of ~/Documents.\n"
-#| "The path must exist prior to running ubuntu-docviewer-app"
 msgid ""
 "Show documents from the given folder, instead of ~/Documents.\n"
 "The path must exist prior to running lomiri-docviewer-app"
 msgstr ""
-"Verilen klasördeki belgeleri göster, örneğin ~/Belgeler.\n"
-"Yol, Ubuntu Belge Görüntüleyici çalıştırılmadan önce mevcut olmalıdır"
+"~/Documents yerine verilen klasördeki belgeleri gösterin.\n"
+"Lomiri-docviewer-app'i çalıştırmadan önce yol mevcut olmalıdır"
 
 #: src/app/qml/common/DetailsPage.qml:29
 #: src/app/qml/loView/LOViewDefaultHeader.qml:93
@@ -231,7 +221,7 @@ msgstr ""
 
 #: src/app/qml/documentPage/DocumentListDelegate.qml:75
 msgid "SD card"
-msgstr ""
+msgstr "SD kartı"
 
 #. TRANSLATORS: %1 refers to a time formatted as Locale.ShortFormat (e.g. hh:mm). It depends on system settings.
 #. http://qt-project.org/doc/qt-4.8/qlocale.html#FormatType-enum
@@ -265,16 +255,12 @@ msgid "Documents"
 msgstr "Belgeler"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-#, fuzzy
-#| msgid "Search"
 msgid "Search…"
-msgstr "Ara"
+msgstr "Ara…"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-#, fuzzy
-#| msgid "Sorting settings"
 msgid "Sorting settings…"
-msgstr "Sıralama ayarları"
+msgstr "Sıralama ayarları…"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
@@ -316,10 +302,8 @@ msgid "Earlier this month"
 msgstr "Bu ay'ın başlarında"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
-#, fuzzy
-#| msgid "Even earlier..."
 msgid "Even earlier…"
-msgstr "Daha da eski..."
+msgstr "Daha da eski…"
 
 #: src/app/qml/documentPage/SharePage.qml:28
 msgid "Share to"
@@ -371,16 +355,12 @@ msgid "Unknown LibreOffice document"
 msgstr "Bilinmeyen LibreOffice belgesi"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:55
-#, fuzzy
-#| msgid "Unknown type document"
 msgid "Unknown document type"
-msgstr "Bilinmeyen türde belge"
+msgstr "Bilinmeyen belge türü"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:72
-#, fuzzy
-#| msgid "Go to position"
 msgid "Go to position…"
-msgstr "Pozisyona git"
+msgstr "Pozisyona git…"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:86
 #: src/app/qml/pdfView/PdfView.qml:310
@@ -460,52 +440,47 @@ msgid "File does not exist."
 msgstr "Dosya bulunmuyor."
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
-#, fuzzy
-#| msgid "Document Viewer"
 msgid "Document is locked"
-msgstr "Belge Görüntüleyici"
+msgstr "Belge kilitli"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:26
 msgid "Please insert a password in order to unlock this document"
-msgstr ""
+msgstr "Bu belgenin kilidini açmak için lütfen bir şifre girin"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:50
 msgid "Entered password is not valid"
-msgstr ""
+msgstr "Girilen şifre geçersiz"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:69
 msgid "Unlock"
-msgstr ""
+msgstr "Kilidini aç"
 
 #: src/app/qml/pdfView/LinkHint.qml:36
 #, qt-format
 msgid "Open link externally: %1"
-msgstr ""
+msgstr "Bağlantıyı harici olarak aç: %1"
 
 #: src/app/qml/pdfView/LinkHint.qml:37
 #: src/app/qml/pdfView/OpenLinkDialog.qml:28
-#, fuzzy, qt-format
-#| msgid "Go to page"
+#, qt-format
 msgid "Go to page %1"
-msgstr "Sayfaya git"
+msgstr "%1 sayfasına git"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:28
 msgid "Open link externally"
-msgstr ""
+msgstr "Bağlantıyı harici olarak aç"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:29
 msgid "Are you sure?"
-msgstr ""
+msgstr "Emin misin?"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:45
 msgid "Open"
-msgstr ""
+msgstr "Aç"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:45
-#, fuzzy
-#| msgid "Go to position"
 msgid "Go to destination"
-msgstr "Pozisyona git"
+msgstr "Hedefe git"
 
 #. TRANSLATORS: "Contents" refers to the "Table of Contents" of a PDF document.
 #: src/app/qml/pdfView/PdfContentsPage.qml:31
@@ -535,11 +510,11 @@ msgstr "Sunum"
 
 #: src/app/qml/pdfView/PdfView.qml:324
 msgid "Rotate 90° right"
-msgstr ""
+msgstr "90° sağa döndür"
 
 #: src/app/qml/pdfView/PdfView.qml:341
 msgid "Rotate 90° left"
-msgstr ""
+msgstr "90° sola döndür"
 
 #: src/app/qml/pdfView/PdfViewGotoDialog.qml:26
 msgid "Go to page"
@@ -551,10 +526,8 @@ msgid "Choose a page between 1 and %1"
 msgstr "1 ile %1 arası bir sayfa seçin"
 
 #: src/app/qml/pdfView/ZoomSelector.qml:120
-#, fuzzy
-#| msgid "Go to page"
 msgid "Fit page"
-msgstr "Sayfaya git"
+msgstr "Sayfayı sığdır"
 
 #. TRANSLATORS: This string is used for renaming a copied file,
 #. when a file with the same name already exists in user's
