@@ -21,7 +21,7 @@ set(LIBREOFFICE_INCLUDE_DIR "" CACHE PATH "Custom LibreOfficeKit include directo
 
 set(APP_NAME            lomiri-docviewer-app)
 set(DESKTOP_FILE        "${PROJECT_NAME}.desktop")
-set(ICON_FILE           docviewer-app.png)
+set(ICON_FILE           docviewer-app.svg)
 set(SPLASH_FILE         docviewer-app-splash.svg)
 set(AUTOPILOT_DIR       lomiri_docviewer_app)
 
