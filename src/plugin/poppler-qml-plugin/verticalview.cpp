@@ -357,6 +357,7 @@ void VerticalView::positionAtIndex(int index, qreal top, qreal left)
 
     m_parentFlickable->setProperty("contentY", page->x() + left);
     m_parentFlickable->setProperty("contentY", page->y() + top);
+    setCurrentPageIndex(index);
 }
 
 void VerticalView::positionAtEnd()

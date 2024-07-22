@@ -14,7 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.4
+import QtQuick 2.12
 import Lomiri.Components 1.3
 import Lomiri.Layouts 1.0
 import DocumentViewer 1.0
@@ -34,6 +34,43 @@ ViewerPage {
 
     header: defaultHeader
     splashScreen: Splashscreen { }
+
+    onIsPresentationModeChanged: {
+        if (isPresentationMode) {
+            header.exposed = false
+            if (isTextDocument) {
+                contentItem.loView.adjustZoomToWidth()
+            } else if (isPresentation) {
+                contentItem.loView.adjustAutomaticZoom()
+            }
+        } else {
+            header.exposed = true
+        }
+    }
+
+    ExposeHeaderHoverHandler {
+        page: loPage
+        z: 10
+        anchors {
+            top: parent.top
+            left: parent.left
+            right: parent.right
+        }
+    }
+
+    MouseArea {
+        enabled: loPage.isPresentationMode && loPage.isPresentation
+        anchors.fill: parent
+        acceptedButtons: Qt.NoButton
+        onWheel: {
+            if (wheel.angleDelta.y == -120) {
+                defaultHeader.nextPage()
+            }
+            if (wheel.angleDelta.y == 120) {
+                defaultHeader.previousPage()
+            }
+        }
+    }
 
     content: FocusScope {
         id: loPageContent
@@ -58,7 +95,7 @@ ViewerPage {
                             id: leftSidebar
                             anchors.left: parent.left
                             anchors.bottom: parent.bottom
-                            visible: loPage.isPresentation
+                            visible: loPage.isPresentation && !loPage.isPresentationMode
 
                             width: visible ? units.gu(40) : 0
 
@@ -94,6 +131,7 @@ ViewerPage {
                 objectName: "pinchArea"
                 Layouts.item: "pinchArea"
                 clip: true
+                enabled: !loPage.isPresentationMode || loPage.isTextDocument || loPage.isSpreadsheet
 
                 targetFlickable: loView
                 onTotalScaleChanged: targetFlickable.updateContentSize(totalScale)
@@ -137,6 +175,7 @@ ViewerPage {
 
                 ScrollView {
                     anchors.fill: parent
+                    enabled: !loPage.isPresentationMode || loPage.isTextDocument || loPage.isSpreadsheet
 
                     // We need to set some custom event handler.
                     // Forward the key events to the Viewer and
@@ -148,6 +187,10 @@ ViewerPage {
                     LibreOffice.Viewer {
                         id: loView
                         objectName: "loView"
+
+                        readonly property bool inLastPage: currentPart == loView.partsModel.length - 1
+                        readonly property bool inFirstPage: currentPart == 0
+
                         anchors.fill: parent
 
                         layer.effect: NightModeShader {}
@@ -241,6 +284,8 @@ ViewerPage {
 
             Item {
                 id: bottomBar
+
+                visible: !loPage.isPresentationMode || loPage.isTextDocument || loPage.isSpreadsheet
                 anchors {
                     left: parent.left
                     right: parent.right
@@ -271,6 +316,30 @@ ViewerPage {
                 }
             }
         }
+
+        PresentationModeTapHandler {
+            anchors.fill: parent
+            enabled: loPage.isPresentationMode
+            onLeftClicked: defaultHeader.nextPage()
+            onRightClicked: defaultHeader.previousPage()
+        }
+
+        SwipeArea {
+            readonly property bool isDragging: Math.abs(distance) > units.gu(2)
+            enabled: loPage.isPresentationMode && loPage.isPresentation
+            visible: enabled
+            direction: SwipeArea.Horizontal
+            anchors.fill: parent
+            onIsDraggingChanged: {
+                if (isDragging) {
+                    if (distance < 0) {
+                        defaultHeader.nextPage()
+                    } else {
+                        defaultHeader.previousPage()
+                    }
+                }
+            }
+        }
     }
 
 
@@ -280,7 +349,7 @@ ViewerPage {
         id: defaultHeader
         visible: loPage.loaded
         title: DocumentViewer.getFileBaseNameFromPath(file.path);
-        flickable: isTextDocument ? loPage.contentItem.loView : null
+        flickable: isTextDocument && !loPage.isPresentationMode ? loPage.contentItem.loView : null
         targetPage: loPage
     }
 

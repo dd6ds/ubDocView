@@ -14,7 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.4
+import QtQuick 2.12
 import Lomiri.Components 1.3
 import Lomiri.Components.Popups 1.3
 import DocumentViewer.PDF 2.0 as PDF
@@ -27,12 +27,15 @@ import "../common/utils.js" as Utils
 
 Page {
     id: pdfPage
+
+    property bool isPresentationMode: false
+
     title: DocumentViewer.getFileBaseNameFromPath(file.path)
 
     header: PageHeader {
-        flickable: pdfView
+        flickable: pdfPage.isPresentationMode ? null : pdfView
 
-        trailingActionBar.actions: [ searchText, goToPage, /*startPresentation,*/ nightModeToggle, fileDetails, rotateRight, rotateLeft ]
+        trailingActionBar.actions: [ searchText, goToPage, startPresentation, exitPresentation, nextPage, previousPage, nightModeToggle, fileDetails, rotateRight, rotateLeft ]
 
         contents: ListItemLayout {
             anchors.centerIn: parent
@@ -57,6 +60,50 @@ Page {
         }
     }
 
+    onIsPresentationModeChanged: {
+        if (isPresentationMode) {
+            pdfView.adjustZoomToPage()
+            scrollToCurrentPageTimer.restart()
+        } else {
+            header.exposed = true
+        }
+    }
+
+    // TODO: Check what's causing the crash
+    // Delay repositioning to avoid app crashing
+    Timer {
+        id: scrollToCurrentPageTimer
+        interval: 300
+        onTriggered: {
+            pdfView.positionAtIndex(pdfView.currentPageIndex) // Make sure current page is positioned correctly
+            pdfPage.header.exposed = false
+        }
+    }
+
+    ExposeHeaderHoverHandler {
+        page: pdfPage
+        z: 10
+        anchors {
+            top: parent.top
+            left: parent.left
+            right: parent.right
+        }
+    }
+
+    MouseArea {
+        enabled: pdfPage.isPresentationMode
+        anchors.fill: parent
+        acceptedButtons: Qt.NoButton
+        onWheel: {
+            if (wheel.angleDelta.y == -120) {
+                nextPage.trigger()
+            }
+            if (wheel.angleDelta.y == 120) {
+                previousPage.trigger()
+            }
+        }
+    }
+
     // Reset night mode shader settings when closing the page
     // Component.onDestruction: mainView.nightModeEnabled = false
 
@@ -72,7 +119,7 @@ Page {
         objectName: "pinchArea"
 
         anchors {
-            top: pdfPage.header.bottom
+            top: pdfPage.isPresentationMode ? parent.top : pdfPage.header.bottom
             left: parent.left
             right: parent.right
             bottom: parent.bottom
@@ -80,7 +127,7 @@ Page {
 
         clip: true
 
-        enabled: !pdfView.moving
+        enabled: !pdfView.moving && !pdfPage.isPresentationMode
 
         targetFlickable: pdfView
         onTotalScaleChanged: targetFlickable.updateContentSize(totalScale)
@@ -111,10 +158,15 @@ Page {
 
         ScrollView {
             anchors.fill: parent
+            enabled: !pdfPage.isPresentationMode
 
             PDF.Viewer {
                 id: pdfView
                 objectName: "pdfView"
+
+                readonly property bool inLastPage: currentPageIndex == pagesCount - 1
+                readonly property bool inFirstPage: currentPageIndex == 0
+
                 anchors.fill: parent
 
                 layer.effect: NightModeShader {}
@@ -218,6 +270,30 @@ Page {
         }
     }
 
+    PresentationModeTapHandler {
+        anchors.fill: pinchArea
+        enabled: pdfPage.isPresentationMode
+        onLeftClicked: nextPage.trigger()
+        onRightClicked: previousPage.trigger()
+    }
+
+    SwipeArea {
+        readonly property bool isDragging: Math.abs(distance) > units.gu(2)
+        enabled: pdfPage.isPresentationMode
+        visible: enabled
+        direction: SwipeArea.Horizontal
+        anchors.fill: parent
+        onIsDraggingChanged: {
+            if (isDragging) {
+                if (distance < 0) {
+                    nextPage.trigger()
+                } else {
+                    previousPage.trigger()
+                }
+            }
+        }
+    }
+
     BottomEdge {
         id: contentsBottomEdge
 
@@ -248,7 +324,7 @@ Page {
         }
 
         enabled: pdfView.document.tocModel.count > 0
-        visible: enabled
+        visible: enabled && !pdfPage.isPresentationMode
 
         onCollapseCompleted: {
             _realPage = contentsPage.createObject(null)
@@ -289,6 +365,7 @@ Page {
         // onTriggered: pageMain.state = "search"
         //Disable it until we provide search in Poppler plugin.
         enabled: false
+        visible: enabled
     }
 
     Action {
@@ -296,6 +373,8 @@ Page {
         objectName:"gotopage"
         iconName: "browser-tabs"
         text: i18n.tr("Go to page...")
+        enabled: !pdfPage.isPresentationMode
+        visible: enabled
         onTriggered: PopupUtils.open(Qt.resolvedUrl("PdfViewGotoDialog.qml"))
     }
 
@@ -305,7 +384,51 @@ Page {
         objectName:"presentationmode"
         iconName: "slideshow"
         text: i18n.tr("Presentation")
-        onTriggered: pageStack.push(Qt.resolvedUrl("./PdfPresentation.qml"), {'poppler': poppler})
+        enabled: !pdfPage.isPresentationMode
+        visible: enabled
+        shortcut: "F5"
+        // TODO: Check if the previous implementation is better
+        // and can be made to work
+        // onTriggered: pageStack.push(Qt.resolvedUrl("./PdfPresentation.qml"), {'poppler': poppler})
+        onTriggered: pdfPage.isPresentationMode = true
+    }
+
+    Action {
+        id: exitPresentation
+        iconName: "cancel"
+        enabled: pdfPage.isPresentationMode
+        visible: enabled
+        text: i18n.tr("Exit presentation mode")
+        shortcut: StandardKey.Cancel
+        onTriggered: pdfPage.isPresentationMode = false
+    }
+
+    Action {
+        id: nextPage
+        iconName: "next"
+        enabled: pdfPage.isPresentationMode
+        visible: enabled
+        text: i18n.tr("Next page")
+        shortcut: StandardKey.MoveToNextChar
+        onTriggered: {
+            if (!pdfView.inLastPage) {
+                pdfView.positionAtIndex((pdfView.currentPageIndex + 1))
+            }
+        }
+    }
+
+    Action {
+        id: previousPage
+        iconName: "previous"
+        enabled: pdfPage.isPresentationMode
+        visible: enabled
+        text: i18n.tr("Previous page")
+        shortcut: StandardKey.MoveToPreviousChar
+        onTriggered: {
+            if (!pdfView.inFirstPage) {
+                pdfView.positionAtIndex((pdfView.currentPageIndex - 1))
+            }
+        }
     }
 
     Action {
@@ -320,6 +443,8 @@ Page {
         objectName: "detailsAction"
         text: i18n.tr("Details")
         iconName: "info"
+        enabled: !pdfPage.isPresentationMode
+        visible: enabled
         onTriggered: pageStack.push(Qt.resolvedUrl("../common/DetailsPage.qml"))
     }
 
@@ -355,5 +480,20 @@ Page {
 
             pdfView.rotation = r
         }
+    }
+
+    Shortcut {
+        sequence: "Return"
+        onActivated: nextPage.trigger()
+    }
+
+    Shortcut {
+        sequence: "Enter"
+        onActivated: nextPage.trigger()
+    }
+
+    Shortcut {
+        sequence: "Backspace"
+        onActivated: previousPage.trigger()
     }
 }

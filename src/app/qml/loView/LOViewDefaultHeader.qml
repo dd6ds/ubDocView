@@ -14,7 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.4
+import QtQuick 2.12
 import Lomiri.Components 1.3
 import Lomiri.Components.Popups 1.3
 import DocumentViewer.LibreOffice 1.0 as LibreOffice
@@ -24,6 +24,14 @@ PageHeader {
     id: defaultHeader
 
     property var targetPage
+
+    function nextPage() {
+        nextPageAction.trigger()
+    }
+
+    function previousPage() {
+        previousPageAction.trigger()
+    }
 
     contents: ListItemLayout {
         anchors.centerIn: parent
@@ -66,6 +74,51 @@ PageHeader {
 
     trailingActionBar.actions: [
         Action {
+            id: startPresentationAction
+            objectName:"presentationmode"
+            iconName: "slideshow"
+            text: i18n.tr("Presentation")
+            enabled: !targetPage.isPresentationMode
+            visible: enabled
+            shortcut: "F5"
+            onTriggered: targetPage.isPresentationMode = true
+        },
+        Action {
+            id: exitPresentationAction
+            iconName: "cancel"
+            enabled: targetPage.isPresentationMode
+            visible: enabled
+            text: i18n.tr("Exit presentation mode")
+            shortcut: StandardKey.Cancel
+            onTriggered: targetPage.isPresentationMode = false
+        },
+        Action {
+            id: nextPageAction
+            iconName: "next"
+            enabled: targetPage.isPresentationMode && targetPage.isPresentation
+            visible: enabled
+            text: i18n.tr("Next page")
+            shortcut: StandardKey.MoveToNextChar
+            onTriggered: {
+                if (!targetPage.contentItem.loView.inLastPage) {
+                    targetPage.contentItem.loView.currentPart = (targetPage.contentItem.loView.currentPart + 1)
+                }
+            }
+        },
+        Action {
+            id: previousPageAction
+            iconName: "previous"
+            enabled: targetPage.isPresentationMode && targetPage.isPresentation
+            visible: enabled
+            text: i18n.tr("Previous page")
+            shortcut: StandardKey.MoveToPreviousChar
+            onTriggered: {
+                if (!targetPage.contentItem.loView.inFirstPage) {
+                    targetPage.contentItem.loView.currentPart = (targetPage.contentItem.loView.currentPart - 1)
+                }
+            }
+        },
+        Action {
             // FIXME: Autopilot test broken... seems not to detect we're now using an ActionBar since the switch to UITK 1.3
             objectName: "gotopage"
             iconName: "browser-tabs"
@@ -92,8 +145,25 @@ PageHeader {
             objectName: "detailsAction"
             text: i18n.tr("Details")
             iconName: "info"
+            enabled: !targetPage.isPresentationMode
+            visible: enabled
 
             onTriggered: pageStack.push(Qt.resolvedUrl("../common/DetailsPage.qml"))
         }
     ]
+
+    Shortcut {
+        sequence: "Return"
+        onActivated: nextPageAction.trigger()
+    }
+
+    Shortcut {
+        sequence: "Enter"
+        onActivated: nextPageAction.trigger()
+    }
+
+    Shortcut {
+        sequence: "Backspace"
+        onActivated: previousPageAction.trigger()
+    }
 }
