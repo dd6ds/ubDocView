@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
-"PO-Revision-Date: 2024-08-06 14:39+0000\n"
+"PO-Revision-Date: 2024-08-10 07:22+0000\n"
 "Last-Translator: umesaburo sagawa <atowa-notonare-yamatonare427@pm.me>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-docviewer-app/ja/>\n"
@@ -216,7 +216,7 @@ msgstr ""
 
 #: src/app/qml/documentPage/DocumentListDelegate.qml:75
 msgid "SD card"
-msgstr ""
+msgstr "SDカード"
 
 #. TRANSLATORS: %1 refers to a time formatted as Locale.ShortFormat (e.g. hh:mm). It depends on system settings.
 #. http://qt-project.org/doc/qt-4.8/qlocale.html#FormatType-enum
@@ -243,7 +243,7 @@ msgstr "yyyy/MM/dd hh:mm"
 #. see http://qt-project.org/doc/qt-5/qml-qtqml-date.html#details for valid expressions.
 #: src/app/qml/documentPage/DocumentListDelegate.qml:125
 msgid "dddd, hh:mm"
-msgstr ""
+msgstr "日時書式指定文字列"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:27
 msgid "Documents"
@@ -254,8 +254,6 @@ msgid "Search…"
 msgstr "検索…"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
-#, fuzzy
-#| msgid "Sorting settings"
 msgid "Sorting settings…"
 msgstr "ソート設定"
 
@@ -290,15 +288,15 @@ msgstr "昨日"
 
 #: src/app/qml/documentPage/SectionHeader.qml:36
 msgid "Earlier this week"
-msgstr ""
+msgstr "今週始め"
 
 #: src/app/qml/documentPage/SectionHeader.qml:39
 msgid "Earlier this month"
-msgstr ""
+msgstr "今月始め"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
 msgid "Even earlier…"
-msgstr ""
+msgstr "もっと前に…"
 
 #: src/app/qml/documentPage/SharePage.qml:28
 msgid "Share to"
@@ -322,7 +320,7 @@ msgstr "サイズソート（小さい順）"
 
 #: src/app/qml/documentPage/SortSettingsDialog.qml:47
 msgid "Reverse order"
-msgstr ""
+msgstr "逆の順序"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:41
 #: src/app/qml/textView/TextView.qml:49
@@ -331,33 +329,31 @@ msgstr "読み込み中..."
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:45
 msgid "LibreOffice text document"
-msgstr ""
+msgstr "リブレオフィステキスト文書"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:47
 msgid "LibreOffice spread sheet"
-msgstr ""
+msgstr "リブレオフィス表計算"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:49
 msgid "LibreOffice presentation"
-msgstr ""
+msgstr "リブレオフィスプレゼンテーション"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:51
 msgid "LibreOffice Draw document"
-msgstr ""
+msgstr "リブレオフィスDrawドキュメント"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:53
 msgid "Unknown LibreOffice document"
-msgstr ""
+msgstr "不明なリブレオフィスドキュメント"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:55
-#, fuzzy
-#| msgid "Unknown file type"
 msgid "Unknown document type"
 msgstr "ファイル形式が不明です"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:72
 msgid "Go to position…"
-msgstr ""
+msgstr "ポジションへ移動…"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:86
 #: src/app/qml/pdfView/PdfView.qml:310
@@ -373,7 +369,7 @@ msgstr "ナイトモードをオンにする"
 
 #: src/app/qml/loView/LOViewGotoDialog.qml:30
 msgid "Go to position"
-msgstr ""
+msgstr "ポジションへ移動"
 
 #: src/app/qml/loView/LOViewGotoDialog.qml:31
 msgid "Choose a position between 1% and 100%"
@@ -382,11 +378,11 @@ msgstr "1％から100％までの間でポジションwp選択する"
 #: src/app/qml/loView/LOViewGotoDialog.qml:62
 #: src/app/qml/pdfView/PdfViewGotoDialog.qml:58
 msgid "GO!"
-msgstr ""
+msgstr "進む!"
 
 #: src/app/qml/loView/LOViewPage.qml:173
 msgid "LibreOffice binaries not found."
-msgstr ""
+msgstr "リブレオフィスのバイナリが見つかりません。"
 
 #: src/app/qml/loView/LOViewPage.qml:176
 msgid "Error while loading LibreOffice."
@@ -409,14 +405,14 @@ msgstr "このシートは内容がありません"
 #. Ref. https://docs.libreoffice.org/libreofficekit.html
 #: src/app/qml/loView/Splashscreen.qml:45
 msgid "Powered by LibreOfficeKit"
-msgstr ""
+msgstr "LibreOfficeKitを採用"
 
 #. TRANSLATORS: Please don't add any space between "Sheet" and "%1".
 #. This is the default name for a sheet in LibreOffice.
 #: src/app/qml/loView/SpreadsheetSelector.qml:64
 #, qt-format
 msgid "Sheet%1"
-msgstr ""
+msgstr "シート1%"
 
 #: src/app/qml/loView/ZoomSelector.qml:122
 #: src/app/qml/pdfView/ZoomSelector.qml:119
@@ -437,49 +433,47 @@ msgid "File does not exist."
 msgstr "ファイルが存在しません"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
-#, fuzzy
-#| msgid "Document Viewer"
 msgid "Document is locked"
-msgstr "ドキュメントビューアー"
+msgstr "ドキュメントがロックされている"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:26
 msgid "Please insert a password in order to unlock this document"
-msgstr ""
+msgstr "この文書のロックを解除するには、パスワードを入力してください"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:50
 msgid "Entered password is not valid"
-msgstr ""
+msgstr "入力されたパスワードが無効です"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:69
 msgid "Unlock"
-msgstr ""
+msgstr "ロック解除"
 
 #: src/app/qml/pdfView/LinkHint.qml:36
 #, qt-format
 msgid "Open link externally: %1"
-msgstr ""
+msgstr "外部リンクを開く: 1%"
 
 #: src/app/qml/pdfView/LinkHint.qml:37
 #: src/app/qml/pdfView/OpenLinkDialog.qml:28
 #, qt-format
 msgid "Go to page %1"
-msgstr ""
+msgstr "ページへ戻る1%"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:28
 msgid "Open link externally"
-msgstr ""
+msgstr "外部リンクを開く"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:29
 msgid "Are you sure?"
-msgstr ""
+msgstr "本当ですか？"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:45
 msgid "Open"
-msgstr ""
+msgstr "開く"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:45
 msgid "Go to destination"
-msgstr ""
+msgstr "目的地へ移動"
 
 #. TRANSLATORS: "Contents" refers to the "Table of Contents" of a PDF document.
 #: src/app/qml/pdfView/PdfContentsPage.qml:31
@@ -493,7 +487,7 @@ msgstr "目次"
 #: src/app/qml/pdfView/PdfView.qml:49
 #, qt-format
 msgid "Page %1 of %2"
-msgstr ""
+msgstr "総頁数に対する現在表示されている頁の割合"
 
 #: src/app/qml/pdfView/PdfView.qml:284
 msgid "Search"
@@ -501,7 +495,7 @@ msgstr "検索"
 
 #: src/app/qml/pdfView/PdfView.qml:294
 msgid "Go to page..."
-msgstr ""
+msgstr "ページに戻る..."
 
 #: src/app/qml/pdfView/PdfView.qml:303
 msgid "Presentation"
@@ -509,24 +503,24 @@ msgstr "プレゼンテーション"
 
 #: src/app/qml/pdfView/PdfView.qml:324
 msgid "Rotate 90° right"
-msgstr ""
+msgstr "右に90°回転"
 
 #: src/app/qml/pdfView/PdfView.qml:341
 msgid "Rotate 90° left"
-msgstr ""
+msgstr "左に90°回転"
 
 #: src/app/qml/pdfView/PdfViewGotoDialog.qml:26
 msgid "Go to page"
-msgstr ""
+msgstr "ページに戻る"
 
 #: src/app/qml/pdfView/PdfViewGotoDialog.qml:27
 #, qt-format
 msgid "Choose a page between 1 and %1"
-msgstr ""
+msgstr "1～1％の間でページを選択"
 
 #: src/app/qml/pdfView/ZoomSelector.qml:120
 msgid "Fit page"
-msgstr ""
+msgstr "適合ページ"
 
 #. TRANSLATORS: This string is used for renaming a copied file,
 #. when a file with the same name already exists in user's
@@ -540,7 +534,7 @@ msgstr ""
 #: src/plugin/file-qml-plugin/docviewerutils.cpp:119
 #, qt-format
 msgid "copy %1"
-msgstr ""
+msgstr "1%コピー"
 
 #~ msgid "Search..."
 #~ msgstr "検索…"
