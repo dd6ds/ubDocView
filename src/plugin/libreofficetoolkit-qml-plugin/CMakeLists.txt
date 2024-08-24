@@ -1,9 +1,9 @@
 set(PLUGIN_DIR DocumentViewer/LibreOffice)
 
-find_package(Qt5Core)
-find_package(Qt5Gui)
-find_package(Qt5Qml)
-find_package(Qt5Quick)
+find_package(Qt5Core REQUIRED)
+find_package(Qt5Gui REQUIRED)
+find_package(Qt5Qml REQUIRED)
+find_package(Qt5Quick REQUIRED)
 
 file(GLOB_RECURSE QML_SRCS
     qml/*.qml
@@ -44,7 +44,11 @@ add_library(libreofficetoolkitqmlplugin MODULE
 )
 
 #target_link_libraries(libreofficetoolkitqmlplugin dl)
-qt5_use_modules(libreofficetoolkitqmlplugin Gui Qml Quick)
+target_link_libraries(libreofficetoolkitqmlplugin
+    Qt5::Gui
+    Qt5::Qml
+    Qt5::Quick
+)
 
 # Copy the plugin, the qmldir file and other assets to the build dir for running in QtCreator
 if(NOT "${CMAKE_CURRENT_SOURCE_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
