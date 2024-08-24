@@ -31,18 +31,18 @@ inline bool isClick() {
 
 inline bool isRunningInstalled()
 {
-    static bool installed = (QCoreApplication::applicationDirPath().startsWith("/usr"));
+    static bool installed = (QCoreApplication::applicationDirPath().startsWith("@CMAKE_INSTALL_FULL_BINDIR@"));
     return installed;
 }
 
 inline QString docviewerDirectory()
 {
     if (!SNAP_ENV.isEmpty()) {
-        return SNAP_ENV + QString("@CMAKE_INSTALL_PREFIX@/@DATA_DIR@");
+        return SNAP_ENV + QString("@DATA_DIR@");
     } else if (isClick()) {
         return APP_DIR;
     } else if (isRunningInstalled()) {
-        return QString("@CMAKE_INSTALL_PREFIX@/@DATA_DIR@");
+        return QString("@DATA_DIR@");
     } else {
         return QString("@CMAKE_CURRENT_SOURCE_DIR@");
     }
