@@ -22,9 +22,10 @@
 #include <QtCore/QString>
 
 static QString SNAP_ENV = qgetenv("SNAP");
+static QString APP_DIR = qgetenv("APP_DIR");
 
 inline bool isClick() {
-    static bool click = (QCoreApplication::applicationDirPath().contains("@CLICK_REL_PATH@"));
+    static bool click = !APP_DIR.isEmpty();
     return click;
 }
 
@@ -39,9 +40,22 @@ inline QString docviewerDirectory()
     if (!SNAP_ENV.isEmpty()) {
         return SNAP_ENV + QString("@CMAKE_INSTALL_PREFIX@/@DATA_DIR@");
     } else if (isClick()) {
-        return QString(".");
+        return APP_DIR;
     } else if (isRunningInstalled()) {
         return QString("@CMAKE_INSTALL_PREFIX@/@DATA_DIR@");
+    } else {
+        return QString("@CMAKE_CURRENT_SOURCE_DIR@");
+    }
+}
+
+inline QString i18nDirectory()
+{
+    if (!SNAP_ENV.isEmpty()) {
+        return SNAP_ENV + QString("@CMAKE_INSTALL_FULL_LOCALEDIR@");
+    } else if (isClick()) {
+        return APP_DIR + QString("@CMAKE_INSTALL_FULL_LOCALEDIR@");
+    } else if (isRunningInstalled()) {
+        return QString("@CMAKE_INSTALL_FULL_LOCALEDIR@");
     } else {
         return QString("@CMAKE_CURRENT_SOURCE_DIR@");
     }

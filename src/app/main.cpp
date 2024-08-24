@@ -53,6 +53,7 @@ int main(int argc, char *argv[])
     QCoreApplication::setOrganizationDomain("docviewer.ubports");
 
     view.rootContext()->setContextProperty("window", &view);
+    view.rootContext()->setContextProperty("i18nDirectory", i18nDirectory());
     QObject::connect(view.engine(), SIGNAL(quit()), &app, SLOT(quit()));
 
     if (qgetenv("QT_LOAD_TESTABILITY") == "1")
