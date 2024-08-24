@@ -1,10 +1,6 @@
 set(PLUGIN_DIR DocumentViewer)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
-find_package(Qt5Core REQUIRED)
-find_package(Qt5Qml REQUIRED)
-find_package(Qt5Quick REQUIRED)
-
 #add the sources to compile
 set(fileqmlplugin_SRCS
     backend.cpp

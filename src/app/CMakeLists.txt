@@ -1,10 +1,5 @@
 file(GLOB_RECURSE QML_SRCS *.qml *.js)
 
-find_package(Qt5Core REQUIRED)
-find_package(Qt5Gui REQUIRED)
-find_package(Qt5Qml REQUIRED)
-find_package(Qt5Quick REQUIRED)
-
 add_definitions(
   -DGETTEXT_PACKAGE=\"${PROJECT_NAME}\"
   -DGETTEXT_LOCALEDIR=\"${CMAKE_INSTALL_LOCALEDIR}\"

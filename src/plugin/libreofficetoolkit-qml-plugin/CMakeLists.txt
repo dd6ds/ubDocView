@@ -1,10 +1,5 @@
 set(PLUGIN_DIR DocumentViewer/LibreOffice)
 
-find_package(Qt5Core REQUIRED)
-find_package(Qt5Gui REQUIRED)
-find_package(Qt5Qml REQUIRED)
-find_package(Qt5Quick REQUIRED)
-
 file(GLOB_RECURSE QML_SRCS
     qml/*.qml
     qml/*.js
