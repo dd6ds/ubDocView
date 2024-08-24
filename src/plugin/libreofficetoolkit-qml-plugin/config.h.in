@@ -42,7 +42,7 @@ public:
         QString loPath;
 
         // LibreOffice installation path on Debian/Ubuntu
-        QString path = "/usr/lib/libreoffice/program";
+        QString path = "@LIBREOFFICE_PREFIX@/lib/libreoffice/program";
 
         if (QDir(path).exists()) {
             loPath = path;
