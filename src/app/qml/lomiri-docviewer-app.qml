@@ -90,7 +90,6 @@ MainView {
                         mainView, { parent: mainView, text: message });
     }
 
-    applicationName: "docviewer.ubports"
     automaticOrientation: true
 
     width: units.gu(150)
@@ -124,9 +123,6 @@ MainView {
     }
 
     Component.onCompleted: {
-        i18n.domain = "lomiri-docviewer-app";
-        i18n.bindtextdomain("lomiri-docviewer-app", i18nDirectory);
-
         // WORKAROUND: Mouse detection is not included in the SDK yet
         QuickUtils.mouseAttached = true
 
