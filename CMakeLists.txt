@@ -47,10 +47,12 @@ endif(NOT CLICK_MODE)
 include(Click)
 
 # Tests
-enable_testing()
+include(CTest)
 
 add_subdirectory(po)
 add_subdirectory(click)
 add_subdirectory(data)
 add_subdirectory(src)
-add_subdirectory(tests)
+if(BUILD_TESTING)
+    add_subdirectory(tests)
+endif()
