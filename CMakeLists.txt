@@ -16,7 +16,6 @@ option(INSTALL_TESTS    "Install the tests on make install" on)
 option(CLICK_MODE       "Installs to a contained location" on)
 option(NO_CACHE         "Disable caching of click dependencies (CLICK_MODE only)" off)
 
-set(DEFAULT_ROOT "/opt/click.ubuntu.com" CACHE PATH "Default click package root path")
 set(LIBREOFFICE_INCLUDE_DIR "" CACHE PATH "Custom LibreOfficeKit include directory")
 
 set(APP_NAME            lomiri-docviewer-app)

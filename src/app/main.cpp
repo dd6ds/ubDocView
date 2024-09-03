@@ -25,6 +25,8 @@
 
 #include <QDebug>
 
+#include <libintl.h>
+
 #include "config.h"
 
 void loadTestability() {
@@ -51,6 +53,11 @@ int main(int argc, char *argv[])
 
     QCoreApplication::setApplicationName("docviewer.ubports");
     QCoreApplication::setOrganizationDomain("docviewer.ubports");
+
+    textdomain("lomiri-docviewer-app");
+    std::string localeDir = i18nDirectory().toStdString();
+    bindtextdomain("lomiri-docviewer-app", localeDir.c_str());
+    bind_textdomain_codeset("lomiri-docviewer-app", "UTF-8");
 
     view.rootContext()->setContextProperty("window", &view);
     QObject::connect(view.engine(), SIGNAL(quit()), &app, SLOT(quit()));
