@@ -2,7 +2,7 @@ file(GLOB_RECURSE QML_SRCS *.qml *.js)
 
 add_definitions(
   -DGETTEXT_PACKAGE=\"${PROJECT_NAME}\"
-  -DGETTEXT_LOCALEDIR=\"${CMAKE_INSTALL_LOCALEDIR}\"
+  -DGETTEXT_LOCALEDIR=\"${CMAKE_INSTALL_FULL_LOCALEDIR}\"
 )
 
 configure_file(
@@ -44,7 +44,7 @@ install(DIRECTORY qml DESTINATION ${DATA_DIR})
 if(CLICK_MODE)
   install(TARGETS lomiri-docviewer-app DESTINATION ${BIN_DIR})
 else()
-  install(TARGETS lomiri-docviewer-app RUNTIME DESTINATION bin)
+  install(TARGETS lomiri-docviewer-app RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 endif()
 
 install(PROGRAMS lomiri-docviewer-app-migrate.py DESTINATION ${DATA_DIR})
