@@ -1,0 +1,76 @@
+Overview of changes in lomiri-docviewer-app 3.1.0
+
+  - Use GNUInstallDirs more/better.
+  - CMakeLists.txt: Move all Qt find_package to top-level.
+  - CMake: Stop using qt5_use_modules.
+  - click/CMakeLists.txt: Also install content-hub &
+    lomiri-url-dispatcher data in non-click mode.
+  - Migrate i18n init to C++.
+  - Call i18n.bindtextdomain with buildtime-determined locale path.
+  - CMakeLists.txt: Use BUILD_TESTING to gate tests.
+  - Add left/right click for back/forward in presentation mode.
+  - Implement presentation mode in LibreOffice documents.
+  - Implement presentation mode in PDF files.
+  - Implement presentation mode to Text Documents.
+  - data/CMakeLists.txt: Do install splash file in non-click mode.
+  - data/CMakeLists.txt: In non-click mode, fix installation of desktop
+    app icon into datadir.
+  - CMakeLists.txt: Use SVG icon as desktop app icon.
+  - Set gettext domain correctly.
+  - Translation updates (thanks to all contributors on
+    hosted.weblate.org).
+
+Overview of changes in lomiri-docviewer-app 3.0.4
+
+  - Update translation files.
+  - Added translation using Weblate (Sanskrit).
+  - add ignore review errors to clickable.yaml to allow local building.
+  - Disable nightMode switch when viewing text files with SuruDark.
+  - Switch UI theme to SuruDark when night mode is enabled.
+  - Apply night mode to document instead of mainView.
+  - Use session-migration for migration in Debian.
+  - Add migrations to manifest.
+  - Add migration wrapper script.
+  - Translation updates (thanks to all contributors on
+    hosted.weblate.org).
+
+Overview of changes in lomiri-docviewer-app 3.0.3
+
+  - No changes release.
+
+Overview of changes in lomiri-docviewer-app 3.0.2
+
+  - CMakeLists.txt: Fix man page installation path.
+  - lomiri-docviewer-app.1: Typo fix.
+  - data/lomiri-docviewer-app.desktop.in.in: Enable MIME handling via
+    Exec= key. Also add TryExec= key.
+  - CMakeLists.txt: Don't use dpkg tools if not in CLICK_MODE. Makes
+    the CMake configuration (more) portable.
+
+Overview of changes in lomiri-docviewer-app 3.0.1
+
+  - Export symbols from lomiri-docviewer-app executable.
+  - CI: Increase timeout for upload to Open Store.
+
+Overview of changes in lomiri-docviewer-app 3.0.1
+
+  - Add note about autopilot.
+  - Update instructions for translators.
+  - Update review guidelines.
+  - Update developer information.
+  - Add manual page.
+  - Update README.md file.
+  - Update CMake requirements.
+  - Fix pep8 so it doesn't pick up unrelated files.
+  - Move fetch-libreoffice.py to tools/.
+  - Spelling: Ellipsis ….
+  - Optimize click package size.
+  - Modernize i18n.
+  - Remove vendored libreofficekit headers.
+  - Do not hardcode the click root path.
+  - Rename Application.
+  - Port to Lomiri on focal.
+  - Remove obsolete bzr-builddeb files.
+  - Remove unused snap packaging.
+  - Translation updates (thanks to all contributors on
+    hosted.weblate.org).

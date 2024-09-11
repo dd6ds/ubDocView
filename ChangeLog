@@ -1,6 +1,215 @@
+2024-09-11 Mike Gabriel
+
+        * Release 3.1.0 (HEAD -> main, tag: v3.1.0)
+        * Merge branch 'personal/OPNA2608/gnuInstallDirs' into 'main'
+          (4e9b9cb)
+
+2024-08-24 OPNA2608
+
+        * Use GNUInstallDirs more/better (a6b34d0)
+
+2024-09-11 Mike Gabriel
+
+        * Merge branch 'personal/OPNA2608/qt5_use_modules' into 'main'
+          (feb431c)
+
+2024-08-24 OPNA2608
+
+        * CMakeLists.txt: Move all Qt find_package to top-level
+          CMakeLists.txt (d508ef1)
+        * Stop using qt5_use_modules (8647cdf)
+
+2024-09-11 Mike Gabriel
+
+        * Merge branch 'personal/OPNA2608/nonclickContenthubUrldispatcher'
+          into 'main' (9fd930f)
+
+2024-09-04 OPNA2608
+
+        * click/CMakeLists.txt: Also install content-hub &
+          lomiri-url-dispatcher data in non-click mode (d6731f6)
+
+2024-09-11 Mike Gabriel
+
+        * .gitlab-ci.yml: Use UBports GitLab runner. (a672953)
+
+2024-09-03 Mike Gabriel
+
+        * Merge branch 'fix/bindtextdomain' into 'main' (a77ee8c)
+
+2024-08-26 OPNA2608
+
+        * Migrate i18n init to C++ (0229831)
+
+2024-08-24 OPNA2608
+
+        * Call i18n.bindtextdomain with buildtime-determined locale path
+          (6202bd4)
+
+2024-09-03 Mike Gabriel
+
+        * Merge branch 'add/optionalTesting' into 'main' (0006cc9)
+
+2024-08-24 OPNA2608
+
+        * CMakeLists.txt: Use BUILD_TESTING to gate tests (6f1eb73)
+
+2024-08-13 Ricky From Hong Kong
+
+        * Translated using Weblate (Chinese (Traditional)) (102b51f)
+
+2024-08-07 umesaburo sagawa
+
+        * Translated using Weblate (Japanese) (79837fb)
+
+2024-08-06 umesaburo sagawa
+
+        * Translated using Weblate (Japanese) (4771201)
+
+2024-07-22 Jiri Grönroos
+
+        * Translated using Weblate (Finnish) (728e9c7)
+
+2024-07-22 Mike Gabriel
+
+        * Merge branch 'main_-_presentationmode' into 'main' (17209c9)
+
+2024-01-24 kugiigi
+
+        * Add left/right click for back/forward in presentation mode
+          (69546e6)
+
+2024-01-10 kugiigi
+
+        * Implement presentation mode in LibreOffice documents (e0de06e)
+        * Implement presentation mode in PDF files (298dfc7)
+        * Implement presentation mode to Text Documents (b817fa6)
+
+2024-07-08 Ricky From Hong Kong
+
+        * Translated using Weblate (Chinese (Traditional, Hong Kong))
+          (811fde9)
+
+2024-06-23 Mike Gabriel
+
+        * Merge branch
+          'personal/sunweaver/non-click-mode-install-icon-and-splash'
+          into 'main' (ef20bbd)
+
+2024-02-26 Mike Gabriel
+
+        * data/CMakeLists.txt: Do install splash file in non-click mode.
+          (8a32a82)
+        * data/CMakeLists.txt: In non-click mode, fix installation of desktop
+          app icon into datadir. (ffca1ec)
+        * CMakeLists.txt: Use SVG icon as desktop app icon. (51da33c)
+
+2024-05-28 Ali Beyaz
+
+        * Translated using Weblate (Turkish) (3c89001)
+
+2024-05-16 Daniel Soohan Park
+
+        * Translated using Weblate (Korean) (e112588)
+
+2024-05-05 phlostically
+
+        * Translated using Weblate (Esperanto) (104140d)
+
+2024-04-23 Mike Gabriel
+
+        * Merge branch 'personal/gberh/fix-i18n-domain' into 'main' (ac1c117)
+
+2024-04-23 Guido Berhoerster
+
+        * Set gettext domain correctly (8dc2c91)
+
+2024-04-01 复予
+
+        * Translated using Weblate (Chinese (Simplified)) (711e274)
+
+2024-03-09 saveurlinux
+
+        * Translated using Weblate (French) (6a3b352)
+
+2024-01-25 Vlad Nirky
+
+        * Translated using Weblate (French) (ec5da85)
+
+2023-12-31 phlostically
+
+        * Translated using Weblate (Esperanto) (e0177ac)
+
+2023-12-27 Hosted Weblate
+
+        * Update translation files (429272c)
+
+2023-12-27 Weblate
+
+        * Added translation using Weblate (Chinese (Simplified)
+          (zh_LATN@pinyin)) (30ef22d)
+        * Added translation using Weblate (Tamil (Sri Lanka)) (59fda1c)
+        * Added translation using Weblate (German (Walser)) (79f1e86)
+        * Added translation using Weblate (Meadow Mari) (0021710)
+        * Added translation using Weblate (Crimean Tatar) (5a2478e)
+        * Added translation using Weblate (Chuvash) (013634e)
+        * Added translation using Weblate (Silesian) (ca79118)
+        * Added translation using Weblate (Latin) (75685cf)
+        * Added translation using Weblate (Venetian) (a259916)
+        * Added translation using Weblate (Ossetian) (4b1a71f)
+        * Added translation using Weblate (Sami (Northern)) (5c6ae5f)
+        * Added translation using Weblate (Greenlandic) (9b7bb77)
+        * Added translation using Weblate (Assamese) (4e12d15)
+        * Added translation using Weblate (Haitian) (93ea56c)
+        * Added translation using Weblate (Cornish) (bb8d1f7)
+        * Added translation using Weblate (Frisian) (3a8e738)
+        * Added translation using Weblate (Kashubian) (99e522b)
+        * Added translation using Weblate (Aragonese) (f2beb7d)
+        * Added translation using Weblate (Tibetan) (37cf0b7)
+        * Added translation using Weblate (Filipino) (2a27ba7)
+        * Added translation using Weblate (Tigrinya) (87d2dbb)
+        * Added translation using Weblate (Tatar) (3327d84)
+
+2023-12-26 Weblate
+
+        * Added translation using Weblate (Italian (it_CARES)) (d11aab0)
+
+2023-12-04 Reza Almanda
+
+        * Translated using Weblate (Indonesian) (8be58bd)
+
+2023-10-21 Hosted Weblate
+
+        * Update translation files (6c38504)
+
+2023-10-18 Weblate
+
+        * Added translation using Weblate (Xhosa) (804d2c9)
+        * Added translation using Weblate (Manx) (79c1e7b)
+        * Added translation using Weblate (Corsican) (d260a18)
+        * Added translation using Weblate (Chechen) (ffafdc7)
+        * Added translation using Weblate (Wolof) (86f53b3)
+        * Added translation using Weblate (Kurdish (Central)) (8db7062)
+        * Added translation using Weblate (Kyrgyz) (d2cdb59)
+        * Added translation using Weblate (Kurdish) (f07a909)
+        * Added translation using Weblate (Sotho (Southern)) (1d0ca02)
+        * Added translation using Weblate (Kannada) (e20717f)
+        * Added translation using Weblate (Kazakh) (9e74e01)
+        * Added translation using Weblate (Nepali) (74ea930)
+        * Added translation using Weblate (Norwegian Nynorsk) (88cfc4e)
+        * Added translation using Weblate (Interlingua) (bb42744)
+        * Added translation using Weblate (Swahili) (2424d9d)
+        * Added translation using Weblate (Marathi) (9c8deda)
+        * Added translation using Weblate (Vietnamese) (f66a947)
+        * Added translation using Weblate (Odia) (0d81856)
+        * Added translation using Weblate (Occitan) (a48e219)
+        * Added translation using Weblate (Bengali) (ac9ac9d)
+        * Added translation using Weblate (Estonian) (721f18d)
+        * Added translation using Weblate (Irish) (b94c660)
+
 2023-10-15 Mike Gabriel
 
-        * Release 3.0.4 (HEAD -> main, tag: v3.0.4)
+        * Release 3.0.4 (82c018a) (tag: v3.0.4)
 
 2023-08-21 NPL
 
@@ -1633,8 +1842,7 @@
 
 2018-06-13 Allan Nordhøy
 
-        * Spelling: Unknown document type, ellipsis (#21) (5493234) (tag:
-          vivid)
+        * Spelling: Unknown document type, ellipsis (#21) (5493234)
 
 2018-04-29 ubports-weblate
 
