@@ -1,10 +1,6 @@
 set(PLUGIN_DIR DocumentViewer)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
-find_package(Qt5Core)
-find_package(Qt5Qml)
-find_package(Qt5Quick)
-
 #add the sources to compile
 set(fileqmlplugin_SRCS
     backend.cpp
@@ -18,7 +14,10 @@ add_library(fileqmlplugin MODULE
     ${fileqmlplugin_SRCS}
 )
 
-qt5_use_modules(fileqmlplugin Qml Quick)
+target_link_libraries(fileqmlplugin
+    Qt5::Qml
+    Qt5::Quick
+)
 
 # Copy the plugin, the qmldir file and other assets to the build dir for running in QtCreator
 if(NOT "${CMAKE_CURRENT_SOURCE_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")

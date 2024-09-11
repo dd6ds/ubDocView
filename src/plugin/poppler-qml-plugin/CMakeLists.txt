@@ -1,12 +1,5 @@
 set(PLUGIN_DIR DocumentViewer/PDF)
 
-find_package(Qt5Core)
-find_package(Qt5Gui)
-find_package(Qt5Qml)
-find_package(Qt5Quick)
-find_package(Qt5Xml)
-find_package(Qt5Concurrent)
-
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_CURRENT_BINARY_DIR}
@@ -45,9 +38,14 @@ add_library(popplerqmlplugin MODULE
     ${popplerqmlplugin_HDRS}
 )
 
-target_link_libraries(popplerqmlplugin poppler-qt5)
-
-qt5_use_modules(popplerqmlplugin Gui Qml Quick Xml Concurrent)
+target_link_libraries(popplerqmlplugin
+    Qt5::Concurrent
+    Qt5::Gui
+    Qt5::Qml
+    Qt5::Quick
+    Qt5::Xml
+    poppler-qt5
+)
 
 # Copy the plugin, the qmldir file and other assets to the build dir for running in QtCreator
 if(NOT "${CMAKE_CURRENT_SOURCE_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")

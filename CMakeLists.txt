@@ -45,6 +45,13 @@ endif(NOT CLICK_MODE)
 
 include(Click)
 
+find_package(Qt5Core REQUIRED)
+find_package(Qt5Concurrent REQUIRED)
+find_package(Qt5Gui REQUIRED)
+find_package(Qt5Qml REQUIRED)
+find_package(Qt5Quick REQUIRED)
+find_package(Qt5Xml REQUIRED)
+
 # Tests
 include(CTest)
 
