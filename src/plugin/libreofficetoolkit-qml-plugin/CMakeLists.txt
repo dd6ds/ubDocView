@@ -5,6 +5,12 @@ file(GLOB_RECURSE QML_SRCS
     qml/*.js
 )
 
+configure_file(
+    config.h.in
+    ${CMAKE_CURRENT_BINARY_DIR}/config.h
+    @ONLY
+)
+
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_CURRENT_BINARY_DIR}
@@ -29,8 +35,8 @@ set(libreofficetoolkitqmlplugin_SRCS
 #add the headers to compile
 set(libreofficetoolkitqmlplugin_HDRS
     twips.h
-    config.h
     loerror.h
+    ${CMAKE_CURRENT_BINARY_DIR}/config.h
 )
 
 add_library(libreofficetoolkitqmlplugin MODULE
