@@ -10,8 +10,8 @@ msgstr ""
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2024-08-10 07:22+0000\n"
 "Last-Translator: umesaburo sagawa <atowa-notonare-yamatonare427@pm.me>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/lomiri/"
-"lomiri-docviewer-app/ja/>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/lomiri/lomiri-"
+"docviewer-app/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -46,8 +46,9 @@ msgstr "全画面表示"
 
 #: src/app/qml/common/CommandLineProxy.qml:71
 msgid "Open lomiri-docviewer-app in pick mode. Used for tests only."
-msgstr "Pickモードで ubuntu-docviewer-app "
-"を起動しています。テスト用途にのみ使用してください。"
+msgstr ""
+"Pickモードで ubuntu-docviewer-app を起動しています。テスト用途にのみ使用して"
+"ください。"
 
 #: src/app/qml/common/CommandLineProxy.qml:77
 msgid ""

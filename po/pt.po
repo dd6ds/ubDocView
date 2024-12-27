@@ -10,8 +10,8 @@ msgstr ""
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
 "PO-Revision-Date: 2023-01-14 23:41+0000\n"
 "Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
-"Language-Team: Portuguese <https://hosted.weblate.org/projects/lomiri/"
-"lomiri-docviewer-app/pt/>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/lomiri/lomiri-"
+"docviewer-app/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -46,7 +46,8 @@ msgstr "Abrir em ecrã completo"
 
 #: src/app/qml/common/CommandLineProxy.qml:71
 msgid "Open lomiri-docviewer-app in pick mode. Used for tests only."
-msgstr "Abra lomiri-docviewer-app no modo de seleção. Usado apenas para testes."
+msgstr ""
+"Abra lomiri-docviewer-app no modo de seleção. Usado apenas para testes."
 
 #: src/app/qml/common/CommandLineProxy.qml:77
 msgid ""
