@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
-"PO-Revision-Date: 2025-02-04 07:51+0000\n"
+"PO-Revision-Date: 2025-02-04 18:53+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-docviewer-app/hr/>\n"
@@ -43,7 +43,7 @@ msgstr ""
 
 #: src/app/qml/common/CommandLineProxy.qml:65
 msgid "Run fullscreen"
-msgstr ""
+msgstr "Pokreni cjeloekranski prikaz"
 
 #: src/app/qml/common/CommandLineProxy.qml:71
 msgid "Open lomiri-docviewer-app in pick mode. Used for tests only."
@@ -64,7 +64,7 @@ msgstr "Detalji"
 
 #: src/app/qml/common/DetailsPage.qml:42
 msgid "File"
-msgstr ""
+msgstr "Datoteka"
 
 #: src/app/qml/common/DetailsPage.qml:47
 msgid "Location"
@@ -251,13 +251,11 @@ msgstr ""
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:27
 msgid "Documents"
-msgstr ""
+msgstr "Dokumenti"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
-#, fuzzy
-#| msgid "Search"
 msgid "Search…"
-msgstr "Pretraži"
+msgstr "Traži …"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
 msgid "Sorting settings…"
@@ -269,7 +267,7 @@ msgstr ""
 
 #: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:46
 msgid "Select None"
-msgstr ""
+msgstr "Poništi izbor"
 
 #: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:46
 msgid "Select All"
