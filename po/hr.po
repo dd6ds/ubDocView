@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
-"PO-Revision-Date: 2025-02-04 18:53+0000\n"
+"PO-Revision-Date: 2025-02-06 10:52+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-docviewer-app/hr/>\n"
@@ -304,7 +304,7 @@ msgstr ""
 
 #: src/app/qml/documentPage/SharePage.qml:28
 msgid "Share to"
-msgstr ""
+msgstr "Podijeli sa"
 
 #: src/app/qml/documentPage/SortSettingsDialog.qml:26
 msgid "Sorting settings"
@@ -493,7 +493,7 @@ msgstr ""
 
 #: src/app/qml/pdfView/PdfView.qml:284
 msgid "Search"
-msgstr "Pretraži"
+msgstr "Traži"
 
 #: src/app/qml/pdfView/PdfView.qml:294
 msgid "Go to page..."
