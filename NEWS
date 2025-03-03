@@ -1,3 +1,11 @@
+Overview of changes in lomiri-docviewer-app 3.1.1
+
+  - libreofficetoolkit-qml-plugin: Make LibreOffice installation path
+    configurable at build time.
+  - data/CMakeLists: XDGify desktop icon.
+  - Translation updates (thanks to all contributors on
+    hosted.weblate.org).
+
 Overview of changes in lomiri-docviewer-app 3.1.0
 
   - Use GNUInstallDirs more/better.

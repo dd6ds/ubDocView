@@ -1,6 +1,67 @@
+2025-03-03 Mike Gabriel
+
+        * Release 3.1.1 (HEAD -> main, tag: v3.1.1)
+
+2025-02-06 Milo Ivir
+
+        * Translated using Weblate (Croatian) (0163b70)
+
+2025-02-05 Milo Ivir
+
+        * Translated using Weblate (Croatian) (061a3e4)
+
+2025-02-04 Milo Ivir
+
+        * Translated using Weblate (Croatian) (8c8be4c)
+
+2025-02-01 Milo Ivir
+
+        * Translated using Weblate (Croatian) (676c730)
+
+2025-01-19 reimu105
+
+        * Translated using Weblate (Chinese (Traditional Han script))
+          (bcb468c)
+
+2025-01-12 தமிழ்நேரம்
+
+        * Translated using Weblate (Tamil) (eb97269)
+
+2024-12-27 Hosted Weblate
+
+        * Update translation files (f2600f0)
+
+2024-10-14 Guido Berhörster
+
+        * .gitlab-ci.yml: Increase clickable publish timeout to 20min
+          (bfa2236)
+
+2024-10-07 Ratchanan Srirattanamet
+
+        * Merge branch 'add/libreofficePrefixConfigurable' into 'main'
+          (472cca4)
+
+2024-08-24 OPNA2608
+
+        * libreofficetoolkit-qml-plugin: Make LibreOffice installation path
+          configurable at build time (45a433f)
+
+2024-09-22 Mike Gabriel
+
+        * Merge branch 'fix/xdgIcon' into 'main' (de50ca7)
+
+2024-09-12 OPNA2608
+
+        * data/CMakeLists: XDGify desktop icon (baf6278)
+
+2024-09-22 Mike Gabriel
+
+        * .gitlab-ci.yml: use shared runner if run outside our namespace.
+          (476ecc9)
+
 2024-09-11 Mike Gabriel
 
-        * Release 3.1.0 (HEAD -> main, tag: v3.1.0)
+        * Release 3.1.0 (8d6af81) (tag: v3.1.0)
         * Merge branch 'personal/OPNA2608/gnuInstallDirs' into 'main'
           (4e9b9cb)
 
