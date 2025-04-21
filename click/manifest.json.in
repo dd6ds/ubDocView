@@ -2,7 +2,7 @@
     "name": "docviewer.ubports",
     "title": "Document Viewer",
     "description": "Document Viewer application for Ubuntu Touch devices",
-    "framework": "ubuntu-sdk-20.04",
+    "framework": "@CLICK_FRAMEWORK@",
     "architecture": "@CLICK_ARCH@",
     "icon": "@ICON@",
     "hooks": {

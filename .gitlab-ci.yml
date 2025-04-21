@@ -21,6 +21,8 @@ stages:
 variables:
     GIT_SUBMODULE_STRATEGY: 'recursive'
     DOCKER_DRIVER: overlay2
+    CLICKABLE_VERSION: '8.4.0'
+    UT_VERSION: '20.04'
 
 .armhf: &armhf
     variables:
@@ -38,7 +40,7 @@ variables:
         ARCH_TRIPLET: "x86_64-linux-gnu"
 
 .build:
-    image: "clickable/ci-20.04-$ARCH"
+    image: "clickable/ci-$UT_VERSION-$ARCH:$CLICKABLE_VERSION"
     stage: build
     variables:
         LIBREOFFICE_PROJECT_ID=41919946
@@ -63,13 +65,13 @@ build-amd64:
 
 publish:
     stage: publish
-    image: "clickable/ci-20.04-armhf"
+    image: "clickable/ci-$UT_VERSION-amd64:$CLICKABLE_VERSION"
     rules:
         - if: $CI_COMMIT_TAG
     script:
         - 'clickable publish --timeout 1200 "$CI_COMMIT_MESSAGE"'
         - 'clickable publish --timeout 1200 --arch arm64'
-        - 'clickable publish --timeout 1200 --arch amd64'
+        - 'clickable publish --timeout 1200 --arch armhf'
     dependencies:
         - build-armhf
         - build-arm64
