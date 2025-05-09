@@ -8,14 +8,16 @@ msgstr ""
 "Project-Id-Version: lomiri-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-05-10 18:00+0000\n"
+"Last-Translator: Priit Jõerüüt <hwlate@joeruut.com>\n"
+"Language-Team: Estonian <https://hosted.weblate.org/projects/lomiri/"
+"lomiri-docviewer-app/et/>\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.12-dev\n"
 
 #: lomiri-docviewer-app.desktop.in:7
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
@@ -56,35 +58,35 @@ msgstr ""
 #: src/app/qml/pdfView/PdfView.qml:317
 #: src/app/qml/textView/TextViewDefaultHeader.qml:55
 msgid "Details"
-msgstr ""
+msgstr "Üksikasjad"
 
 #: src/app/qml/common/DetailsPage.qml:42
 msgid "File"
-msgstr ""
+msgstr "Fail"
 
 #: src/app/qml/common/DetailsPage.qml:47
 msgid "Location"
-msgstr ""
+msgstr "Asukoht"
 
 #: src/app/qml/common/DetailsPage.qml:52
 msgid "Size"
-msgstr ""
+msgstr "Suurus"
 
 #: src/app/qml/common/DetailsPage.qml:57
 msgid "Created"
-msgstr ""
+msgstr "Loodud"
 
 #: src/app/qml/common/DetailsPage.qml:62
 msgid "Last modified"
-msgstr ""
+msgstr "Viimati muudetud"
 
 #: src/app/qml/common/DetailsPage.qml:69
 msgid "MIME type"
-msgstr ""
+msgstr "MIME-tüüp"
 
 #: src/app/qml/common/ErrorDialog.qml:23
 msgid "Error"
-msgstr ""
+msgstr "Viga"
 
 #: src/app/qml/common/ErrorDialog.qml:26
 #: src/app/qml/common/PickImportedDialog.qml:54
@@ -92,43 +94,45 @@ msgstr ""
 #: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:33
 #: src/app/qml/documentPage/SortSettingsDialog.qml:53
 msgid "Close"
-msgstr ""
+msgstr "Sulge"
 
 #: src/app/qml/common/PickImportedDialog.qml:29
 msgid "Multiple documents imported"
-msgstr ""
+msgstr "Mitu dokumenti on imporditud"
 
 #: src/app/qml/common/PickImportedDialog.qml:30
 msgid "Choose which one to open:"
-msgstr ""
+msgstr "Vali, millist soovid avada:"
 
 #: src/app/qml/common/RejectedImportDialog.qml:28
 msgid "File not supported"
 msgid_plural "Files not supported"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Fail pole toetatud"
+msgstr[1] "Failid pole toetatud"
 
 #: src/app/qml/common/RejectedImportDialog.qml:29
 msgid "Following document has not been imported:"
 msgid_plural "Following documents have not been imported:"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Järgmine dokument jäi importimata:"
+msgstr[1] "Järgmised dokumendid jäid importimata:"
 
 #: src/app/qml/common/TextualButtonStyle.qml:48
 #: src/app/qml/common/TextualButtonStyle.qml:51
 #: src/app/qml/documentPage/DocumentPagePickModeHeader.qml:54
 msgid "Pick"
-msgstr ""
+msgstr "Vali"
 
 #: src/app/qml/common/UnknownTypeDialog.qml:27
 msgid "Unknown file type"
-msgstr ""
+msgstr "Tundmatu failitüüp"
 
 #: src/app/qml/common/UnknownTypeDialog.qml:28
 msgid ""
 "This file is not supported.\n"
 "Do you want to open it as a plain text?"
 msgstr ""
+"Fail pole toetatud.\n"
+"Kas sa sooviksid ta avada tavatekstina?"
 
 #: src/app/qml/common/UnknownTypeDialog.qml:38
 #: src/app/qml/documentPage/DeleteFileDialog.qml:55
@@ -140,67 +144,67 @@ msgstr ""
 #: src/app/qml/pdfView/PdfView.qml:261
 #: src/app/qml/pdfView/PdfViewGotoDialog.qml:51
 msgid "Cancel"
-msgstr ""
+msgstr "Katkesta"
 
 #: src/app/qml/common/UnknownTypeDialog.qml:44
 msgid "Yes"
-msgstr ""
+msgstr "Jah"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
 #: src/app/qml/common/utils.js:22
 #, qt-format
 msgid "%1 GB"
-msgstr ""
+msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
 #: src/app/qml/common/utils.js:26
 #, qt-format
 msgid "%1 MB"
-msgstr ""
+msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
 #: src/app/qml/common/utils.js:30
 #, qt-format
 msgid "%1 kB"
-msgstr ""
+msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in byte
 #: src/app/qml/common/utils.js:33
 #, qt-format
 msgid "%1 byte"
-msgstr ""
+msgstr "%1 bait"
 
 #: src/app/qml/documentPage/DeleteFileDialog.qml:39
 msgid "Delete file"
-msgstr ""
+msgstr "Kustuta fail"
 
 #: src/app/qml/documentPage/DeleteFileDialog.qml:40
 #, qt-format
 msgid "Delete %1 file"
 msgid_plural "Delete %1 files"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Kustuta %1 fail"
+msgstr[1] "Kustuta %1 faili"
 
 #: src/app/qml/documentPage/DeleteFileDialog.qml:41
 #: src/app/qml/documentPage/DeleteFileDialog.qml:42
 msgid "Are you sure you want to permanently delete this file?"
 msgid_plural "Are you sure you want to permanently delete these files?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Kas sa oled kindel, et soovid selle faili jäädavalt kustutada?"
+msgstr[1] "Kas sa oled kindel, et soovid need failid jäädavalt kustutada?"
 
 #: src/app/qml/documentPage/DeleteFileDialog.qml:61
 #: src/app/qml/documentPage/DocumentDelegateActions.qml:25
 #: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:58
 msgid "Delete"
-msgstr ""
+msgstr "Kustuta"
 
 #: src/app/qml/documentPage/DocumentDelegateActions.qml:44
 msgid "Share"
-msgstr ""
+msgstr "Jaga"
 
 #: src/app/qml/documentPage/DocumentEmptyState.qml:27
 msgid "No documents found"
-msgstr ""
+msgstr "Dokumente ei leidu"
 
 #: src/app/qml/documentPage/DocumentEmptyState.qml:28
 msgid ""
@@ -387,6 +391,8 @@ msgid ""
 "Document not loaded.\n"
 "The requested document may be corrupt or protected by a password."
 msgstr ""
+"Dokument pole laaditud.\n"
+"Ta kas on vigane või salasõnaga kaitstud."
 
 #: src/app/qml/loView/LOViewPage.qml:231
 msgid "This sheet has no content."
@@ -430,11 +436,11 @@ msgstr ""
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:26
 msgid "Please insert a password in order to unlock this document"
-msgstr ""
+msgstr "Lukustuse eemaldamiseks sisesta palun salasõna"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:50
 msgid "Entered password is not valid"
-msgstr ""
+msgstr "Sisestatud salasõna on vale"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:69
 msgid "Unlock"
