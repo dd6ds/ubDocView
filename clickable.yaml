@@ -16,6 +16,7 @@ build_args:
 
 install_lib:
 - ${LIBREOFFICE_LIB_INSTALL_DIR}/lib/libreoffice
+- libicuuc.so*
 
 libraries:
   libreoffice:
