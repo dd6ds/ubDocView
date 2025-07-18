@@ -210,273 +210,277 @@ msgid ""
 "folder or insert removable media containing documents."
 msgstr ""
 "Kết nối thiết bị của bạn đến máy tính bất kì, và sau đó đơn giản kéo/sao "
-"chép các tệp tài liệu vào thư mục Tài liệu trên thiết bị này hoặc gắn thiết "
-"bị lưu trữ có chứa tệp tài liệu vào thiết bị này."
+"chép các tệp tài liệu vào thư mục \"Tài liệu\" trên thiết bị này hoặc gắn "
+"thiết bị lưu trữ có chứa tệp tài liệu vào thiết bị này."
 
 #: src/app/qml/documentPage/DocumentListDelegate.qml:75
 msgid "SD card"
-msgstr ""
+msgstr "Thẻ SD"
 
 #. TRANSLATORS: %1 refers to a time formatted as Locale.ShortFormat (e.g. hh:mm). It depends on system settings.
 #. http://qt-project.org/doc/qt-4.8/qlocale.html#FormatType-enum
 #: src/app/qml/documentPage/DocumentListDelegate.qml:100
 #, qt-format
 msgid "Today, %1"
-msgstr ""
+msgstr "Hôm nay, %1"
 
 #. TRANSLATORS: %1 refers to a time formatted as Locale.ShortFormat (e.g. hh:mm). It depends on system settings.
 #. http://qt-project.org/doc/qt-4.8/qlocale.html#FormatType-enum
 #: src/app/qml/documentPage/DocumentListDelegate.qml:105
 #, qt-format
 msgid "Yesterday, %1"
-msgstr ""
+msgstr "Hôm qua, %1"
 
 #. TRANSLATORS: this is a datetime formatting string,
 #. see http://qt-project.org/doc/qt-5/qml-qtqml-date.html#details for valid expressions.
 #: src/app/qml/documentPage/DocumentListDelegate.qml:112
 #: src/app/qml/documentPage/DocumentListDelegate.qml:131
 msgid "yyyy/MM/dd hh:mm"
-msgstr ""
+msgstr "HH:mm dd/MM/yyyy"
 
 #. TRANSLATORS: this is a datetime formatting string,
 #. see http://qt-project.org/doc/qt-5/qml-qtqml-date.html#details for valid expressions.
 #: src/app/qml/documentPage/DocumentListDelegate.qml:125
 msgid "dddd, hh:mm"
-msgstr ""
+msgstr "dddd, HH:mm"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:27
 msgid "Documents"
-msgstr ""
+msgstr "Tài liệu"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
 msgid "Search…"
-msgstr ""
+msgstr "Tìm kiếm…"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
 msgid "Sorting settings…"
-msgstr ""
+msgstr "Cài đặt sắp xếp…"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
-msgstr ""
+msgstr "tìm kiếm trong tài liệu..."
 
 #: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:46
 msgid "Select None"
-msgstr ""
+msgstr "Chọn không có gì"
 
 #: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:46
 msgid "Select All"
-msgstr ""
+msgstr "Chọn tất cả"
 
 #: src/app/qml/documentPage/SearchEmptyState.qml:24
 msgid "No matching document found"
-msgstr ""
+msgstr "Không tìm thấy tài liệu trùng khớp nào"
 
 #: src/app/qml/documentPage/SearchEmptyState.qml:26
 msgid ""
 "Please ensure that your query is not misspelled and/or try a different query."
 msgstr ""
+"Vui lòng đảm bảo truy vấn của bạn không bị lỗi chính tả và/hoặc thử một truy "
+"vấn khác."
 
 #: src/app/qml/documentPage/SectionHeader.qml:30
 msgid "Today"
-msgstr ""
+msgstr "Hôm nay"
 
 #: src/app/qml/documentPage/SectionHeader.qml:33
 msgid "Yesterday"
-msgstr ""
+msgstr "Hôm qua"
 
 #: src/app/qml/documentPage/SectionHeader.qml:36
 msgid "Earlier this week"
-msgstr ""
+msgstr "Đầu tuần này"
 
 #: src/app/qml/documentPage/SectionHeader.qml:39
 msgid "Earlier this month"
-msgstr ""
+msgstr "Đầu tháng này"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
 msgid "Even earlier…"
-msgstr ""
+msgstr "Thậm chí còn sớm hơn…"
 
 #: src/app/qml/documentPage/SharePage.qml:28
 msgid "Share to"
-msgstr ""
+msgstr "Chia sẻ đến"
 
 #: src/app/qml/documentPage/SortSettingsDialog.qml:26
 msgid "Sorting settings"
-msgstr ""
+msgstr "Cài đặt sắp xếp"
 
 #: src/app/qml/documentPage/SortSettingsDialog.qml:31
 msgid "Sort by date (Latest first)"
-msgstr ""
+msgstr "Sắp xếp theo ngày (Mới nhất trước)"
 
 #: src/app/qml/documentPage/SortSettingsDialog.qml:32
 msgid "Sort by name (A-Z)"
-msgstr ""
+msgstr "Sắp xếp theo tên (từ A-Z)"
 
 #: src/app/qml/documentPage/SortSettingsDialog.qml:33
 msgid "Sort by size (Smaller first)"
-msgstr ""
+msgstr "Sắp xếp theo kích thước (Nhỏ hơn trước)"
 
 #: src/app/qml/documentPage/SortSettingsDialog.qml:47
 msgid "Reverse order"
-msgstr ""
+msgstr "Đảo ngược thứ tự"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:41
 #: src/app/qml/textView/TextView.qml:49
 msgid "Loading..."
-msgstr ""
+msgstr "Đang tải..."
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:45
 msgid "LibreOffice text document"
-msgstr ""
+msgstr "Tài liệu văn bản LibreOffice"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:47
 msgid "LibreOffice spread sheet"
-msgstr ""
+msgstr "Bảng tính LibreOffice"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:49
 msgid "LibreOffice presentation"
-msgstr ""
+msgstr "Bài trình chiếu LibreOffice"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:51
 msgid "LibreOffice Draw document"
-msgstr ""
+msgstr "Tài liệu LibreOffice Draw"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:53
 msgid "Unknown LibreOffice document"
-msgstr ""
+msgstr "Tài liệu LibreOffice không xác định"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:55
 msgid "Unknown document type"
-msgstr ""
+msgstr "Loại tài liệu không xác định"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:72
 msgid "Go to position…"
-msgstr ""
+msgstr "Đi tới vị trí…"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:86
 #: src/app/qml/pdfView/PdfView.qml:310
 #: src/app/qml/textView/TextViewDefaultHeader.qml:49
 msgid "Disable night mode"
-msgstr ""
+msgstr "Tắt chế độ tối"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:86
 #: src/app/qml/pdfView/PdfView.qml:310
 #: src/app/qml/textView/TextViewDefaultHeader.qml:49
 msgid "Enable night mode"
-msgstr ""
+msgstr "Bật chế độ tối"
 
 #: src/app/qml/loView/LOViewGotoDialog.qml:30
 msgid "Go to position"
-msgstr ""
+msgstr "Đi đến vị trí"
 
 #: src/app/qml/loView/LOViewGotoDialog.qml:31
 msgid "Choose a position between 1% and 100%"
-msgstr ""
+msgstr "Chọn vị trí từ 1% đến 100%"
 
 #: src/app/qml/loView/LOViewGotoDialog.qml:62
 #: src/app/qml/pdfView/PdfViewGotoDialog.qml:58
 msgid "GO!"
-msgstr ""
+msgstr "ĐI !"
 
 #: src/app/qml/loView/LOViewPage.qml:173
 msgid "LibreOffice binaries not found."
-msgstr ""
+msgstr "Không tìm thấy tệp nhị phân LibreOffice."
 
 #: src/app/qml/loView/LOViewPage.qml:176
 msgid "Error while loading LibreOffice."
-msgstr ""
+msgstr "Lỗi khi đang tải LibreOffice."
 
 #: src/app/qml/loView/LOViewPage.qml:179
 msgid ""
 "Document not loaded.\n"
 "The requested document may be corrupt or protected by a password."
 msgstr ""
+"Tài liệu không được tải.\n"
+"Tài liệu được yêu cầu mở có thể bị hỏng hoặc được bảo vệ bằng mật khẩu."
 
 #: src/app/qml/loView/LOViewPage.qml:231
 msgid "This sheet has no content."
-msgstr ""
+msgstr "Trang này không có nội dung."
 
 #. TRANSLATORS: 'LibreOfficeKit' is the name of the library used by
 #. Document Viewer for rendering LibreOffice/MS-Office documents.
 #. Ref. https://docs.libreoffice.org/libreofficekit.html
 #: src/app/qml/loView/Splashscreen.qml:45
 msgid "Powered by LibreOfficeKit"
-msgstr ""
+msgstr "Được hỗ trợ bởi LibreOfficeKit"
 
 #. TRANSLATORS: Please don't add any space between "Sheet" and "%1".
 #. This is the default name for a sheet in LibreOffice.
 #: src/app/qml/loView/SpreadsheetSelector.qml:64
 #, qt-format
 msgid "Sheet%1"
-msgstr ""
+msgstr "Trang%1"
 
 #: src/app/qml/loView/ZoomSelector.qml:122
 #: src/app/qml/pdfView/ZoomSelector.qml:119
 msgid "Fit width"
-msgstr ""
+msgstr "Chiều rộng vừa"
 
 #: src/app/qml/loView/ZoomSelector.qml:123
 msgid "Fit height"
-msgstr ""
+msgstr "Chiều cao vừa"
 
 #: src/app/qml/loView/ZoomSelector.qml:124
 #: src/app/qml/pdfView/ZoomSelector.qml:121
 msgid "Automatic"
-msgstr ""
+msgstr "Tự động"
 
 #: src/app/qml/lomiri-docviewer-app.qml:134
 msgid "File does not exist."
-msgstr ""
+msgstr "Tệp không tồn tại."
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 msgid "Document is locked"
-msgstr ""
+msgstr "Tài liệu bị khóa"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:26
 msgid "Please insert a password in order to unlock this document"
-msgstr ""
+msgstr "Vui lòng nhập mật khẩu để mở khóa tài liệu này"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:50
 msgid "Entered password is not valid"
-msgstr ""
+msgstr "Mật khẩu đã nhập không hợp lệ"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:69
 msgid "Unlock"
-msgstr ""
+msgstr "Mở khóa"
 
 #: src/app/qml/pdfView/LinkHint.qml:36
 #, qt-format
 msgid "Open link externally: %1"
-msgstr ""
+msgstr "Mở liên kết bên ngoài: %1"
 
 #: src/app/qml/pdfView/LinkHint.qml:37
 #: src/app/qml/pdfView/OpenLinkDialog.qml:28
 #, qt-format
 msgid "Go to page %1"
-msgstr ""
+msgstr "Đi tới trang %1"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:28
 msgid "Open link externally"
-msgstr ""
+msgstr "Mở liên kết bên ngoài"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:29
 msgid "Are you sure?"
-msgstr ""
+msgstr "Bạn có chắc không?"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:45
 msgid "Open"
-msgstr ""
+msgstr "Mở"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:45
 msgid "Go to destination"
-msgstr ""
+msgstr "Đi đến đích"
 
 #. TRANSLATORS: "Contents" refers to the "Table of Contents" of a PDF document.
 #: src/app/qml/pdfView/PdfContentsPage.qml:31
 #: src/app/qml/pdfView/PdfView.qml:230
 msgid "Contents"
-msgstr ""
+msgstr "Mục lục"
 
 #. TRANSLATORS: the first argument (%1) refers to the page currently shown on the screen,
 #. while the second one (%2) refers to the total pages count.
@@ -484,40 +488,40 @@ msgstr ""
 #: src/app/qml/pdfView/PdfView.qml:49
 #, qt-format
 msgid "Page %1 of %2"
-msgstr ""
+msgstr "Trang %1 của %2"
 
 #: src/app/qml/pdfView/PdfView.qml:284
 msgid "Search"
-msgstr ""
+msgstr "Tìm kiếm"
 
 #: src/app/qml/pdfView/PdfView.qml:294
 msgid "Go to page..."
-msgstr ""
+msgstr "Đi đến trang..."
 
 #: src/app/qml/pdfView/PdfView.qml:303
 msgid "Presentation"
-msgstr ""
+msgstr "Trình chiếu"
 
 #: src/app/qml/pdfView/PdfView.qml:324
 msgid "Rotate 90° right"
-msgstr ""
+msgstr "Xoay 90° sang phải"
 
 #: src/app/qml/pdfView/PdfView.qml:341
 msgid "Rotate 90° left"
-msgstr ""
+msgstr "Xoay 90° sang trái"
 
 #: src/app/qml/pdfView/PdfViewGotoDialog.qml:26
 msgid "Go to page"
-msgstr ""
+msgstr "Đi đến trang"
 
 #: src/app/qml/pdfView/PdfViewGotoDialog.qml:27
 #, qt-format
 msgid "Choose a page between 1 and %1"
-msgstr ""
+msgstr "Chọn một trang từ 1 đến %1"
 
 #: src/app/qml/pdfView/ZoomSelector.qml:120
 msgid "Fit page"
-msgstr ""
+msgstr "Chỉnh trang vừa vặn"
 
 #. TRANSLATORS: This string is used for renaming a copied file,
 #. when a file with the same name already exists in user's
@@ -531,4 +535,4 @@ msgstr ""
 #: src/plugin/file-qml-plugin/docviewerutils.cpp:119
 #, qt-format
 msgid "copy %1"
-msgstr ""
+msgstr "bản sao %1"
