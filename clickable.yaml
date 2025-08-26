@@ -10,13 +10,21 @@ dependencies_target:
 - qtbase5-dev
 - qtdeclarative5-dev
 - libpoppler-qt5-dev
+- libharfbuzz-dev
 
 build_args:
 - -DLIBREOFFICE_INCLUDE_DIR=${LIBREOFFICE_LIB_INSTALL_DIR}/include
 
 install_lib:
 - ${LIBREOFFICE_LIB_INSTALL_DIR}/lib/libreoffice
+- libharfbuzz-icu.so*
+- libicudata.so*
+- libicui18n.so*
 - libicuuc.so*
+- libpoppler.so*
+- libpoppler-qt5.so*
+- libtiff.so*
+- libwebp.so*
 
 libraries:
   libreoffice:
