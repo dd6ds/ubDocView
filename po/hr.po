@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
-"PO-Revision-Date: 2025-02-07 15:53+0000\n"
+"PO-Revision-Date: 2025-09-09 20:02+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-docviewer-app/hr/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.14-dev\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:49+0000\n"
 
 #: lomiri-docviewer-app.desktop.in:7
@@ -27,11 +27,11 @@ msgstr "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 
 #: lomiri-docviewer-app.desktop.in:8
 msgid "Document Viewer"
-msgstr ""
+msgstr "Pregled dokumenata"
 
 #: lomiri-docviewer-app.desktop.in:9
 msgid "documents;viewer;pdf;reader;"
-msgstr ""
+msgstr "dokumenti;pregled;preglednik;pdf;čitač;"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
@@ -39,7 +39,7 @@ msgstr "Neki navedeni argumenti nisu ispravni."
 
 #: src/app/qml/common/CommandLineProxy.qml:58
 msgid "Open lomiri-docviewer-app displaying the selected file"
-msgstr ""
+msgstr "Otvori aplikaciju lomiri-docviewer-app za prikaz odabrane datoteke"
 
 #: src/app/qml/common/CommandLineProxy.qml:65
 msgid "Run fullscreen"
@@ -48,12 +48,16 @@ msgstr "Pokreni cjeloekranski prikaz"
 #: src/app/qml/common/CommandLineProxy.qml:71
 msgid "Open lomiri-docviewer-app in pick mode. Used for tests only."
 msgstr ""
+"Otvori aplikaciju lomiri-docviewer-app u načinu odabira. Koristi se samo za "
+"testiranje."
 
 #: src/app/qml/common/CommandLineProxy.qml:77
 msgid ""
 "Show documents from the given folder, instead of ~/Documents.\n"
 "The path must exist prior to running lomiri-docviewer-app"
 msgstr ""
+"Prikaži dokumente iz zadane mape umjesto iz ~/Dokumenti.\n"
+"Staza mora postojati prije pokretanja aplikacije lomiri-docviewer-app"
 
 #: src/app/qml/common/DetailsPage.qml:29
 #: src/app/qml/loView/LOViewDefaultHeader.qml:93
@@ -210,13 +214,15 @@ msgstr "Podijeli"
 
 #: src/app/qml/documentPage/DocumentEmptyState.qml:27
 msgid "No documents found"
-msgstr ""
+msgstr "Nijedan dokument nije pronađen"
 
 #: src/app/qml/documentPage/DocumentEmptyState.qml:28
 msgid ""
 "Connect your device to any computer and simply drag files to the Documents "
 "folder or insert removable media containing documents."
 msgstr ""
+"Spojite svoj uređaj s bilo kojim računalom i jednostavno povucite datoteke u "
+"mapu „Dokumenti” ili umetnite izmjenjiv uređaj koji sadrži dokumente."
 
 #: src/app/qml/documentPage/DocumentListDelegate.qml:75
 msgid "SD card"
@@ -241,13 +247,13 @@ msgstr "Jučer, %1"
 #: src/app/qml/documentPage/DocumentListDelegate.qml:112
 #: src/app/qml/documentPage/DocumentListDelegate.qml:131
 msgid "yyyy/MM/dd hh:mm"
-msgstr ""
+msgstr "dd. MM. yyyy. hh:mm"
 
 #. TRANSLATORS: this is a datetime formatting string,
 #. see http://qt-project.org/doc/qt-5/qml-qtqml-date.html#details for valid expressions.
 #: src/app/qml/documentPage/DocumentListDelegate.qml:125
 msgid "dddd, hh:mm"
-msgstr ""
+msgstr "dddd, hh:mm"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:27
 msgid "Documents"
@@ -259,11 +265,11 @@ msgstr "Traži …"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
 msgid "Sorting settings…"
-msgstr ""
+msgstr "Postavke razvrstavanja …"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
-msgstr ""
+msgstr "traži u dokumentima …"
 
 #: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:46
 msgid "Select None"
@@ -275,12 +281,13 @@ msgstr "Odaberi sve"
 
 #: src/app/qml/documentPage/SearchEmptyState.qml:24
 msgid "No matching document found"
-msgstr ""
+msgstr "Nijedan odgovarajući dokument nije pronađen"
 
 #: src/app/qml/documentPage/SearchEmptyState.qml:26
 msgid ""
 "Please ensure that your query is not misspelled and/or try a different query."
 msgstr ""
+"Provjerite jeste li točno unijeli upit i/ili pokušajte s drugačijim upitom."
 
 #: src/app/qml/documentPage/SectionHeader.qml:30
 msgid "Today"
