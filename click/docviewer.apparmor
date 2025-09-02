@@ -1,18 +1,13 @@
 {
     "policy_groups": [
+        "document_files",
         "content_exchange_source",
         "content_exchange",
         "keep-display-on"
     ],
     "read_path": [
-        "@{HOME}/Documents/",
-        "/media/*/*/[Dd][Oo][Cc][Uu][Mm][Ee][Nn][Tt][Ss]/",
         "@{PROC}/*/mounts",
         "/dev/disk/by-label/"
-    ],
-    "write_path": [
-        "@{HOME}/Documents/",
-        "/media/*/*/[Dd][Oo][Cc][Uu][Mm][Ee][Nn][Tt][Ss]/"
     ],
     "policy_version": 20.04
 }
