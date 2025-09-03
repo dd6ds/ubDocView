@@ -1,3 +1,10 @@
+Overview of changes in lomiri-docviewer-app 3.1.3
+
+  - Bundle enough libraries in click build so that it
+    launches on 24.04-1.x.
+  - Translation updates (thanks to all contributors on
+    hosted.weblate.org).
+
 Overview of changes in lomiri-docviewer-app 3.1.2
 
   - Fix opening odt/docx files.
