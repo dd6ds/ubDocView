@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
-"PO-Revision-Date: 2025-09-09 20:02+0000\n"
+"PO-Revision-Date: 2025-09-21 17:01+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-docviewer-app/hr/>\n"
@@ -184,15 +184,15 @@ msgstr "%1 bajt"
 
 #: src/app/qml/documentPage/DeleteFileDialog.qml:39
 msgid "Delete file"
-msgstr "Obriši datoteku"
+msgstr "Izbriši datoteku"
 
 #: src/app/qml/documentPage/DeleteFileDialog.qml:40
 #, qt-format
 msgid "Delete %1 file"
 msgid_plural "Delete %1 files"
-msgstr[0] "Obriši %1 datoteku"
-msgstr[1] "Obriši %1 datoteke"
-msgstr[2] "Obriši %1 datoteka"
+msgstr[0] "Izbriši %1 datoteku"
+msgstr[1] "Izbriši %1 datoteke"
+msgstr[2] "Izbriši %1 datoteka"
 
 #: src/app/qml/documentPage/DeleteFileDialog.qml:41
 #: src/app/qml/documentPage/DeleteFileDialog.qml:42
@@ -206,7 +206,7 @@ msgstr[2] "Stvarno želiš trajno izbrisati ove datoteke?"
 #: src/app/qml/documentPage/DocumentDelegateActions.qml:25
 #: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:58
 msgid "Delete"
-msgstr "Obriši"
+msgstr "Izbriši"
 
 #: src/app/qml/documentPage/DocumentDelegateActions.qml:44
 msgid "Share"
@@ -476,7 +476,7 @@ msgstr "Otvori poveznicu eksterno"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:29
 msgid "Are you sure?"
-msgstr "Sigurno?"
+msgstr "Stvarno?"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:45
 msgid "Open"
