@@ -8,27 +8,25 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
-"PO-Revision-Date: 2020-12-24 08:57+0000\n"
-"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: Hebrew <https://translate.ubports.com/projects/ubports/"
-"docviewer-app/he/>\n"
+"PO-Revision-Date: 2025-11-01 16:05+0000\n"
+"Last-Translator: \"Omer I.S.\" <omeritzicschwartz@gmail.com>\n"
+"Language-Team: Hebrew <https://hosted.weblate.org/projects/lomiri/"
+"lomiri-docviewer-app/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
-"n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Weblate 3.11.3\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : "
+"((n > 10 && n % 10 == 0) ? 2 : 3));\n"
+"X-Generator: Weblate 5.14.1-dev\n"
 
 #: lomiri-docviewer-app.desktop.in:7
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 msgstr ""
 
 #: lomiri-docviewer-app.desktop.in:8
-#, fuzzy
-#| msgid "Document Viewer"
 msgid "Document Viewer"
-msgstr "מציג המסמכים"
+msgstr "מציג מסמכים"
 
 #: lomiri-docviewer-app.desktop.in:9
 msgid "documents;viewer;pdf;reader;"
@@ -39,10 +37,8 @@ msgid "Some of the provided arguments are not valid."
 msgstr "חלק מהטיעונים הניתנים אינם תקפים."
 
 #: src/app/qml/common/CommandLineProxy.qml:58
-#, fuzzy
-#| msgid "Open ubuntu-docviewer-app displaying the selected file"
 msgid "Open lomiri-docviewer-app displaying the selected file"
-msgstr "פתח את אפליקציית ubuntu-docviewer המציגה את הקובץ שנבחר"
+msgstr "נא לפתוח את יישום lomiri-docviewer המציג את הקובץ הנבחר"
 
 #: src/app/qml/common/CommandLineProxy.qml:65
 msgid "Run fullscreen"
