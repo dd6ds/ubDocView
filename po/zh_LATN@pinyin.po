@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lomiri-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
-"PO-Revision-Date: 2025-11-11 13:51+0000\n"
+"PO-Revision-Date: 2025-11-20 10:56+0000\n"
 "Last-Translator: Wenwen Luo <wenwenluo130@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "lomiri/lomiri-docviewer-app/zh_LATN@pinyin/>\n"
@@ -37,28 +37,30 @@ msgstr "提供的部分参数无效。"
 
 #: src/app/qml/common/CommandLineProxy.qml:58
 msgid "Open lomiri-docviewer-app displaying the selected file"
-msgstr ""
+msgstr "打开 lomiri-docviewer-app，以显示选择的文件"
 
 #: src/app/qml/common/CommandLineProxy.qml:65
 msgid "Run fullscreen"
-msgstr ""
+msgstr "打开全屏"
 
 #: src/app/qml/common/CommandLineProxy.qml:71
 msgid "Open lomiri-docviewer-app in pick mode. Used for tests only."
-msgstr ""
+msgstr "在lomiri-docviewer-app选择模式。仅用来测试。"
 
 #: src/app/qml/common/CommandLineProxy.qml:77
 msgid ""
 "Show documents from the given folder, instead of ~/Documents.\n"
 "The path must exist prior to running lomiri-docviewer-app"
 msgstr ""
+"显示指定文件夹中的文档，而不是默认的 ~/Documents 文件夹中的文档。\n"
+"在运行 lomiri-docviewer-app 之前，指定的路径必须存在"
 
 #: src/app/qml/common/DetailsPage.qml:29
 #: src/app/qml/loView/LOViewDefaultHeader.qml:93
 #: src/app/qml/pdfView/PdfView.qml:317
 #: src/app/qml/textView/TextViewDefaultHeader.qml:55
 msgid "Details"
-msgstr ""
+msgstr "详情"
 
 #: src/app/qml/common/DetailsPage.qml:42
 msgid "File"
