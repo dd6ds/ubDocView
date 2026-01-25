@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
-"PO-Revision-Date: 2026-01-25 16:49+0000\n"
+"PO-Revision-Date: 2026-01-25 17:19+0000\n"
 "Last-Translator: BoneNI <bounkirdni@gmail.com>\n"
 "Language-Team: Lao <https://hosted.weblate.org/projects/lomiri/lomiri-"
 "docviewer-app/lo/>\n"
@@ -454,10 +454,9 @@ msgstr "ເປີດລິ້ງພາຍນອກ: %1"
 
 #: src/app/qml/pdfView/LinkHint.qml:37
 #: src/app/qml/pdfView/OpenLinkDialog.qml:28
-#, fuzzy, qt-format
-#| msgid "Go to page"
+#, qt-format
 msgid "Go to page %1"
-msgstr "ໄປຫາໜ້າ"
+msgstr "ໄປຫາໜ້າ %1"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:28
 msgid "Open link externally"
@@ -519,8 +518,6 @@ msgid "Choose a page between 1 and %1"
 msgstr "ເລືອກໜ້າລະຫວ່າງ 1 ຫາ %1"
 
 #: src/app/qml/pdfView/ZoomSelector.qml:120
-#, fuzzy
-#| msgid "Go to page"
 msgid "Fit page"
 msgstr "ໄປຫາໜ້າ"
 
