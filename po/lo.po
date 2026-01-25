@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
-"PO-Revision-Date: 2023-01-04 19:45+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-01-25 16:49+0000\n"
+"Last-Translator: BoneNI <bounkirdni@gmail.com>\n"
 "Language-Team: Lao <https://hosted.weblate.org/projects/lomiri/lomiri-"
 "docviewer-app/lo/>\n"
 "Language: lo\n"
@@ -17,44 +17,44 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.15.1-dev\n"
+"X-Generator: Weblate 5.16-dev\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:49+0000\n"
 
 #: lomiri-docviewer-app.desktop.in:7
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
-msgstr ""
+msgstr "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 
 #: lomiri-docviewer-app.desktop.in:8
-#, fuzzy
-#| msgid "Document Viewer"
 msgid "Document Viewer"
 msgstr "ຕົວເບີ່ງເອກະສານ"
 
 #: lomiri-docviewer-app.desktop.in:9
 msgid "documents;viewer;pdf;reader;"
-msgstr "ເກະສານ;ຕົວເບີ່ງ;ພີດີເເຟບ;ຕົວອ່ານ;"
+msgstr "ເອກະສານ;ຕົວເບິ່ງ;ພີດີເອັບ;ຕົວອ່ານ;"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
-msgstr ""
+msgstr "ບາງຄ່າທີ່ລະບຸໄວ້ບໍ່ຖືກຕ້ອງ."
 
 #: src/app/qml/common/CommandLineProxy.qml:58
 msgid "Open lomiri-docviewer-app displaying the selected file"
-msgstr ""
+msgstr "ເປີດ lomiri-docviewer-app ເພື່ອສະແດງໄຟລ໌ທີ່ເລືອກ"
 
 #: src/app/qml/common/CommandLineProxy.qml:65
 msgid "Run fullscreen"
-msgstr ""
+msgstr "ແລ່ນແບບເຕັມຈໍ"
 
 #: src/app/qml/common/CommandLineProxy.qml:71
 msgid "Open lomiri-docviewer-app in pick mode. Used for tests only."
-msgstr ""
+msgstr "ເປີດ lomiri-docviewer-app ໃນໂໝດເລືອກ. ໃຊ້ສຳລັບການທົດສອບເທົ່ານັ້ນ."
 
 #: src/app/qml/common/CommandLineProxy.qml:77
 msgid ""
 "Show documents from the given folder, instead of ~/Documents.\n"
 "The path must exist prior to running lomiri-docviewer-app"
 msgstr ""
+"ສະແດງເອກະສານຈາກໂຟນເດີທີ່ລະບຸ, ແທນທີ່ ~/Documents.\n"
+"ເສັ້ນທາງຕ້ອງມີຢູ່ກ່ອນການແລ່ນ lomiri-docviewer-app"
 
 #: src/app/qml/common/DetailsPage.qml:29
 #: src/app/qml/loView/LOViewDefaultHeader.qml:93
@@ -65,7 +65,7 @@ msgstr "ລາຍລະອຽດ"
 
 #: src/app/qml/common/DetailsPage.qml:42
 msgid "File"
-msgstr ""
+msgstr "ໄຟລ໌"
 
 #: src/app/qml/common/DetailsPage.qml:47
 msgid "Location"
@@ -73,15 +73,15 @@ msgstr "ສະຖານທີ່"
 
 #: src/app/qml/common/DetailsPage.qml:52
 msgid "Size"
-msgstr "ຂະຫນາດ"
+msgstr "ຂະໜາດ"
 
 #: src/app/qml/common/DetailsPage.qml:57
 msgid "Created"
-msgstr "ສ້າງ"
+msgstr "ສ້າງເມື່ອ"
 
 #: src/app/qml/common/DetailsPage.qml:62
 msgid "Last modified"
-msgstr "ດັດເເກ້ຄັ້ງສຸດທ້າຍ"
+msgstr "ແກ້ໄຂຄັ້ງສຸດທ້າຍ"
 
 #: src/app/qml/common/DetailsPage.qml:69
 msgid "MIME type"
@@ -101,39 +101,39 @@ msgstr "ປິດ"
 
 #: src/app/qml/common/PickImportedDialog.qml:29
 msgid "Multiple documents imported"
-msgstr ""
+msgstr "ນຳເຂົ້າເອກະສານຫຼາຍສະບັບແລ້ວ"
 
 #: src/app/qml/common/PickImportedDialog.qml:30
 msgid "Choose which one to open:"
-msgstr ""
+msgstr "ເລືອກອັນທີ່ຕ້ອງການເປີດ:"
 
 #: src/app/qml/common/RejectedImportDialog.qml:28
 msgid "File not supported"
 msgid_plural "Files not supported"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ບໍ່ຮອງຮັບໄຟລ໌"
 
 #: src/app/qml/common/RejectedImportDialog.qml:29
 msgid "Following document has not been imported:"
 msgid_plural "Following documents have not been imported:"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ເອກະສານຕໍ່ໄປນີ້ບໍ່ໄດ້ຖືກນຳເຂົ້າ:"
 
 #: src/app/qml/common/TextualButtonStyle.qml:48
 #: src/app/qml/common/TextualButtonStyle.qml:51
 #: src/app/qml/documentPage/DocumentPagePickModeHeader.qml:54
 msgid "Pick"
-msgstr "ເລີອກ"
+msgstr "ເລືອກ"
 
 #: src/app/qml/common/UnknownTypeDialog.qml:27
 msgid "Unknown file type"
-msgstr "ບໍ່ຮູ້ປະເພດຟາຍ"
+msgstr "ບໍ່ຮູ້ຈັກປະເພດໄຟລ໌"
 
 #: src/app/qml/common/UnknownTypeDialog.qml:28
 msgid ""
 "This file is not supported.\n"
 "Do you want to open it as a plain text?"
 msgstr ""
+"ບໍ່ຮອງຮັບໄຟລ໌ນີ້.\n"
+"ທ່ານຕ້ອງການເປີດມັນເປັນຂໍ້ຄວາມທຳມະດາ (plain text) ບໍ່?"
 
 #: src/app/qml/common/UnknownTypeDialog.qml:38
 #: src/app/qml/documentPage/DeleteFileDialog.qml:55
@@ -144,9 +144,8 @@ msgstr ""
 #: src/app/qml/pdfView/OpenLinkDialog.qml:39
 #: src/app/qml/pdfView/PdfView.qml:261
 #: src/app/qml/pdfView/PdfViewGotoDialog.qml:51
-#, fuzzy
 msgid "Cancel"
-msgstr "Cancel"
+msgstr "ຍົກເລີກ"
 
 #: src/app/qml/common/UnknownTypeDialog.qml:44
 msgid "Yes"
@@ -156,89 +155,88 @@ msgstr "ແມ່ນ"
 #: src/app/qml/common/utils.js:22
 #, qt-format
 msgid "%1 GB"
-msgstr ""
+msgstr "%1 GB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
 #: src/app/qml/common/utils.js:26
 #, qt-format
 msgid "%1 MB"
-msgstr ""
+msgstr "%1 MB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
 #: src/app/qml/common/utils.js:30
 #, qt-format
 msgid "%1 kB"
-msgstr ""
+msgstr "%1 kB"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in byte
 #: src/app/qml/common/utils.js:33
 #, qt-format
 msgid "%1 byte"
-msgstr ""
+msgstr "%1 ໄບຕ໌"
 
 #: src/app/qml/documentPage/DeleteFileDialog.qml:39
 msgid "Delete file"
-msgstr "ລຶບຟາຍ"
+msgstr "ລຶບໄຟລ໌"
 
 #: src/app/qml/documentPage/DeleteFileDialog.qml:40
 #, qt-format
 msgid "Delete %1 file"
 msgid_plural "Delete %1 files"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ລຶບໄຟລ໌ %1"
 
 #: src/app/qml/documentPage/DeleteFileDialog.qml:41
 #: src/app/qml/documentPage/DeleteFileDialog.qml:42
 msgid "Are you sure you want to permanently delete this file?"
 msgid_plural "Are you sure you want to permanently delete these files?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບໄຟລ໌ເຫຼົ່ານີ້ແບບຖາວອນ?"
 
 #: src/app/qml/documentPage/DeleteFileDialog.qml:61
 #: src/app/qml/documentPage/DocumentDelegateActions.qml:25
 #: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:58
-#, fuzzy
 msgid "Delete"
-msgstr "Delete"
+msgstr "ລືບ"
 
 #: src/app/qml/documentPage/DocumentDelegateActions.qml:44
 msgid "Share"
-msgstr ""
+msgstr "ແບ່ງປັນ"
 
 #: src/app/qml/documentPage/DocumentEmptyState.qml:27
 msgid "No documents found"
-msgstr ""
+msgstr "ບໍ່ພົບເອກະສານ"
 
 #: src/app/qml/documentPage/DocumentEmptyState.qml:28
 msgid ""
 "Connect your device to any computer and simply drag files to the Documents "
 "folder or insert removable media containing documents."
 msgstr ""
+"ເຊື່ອມຕໍ່ອຸປະກອນຂອງທ່ານກັບຄອມພິວເຕີໃດໜຶ່ງ ແລະ ລາກໄຟລ໌ໄປທີ່ໂຟນເດີ Documents ຫຼື ສຽບອຸປະກອນເກັບຂໍ້ມູນ"
+"ພາຍນອກທີ່ມີເອກະສານຢູ່."
 
 #: src/app/qml/documentPage/DocumentListDelegate.qml:75
 msgid "SD card"
-msgstr ""
+msgstr "ກາດ SD"
 
 #. TRANSLATORS: %1 refers to a time formatted as Locale.ShortFormat (e.g. hh:mm). It depends on system settings.
 #. http://qt-project.org/doc/qt-4.8/qlocale.html#FormatType-enum
 #: src/app/qml/documentPage/DocumentListDelegate.qml:100
 #, qt-format
 msgid "Today, %1"
-msgstr ""
+msgstr "ມື້ນີ້, %1"
 
 #. TRANSLATORS: %1 refers to a time formatted as Locale.ShortFormat (e.g. hh:mm). It depends on system settings.
 #. http://qt-project.org/doc/qt-4.8/qlocale.html#FormatType-enum
 #: src/app/qml/documentPage/DocumentListDelegate.qml:105
 #, qt-format
 msgid "Yesterday, %1"
-msgstr ""
+msgstr "ມື້ວານນີ້, %1"
 
 #. TRANSLATORS: this is a datetime formatting string,
 #. see http://qt-project.org/doc/qt-5/qml-qtqml-date.html#details for valid expressions.
 #: src/app/qml/documentPage/DocumentListDelegate.qml:112
 #: src/app/qml/documentPage/DocumentListDelegate.qml:131
 msgid "yyyy/MM/dd hh:mm"
-msgstr ""
+msgstr "yyyy/MM/dd hh:mm"
 
 #. TRANSLATORS: this is a datetime formatting string,
 #. see http://qt-project.org/doc/qt-5/qml-qtqml-date.html#details for valid expressions.
@@ -248,38 +246,36 @@ msgstr "dddd, hh:mm"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:27
 msgid "Documents"
-msgstr ""
+msgstr "ເອກະສານ"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
 msgid "Search…"
-msgstr ""
+msgstr "ຄົ້ນຫາ…"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
 msgid "Sorting settings…"
-msgstr ""
+msgstr "ການຕັ້ງຄ່າການຈັດລຽງ…"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
-msgstr ""
+msgstr "ຄົ້ນຫາໃນເອກະສານ..."
 
 #: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:46
-#, fuzzy
 msgid "Select None"
-msgstr "Select None"
+msgstr "ບໍ່ເລືອກ"
 
 #: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:46
-#, fuzzy
 msgid "Select All"
-msgstr "Select All"
+msgstr "ເລືອກທັງໝົດ"
 
 #: src/app/qml/documentPage/SearchEmptyState.qml:24
 msgid "No matching document found"
-msgstr ""
+msgstr "ບໍ່ພົບເອກະສານທີ່ກົງກັນ"
 
 #: src/app/qml/documentPage/SearchEmptyState.qml:26
 msgid ""
 "Please ensure that your query is not misspelled and/or try a different query."
-msgstr ""
+msgstr "ກະລຸນາກວດສອບວ່າຄຳຄົ້ນຫາຂອງທ່ານບໍ່ໄດ້ພິມຜິດ ແລະ/ຫຼື ລອງໃຊ້ຄຳຄົ້ນຫາອື່ນ."
 
 #: src/app/qml/documentPage/SectionHeader.qml:30
 msgid "Today"
@@ -299,86 +295,84 @@ msgstr "ຕົ້ນເດືອນນີ້"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
 msgid "Even earlier…"
-msgstr ""
+msgstr "ກ່ອນໜ້ານັ້ນ…"
 
 #: src/app/qml/documentPage/SharePage.qml:28
 msgid "Share to"
-msgstr ""
+msgstr "ແບ່ງປັນໄປທີ່"
 
 #: src/app/qml/documentPage/SortSettingsDialog.qml:26
 msgid "Sorting settings"
-msgstr ""
+msgstr "ການຕັ້ງຄ່າການຈັດລຽງ"
 
 #: src/app/qml/documentPage/SortSettingsDialog.qml:31
 msgid "Sort by date (Latest first)"
-msgstr ""
+msgstr "ຈັດລຽງຕາມວັນທີ (ໃໝ່ສຸດກ່ອນ)"
 
 #: src/app/qml/documentPage/SortSettingsDialog.qml:32
 msgid "Sort by name (A-Z)"
-msgstr ""
+msgstr "ຈັດລຽງຕາມຊື່ (A-Z)"
 
 #: src/app/qml/documentPage/SortSettingsDialog.qml:33
 msgid "Sort by size (Smaller first)"
-msgstr ""
+msgstr "ຈັດລຽງຕາມຂະໜາດ (ນ້ອຍສຸດກ່ອນ)"
 
 #: src/app/qml/documentPage/SortSettingsDialog.qml:47
 msgid "Reverse order"
-msgstr ""
+msgstr "ປີ້ນລຳດັບ"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:41
 #: src/app/qml/textView/TextView.qml:49
 msgid "Loading..."
-msgstr "ກໍາລັງໂຫຼດ...."
+msgstr "ກຳລັງໂຫຼດ..."
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:45
 msgid "LibreOffice text document"
-msgstr ""
+msgstr "ເອກະສານຂໍ້ຄວາມ LibreOffice"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:47
 msgid "LibreOffice spread sheet"
-msgstr ""
+msgstr "ສະເປຣດຊີດ LibreOffice"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:49
 msgid "LibreOffice presentation"
-msgstr ""
+msgstr "ງານນຳສະເໜີ LibreOffice"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:51
 msgid "LibreOffice Draw document"
-msgstr ""
+msgstr "ເອກະສານວາດແຕ້ມ LibreOffice"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:53
 msgid "Unknown LibreOffice document"
-msgstr ""
+msgstr "ບໍ່ຮູ້ຈັກເອກະສານ LibreOffice"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:55
-#, fuzzy
-#| msgid "Unknown file type"
 msgid "Unknown document type"
 msgstr "ບໍ່ຮູ້ປະເພດຟາຍ"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:72
 msgid "Go to position…"
-msgstr ""
+msgstr "ໄປຫາຕຳແໜ່ງ…"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:86
 #: src/app/qml/pdfView/PdfView.qml:310
 #: src/app/qml/textView/TextViewDefaultHeader.qml:49
 msgid "Disable night mode"
-msgstr ""
+msgstr "ປິດໂໝດກາງຄືນ"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:86
 #: src/app/qml/pdfView/PdfView.qml:310
 #: src/app/qml/textView/TextViewDefaultHeader.qml:49
 msgid "Enable night mode"
-msgstr ""
+msgstr "ເປີດໂໝດກາງຄືນ"
 
 #: src/app/qml/loView/LOViewGotoDialog.qml:30
 msgid "Go to position"
-msgstr ""
+msgstr "ໄປຫາຕຳແໜ່ງ"
 
 #: src/app/qml/loView/LOViewGotoDialog.qml:31
 msgid "Choose a position between 1% and 100%"
-msgstr ""
+msgstr "ເລືອກຕຳແໜ່ງລະຫວ່າງ 1% ຫາ 100%"
 
 #: src/app/qml/loView/LOViewGotoDialog.qml:62
 #: src/app/qml/pdfView/PdfViewGotoDialog.qml:58
@@ -387,76 +381,76 @@ msgstr "ໄປ!"
 
 #: src/app/qml/loView/LOViewPage.qml:173
 msgid "LibreOffice binaries not found."
-msgstr ""
+msgstr "ບໍ່ພົບໄຟລ໌ໄບນາຣີຂອງ LibreOffice."
 
 #: src/app/qml/loView/LOViewPage.qml:176
 msgid "Error while loading LibreOffice."
-msgstr ""
+msgstr "ເກີດຂໍ້ຜິດພາດຂະນະກຳລັງໂຫຼດ LibreOffice."
 
 #: src/app/qml/loView/LOViewPage.qml:179
 msgid ""
 "Document not loaded.\n"
 "The requested document may be corrupt or protected by a password."
 msgstr ""
+"ເອກະສານບໍ່ໄດ້ຖືກໂຫຼດ.\n"
+"ເອກະສານທີ່ຮ້ອງຂໍອາດຈະເສຍຫາຍ ຫຼື ຖືກປ້ອງກັນດ້ວຍລະຫັດຜ່ານ."
 
 #: src/app/qml/loView/LOViewPage.qml:231
 msgid "This sheet has no content."
-msgstr ""
+msgstr "ຊີດນີ້ບໍ່ມີເນື້ອຫາ."
 
 #. TRANSLATORS: 'LibreOfficeKit' is the name of the library used by
 #. Document Viewer for rendering LibreOffice/MS-Office documents.
 #. Ref. https://docs.libreoffice.org/libreofficekit.html
 #: src/app/qml/loView/Splashscreen.qml:45
 msgid "Powered by LibreOfficeKit"
-msgstr ""
+msgstr "ຂັບເຄື່ອນໂດຍ LibreOfficeKit"
 
 #. TRANSLATORS: Please don't add any space between "Sheet" and "%1".
 #. This is the default name for a sheet in LibreOffice.
 #: src/app/qml/loView/SpreadsheetSelector.qml:64
 #, qt-format
 msgid "Sheet%1"
-msgstr ""
+msgstr "ຊີດ%1"
 
 #: src/app/qml/loView/ZoomSelector.qml:122
 #: src/app/qml/pdfView/ZoomSelector.qml:119
 msgid "Fit width"
-msgstr ""
+msgstr "ພໍດີກັບຄວາມກວ້າງ"
 
 #: src/app/qml/loView/ZoomSelector.qml:123
 msgid "Fit height"
-msgstr ""
+msgstr "ພໍດີກັບຄວາມສູງ"
 
 #: src/app/qml/loView/ZoomSelector.qml:124
 #: src/app/qml/pdfView/ZoomSelector.qml:121
 msgid "Automatic"
-msgstr ""
+msgstr "ອັດຕະໂນມັດ"
 
 #: src/app/qml/lomiri-docviewer-app.qml:134
 msgid "File does not exist."
-msgstr ""
+msgstr "ໄຟລ໌ບໍ່ມີຢູ່."
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
-#, fuzzy
-#| msgid "Document Viewer"
 msgid "Document is locked"
 msgstr "ຕົວເບີ່ງເອກະສານ"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:26
 msgid "Please insert a password in order to unlock this document"
-msgstr ""
+msgstr "ກະລຸນາປ້ອນລະຫັດຜ່ານເພື່ອປົດລັອກເອກະສານນີ້"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:50
 msgid "Entered password is not valid"
-msgstr ""
+msgstr "ລະຫັດຜ່ານທີ່ປ້ອນບໍ່ຖືກຕ້ອງ"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:69
 msgid "Unlock"
-msgstr ""
+msgstr "ປົດລັອກ"
 
 #: src/app/qml/pdfView/LinkHint.qml:36
 #, qt-format
 msgid "Open link externally: %1"
-msgstr ""
+msgstr "ເປີດລິ້ງພາຍນອກ: %1"
 
 #: src/app/qml/pdfView/LinkHint.qml:37
 #: src/app/qml/pdfView/OpenLinkDialog.qml:28
@@ -467,19 +461,19 @@ msgstr "ໄປຫາໜ້າ"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:28
 msgid "Open link externally"
-msgstr ""
+msgstr "ເປີດລິ້ງພາຍນອກ"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:29
 msgid "Are you sure?"
-msgstr ""
+msgstr "ທ່ານແນ່ໃຈບໍ່?"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:45
 msgid "Open"
-msgstr ""
+msgstr "ເປີດ"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:45
 msgid "Go to destination"
-msgstr ""
+msgstr "ໄປຫາປາຍທາງ"
 
 #. TRANSLATORS: "Contents" refers to the "Table of Contents" of a PDF document.
 #: src/app/qml/pdfView/PdfContentsPage.qml:31
@@ -493,27 +487,27 @@ msgstr "ເນື້ອຫາ"
 #: src/app/qml/pdfView/PdfView.qml:49
 #, qt-format
 msgid "Page %1 of %2"
-msgstr "ໜ້າ %1 ຂອງ %2"
+msgstr "ໜ້າ %1 ຈາກ %2"
 
 #: src/app/qml/pdfView/PdfView.qml:284
 msgid "Search"
-msgstr ""
+msgstr "ຄົ້ນຫາ"
 
 #: src/app/qml/pdfView/PdfView.qml:294
 msgid "Go to page..."
-msgstr ""
+msgstr "ໄປຫາໜ້າ..."
 
 #: src/app/qml/pdfView/PdfView.qml:303
 msgid "Presentation"
-msgstr ""
+msgstr "ງານນຳສະເໜີ"
 
 #: src/app/qml/pdfView/PdfView.qml:324
 msgid "Rotate 90° right"
-msgstr ""
+msgstr "ໝຸນໄປທາງຂວາ 90°"
 
 #: src/app/qml/pdfView/PdfView.qml:341
 msgid "Rotate 90° left"
-msgstr ""
+msgstr "ໝຸນໄປທາງຊ້າຍ 90°"
 
 #: src/app/qml/pdfView/PdfViewGotoDialog.qml:26
 msgid "Go to page"
@@ -522,7 +516,7 @@ msgstr "ໄປຫາໜ້າ"
 #: src/app/qml/pdfView/PdfViewGotoDialog.qml:27
 #, qt-format
 msgid "Choose a page between 1 and %1"
-msgstr "ເລີອກໜ້າລະວ່າງ 1 ເເລະ %1"
+msgstr "ເລືອກໜ້າລະຫວ່າງ 1 ຫາ %1"
 
 #: src/app/qml/pdfView/ZoomSelector.qml:120
 #, fuzzy
@@ -542,7 +536,7 @@ msgstr "ໄປຫາໜ້າ"
 #: src/plugin/file-qml-plugin/docviewerutils.cpp:119
 #, qt-format
 msgid "copy %1"
-msgstr ""
+msgstr "ສຳເນົາ %1"
 
 #~ msgid "Back"
 #~ msgstr "ກັບ"
