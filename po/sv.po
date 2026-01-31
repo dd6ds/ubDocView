@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
-"PO-Revision-Date: 2023-02-27 19:38+0000\n"
-"Last-Translator: Luna Jernberg <droidbittin@gmail.com>\n"
+"PO-Revision-Date: 2026-02-01 06:03+0000\n"
+"Last-Translator: Daniel Wiik <d.wiik@outlook.com>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/lomiri/lomiri-"
 "docviewer-app/sv/>\n"
 "Language: sv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 5.16-dev\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:49+0000\n"
 
 #: lomiri-docviewer-app.desktop.in:7
@@ -279,7 +279,7 @@ msgstr "Inga matchande dokument hittade"
 #: src/app/qml/documentPage/SearchEmptyState.qml:26
 msgid ""
 "Please ensure that your query is not misspelled and/or try a different query."
-msgstr "Kontrollera stavningen och/eller försök med andra söktermer"
+msgstr "Kontrollera stavningen och/eller försök med andra söktermer."
 
 #: src/app/qml/documentPage/SectionHeader.qml:30
 msgid "Today"
