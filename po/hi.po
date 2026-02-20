@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: lomiri-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
-"PO-Revision-Date: 2023-06-28 04:33+0000\n"
-"Last-Translator: \"Rudra Harsh V.Singh\" <rudraHarsh45@proton.me>\n"
+"PO-Revision-Date: 2026-02-20 16:28+0000\n"
+"Last-Translator: Satyaakam Goswami <satyaakam@gmail.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/lomiri/lomiri-"
 "docviewer-app/hi/>\n"
 "Language: hi\n"
@@ -17,76 +17,80 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.18.1\n"
+"X-Generator: Weblate 5.16.1-dev\n"
 
 #: lomiri-docviewer-app.desktop.in:7
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
-msgstr ""
+msgstr "/usr/share/lomiri-docviewer-app/docviewer-app.png"
 
 #: lomiri-docviewer-app.desktop.in:8
 msgid "Document Viewer"
-msgstr ""
+msgstr "डॉक्यूमेंट व्यूअर"
 
 #: lomiri-docviewer-app.desktop.in:9
 msgid "documents;viewer;pdf;reader;"
-msgstr ""
+msgstr "दस्तावेज़; दर्शक; पीडीएफ; reader;"
 
 #: src/app/qml/common/CommandLineProxy.qml:49
 msgid "Some of the provided arguments are not valid."
-msgstr ""
+msgstr "दिए गए कुछ तर्क मान्य नहीं हैं।"
 
 #: src/app/qml/common/CommandLineProxy.qml:58
 msgid "Open lomiri-docviewer-app displaying the selected file"
-msgstr ""
+msgstr "ओपन लोमिरी-डॉकव्यूअर-एप्प डिस्प्ले इंगिटा हुआ फ़ाइल"
 
 #: src/app/qml/common/CommandLineProxy.qml:65
 msgid "Run fullscreen"
-msgstr ""
+msgstr "तीनों हाथों में से एक को बाहर करें"
 
 #: src/app/qml/common/CommandLineProxy.qml:71
 msgid "Open lomiri-docviewer-app in pick mode. Used for tests only."
 msgstr ""
+"ओपन लोमिरी-डॉकव्यूअर-अप को चुनने के मोड में खोलें। इसे परीक्षण के उद्देश्य के लिए ही उपयोग "
+"किया जाता है।"
 
 #: src/app/qml/common/CommandLineProxy.qml:77
 msgid ""
 "Show documents from the given folder, instead of ~/Documents.\n"
 "The path must exist prior to running lomiri-docviewer-app"
 msgstr ""
+"Documents के बजाय दिए गए फ़ोल्डर से दस्तावेज़ दिखाएँ। lomiri-docviewer-app चलाने से "
+"पहले यह पथ मौजूद होना चाहिए।"
 
 #: src/app/qml/common/DetailsPage.qml:29
 #: src/app/qml/loView/LOViewDefaultHeader.qml:93
 #: src/app/qml/pdfView/PdfView.qml:317
 #: src/app/qml/textView/TextViewDefaultHeader.qml:55
 msgid "Details"
-msgstr ""
+msgstr "निर्देश"
 
 #: src/app/qml/common/DetailsPage.qml:42
 msgid "File"
-msgstr ""
+msgstr "पड़ाव"
 
 #: src/app/qml/common/DetailsPage.qml:47
 msgid "Location"
-msgstr ""
+msgstr "S्थान"
 
 #: src/app/qml/common/DetailsPage.qml:52
 msgid "Size"
-msgstr ""
+msgstr "आकार"
 
 #: src/app/qml/common/DetailsPage.qml:57
 msgid "Created"
-msgstr ""
+msgstr "तैयार हो गया"
 
 #: src/app/qml/common/DetailsPage.qml:62
 msgid "Last modified"
-msgstr ""
+msgstr "अखरी संशोधन"
 
 #: src/app/qml/common/DetailsPage.qml:69
 msgid "MIME type"
-msgstr ""
+msgstr "मिम टाइप"
 
 #: src/app/qml/common/ErrorDialog.qml:23
 msgid "Error"
-msgstr ""
+msgstr "एरर"
 
 #: src/app/qml/common/ErrorDialog.qml:26
 #: src/app/qml/common/PickImportedDialog.qml:54
@@ -94,43 +98,55 @@ msgstr ""
 #: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:33
 #: src/app/qml/documentPage/SortSettingsDialog.qml:53
 msgid "Close"
-msgstr ""
+msgstr "Bंद कर"
 
 #: src/app/qml/common/PickImportedDialog.qml:29
 msgid "Multiple documents imported"
-msgstr ""
+msgstr "मultiple documents imported"
 
 #: src/app/qml/common/PickImportedDialog.qml:30
 msgid "Choose which one to open:"
-msgstr ""
+msgstr "चुनें और खोलें"
 
 #: src/app/qml/common/RejectedImportDialog.qml:28
 msgid "File not supported"
 msgid_plural "Files not supported"
-msgstr[0] ""
+msgstr[0] "फाइल का समर्थन नहीं किया जाता है।"
 msgstr[1] ""
+"ज़रूर, यहाँ हिंदी में अनुवाद है:\n"
+"\n"
+"नहीं समर्थित फ़ाइलें।"
 
 #: src/app/qml/common/RejectedImportDialog.qml:29
 msgid "Following document has not been imported:"
 msgid_plural "Following documents have not been imported:"
-msgstr[0] ""
+msgstr[0] "पीड़ित दस्तावेज़ ने अपलोड नहीं किया है।"
 msgstr[1] ""
+"\"पीड़ित दस्तावेजों को संग्रहीत नहीं किया गया है।\"\n"
+"\n"
+"Or in a more natural way:\n"
+"\"दस्तावेज़ पीड़ित में शामिल नहीं किए गए।\"\n"
+"\n"
+"This translation maintains the original meaning and conveys the idea that "
+"some documents related to the issue (or \"pीड़ित\") have not been imported."
 
 #: src/app/qml/common/TextualButtonStyle.qml:48
 #: src/app/qml/common/TextualButtonStyle.qml:51
 #: src/app/qml/documentPage/DocumentPagePickModeHeader.qml:54
 msgid "Pick"
-msgstr ""
+msgstr "चुनना"
 
 #: src/app/qml/common/UnknownTypeDialog.qml:27
 msgid "Unknown file type"
-msgstr ""
+msgstr "अज्ञात फ़ाइल प्रकार"
 
 #: src/app/qml/common/UnknownTypeDialog.qml:28
 msgid ""
 "This file is not supported.\n"
 "Do you want to open it as a plain text?"
 msgstr ""
+"यह फ़ाइल समर्थन नहीं करती है।\n"
+"आप इसे एक सीधा टेक्स्ट के रूप में खोलना चाहते हैं?"
 
 #: src/app/qml/common/UnknownTypeDialog.qml:38
 #: src/app/qml/documentPage/DeleteFileDialog.qml:55
@@ -146,49 +162,49 @@ msgstr "रद्द करें"
 
 #: src/app/qml/common/UnknownTypeDialog.qml:44
 msgid "Yes"
-msgstr ""
+msgstr "जय हो"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in GB
 #: src/app/qml/common/utils.js:22
 #, qt-format
 msgid "%1 GB"
-msgstr ""
+msgstr "%1 गीगाबाइट"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in MB
 #: src/app/qml/common/utils.js:26
 #, qt-format
 msgid "%1 MB"
-msgstr ""
+msgstr "%din %1 कीबी"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in kB
 #: src/app/qml/common/utils.js:30
 #, qt-format
 msgid "%1 kB"
-msgstr ""
+msgstr "कब की ( KB )"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in byte
 #: src/app/qml/common/utils.js:33
 #, qt-format
 msgid "%1 byte"
-msgstr ""
+msgstr "%१ बाइट"
 
 #: src/app/qml/documentPage/DeleteFileDialog.qml:39
 msgid "Delete file"
-msgstr ""
+msgstr "निकालें फ़ाइल"
 
 #: src/app/qml/documentPage/DeleteFileDialog.qml:40
 #, qt-format
 msgid "Delete %1 file"
 msgid_plural "Delete %1 files"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "मिटाएं %1 फ़ाइल"
+msgstr[1] "मिटाने की आवश्यकता वाले %1 फ़ाइलें"
 
 #: src/app/qml/documentPage/DeleteFileDialog.qml:41
 #: src/app/qml/documentPage/DeleteFileDialog.qml:42
 msgid "Are you sure you want to permanently delete this file?"
 msgid_plural "Are you sure you want to permanently delete these files?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "क्या आप सुनिश्चित हैं कि आप इस फ़ाइल को पूरी तरह से हटाना चाहते हैं?"
+msgstr[1] "क्या आप इन फ़ाइलों को स्थायी रूप से हटाना चाहते हैं?"
 
 #: src/app/qml/documentPage/DeleteFileDialog.qml:61
 #: src/app/qml/documentPage/DocumentDelegateActions.qml:25
@@ -198,68 +214,70 @@ msgstr "हटाएं"
 
 #: src/app/qml/documentPage/DocumentDelegateActions.qml:44
 msgid "Share"
-msgstr ""
+msgstr "Banchao"
 
 #: src/app/qml/documentPage/DocumentEmptyState.qml:27
 msgid "No documents found"
-msgstr ""
+msgstr "कोई दस्तावेज नहीं पाए गए"
 
 #: src/app/qml/documentPage/DocumentEmptyState.qml:28
 msgid ""
 "Connect your device to any computer and simply drag files to the Documents "
 "folder or insert removable media containing documents."
 msgstr ""
+"यदि आप अपने डिवाइस को किसी भी कंप्यूटर से जोड़ें और सिर्फ फ़ाइलों को दस्तावेज़ पेपर में ड्रैग "
+"करें या दस्तावेज़ से भरपूर मीडिया को रिमूवेबल मीडिया में इंसेर्ट करें।"
 
 #: src/app/qml/documentPage/DocumentListDelegate.qml:75
 msgid "SD card"
-msgstr ""
+msgstr "माइक्रो एसडी कार्ड"
 
 #. TRANSLATORS: %1 refers to a time formatted as Locale.ShortFormat (e.g. hh:mm). It depends on system settings.
 #. http://qt-project.org/doc/qt-4.8/qlocale.html#FormatType-enum
 #: src/app/qml/documentPage/DocumentListDelegate.qml:100
 #, qt-format
 msgid "Today, %1"
-msgstr ""
+msgstr "आज, %1"
 
 #. TRANSLATORS: %1 refers to a time formatted as Locale.ShortFormat (e.g. hh:mm). It depends on system settings.
 #. http://qt-project.org/doc/qt-4.8/qlocale.html#FormatType-enum
 #: src/app/qml/documentPage/DocumentListDelegate.qml:105
 #, qt-format
 msgid "Yesterday, %1"
-msgstr ""
+msgstr "कल , %1"
 
 #. TRANSLATORS: this is a datetime formatting string,
 #. see http://qt-project.org/doc/qt-5/qml-qtqml-date.html#details for valid expressions.
 #: src/app/qml/documentPage/DocumentListDelegate.qml:112
 #: src/app/qml/documentPage/DocumentListDelegate.qml:131
 msgid "yyyy/MM/dd hh:mm"
-msgstr ""
+msgstr "वर्ष/माह/दिन समय"
 
 #. TRANSLATORS: this is a datetime formatting string,
 #. see http://qt-project.org/doc/qt-5/qml-qtqml-date.html#details for valid expressions.
 #: src/app/qml/documentPage/DocumentListDelegate.qml:125
 msgid "dddd, hh:mm"
-msgstr ""
+msgstr "दिन, घंटे:मिनट"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:27
 msgid "Documents"
-msgstr ""
+msgstr "पapers"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
 msgid "Search…"
-msgstr ""
+msgstr "खोज"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
 msgid "Sorting settings…"
-msgstr ""
+msgstr "सॉर्टिंग सेटिंग्स…"
 
 #: src/app/qml/documentPage/DocumentPageSearchHeader.qml:56
 msgid "search in documents..."
-msgstr ""
+msgstr "खोजें दस्तावेज़..।"
 
 #: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:46
 msgid "Select None"
-msgstr ""
+msgstr "निलंबित नहीं"
 
 #: src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml:46
 msgid "Select All"
@@ -267,56 +285,59 @@ msgstr "सबका चयन करें"
 
 #: src/app/qml/documentPage/SearchEmptyState.qml:24
 msgid "No matching document found"
-msgstr ""
+msgstr "कोई मैचिंग दस्तावेज़ नहीं पाया गया।"
 
 #: src/app/qml/documentPage/SearchEmptyState.qml:26
 msgid ""
 "Please ensure that your query is not misspelled and/or try a different query."
 msgstr ""
+"I don't see any UI string provided in the query. Please provide the UI "
+"string you'd like me to translate into Hindi, and I'll be happy to assist "
+"you!"
 
 #: src/app/qml/documentPage/SectionHeader.qml:30
 msgid "Today"
-msgstr ""
+msgstr "आज"
 
 #: src/app/qml/documentPage/SectionHeader.qml:33
 msgid "Yesterday"
-msgstr ""
+msgstr "कल"
 
 #: src/app/qml/documentPage/SectionHeader.qml:36
 msgid "Earlier this week"
-msgstr ""
+msgstr "पिछले सप्ताह"
 
 #: src/app/qml/documentPage/SectionHeader.qml:39
 msgid "Earlier this month"
-msgstr ""
+msgstr "कहीं महीने पहले"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
 msgid "Even earlier…"
-msgstr ""
+msgstr "अधिक पुराना"
 
 #: src/app/qml/documentPage/SharePage.qml:28
 msgid "Share to"
-msgstr ""
+msgstr "बांटना"
 
 #: src/app/qml/documentPage/SortSettingsDialog.qml:26
 msgid "Sorting settings"
-msgstr ""
+msgstr "निर्धारण सेटिंग"
 
 #: src/app/qml/documentPage/SortSettingsDialog.qml:31
 msgid "Sort by date (Latest first)"
-msgstr ""
+msgstr "पुराना से सबसे नया"
 
 #: src/app/qml/documentPage/SortSettingsDialog.qml:32
 msgid "Sort by name (A-Z)"
-msgstr ""
+msgstr "नाम (A-ए) द्वारा सारांशित करें"
 
 #: src/app/qml/documentPage/SortSettingsDialog.qml:33
 msgid "Sort by size (Smaller first)"
-msgstr ""
+msgstr "कम आकार से शुरू (छोटा पहला)"
 
 #: src/app/qml/documentPage/SortSettingsDialog.qml:47
 msgid "Reverse order"
-msgstr ""
+msgstr "पीछे की ओर"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:41
 #: src/app/qml/textView/TextView.qml:49
@@ -325,155 +346,164 @@ msgstr "लोड हो रहा है..।"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:45
 msgid "LibreOffice text document"
-msgstr ""
+msgstr "लिब्र ऑफिस टेक्स्ट दस्तावेज"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:47
 msgid "LibreOffice spread sheet"
-msgstr ""
+msgstr "फ्री ओफिस स्प्रेडशीट"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:49
 msgid "LibreOffice presentation"
-msgstr ""
+msgstr "स्वायत्त सॉफ्टवेयर"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:51
 msgid "LibreOffice Draw document"
 msgstr ""
+"स्व-द्वारा ड्रॉ\n"
+"\n"
+"(LibreOffice Draw is a translation of \"Sw-Dwara Draw\" which roughly "
+"translates to \"Self-made Drawing\" or \"Drawn by oneself\")"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:53
 msgid "Unknown LibreOffice document"
-msgstr ""
+msgstr "अज्ञात लिब्री ऑफिस दस्तावेज़"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:55
 msgid "Unknown document type"
-msgstr ""
+msgstr "अज्ञात दस्तावेज प्रकार"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:72
 msgid "Go to position…"
-msgstr ""
+msgstr "जाएं स्थान…"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:86
 #: src/app/qml/pdfView/PdfView.qml:310
 #: src/app/qml/textView/TextViewDefaultHeader.qml:49
 msgid "Disable night mode"
-msgstr ""
+msgstr "रात्रि मोड़ बंद करें"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:86
 #: src/app/qml/pdfView/PdfView.qml:310
 #: src/app/qml/textView/TextViewDefaultHeader.qml:49
 msgid "Enable night mode"
-msgstr ""
+msgstr "রात्रि मोड सक्षम करें"
 
 #: src/app/qml/loView/LOViewGotoDialog.qml:30
 msgid "Go to position"
-msgstr ""
+msgstr "जाएं स्थान पर"
 
 #: src/app/qml/loView/LOViewGotoDialog.qml:31
 msgid "Choose a position between 1% and 100%"
-msgstr ""
+msgstr "चुनें एक स्थिति १% और १००% के बीच"
 
 #: src/app/qml/loView/LOViewGotoDialog.qml:62
 #: src/app/qml/pdfView/PdfViewGotoDialog.qml:58
 msgid "GO!"
-msgstr ""
+msgstr "प्रारंभ हो!"
 
 #: src/app/qml/loView/LOViewPage.qml:173
 msgid "LibreOffice binaries not found."
-msgstr ""
+msgstr "स्वायत्त सॉफ्टवेयर बाइनरी नहीं पाई गई।"
 
 #: src/app/qml/loView/LOViewPage.qml:176
 msgid "Error while loading LibreOffice."
-msgstr ""
+msgstr "एरर वाइल्ड लोडिंग लाइबर ऑफिस"
 
 #: src/app/qml/loView/LOViewPage.qml:179
 msgid ""
 "Document not loaded.\n"
 "The requested document may be corrupt or protected by a password."
 msgstr ""
+"नोटिफिकेशन:\n"
+"\n"
+"दस्तावेज़ लोड नहीं हुआ।\n"
+"\n"
+"पूछे गये दस्तावेज़ क्षतिग्रस्त या पासवर्ड से बंद हो सकता है।"
 
 #: src/app/qml/loView/LOViewPage.qml:231
 msgid "This sheet has no content."
-msgstr ""
+msgstr "इस सheet में कोई सामग्री नहीं है।"
 
 #. TRANSLATORS: 'LibreOfficeKit' is the name of the library used by
 #. Document Viewer for rendering LibreOffice/MS-Office documents.
 #. Ref. https://docs.libreoffice.org/libreofficekit.html
 #: src/app/qml/loView/Splashscreen.qml:45
 msgid "Powered by LibreOfficeKit"
-msgstr ""
+msgstr "पावर्ड बाय लिब्रो ऑफिस किट"
 
 #. TRANSLATORS: Please don't add any space between "Sheet" and "%1".
 #. This is the default name for a sheet in LibreOffice.
 #: src/app/qml/loView/SpreadsheetSelector.qml:64
 #, qt-format
 msgid "Sheet%1"
-msgstr ""
+msgstr "फ़िल्म%1"
 
 #: src/app/qml/loView/ZoomSelector.qml:122
 #: src/app/qml/pdfView/ZoomSelector.qml:119
 msgid "Fit width"
-msgstr ""
+msgstr "चौड़ाई को फिट करें"
 
 #: src/app/qml/loView/ZoomSelector.qml:123
 msgid "Fit height"
-msgstr ""
+msgstr "लंबाई (Lambai)"
 
 #: src/app/qml/loView/ZoomSelector.qml:124
 #: src/app/qml/pdfView/ZoomSelector.qml:121
 msgid "Automatic"
-msgstr ""
+msgstr "अटोमैटिक"
 
 #: src/app/qml/lomiri-docviewer-app.qml:134
 msgid "File does not exist."
-msgstr ""
+msgstr "पीड़ा न हो।"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:25
 msgid "Document is locked"
-msgstr ""
+msgstr "ડॉक્યુમેન્ટ બંધ"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:26
 msgid "Please insert a password in order to unlock this document"
-msgstr ""
+msgstr "पासवर्ड डालकर इस दस्तावेज़ को खोलें।"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:50
 msgid "Entered password is not valid"
-msgstr ""
+msgstr "पासवर्ड दर्ज करना गैर-वैध है।"
 
 #: src/app/qml/pdfView/DocumentLockedDialog.qml:69
 msgid "Unlock"
-msgstr ""
+msgstr "अनलॉक"
 
 #: src/app/qml/pdfView/LinkHint.qml:36
 #, qt-format
 msgid "Open link externally: %1"
-msgstr ""
+msgstr "open link bahar khola hai: %1"
 
 #: src/app/qml/pdfView/LinkHint.qml:37
 #: src/app/qml/pdfView/OpenLinkDialog.qml:28
 #, qt-format
 msgid "Go to page %1"
-msgstr ""
+msgstr "Jayenuvaam ka panaas %1"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:28
 msgid "Open link externally"
-msgstr ""
+msgstr "खुले प्रकार में लिंक खोलें"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:29
 msgid "Are you sure?"
-msgstr ""
+msgstr "आप शुरू में सुनिश्चित हैं?"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:45
 msgid "Open"
-msgstr ""
+msgstr "ओपन"
 
 #: src/app/qml/pdfView/OpenLinkDialog.qml:45
 msgid "Go to destination"
-msgstr ""
+msgstr "Yatra ke desh mein jaana"
 
 #. TRANSLATORS: "Contents" refers to the "Table of Contents" of a PDF document.
 #: src/app/qml/pdfView/PdfContentsPage.qml:31
 #: src/app/qml/pdfView/PdfView.qml:230
 msgid "Contents"
-msgstr ""
+msgstr "सामग्री"
 
 #. TRANSLATORS: the first argument (%1) refers to the page currently shown on the screen,
 #. while the second one (%2) refers to the total pages count.
@@ -481,40 +511,40 @@ msgstr ""
 #: src/app/qml/pdfView/PdfView.qml:49
 #, qt-format
 msgid "Page %1 of %2"
-msgstr ""
+msgstr "पृष्ठ %1 पृष्ठों के बीच से %2"
 
 #: src/app/qml/pdfView/PdfView.qml:284
 msgid "Search"
-msgstr ""
+msgstr "खोज"
 
 #: src/app/qml/pdfView/PdfView.qml:294
 msgid "Go to page..."
-msgstr ""
+msgstr "जाने वाली पृष्ठ"
 
 #: src/app/qml/pdfView/PdfView.qml:303
 msgid "Presentation"
-msgstr ""
+msgstr "प्रस्तुति"
 
 #: src/app/qml/pdfView/PdfView.qml:324
 msgid "Rotate 90° right"
-msgstr ""
+msgstr "गिरना 90° दाएं"
 
 #: src/app/qml/pdfView/PdfView.qml:341
 msgid "Rotate 90° left"
-msgstr ""
+msgstr "पहुंच 90° बाएं"
 
 #: src/app/qml/pdfView/PdfViewGotoDialog.qml:26
 msgid "Go to page"
-msgstr ""
+msgstr "जाएँ"
 
 #: src/app/qml/pdfView/PdfViewGotoDialog.qml:27
 #, qt-format
 msgid "Choose a page between 1 and %1"
-msgstr ""
+msgstr "चुनें पेज नंबर 1 से %1 तक"
 
 #: src/app/qml/pdfView/ZoomSelector.qml:120
 msgid "Fit page"
-msgstr ""
+msgstr "फिट पेज"
 
 #. TRANSLATORS: This string is used for renaming a copied file,
 #. when a file with the same name already exists in user's
@@ -528,4 +558,4 @@ msgstr ""
 #: src/plugin/file-qml-plugin/docviewerutils.cpp:119
 #, qt-format
 msgid "copy %1"
-msgstr ""
+msgstr "कॉपी %1"
