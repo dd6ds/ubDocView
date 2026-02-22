@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lomiri-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
-"PO-Revision-Date: 2026-02-20 16:28+0000\n"
+"PO-Revision-Date: 2026-02-28 06:09+0000\n"
 "Last-Translator: Satyaakam Goswami <satyaakam@gmail.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/lomiri/lomiri-"
 "docviewer-app/hi/>\n"
@@ -54,8 +54,8 @@ msgid ""
 "Show documents from the given folder, instead of ~/Documents.\n"
 "The path must exist prior to running lomiri-docviewer-app"
 msgstr ""
-"Documents के बजाय दिए गए फ़ोल्डर से दस्तावेज़ दिखाएँ। lomiri-docviewer-app चलाने से "
-"पहले यह पथ मौजूद होना चाहिए।"
+"Documents के बजाय दिए गए फ़ोल्डर से दस्तावेज़ दिखाएँ। \n"
+"lomiri-docviewer-app चलाने से पहले यह पथ मौजूद होना चाहिए"
 
 #: src/app/qml/common/DetailsPage.qml:29
 #: src/app/qml/loView/LOViewDefaultHeader.qml:93
@@ -106,29 +106,19 @@ msgstr "मultiple documents imported"
 
 #: src/app/qml/common/PickImportedDialog.qml:30
 msgid "Choose which one to open:"
-msgstr "चुनें और खोलें"
+msgstr "चुनें कि कौन सा खोलना है:"
 
 #: src/app/qml/common/RejectedImportDialog.qml:28
 msgid "File not supported"
 msgid_plural "Files not supported"
-msgstr[0] "फाइल का समर्थन नहीं किया जाता है।"
-msgstr[1] ""
-"ज़रूर, यहाँ हिंदी में अनुवाद है:\n"
-"\n"
-"नहीं समर्थित फ़ाइलें।"
+msgstr[0] "असंचालित फ़ाइलें"
+msgstr[1] "असंचालित फ़ाइलें"
 
 #: src/app/qml/common/RejectedImportDialog.qml:29
 msgid "Following document has not been imported:"
 msgid_plural "Following documents have not been imported:"
-msgstr[0] "पीड़ित दस्तावेज़ ने अपलोड नहीं किया है।"
-msgstr[1] ""
-"\"पीड़ित दस्तावेजों को संग्रहीत नहीं किया गया है।\"\n"
-"\n"
-"Or in a more natural way:\n"
-"\"दस्तावेज़ पीड़ित में शामिल नहीं किए गए।\"\n"
-"\n"
-"This translation maintains the original meaning and conveys the idea that "
-"some documents related to the issue (or \"pीड़ित\") have not been imported."
+msgstr[0] "निम्नलिखित दस्तावेज़ आयात नहीं किया गया है"
+msgstr[1] "निम्नलिखित दस्तावेज़ आयात नहीं किए गए हैं"
 
 #: src/app/qml/common/TextualButtonStyle.qml:48
 #: src/app/qml/common/TextualButtonStyle.qml:51
