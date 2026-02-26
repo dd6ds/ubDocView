@@ -34,7 +34,8 @@ function load(mimetype) {
             || mimetype === "application/vnd.openxmlformats-officedocument.presentationml.presentation"
             || mimetype === "application/msword"
             || mimetype === "application/vnd.ms-excel"
-            || mimetype === "application/vnd.ms-powerpoint")
+            || mimetype === "application/vnd.ms-powerpoint"
+            || mimetype === "text/html")
         qmlToLoad = Qt.resolvedUrl("../loView/LOViewPage.qml")
 
     if (qmlToLoad != "") {
