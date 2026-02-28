@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lomiri-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
-"PO-Revision-Date: 2026-02-28 06:09+0000\n"
+"PO-Revision-Date: 2026-03-07 09:09+0000\n"
 "Last-Translator: Satyaakam Goswami <satyaakam@gmail.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/lomiri/lomiri-"
 "docviewer-app/hi/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.16.1-dev\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 #: lomiri-docviewer-app.desktop.in:7
 msgid "/usr/share/lomiri-docviewer-app/docviewer-app.png"
@@ -111,7 +111,7 @@ msgstr "चुनें कि कौन सा खोलना है:"
 #: src/app/qml/common/RejectedImportDialog.qml:28
 msgid "File not supported"
 msgid_plural "Files not supported"
-msgstr[0] "असंचालित फ़ाइलें"
+msgstr[0] "फ़ाइल समर्थित नहीं है"
 msgstr[1] "असंचालित फ़ाइलें"
 
 #: src/app/qml/common/RejectedImportDialog.qml:29
@@ -170,7 +170,7 @@ msgstr "%din %1 कीबी"
 #: src/app/qml/common/utils.js:30
 #, qt-format
 msgid "%1 kB"
-msgstr "कब की ( KB )"
+msgstr "%1 केबी"
 
 #. TRANSLATORS: %1 is the size of a file, expressed in byte
 #: src/app/qml/common/utils.js:33
