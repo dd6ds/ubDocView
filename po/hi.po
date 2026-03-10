@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lomiri-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
-"PO-Revision-Date: 2026-03-07 09:09+0000\n"
+"PO-Revision-Date: 2026-03-11 04:18+0000\n"
 "Last-Translator: Satyaakam Goswami <satyaakam@gmail.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/lomiri/lomiri-"
 "docviewer-app/hi/>\n"
@@ -255,7 +255,7 @@ msgstr "पapers"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:32
 msgid "Search…"
-msgstr "खोज"
+msgstr "खोज…"
 
 #: src/app/qml/documentPage/DocumentPageDefaultHeader.qml:39
 msgid "Sorting settings…"
@@ -275,15 +275,14 @@ msgstr "सबका चयन करें"
 
 #: src/app/qml/documentPage/SearchEmptyState.qml:24
 msgid "No matching document found"
-msgstr "कोई मैचिंग दस्तावेज़ नहीं पाया गया।"
+msgstr "कोई मेल खाने वाला दस्तावेज़ नहीं मिला"
 
 #: src/app/qml/documentPage/SearchEmptyState.qml:26
 msgid ""
 "Please ensure that your query is not misspelled and/or try a different query."
 msgstr ""
-"I don't see any UI string provided in the query. Please provide the UI "
-"string you'd like me to translate into Hindi, and I'll be happy to assist "
-"you!"
+"कृपया सुनिश्चित करें कि आपके प्रश्न में वर्तनी की कोई त्रुटि न हो और/या कोई भिन्न प्रश्न "
+"आज़माएँ।"
 
 #: src/app/qml/documentPage/SectionHeader.qml:30
 msgid "Today"
@@ -303,7 +302,7 @@ msgstr "कहीं महीने पहले"
 
 #: src/app/qml/documentPage/SectionHeader.qml:41
 msgid "Even earlier…"
-msgstr "अधिक पुराना"
+msgstr "पहले भी…"
 
 #: src/app/qml/documentPage/SharePage.qml:28
 msgid "Share to"
@@ -348,11 +347,7 @@ msgstr "स्वायत्त सॉफ्टवेयर"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:51
 msgid "LibreOffice Draw document"
-msgstr ""
-"स्व-द्वारा ड्रॉ\n"
-"\n"
-"(LibreOffice Draw is a translation of \"Sw-Dwara Draw\" which roughly "
-"translates to \"Self-made Drawing\" or \"Drawn by oneself\")"
+msgstr "लिब्रेऑफिस ड्रॉ दस्तावेज़"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:53
 msgid "Unknown LibreOffice document"
