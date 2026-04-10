@@ -97,35 +97,24 @@ void PdfTocModel::fillModel() {
         Q_EMIT countChanged();
     }
 
-    if (m_document->toc()) {
+    if (!m_document->outline().isEmpty()) {
         qDebug() << "[PDF] Parsing toc model";
-        QDomDocument* toc = m_document->toc();
-
-        QDomNode child = toc->firstChild();
-        recursiveGetEntries(child, 0);
+        QVector<Poppler::OutlineItem> outline = m_document->outline();
+        recursiveGetEntries(outline, 0);
     }
 }
 
-void PdfTocModel::recursiveGetEntries(QDomNode node, int nodeLevel, int parentNodeIndex)
+void PdfTocModel::recursiveGetEntries(const QVector<Poppler::OutlineItem> &items, int nodeLevel, int parentNodeIndex)
 {
-    while(!node.isNull()) {
-        QDomNode child = node.firstChild();
-
+    for (const Poppler::OutlineItem &item : items) {
         TocEntry entry;
-        entry.title = node.toElement().tagName();
+        entry.title = item.name();
         entry.parentNodeIndex = parentNodeIndex;
         entry.level = nodeLevel;
 
-        QString dest = node.toElement().attribute("Destination");
-        if (!dest.isEmpty()) {
-            Poppler::LinkDestination dl(dest);
-            entry.pageIndex = dl.pageNumber() - 1;
-        } else {
-            QString destName = node.toElement().attribute("DestinationName");
-            if (!destName.isEmpty()) {
-                Poppler::LinkDestination* l = m_document->linkDestination(destName);
-                entry.pageIndex = l->pageNumber() - 1;
-            }
+        QSharedPointer<const Poppler::LinkDestination> dest = item.destination();
+        if (dest && !dest.isNull()) {
+            entry.pageIndex = dest->pageNumber() - 1;
         }
 
         beginInsertRows(QModelIndex(), rowCount(), rowCount());
@@ -135,10 +124,9 @@ void PdfTocModel::recursiveGetEntries(QDomNode node, int nodeLevel, int parentNo
         Q_EMIT countChanged();
 
         // Look for children entries
-        recursiveGetEntries(child, nodeLevel + 1, m_entries.count() - 1);
-
-        // Go to the next entry at the same level.
-        node = node.nextSibling();
+        if (item.hasChildren()) {
+            recursiveGetEntries(item.children(), nodeLevel + 1, m_entries.count() - 1);
+        }
     }
 }
 

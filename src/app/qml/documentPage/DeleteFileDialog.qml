@@ -39,9 +39,9 @@ Dialog {
     title: path ? i18n.tr("Delete file")
                 : i18n.tr("Delete %1 file", "Delete %1 files", deleteCount).arg(deleteCount)
     text: path ? i18n.tr("Are you sure you want to permanently delete this file?")
-               : i18n.tr("Are you sure you want to permanently delete this file?",
-                         "Are you sure you want to permanently delete these files?",
-                         deleteCount)
+               : i18n.tr("Are you sure you want to permanently delete %1 file?",
+                         "Are you sure you want to permanently delete %1 files?",
+                         deleteCount).arg(deleteCount)
 
 
     RowLayout {
