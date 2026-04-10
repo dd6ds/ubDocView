@@ -19,13 +19,8 @@ build_args:
 install_lib:
 - ${LIBREOFFICE_LIB_INSTALL_DIR}/lib/libreoffice
 - libharfbuzz-icu.so*
-- libicudata.so*
-- libicui18n.so*
-- libicuuc.so*
 - libpoppler.so*
 - libpoppler-qt5.so*
-- libtiff.so*
-- libwebp.so*
 
 libraries:
   libreoffice:
