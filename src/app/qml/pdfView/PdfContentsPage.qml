@@ -98,8 +98,7 @@ Page {
                     text: model.title
                     elide: Text.ElideRight
                     font.weight: model.level == 0 ? Font.DemiBold : Font.Normal
-                    color: (model.level == 0) ? LomiriColors.midAubergine
-                                              : theme.palette.selected.backgroundText
+                    color: theme.palette.selected.backgroundText
                 }
 
                 /* UITK 1.3 specs: Slot B */
@@ -117,8 +116,7 @@ Page {
                     SlotsLayout.position: SlotsLayout.Last
                     text: model.pageIndex + 1
                     font.weight: model.level == 0 ? Font.DemiBold : Font.Normal
-                    color: (model.level == 0) ? LomiriColors.midAubergine
-                                              : theme.palette.selected.backgroundText
+                    color: theme.palette.selected.backgroundText
                 }
             }
         }
