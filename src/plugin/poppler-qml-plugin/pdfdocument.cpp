@@ -33,7 +33,7 @@ PdfDocument::PdfDocument():
     m_path("")
   , m_tocModel(nullptr)
   , m_error(PopplerError::NoError)
-  , m_renderHints(0)
+  , m_renderHints()
 {
     connect(this, &PdfDocument::renderHintsChanged, this, &PdfDocument::updateRenderHints);
 }

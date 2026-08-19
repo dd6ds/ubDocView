@@ -69,7 +69,7 @@ private:
     QSharedPointer<Poppler::Document> m_document;
     QList<TocEntry> m_entries;
 
-    void recursiveGetEntries(QDomNode node, int nodeLevel, int parentNodeIndex = -1);
+    void recursiveGetEntries(const QVector<Poppler::OutlineItem> &items, int nodeLevel, int parentNodeIndex = -1);
 };
 
 #endif // PDFTOCMODEL_H

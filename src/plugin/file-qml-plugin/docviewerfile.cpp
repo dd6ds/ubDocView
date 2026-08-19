@@ -89,7 +89,7 @@ void DocviewerFile::open()
         /** Get info of the file **/
         m_info["size"] = file.size();
         m_info["lastModified"] = file.lastModified();
-        m_info["creationTime"] = file.created();
+        m_info["creationTime"] = file.birthTime();
         Q_EMIT infoChanged();
 
         /** Get mimetype **/

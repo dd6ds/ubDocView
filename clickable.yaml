@@ -1,8 +1,8 @@
-clickable_minimum_required: '7.7.0'
+clickable_minimum_required: 8.4.0
 
 builder: cmake
 
-framework: ubuntu-sdk-20.04
+framework: ubuntu-touch-24.04-1.x
 
 ignore_review_errors: true
 
@@ -10,21 +10,17 @@ dependencies_target:
 - qtbase5-dev
 - qtdeclarative5-dev
 - libpoppler-qt5-dev
-- libharfbuzz-dev
+- libharfbuzz-icu0
 
 build_args:
 - -DLIBREOFFICE_INCLUDE_DIR=${LIBREOFFICE_LIB_INSTALL_DIR}/include
+- -DINSTALL_TESTS=OFF
 
 install_lib:
 - ${LIBREOFFICE_LIB_INSTALL_DIR}/lib/libreoffice
 - libharfbuzz-icu.so*
-- libicudata.so*
-- libicui18n.so*
-- libicuuc.so*
 - libpoppler.so*
 - libpoppler-qt5.so*
-- libtiff.so*
-- libwebp.so*
 
 libraries:
   libreoffice:

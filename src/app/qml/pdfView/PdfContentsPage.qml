@@ -32,13 +32,12 @@ Page {
         flickable: view
     }
 
-//     FIXME: Restore it
-   /* onActiveChanged: {
+    onActiveChanged: {
         // Find out the current page position in the ToC index
-        for (var i=0; i<poppler.tocModel.count; i++) {
-            if (i+1 < poppler.tocModel.count) {
-                if (pdfView.currentPageIndex >= poppler.tocModel.get(i).pageIndex &&
-                        pdfView.currentPageIndex < poppler.tocModel.get(i+1).pageIndex) {
+        for (var i=0; i<pdfView.document.tocModel.count; i++) {
+            if (i+1 < pdfView.document.tocModel.count) {
+                if (pdfView.currentPageIndex >= pdfView.document.tocModel.get(i).pageIndex &&
+                        pdfView.currentPageIndex < pdfView.document.tocModel.get(i+1).pageIndex) {
                     break;
                 }
             }
@@ -49,7 +48,7 @@ Page {
 
         // Position view at the highlighted index
         view.positionViewAtIndex(i, ListView.Center);
-    }*/
+    }
 
     ListView {
         id: view
@@ -99,8 +98,7 @@ Page {
                     text: model.title
                     elide: Text.ElideRight
                     font.weight: model.level == 0 ? Font.DemiBold : Font.Normal
-                    color: (model.level == 0) ? LomiriColors.midAubergine
-                                              : theme.palette.selected.backgroundText
+                    color: theme.palette.selected.backgroundText
                 }
 
                 /* UITK 1.3 specs: Slot B */
@@ -118,8 +116,7 @@ Page {
                     SlotsLayout.position: SlotsLayout.Last
                     text: model.pageIndex + 1
                     font.weight: model.level == 0 ? Font.DemiBold : Font.Normal
-                    color: (model.level == 0) ? LomiriColors.midAubergine
-                                              : theme.palette.selected.backgroundText
+                    color: theme.palette.selected.backgroundText
                 }
             }
         }
