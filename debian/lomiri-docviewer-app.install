@@ -1,8 +1,0 @@
-usr/bin/lomiri-docviewer-app
-usr/share/applications
-usr/share/locale
-usr/share/lomiri-docviewer-app
-usr/lib/*/qt5/qml/DocumentViewer/qmldir
-usr/lib/*/qt5/qml/DocumentViewer/libfileqmlplugin.so
-usr/lib/*/qt5/qml/DocumentViewer/LibreOffice
-usr/lib/*/qt5/qml/DocumentViewer/PDF

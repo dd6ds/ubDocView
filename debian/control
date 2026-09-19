@@ -9,7 +9,6 @@ Build-Depends: cmake,
                pep8,
                pkg-config,
                pkg-kde-tools,
-               python3-all,
                qt5-default,
                qtbase5-dev (>= 5.4.0),
                qtchooser,
@@ -42,14 +41,3 @@ Depends: ${misc:Depends},
 Description: Lomiri Document Viewer application
  A Document Viewer application capable of opening many common document file
  formats including PDFs and those supported by LibreOffice.
-
-Package: lomiri-docviewer-app-autopilot
-Architecture: all
-Depends: libautopilot-qt,
-         libqt5test5,
-         python3-lxml,
-         lomiri-docviewer-app (>= ${source:Version}),
-         lomiri-ui-toolkit-autopilot,
-         ${misc:Depends}
-Description: Autopilot tests for Lomiri Document Viewer
- This package contains the autopilot tests for Lomiri Document Viewer
