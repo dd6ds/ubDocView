@@ -91,8 +91,14 @@ void LODocument::loadDocument(const QString &pathName)
     }
 
 
-    /* Load the document */
-    m_lokDocument = s_office->documentLoad(m_path.toUtf8().constData());
+    /* Load the document.
+     * LibreOfficeKit parses the path as a URL, so a literal '%' in the
+     * file name must be escaped as "%25" or it is misinterpreted as the
+     * start of a percent-encoded sequence and the load fails. Encode a
+     * copy rather than m_path itself, since m_path is also used verbatim
+     * elsewhere (e.g. path()). */
+    QString loadPath = QString(m_path).replace("%", "%25");
+    m_lokDocument = s_office->documentLoad(loadPath.toUtf8().constData());
 
     if (!m_lokDocument) {
         setError(LibreOfficeError::DocumentNotLoaded);

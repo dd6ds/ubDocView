@@ -117,7 +117,7 @@ Item {
         }
 
         function getPathFromUrl(url) {
-            return url.toString().replace("file://", "")
+            return decodeURIComponent(url.toString()).replace("file://", "")
         }
 
         function importDocument(sourcePath, destPath) {
