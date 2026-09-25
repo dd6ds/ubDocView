@@ -17,8 +17,5 @@
     "maintainer": "UBports <dev@ubports.com>",
     "migrations": {
         "old-name": "com.ubuntu.docviewer"
-    },
-    "x-test": {
-        "autopilot": "@AUTOPILOT_DIR@"
     }
 }

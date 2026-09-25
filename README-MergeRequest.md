@@ -18,7 +18,7 @@ checklist below before approving a MR.
     related functionality?
 
 *   If the MR fixes a bug or implements a feature, are there accompanying unit
-    and autopilot tests?
+    tests?
 
 *   Is the app buildable and runnable using Qtcreator?
 

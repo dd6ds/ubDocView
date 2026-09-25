@@ -12,7 +12,6 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -fno-permissive -pedantic -Wa
 include(FindPkgConfig)
 include(GNUInstallDirs)
 
-option(INSTALL_TESTS    "Install the tests on make install" on)
 option(CLICK_MODE       "Installs to a contained location" on)
 option(NO_CACHE         "Disable caching of click dependencies (CLICK_MODE only)" off)
 
@@ -23,7 +22,6 @@ set(APP_NAME            lomiri-docviewer-app)
 set(DESKTOP_FILE        "${PROJECT_NAME}.desktop")
 set(ICON_FILE           docviewer-app.svg)
 set(SPLASH_FILE         docviewer-app-splash.svg)
-set(AUTOPILOT_DIR       lomiri_docviewer_app)
 
 if(CLICK_MODE)
 # Find out the architecture for package building
@@ -53,13 +51,7 @@ find_package(Qt5Qml REQUIRED)
 find_package(Qt5Quick REQUIRED)
 find_package(Qt5Xml REQUIRED)
 
-# Tests
-include(CTest)
-
 add_subdirectory(po)
 add_subdirectory(click)
 add_subdirectory(data)
 add_subdirectory(src)
-if(BUILD_TESTING)
-    add_subdirectory(tests)
-endif()
