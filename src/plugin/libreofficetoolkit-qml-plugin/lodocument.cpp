@@ -21,6 +21,8 @@
 
 #include <QImage>
 #include <QDebug>
+#include <QFileInfo>
+#include <QUrl>
 
 #define LOK_USE_UNSTABLE_API
 #include <LibreOfficeKit/LibreOfficeKitInit.h>
@@ -91,8 +93,13 @@ void LODocument::loadDocument(const QString &pathName)
     }
 
 
-    /* Load the document */
-    m_lokDocument = s_office->documentLoad(m_path.toUtf8().constData());
+    /* Load the document.
+     * LibreOfficeKit parses its argument as a URL, so pass it a properly
+     * URI-encoded file:// URL. Otherwise characters such as a literal '%'
+     * in the file name are misinterpreted as percent-encoded sequences
+     * and the load fails. */
+    const QByteArray loadUrl = QUrl::fromLocalFile(QFileInfo(m_path).absoluteFilePath()).toEncoded();
+    m_lokDocument = s_office->documentLoad(loadUrl.constData());
 
     if (!m_lokDocument) {
         setError(LibreOfficeError::DocumentNotLoaded);
