@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-docviewer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-10 07:09+0000\n"
-"PO-Revision-Date: 2026-10-02 22:01+0000\n"
+"PO-Revision-Date: 2026-10-05 09:55+0000\n"
 "Last-Translator: aimar orbe <aimar.orbe@ehu.eus>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/lomiri/lomiri-"
 "docviewer-app/eu/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.10\n"
+"X-Generator: Weblate 2026.10.1.dev0\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:48+0000\n"
 
 #: lomiri-docviewer-app.desktop.in:7
@@ -327,7 +327,7 @@ msgstr ""
 #: src/app/qml/loView/LOViewDefaultHeader.qml:41
 #: src/app/qml/textView/TextView.qml:49
 msgid "Loading..."
-msgstr "Kargatzen..."
+msgstr "Kargatzen…"
 
 #: src/app/qml/loView/LOViewDefaultHeader.qml:45
 msgid "LibreOffice text document"
