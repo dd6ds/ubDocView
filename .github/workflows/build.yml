@@ -47,6 +47,16 @@ jobs:
             exit 1
           fi
 
+      # Clickable prefers podman over docker when both exist. Rootless podman on
+      # the GitHub runner has no subordinate UID range, so it cannot unpack the
+      # Ubuntu Touch 24.04 image ("container ID 32011 cannot be mapped to a host
+      # ID"). Removing podman makes clickable use the runner's docker instead.
+      - name: Use docker instead of podman
+        run: |
+          sudo apt-get remove -y podman buildah skopeo || true
+          if command -v podman; then echo "::error::podman is still installed"; exit 1; fi
+          docker version --format 'docker {{.Server.Version}}'
+
       # Clickable builds in its Docker image (Ubuntu Touch 24.04, arm64),
       # the same way as "clickable build" locally.
       - name: Install clickable
