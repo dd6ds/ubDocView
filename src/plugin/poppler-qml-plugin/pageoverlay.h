@@ -45,6 +45,7 @@ protected:
 
 private:
     void drawLinkBorders(QSGSimpleRectNode *parentNode);
+    void drawBorders(QSGSimpleRectNode *parentNode, const QColor &color);
 
 private:
     VerticalView* m_view;

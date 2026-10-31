@@ -16,6 +16,31 @@ Flickable {
     property alias linkHighlightColor: view.linkHighlightColor
     property alias rotation: view.rotation
 
+    // Text search
+    // (aliases of read-only C++ properties are read-only as well)
+    property alias searchText: view.searchText
+    property alias searchInProgress: view.searchInProgress
+    property alias searchResultsCount: view.searchResultsCount
+    property alias currentSearchResult: view.currentSearchResult
+    property alias searchHighlightColor: view.searchHighlightColor
+    property alias currentSearchHighlightColor: view.currentSearchHighlightColor
+
+    function search(text, caseSensitive) {
+        view.search(text, caseSensitive === true)
+    }
+
+    function clearSearch() {
+        view.clearSearch()
+    }
+
+    function nextSearchResult() {
+        view.nextSearchResult()
+    }
+
+    function previousSearchResult() {
+        view.previousSearchResult()
+    }
+
     property string documentPath: ""
 
     property bool isLinkHovered: false

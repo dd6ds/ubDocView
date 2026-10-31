@@ -29,10 +29,32 @@ Page {
     id: pdfPage
 
     property bool isPresentationMode: false
+    property bool searchMode: false
 
     title: DocumentViewer.getFileBaseNameFromPath(file.path)
 
-    header: PageHeader {
+    header: searchMode ? searchHeader : defaultHeader
+
+    onSearchModeChanged: {
+        if (searchMode) {
+            header.exposed = true
+            searchHeader.focusField()
+        } else {
+            pdfView.clearSearch()
+        }
+    }
+
+    PdfViewSearchHeader {
+        id: searchHeader
+        objectName: "pdfSearchHeader"
+        visible: pdfPage.searchMode
+        view: pdfView
+        onCloseRequested: pdfPage.searchMode = false
+    }
+
+    PageHeader {
+        id: defaultHeader
+        visible: !pdfPage.searchMode
         flickable: pdfPage.isPresentationMode ? null : pdfView
 
         trailingActionBar.actions: [ searchText, goToPage, startPresentation, exitPresentation, nextPage, previousPage, nightModeToggle, fileDetails, rotateRight, rotateLeft ]
@@ -62,6 +84,7 @@ Page {
 
     onIsPresentationModeChanged: {
         if (isPresentationMode) {
+            searchMode = false
             pdfView.adjustZoomToPage()
             scrollToCurrentPageTimer.restart()
         } else {
@@ -180,6 +203,10 @@ Page {
                 renderHints: PDF.Document.Antialiasing | PDF.Document.TextAntialiasing
 
                 linkHighlightColor: LomiriColors.orange
+
+                // Text search highlights (all matches / selected match)
+                searchHighlightColor: Qt.rgba(1.0, 0.84, 0.0, 0.35)
+                currentSearchHighlightColor: Qt.rgba(0.91, 0.33, 0.13, 0.55)
 
                 spacing: units.gu(4)
 
@@ -362,10 +389,14 @@ Page {
         id: searchText
         iconName: "search"
         text: i18n.tr("Search")
-        // onTriggered: pageMain.state = "search"
-        //Disable it until we provide search in Poppler plugin.
-        enabled: false
+        enabled: !pdfPage.isPresentationMode && pdfView.pagesCount > 0
         visible: enabled
+        onTriggered: {
+            if (pdfPage.searchMode)
+                searchHeader.focusField()
+            else
+                pdfPage.searchMode = true
+        }
     }
 
     Action {
@@ -484,16 +515,38 @@ Page {
 
     Shortcut {
         sequence: "Return"
+        enabled: !pdfPage.searchMode
         onActivated: nextPage.trigger()
     }
 
     Shortcut {
         sequence: "Enter"
+        enabled: !pdfPage.searchMode
         onActivated: nextPage.trigger()
     }
 
     Shortcut {
         sequence: "Backspace"
+        enabled: !pdfPage.searchMode
         onActivated: previousPage.trigger()
+    }
+
+    // Text search shortcuts
+    Shortcut {
+        sequence: StandardKey.Find
+        enabled: searchText.enabled
+        onActivated: searchText.trigger()
+    }
+
+    Shortcut {
+        sequence: StandardKey.FindNext       // F3 / Ctrl+G
+        enabled: pdfPage.searchMode
+        onActivated: pdfView.nextSearchResult()
+    }
+
+    Shortcut {
+        sequence: StandardKey.FindPrevious   // Shift+F3 / Ctrl+Shift+G
+        enabled: pdfPage.searchMode
+        onActivated: pdfView.previousSearchResult()
     }
 }

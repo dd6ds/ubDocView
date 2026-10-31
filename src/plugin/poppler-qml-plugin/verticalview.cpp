@@ -27,7 +27,10 @@
 #include "config.h"
 
 #include <QImage>
+#include <QElapsedTimer>
 #include <QtCore/qmath.h>
+
+#include <algorithm>
 
 // FIXME: Sometimes layout is not created when a document is opened
 // TODO: Check if everything works as expected when zooming
@@ -54,7 +57,17 @@ VerticalView::VerticalView(QQuickItem *parent)
     , m_hasFlickableBeenScrolled(false)
     , m_hasFlickableBeenResized(false)
     , m_hasRenderHintsChanged(false)
+    , m_searchCaseSensitive(false)
+    , m_searchInProgress(false)
+    , m_searchNextPage(0)
+    , m_searchStartPage(0)
+    , m_currentSearchResult(-1)
+    , m_searchHighlightColor(QColor::fromRgb(255, 214, 0, 90))
+    , m_currentSearchHighlightColor(QColor::fromRgb(233, 84, 32, 140))
 {
+    m_searchTimer.setInterval(0);
+    connect(&m_searchTimer, &QTimer::timeout, this, &VerticalView::searchNextChunk);
+
     // Connect signals
     connect(this, &VerticalView::documentChanged, this, &VerticalView::updateLayout);
     connect(this, &VerticalView::parentFlickableChanged, this, &VerticalView::updateLayout);
@@ -247,6 +260,9 @@ void VerticalView::initializeDocument(const QString &path)
 {
     if (m_document)
         m_document->disconnect(this);
+
+    // A new document invalidates any previous search results.
+    clearSearch();
 
     setError(PopplerError::NoError);
 
@@ -732,4 +748,327 @@ void VerticalView::slotTaskRenderFinished(AbstractRenderTask *task, QImage img)
             }
         }
     }
+}
+
+/*** TEXT SEARCH ***/
+
+// Max time (ms) spent searching per event-loop iteration, so the UI stays responsive.
+#define SEARCH_CHUNK_MSECS 25
+
+void VerticalView::search(const QString &text, bool caseSensitive)
+{
+    resetSearch();
+
+    if (m_searchText != text) {
+        m_searchText = text;
+        Q_EMIT searchTextChanged();
+    }
+
+    m_searchCaseSensitive = caseSensitive;
+
+    if (text.isEmpty() || !m_document || m_document.data()->isLocked()
+            || m_document.data()->pageCount() <= 0) {
+        Q_EMIT searchFinished();
+        return;
+    }
+
+    // Start scanning at the page the user is reading, then wrap around.
+    m_searchNextPage = 0;
+    m_searchStartPage = qBound(0, m_currentPageIndex, m_document.data()->pageCount() - 1);
+
+    setSearchInProgress(true);
+    m_searchTimer.start();
+}
+
+void VerticalView::clearSearch()
+{
+    resetSearch();
+
+    if (!m_searchText.isEmpty()) {
+        m_searchText.clear();
+        Q_EMIT searchTextChanged();
+    }
+}
+
+void VerticalView::resetSearch()
+{
+    m_searchTimer.stop();
+
+    const bool hadResults = !m_searchHits.isEmpty();
+
+    m_searchHits.clear();
+    m_searchResultsByPage.clear();
+    m_searchNextPage = 0;
+
+    setCurrentSearchResult(-1);
+    setSearchInProgress(false);
+
+    if (hadResults)
+        Q_EMIT searchResultsChanged();
+}
+
+void VerticalView::searchNextChunk()
+{
+    if (!m_document || m_document.data()->isLocked()) {
+        m_searchTimer.stop();
+        setSearchInProgress(false);
+        return;
+    }
+
+    PdfDocument* doc = m_document.data();
+    const int count = doc->pageCount();
+
+    // Remember the currently selected hit, so we can find it again after re-sorting.
+    int curPage = -1;
+    int curIndexInPage = -1;
+    if (m_currentSearchResult >= 0 && m_currentSearchResult < m_searchHits.size()) {
+        curPage = m_searchHits.at(m_currentSearchResult).page;
+        for (int i = m_currentSearchResult; i >= 0 && m_searchHits.at(i).page == curPage; --i)
+            ++curIndexInPage;
+    }
+
+    QElapsedTimer budget;
+    budget.start();
+
+    bool found = false;
+
+    while (m_searchNextPage < count && budget.elapsed() < SEARCH_CHUNK_MSECS) {
+        const int page = (m_searchStartPage + m_searchNextPage) % count;
+        ++m_searchNextPage;
+
+        const QList<QRectF> rects = doc->searchPage(page, m_searchText, m_searchCaseSensitive);
+        if (rects.isEmpty())
+            continue;
+
+        m_searchResultsByPage.insert(page, rects);
+        found = true;
+    }
+
+    if (found) {
+        // Rebuild the flat, page-ordered list of hits.
+        QList<int> pages = m_searchResultsByPage.keys();
+        std::sort(pages.begin(), pages.end());
+
+        m_searchHits.clear();
+        int newCurrent = -1;
+
+        Q_FOREACH (int p, pages) {
+            const QList<QRectF> &rects = m_searchResultsByPage.value(p);
+            for (int i = 0; i < rects.size(); ++i) {
+                if (p == curPage && i == curIndexInPage)
+                    newCurrent = m_searchHits.size();
+
+                m_searchHits.append(SearchHit{ p, rects.at(i) });
+            }
+        }
+
+        if (newCurrent != -1)
+            setCurrentSearchResult(newCurrent);
+
+        Q_EMIT searchResultsChanged();
+
+        // First hits found: select the first one at/after the page the user is reading.
+        if (m_currentSearchResult < 0) {
+            int first = -1;
+
+            for (int i = 0; i < m_searchHits.size(); ++i) {
+                if (m_searchHits.at(i).page >= m_searchStartPage) {
+                    first = i;
+                    break;
+                }
+            }
+
+            // Only hits before the start page so far (wrap-around): take the first one.
+            if (first == -1)
+                first = 0;
+
+            setCurrentSearchResult(first);
+            goToCurrentSearchResult();
+        }
+    }
+
+    if (m_searchNextPage >= count) {
+        m_searchTimer.stop();
+        setSearchInProgress(false);
+        Q_EMIT searchFinished();
+    }
+}
+
+void VerticalView::nextSearchResult()
+{
+    if (m_searchHits.isEmpty())
+        return;
+
+    setCurrentSearchResult((m_currentSearchResult + 1) % m_searchHits.size());
+    goToCurrentSearchResult();
+}
+
+void VerticalView::previousSearchResult()
+{
+    if (m_searchHits.isEmpty())
+        return;
+
+    int index = m_currentSearchResult - 1;
+    if (index < 0)
+        index = m_searchHits.size() - 1;
+
+    setCurrentSearchResult(index);
+    goToCurrentSearchResult();
+}
+
+void VerticalView::goToCurrentSearchResult()
+{
+    if (!m_parentFlickable || !m_document)
+        return;
+
+    if (m_currentSearchResult < 0 || m_currentSearchResult >= m_searchHits.size())
+        return;
+
+    const SearchHit &hit = m_searchHits.at(m_currentSearchResult);
+
+    // Makes sure the page item exists and scrolls to its top.
+    positionAtIndex(hit.page);
+
+    SGTileItem* page = m_pages.value(hit.page);
+    if (!page)
+        return;
+
+    const QRectF r = mapNormalizedRect(hit.rect, page->width(), page->height());
+
+    const qreal flickW = m_parentFlickable->width();
+    const qreal flickH = m_parentFlickable->height();
+    const qreal contentW = m_parentFlickable->property("contentWidth").toReal();
+    const qreal contentH = m_parentFlickable->property("contentHeight").toReal();
+
+    // Place the match at about one third of the visible height, centered horizontally.
+    qreal targetY = this->y() + page->y() + r.center().y() - flickH / 3.0;
+    qreal targetX = this->x() + page->x() + r.center().x() - flickW / 2.0;
+
+    targetY = qBound<qreal>(0, targetY, qMax<qreal>(0, contentH - flickH));
+    targetX = qBound<qreal>(0, targetX, qMax<qreal>(0, contentW - flickW));
+
+    m_parentFlickable->setProperty("contentX", targetX);
+    m_parentFlickable->setProperty("contentY", targetY);
+
+    setCurrentPageIndex(hit.page);
+}
+
+QRectF VerticalView::mapNormalizedRect(const QRectF &n, qreal w, qreal h) const
+{
+    const bool rotatedBy90 = (m_rotation == Rotate90 || m_rotation == Rotate270);
+
+    // Size of the unrotated page in item pixels
+    const qreal pw = !rotatedBy90 ? w : h;
+    const qreal ph = !rotatedBy90 ? h : w;
+
+    const qreal x1 = pw * n.left();
+    const qreal y1 = ph * n.top();
+    const qreal x2 = pw * n.right();
+    const qreal y2 = ph * n.bottom();
+
+    QRectF r;
+
+    switch (m_rotation) {
+    case Rotate0:
+        r.setCoords(x1, y1, x2, y2);
+        break;
+    case Rotate90:
+        r.setCoords(w - y2, x1, w - y1, x2);
+        break;
+    case Rotate180:
+        r.setCoords(w - x2, h - y2, w - x1, h - y1);
+        break;
+    case Rotate270:
+        r.setCoords(y1, h - x2, y2, h - x1);
+        break;
+    }
+
+    return r;
+}
+
+QString VerticalView::searchText() const
+{
+    return m_searchText;
+}
+
+bool VerticalView::searchInProgress() const
+{
+    return m_searchInProgress;
+}
+
+void VerticalView::setSearchInProgress(bool inProgress)
+{
+    if (m_searchInProgress == inProgress)
+        return;
+
+    m_searchInProgress = inProgress;
+    Q_EMIT searchInProgressChanged();
+}
+
+int VerticalView::searchResultsCount() const
+{
+    return m_searchHits.size();
+}
+
+int VerticalView::currentSearchResult() const
+{
+    return m_currentSearchResult;
+}
+
+void VerticalView::setCurrentSearchResult(int index)
+{
+    if (m_currentSearchResult == index)
+        return;
+
+    m_currentSearchResult = index;
+    Q_EMIT currentSearchResultChanged();
+}
+
+QColor VerticalView::searchHighlightColor() const
+{
+    return m_searchHighlightColor;
+}
+
+void VerticalView::setSearchHighlightColor(const QColor &color)
+{
+    if (m_searchHighlightColor == color)
+        return;
+
+    m_searchHighlightColor = color;
+    Q_EMIT searchHighlightColorChanged();
+}
+
+QColor VerticalView::currentSearchHighlightColor() const
+{
+    return m_currentSearchHighlightColor;
+}
+
+void VerticalView::setCurrentSearchHighlightColor(const QColor &color)
+{
+    if (m_currentSearchHighlightColor == color)
+        return;
+
+    m_currentSearchHighlightColor = color;
+    Q_EMIT searchHighlightColorChanged();
+}
+
+QList<QRectF> VerticalView::searchResultsForPage(int pageIndex) const
+{
+    return m_searchResultsByPage.value(pageIndex);
+}
+
+int VerticalView::currentSearchResultPage() const
+{
+    if (m_currentSearchResult < 0 || m_currentSearchResult >= m_searchHits.size())
+        return -1;
+
+    return m_searchHits.at(m_currentSearchResult).page;
+}
+
+QRectF VerticalView::currentSearchResultRect() const
+{
+    if (m_currentSearchResult < 0 || m_currentSearchResult >= m_searchHits.size())
+        return QRectF();
+
+    return m_searchHits.at(m_currentSearchResult).rect;
 }

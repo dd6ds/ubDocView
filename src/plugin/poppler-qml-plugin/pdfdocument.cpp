@@ -214,6 +214,41 @@ QList<Poppler::Link *> PdfDocument::pageLinks(int pageIndex) const
     return result;
 }
 
+QList<QRectF> PdfDocument::searchPage(int pageIndex, const QString &text, bool caseSensitive) const
+{
+    QList<QRectF> result;
+
+    if (!m_popDocument || text.isEmpty())
+        return result;
+
+    if (pageIndex < 0 || pageIndex >= m_popDocument->numPages())
+        return result;
+
+    QScopedPointer<Poppler::Page> page(m_popDocument->page(pageIndex));
+    if (!page)
+        return result;
+
+    const QSizeF size = page->pageSizeF();
+    if (size.width() <= 0 || size.height() <= 0)
+        return result;
+
+    const Poppler::Page::SearchFlags flags = caseSensitive
+            ? Poppler::Page::SearchFlags(Poppler::Page::NoSearchFlags)
+            : Poppler::Page::SearchFlags(Poppler::Page::IgnoreCase);
+
+    // Rectangles are returned in points (72 dpi), origin top-left, unrotated.
+    const QList<QRectF> rects = page->search(text, flags);
+
+    for (const QRectF &r : rects) {
+        result.append(QRectF(r.left()   / size.width(),
+                             r.top()    / size.height(),
+                             r.width()  / size.width(),
+                             r.height() / size.height()));
+    }
+
+    return result;
+}
+
 bool PdfDocument::loadDocument()
 {
     qDebug() << "Loading document...";

@@ -84,6 +84,10 @@ public:
 
     QList<Poppler::Link *> pageLinks(int pageIndex) const;
 
+    // Text search: returns the matches on the given page as rectangles
+    // normalized to the page size (0..1, unrotated page coordinates).
+    QList<QRectF> searchPage(int pageIndex, const QString &text, bool caseSensitive = false) const;
+
     Q_INVOKABLE QDateTime getDocumentDate(QString data);
     Q_INVOKABLE QString getDocumentInfo(QString data);
     Q_INVOKABLE QVariant documentInfo(DocumentInfo info);

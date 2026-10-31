@@ -42,6 +42,11 @@ PageOverlay::PageOverlay(VerticalView *view, int pageIndex, QQuickItem *parent)
 
     connect(m_view, &VerticalView::showLinkHighlightChanged, this, &PageOverlay::update);
     connect(m_view, &VerticalView::linkHighlightColorChanged, this, &PageOverlay::update);
+
+    // Text search highlights
+    connect(m_view, &VerticalView::searchResultsChanged, this, &PageOverlay::update);
+    connect(m_view, &VerticalView::currentSearchResultChanged, this, &PageOverlay::update);
+    connect(m_view, &VerticalView::searchHighlightColorChanged, this, &PageOverlay::update);
 }
 
 PageOverlay::~PageOverlay()
@@ -56,7 +61,48 @@ QSGNode *PageOverlay::updatePaintNode(QSGNode *oldNode, QQuickItem::UpdatePaintN
         node = new QSGNode();
     }
 
-    if (m_view->showLinkHighlight() && boundingRect().isValid()) {
+    if (!node)
+        return nullptr;
+
+    // Remove the nodes from the previous paint, otherwise they pile up on every update.
+    while (QSGNode* child = node->firstChild()) {
+        node->removeChildNode(child);
+        delete child;
+    }
+
+    if (!m_view->document() || !boundingRect().isValid())
+        return node;
+
+    // Search highlights
+    const QList<QRectF> hits = m_view->searchResultsForPage(m_pageIndex);
+
+    if (!hits.isEmpty()) {
+        const bool currentOnThisPage = (m_view->currentSearchResultPage() == m_pageIndex);
+        const QRectF currentRect = m_view->currentSearchResultRect();
+
+        Q_FOREACH (const QRectF &hit, hits) {
+            const bool isCurrent = currentOnThisPage && hit == currentRect;
+
+            // Slightly enlarge the box so it doesn't clip the glyphs
+            QRectF r = m_view->mapNormalizedRect(hit, width(), height());
+            r.adjust(-1, -1, 1, 1);
+
+            auto hitNode = new QSGSimpleRectNode();
+            hitNode->setColor(isCurrent ? m_view->currentSearchHighlightColor()
+                                        : m_view->searchHighlightColor());
+            hitNode->setRect(r);
+
+            if (isCurrent) {
+                QColor border = m_view->currentSearchHighlightColor();
+                border.setAlpha(255);
+                drawBorders(hitNode, border);
+            }
+
+            node->appendChildNode(hitNode);
+        }
+    }
+
+    if (m_view->showLinkHighlight()) {
         QList<Poppler::Link *> links = m_view->document()->pageLinks(m_pageIndex);
 
         Q_FOREACH(Poppler::Link *link, links) {
@@ -154,6 +200,12 @@ void PageOverlay::hoverMoveEvent(QHoverEvent *event)
 
 void PageOverlay::drawLinkBorders(QSGSimpleRectNode *parentNode)
 {
+    const QColor &linkColor = m_view->linkHighlightColor();
+    drawBorders(parentNode, QColor::fromRgb(linkColor.red(), linkColor.green(), linkColor.blue(), 64));
+}
+
+void PageOverlay::drawBorders(QSGSimpleRectNode *parentNode, const QColor &color)
+{
     auto node = parentNode;
 
     auto linkBorderGeometry = new QSGGeometry(QSGGeometry::defaultAttributes_Point2D(), 8);
@@ -174,9 +226,7 @@ void PageOverlay::drawLinkBorders(QSGSimpleRectNode *parentNode)
     vertex[7].set(vertex[3].x, vertex[3].y);
 
     auto linkBorderMaterial = new QSGFlatColorMaterial;
-
-    const QColor &linkColor = m_view->linkHighlightColor();
-    linkBorderMaterial->setColor(QColor::fromRgb(linkColor.red(), linkColor.green(), linkColor.blue(), 64));
+    linkBorderMaterial->setColor(color);
 
     auto linkBorderNode = new QSGGeometryNode;
 

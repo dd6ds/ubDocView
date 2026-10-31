@@ -22,6 +22,9 @@
 #include <QQuickItem>
 #include <QTimer>
 #include <QSharedPointer>
+#include <QVector>
+#include <QHash>
+#include <QRectF>
 #include <QQmlContext>
 #include <QQmlEngine>
 
@@ -51,6 +54,14 @@ class VerticalView : public QQuickItem
     Q_PROPERTY(bool                     showLinkHighlight  READ showLinkHighlight  WRITE setShowLinkHighlight  NOTIFY showLinkHighlightChanged)
     Q_PROPERTY(QColor                   linkHighlightColor READ linkHighlightColor WRITE setLinkHighlightColor NOTIFY linkHighlightColorChanged)
     Q_PROPERTY(Rotation                 rotation           READ rotation           WRITE setRotation           NOTIFY rotationChanged)
+
+    // Text search
+    Q_PROPERTY(QString                  searchText              READ searchText              NOTIFY searchTextChanged)
+    Q_PROPERTY(bool                     searchInProgress        READ searchInProgress        NOTIFY searchInProgressChanged)
+    Q_PROPERTY(int                      searchResultsCount      READ searchResultsCount      NOTIFY searchResultsChanged)
+    Q_PROPERTY(int                      currentSearchResult     READ currentSearchResult     NOTIFY currentSearchResultChanged)
+    Q_PROPERTY(QColor                   searchHighlightColor    READ searchHighlightColor    WRITE setSearchHighlightColor    NOTIFY searchHighlightColorChanged)
+    Q_PROPERTY(QColor                   currentSearchHighlightColor READ currentSearchHighlightColor WRITE setCurrentSearchHighlightColor NOTIFY searchHighlightColorChanged)
 
 public:
     VerticalView(QQuickItem *parent = 0);
@@ -107,6 +118,31 @@ public:
 
     Q_INVOKABLE bool unlock(const QString &ownerPassword, const QString &userPassword);
 
+    // Text search API (exposed to QML)
+    Q_INVOKABLE void search(const QString &text, bool caseSensitive = false);
+    Q_INVOKABLE void clearSearch();
+    Q_INVOKABLE void nextSearchResult();
+    Q_INVOKABLE void previousSearchResult();
+
+    QString searchText() const;
+    bool    searchInProgress() const;
+    int     searchResultsCount() const;
+    int     currentSearchResult() const;   // 0-based, -1 = none
+
+    QColor  searchHighlightColor() const;
+    void    setSearchHighlightColor(const QColor &color);
+    QColor  currentSearchHighlightColor() const;
+    void    setCurrentSearchHighlightColor(const QColor &color);
+
+    // Used by PageOverlay
+    QList<QRectF> searchResultsForPage(int pageIndex) const;
+    int     currentSearchResultPage() const;
+    QRectF  currentSearchResultRect() const;
+
+    // Maps a rect normalized to the unrotated page (0..1) to item coordinates
+    // of a page item with the given (already rotated) size.
+    QRectF  mapNormalizedRect(const QRectF &normalized, qreal width, qreal height) const;
+
 Q_SIGNALS:
     void parentFlickableChanged();
     void documentChanged();
@@ -118,8 +154,15 @@ Q_SIGNALS:
     void showLinkHighlightChanged();
     void linkHighlightColorChanged();
     void rotationChanged();
+    void searchTextChanged();
+    void searchInProgressChanged();
+    void searchResultsChanged();
+    void currentSearchResultChanged();
+    void searchHighlightColorChanged();
+    void searchFinished();
 
 private Q_SLOTS:
+    void searchNextChunk();
     void updateLayout();
     void onFlickableScrolled();
     void onFlickableSizeChanged();
@@ -159,7 +202,30 @@ private:
     bool                        m_hasFlickableBeenResized;
     bool                        m_hasRenderHintsChanged;
 
+    // Text search state
+    struct SearchHit {
+        int    page;
+        QRectF rect;    // normalized, unrotated
+    };
+
+    QString                     m_searchText;
+    bool                        m_searchCaseSensitive;
+    bool                        m_searchInProgress;
+    int                         m_searchNextPage;       // next page to scan
+    int                         m_searchStartPage;      // page the user was on when searching
+    QVector<SearchHit>          m_searchHits;           // ordered by page
+    QHash<int, QList<QRectF>>   m_searchResultsByPage;
+    int                         m_currentSearchResult;
+    QTimer                      m_searchTimer;
+    QColor                      m_searchHighlightColor;
+    QColor                      m_currentSearchHighlightColor;
+
 private:
+    void setSearchInProgress(bool inProgress);
+    void setCurrentSearchResult(int index);
+    void goToCurrentSearchResult();
+    void resetSearch();
+
     void setCurrentPageIndex(int currentPageIndex);
     void setError(const PopplerError::Error &error);
     SGTileItem* createPage(int index, const QRect &pageRect);
